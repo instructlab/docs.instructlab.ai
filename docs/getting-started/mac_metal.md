@@ -1,3 +1,9 @@
+---
+title: Getting Started with Mac Metal
+description: Steps to get ilab working on a Mac M Machine
+logo: images/ilab_dog.png
+---
+
 # Getting Started Mac Metal
 
 ## tl;dr

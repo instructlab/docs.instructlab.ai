@@ -1,3 +1,9 @@
+---
+title: Getting Started with Linux AMD
+description: Steps to get ilab working on a Linux AMD Machine
+logo: images/ilab_dog.png
+---
+
 # Getting Started Linux AMD
 
 ## tl;dr

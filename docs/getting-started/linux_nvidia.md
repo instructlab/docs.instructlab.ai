@@ -1,3 +1,9 @@
+---
+title: Getting Started with Linux NVidia
+description: Steps to get ilab working on a Linux NVidia Machine
+logo: images/ilab_dog.png
+---
+
 # Getting Started Linux NVidia
 
 ## tl;dr
