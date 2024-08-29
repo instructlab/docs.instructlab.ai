@@ -153,12 +153,12 @@ Yes, these work. :smiley: :+1:
 
 ## Images
 
-![image](../images/ibm-cloud-sign-up.png)
+![image](../images/ilab_dog.png)
 
 Nunc eu odio eleifend, blandit leo a, volutpat sapien
 
 ## right align image
 
-![Placeholder](../images/ibm-cloud-sign-up.png){: align=right }
+![Placeholder](../images/ilab_dog.png){: align=right }
 
 Nunc eu odio eleifend, blandit leo a, volutpat sapien

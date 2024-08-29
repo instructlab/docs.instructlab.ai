@@ -1,4 +1,4 @@
-# Getting Started Mac Metal
+# Getting Started Linux NVidia
 
 
 TODO

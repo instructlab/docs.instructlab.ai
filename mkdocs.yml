@@ -9,7 +9,7 @@ edit_uri: edit/main/docs
 # Navigation
 nav:
   - Welcome:
-    - About InstructLab: README.md
+    - About InstructLab: index.md
   - Getting Started:
     - Mac Metal: getting-started/mac_metal.md
     - Linux NVidia: getting-started/linux_nvidia.md
