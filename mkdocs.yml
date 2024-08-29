@@ -1,0 +1,4 @@
+site_name: docs.instructlab.ai
+site_url: https://docs.instructlab.ai
+theme:
+    name: material
