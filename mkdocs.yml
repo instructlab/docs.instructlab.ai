@@ -31,7 +31,8 @@ theme:
   logo: images/ilab_dog.png
   palette:
     scheme: default
-    primary: purple
+    primary:
+      primary: custom
     accent: purple
 
 # Plugins
