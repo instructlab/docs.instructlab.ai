@@ -9,7 +9,7 @@ logo: images/ilab_dog.png
 ## tl;dr
 
 !!! note
-    These steps will pull down a premade `qna.yaml` so you can do a local build. skip the `wget`, `mv`, and `ilab taxonomy diff` if you don't want to do this.
+    These steps will pull down a premade `qna.yaml` so you can do a local build. Skip the `wget`, `mv`, and `ilab taxonomy diff` if you don't want to do this.
 
 ```bash
 python3.11 -m venv venv-instructlab-0.18-3.11
