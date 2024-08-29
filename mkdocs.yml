@@ -1,4 +1,80 @@
 site_name: docs.instructlab.ai
 site_url: https://docs.instructlab.ai
+
+# Repository
+repo_name: docs.instructlab.ai
+repo_url: https://github.com/instructlab/docs.instructlab.ai
+edit_uri: edit/main/docs
+
+# Navigation
+nav:
+  - Welcome:
+    - About InstructLab: README.md
+  - Getting Started:
+    - Mac Metal: getting-started/mac_metal.md
+    - Linux NVidia: getting-started/linux_nvidia.md
+    - Linux AMD: getting-started/linux_amd.md
+  - References:
+    - Additional Resources: resources/RESOURCES.md
+    - Contributors: resources/CONTRIBUTORS.md
+    - MkDocs Cheatsheet: resources/MKDOCS.md
+    - Admin Guide: resources/ADMIN.md
+
+## YOU SHOULD NOT NOT CHANGE BELOW THIS LINE
+
+# Copyright
+copyright: Copyright &copy; 2024- Red Hat Inc.
+
 theme:
-    name: material
+  name: material
+  icon:
+    logo: material/library
+  logo: images/ilab_dog.png
+  features:
+    - navigation.tabs
+    #- navigation.instant
+  palette:
+    scheme: default
+    primary: purple
+    accent: purple
+
+# Plugins
+plugins:
+  - search
+
+# Extensions
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - meta
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.snippets:
+      check_paths: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
