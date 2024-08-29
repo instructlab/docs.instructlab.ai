@@ -3,22 +3,31 @@ title: Introduction
 description: Introduction docs.instructlab.ai
 logo: images/ilab_dog.png
 ---
-# Welcome to InstructLab!
+# Welcome to the 🐶 InstructLab Project
 
-## Introduction
+![Banner](images/instructlab-banner.png)
 
-### ? What is InstructLab?
-InstructLab 🐶 uses a novel synthetic data-based alignment tuning method for
-Large Language Models (LLMs.) The "**lab**" in Instruct**Lab** 🐶 stands for
-[**L**arge-Scale **A**lignment for Chat**B**ots](https://arxiv.org/abs/2403.01081) [1].
+InstructLab is a model-agnostic open source AI project that facilitates contributions to Large Language Models (LLMs).
 
-[1] Shivchander Sudalairaj*, Abhishek Bhandwaldar*, Aldo Pareja*, Kai Xu, David D.
-Cox, Akash Srivastava*. "LAB: Large-Scale Alignment for ChatBots", arXiv preprint arXiv:
-2403.01081, 2024. (* denotes equal contributions)
+We are on a mission to let anyone shape generative AI by enabling contributed updates to existing LLMs in an accessible way.
 
-### 🔭 Use Cases
+**Our community welcomes all those who would like to help us enable everyone to shape the future of generative AI.**
 
-TODO
+## Why InstructLab
+
+There are many projects rapidly embracing and extending permissively licensed AI models, but they are faced with three main challenges:
+
+* Contribution to LLMs is not possible directly. They show up as forks, which forces consumers to choose a “best-fit” model that isn’t easily extensible. Also, the forks are expensive for model creators to maintain.
+* The ability to contribute ideas is limited by a lack of AI/ML expertise. One has to learn how to fork, train, and refine models to see their idea move forward. This is a high barrier to entry.
+* There is no direct community governance or best practice around review, curation, and distribution of forked models.
+
+**InstructLab is here to solve these problems.**
+
+The project enables community contributors to add additional "skills" or "knowledge" to a particular model.
+
+InstructLab's model-agnostic technology gives model upstreams with sufficient infrastructure resources the ability to create regular builds of their open source licensed models not by rebuilding and retraining the entire model but by composing new skills into it.
+
+Take a look at "lab-enhanced" models on the [InstructLab Hugging Face page](https://huggingface.co/instructlab).
 
 ## 📋 Requirements
 
