@@ -18,7 +18,6 @@ nav:
     - Additional Resources: resources/RESOURCES.md
     - Contributors: resources/CONTRIBUTORS.md
     - MkDocs Cheatsheet: resources/MKDOCS.md
-    - Admin Guide: resources/ADMIN.md
 
 ## YOU SHOULD NOT NOT CHANGE BELOW THIS LINE
 
@@ -30,9 +29,6 @@ theme:
   icon:
     logo: material/library
   logo: images/ilab_dog.png
-  features:
-    - navigation.tabs
-    #- navigation.instant
   palette:
     scheme: default
     primary: purple
