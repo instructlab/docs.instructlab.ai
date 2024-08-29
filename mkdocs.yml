@@ -14,6 +14,13 @@ nav:
     - Mac Metal: getting-started/mac_metal.md
     - Linux NVidia: getting-started/linux_nvidia.md
     - Linux AMD: getting-started/linux_amd.md
+  - Community:
+      - Code of Conduct: community/CODE_OF_CONDUCT.md
+      - Code of Conduct Committee: community/CODE_OF_CONDUCT_COMMITTEE.md
+      - FAQ: community/FAQ.md
+      - Governce Policy: community/GOVERNANCE.md
+      - Slack Guide: community/InstructLab_SLACK_GUIDE.md
+      - Slack Moderation Guide: community/InstructLab_SLACK_MODERATION_GUIDE.md
   - References:
     - Additional Resources: resources/RESOURCES.md
     - Contributors: resources/CONTRIBUTORS.md
