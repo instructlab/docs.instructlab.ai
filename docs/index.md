@@ -1,6 +1,6 @@
 ---
-title: Introduction
-description: Introduction docs.instructlab.ai
+title: Welcome to InstructLab!
+description: The overview of 🐶 InsturctLab.
 logo: images/ilab_dog.png
 ---
 # Welcome to the 🐶 InstructLab Project

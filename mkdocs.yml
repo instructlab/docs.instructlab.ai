@@ -21,6 +21,14 @@ nav:
       - Governce Policy: community/GOVERNANCE.md
       - Slack Guide: community/InstructLab_SLACK_GUIDE.md
       - Slack Moderation Guide: community/InstructLab_SLACK_MODERATION_GUIDE.md
+  - Taxonomy:
+      - About Taxonomy: taxonomy/index.md
+      - Skills Overview: taxonomy/skills/index.md
+      - Knowledge Overview: taxonomy/knowledge/index.md
+      - Knowledge Guide: taxonomy/knowledge/guide.md
+      - Knowledge Contribution Details: taxonomy/knowledge/contribution_details.md
+  - Community Model Build:
+      - About Community Model Build: cmb/index.md
   - References:
     - Additional Resources: resources/RESOURCES.md
     - Contributors: resources/CONTRIBUTORS.md
