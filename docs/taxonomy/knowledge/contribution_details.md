@@ -1,6 +1,6 @@
 ---
 title: Knowledge Contribution Guidelines
-description: The overview of 🐶 InsturctLab's Knowledge contribution guidelines
+description: The overview of 🐶 InstructLab's Knowledge contribution guidelines
 logo: images/ilab_dog.png
 ---
 

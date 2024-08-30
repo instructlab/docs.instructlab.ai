@@ -1,6 +1,6 @@
 ---
 title: Welcome to InstructLab's Taxonomy
-description: The overview of 🐶 InsturctLab's Taxonomy.
+description: The overview of 🐶 InstructLab's Taxonomy.
 logo: images/ilab_dog.png
 ---
 ## Welcome to the InstructLab Taxonomy

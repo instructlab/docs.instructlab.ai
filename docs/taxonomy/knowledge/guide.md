@@ -1,6 +1,6 @@
 ---
 title: Knowledge Guide
-description: The overview of 🐶 InsturctLab's knowledge
+description: The overview of 🐶 InstructLab's knowledge
 logo: images/ilab_dog.png
 ---
 # What is "Knowledge"?

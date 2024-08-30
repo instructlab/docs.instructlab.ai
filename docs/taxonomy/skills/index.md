@@ -1,6 +1,6 @@
 ---
 title: Getting Started with Skill Contributions
-description: Adding skills to 🐶 InsturctLab
+description: Adding skills to 🐶 InstructLab
 logo: images/ilab_dog.png
 ---
 ## Getting Started with Skill Contributions

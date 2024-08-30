@@ -1,6 +1,6 @@
 ---
 title: Getting Started with Knowledge Contributions
-description: Adding knowledge to 🐶 InsturctLab
+description: Adding knowledge to 🐶 InstructLab
 logo: images/ilab_dog.png
 ---
 ## Getting Started with Knowledge Contributions
