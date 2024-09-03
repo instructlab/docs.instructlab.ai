@@ -9,11 +9,12 @@ edit_uri: edit/main/docs
 # Navigation
 nav:
   - Welcome:
-    - About InstructLab: index.md
+      - About InstructLab: index.md
   - Getting Started:
-    - Mac Metal: getting-started/mac_metal.md
-    - Linux NVidia: getting-started/linux_nvidia.md
-    - Linux AMD: getting-started/linux_amd.md
+      - Mac Metal: getting-started/mac_metal.md
+      - Linux NVIDIA: getting-started/linux_nvidia.md
+      - Linux AMD: getting-started/linux_amd.md
+      - Creating New Knowledge or Skills: getting-started/creating_new_knowledge_or_skills.md
   - Community:
       - Code of Conduct: community/CODE_OF_CONDUCT.md
       - Code of Conduct Committee: community/CODE_OF_CONDUCT_COMMITTEE.md
@@ -30,9 +31,9 @@ nav:
   - Community Model Build:
       - About Community Model Build: cmb/index.md
   - References:
-    - Additional Resources: resources/RESOURCES.md
-    - Contributors: resources/CONTRIBUTORS.md
-    - MkDocs Cheatsheet: resources/MKDOCS.md
+      - Additional Resources: resources/RESOURCES.md
+      - Contributors: resources/CONTRIBUTORS.md
+      - MkDocs Cheatsheet: resources/MKDOCS.md
 
 ## YOU SHOULD NOT NOT CHANGE BELOW THIS LINE
 
