@@ -4,13 +4,13 @@ description: The overview of 🐶 InstructLab's Knowledge contribution guideline
 logo: images/ilab_dog.png
 ---
 
-You can create a Git repository to host your knowledge contributions anywhere (GitLab, Gerrit, etc.) but it may be favorable to create one on GitHub. The following instructions show you how to create a knowledge repository in GitHub and contribute to the taxonomy.
+You can create a Git repository to host your knowledge contributions anywhere (GitLab, Gerrit, etc.) but it might be favorable to create one on GitHub. The following instructions show you how to create a knowledge repository in GitHub and contribute to the taxonomy.
 
 ## Prerequisites
 
 - You have a GitHub account
 - You have a forked copy of the [taxonomy](https://github.com/instructlab/taxonomy/tree/main) repository
-- Verify that the model does not already know the knowledge you want to submit
+- You have verified that the model does not already know the knowledge you want to submit
 
 ## Creating your own knowledge repository
 
@@ -18,8 +18,8 @@ To create a new GitHub repository, follow the GitHub documentation in [Creating 
 
 The specific steps are listed as follows:
 
-1. In your GitHub profile page, navigate to the repositories tab. You will see a search bar where you can search your repositories, or create a new one.
-2. This takes you to a page titled “Create a new repository”. Create a custom name for your repository and add a README.md file. For example, “knowlege_contributions” could be a good name for your repository.
+1. In your GitHub profile page, navigate to the repositories tab. You will see a search bar where you can search your repositories or create a new one.
+2. This takes you to a page titled “Create a new repository”. Create a custom name for your repository and add a `README.md` file. For example, “knowlege_contributions” could be a good name for your repository.
 3. Click “Create” when you are all set.
 
 ## Convert your knowledge documentation to markdown
@@ -40,7 +40,7 @@ The specific steps are listed as follows:
 3. You can then see your new content in your repository.
 
 !!! important
-    Make a note of your commit SHA; you need it for your `qna.yaml`.
+    Make a note of your commit SHA; you'll need it for your `qna.yaml`.
 
 ## Create a pull request in the taxonomy repository
 
@@ -48,7 +48,7 @@ Navigate to your forked taxonomy repository and ensure it is up-to-date.
 
 There are a few ways you can create a pull request:
 
-- For details on the local process, check out [The GitHub Workflow Guide](https://github.com/kubernetes/community/blob/master/contributors/guide/github-workflow.md) in the kubernetes documentation and the [GitHub flow](https://docs.github.com/en/get-started/using-github/github-flow) in the GitHub documentation.
+- For details on the local process, check out [The GitHub Workflow Guide](https://github.com/kubernetes/community/blob/master/contributors/guide/github-workflow.md) in the Kubernetes documentation and the [GitHub flow](https://docs.github.com/en/get-started/using-github/github-flow) in the GitHub documentation.
 - For details on contributing using the GitHub webpage UI, see [Contributing using the GH UI](https://github.com/instructlab/taxonomy/docs/contributing_via_GH_UI.md) or [Creating a pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request?tool=webui) in the GitHub documentation.
 
 ## Verification
@@ -61,7 +61,7 @@ Here are a few things to check before seeking reviews for your contribution:
 
 ## PR Upstream Workflow
 
-The following table outlines the expected timing for the PR(s) you have put in. The PRs go through a few steps, and checks, but you should be able to map your `label` to
+The following table outlines the expected timing for the PRs you have submitted. The PRs go through a few steps, and checks, but you should be able to map your `label` to
 the place that it is in.
 
 | Label | Actor | Action | Duration |
