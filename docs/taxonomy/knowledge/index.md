@@ -5,41 +5,42 @@ logo: images/ilab_dog.png
 ---
 ## Getting Started with Knowledge Contributions
 
-While skills are foundational or performative, knowledge is based more on answering questions that involve facts,
-data, or references.
+While skills are foundational or performative, knowledge is based more on answering questions that involve facts, data, or references.
 
 Knowledge is supported by documents, such as a textbook, technical manual, encyclopedia, journal, or magazine.
 
 Knowledge in the taxonomy tree consists of a few more elements than skills:
 
 - Each knowledge node in the tree has a `qna.yaml`, similar to the format of the `qna.yaml` for skills.
-- ⭐ Knowledge submissions require you to create a Git repository, can be with GitHub, that contains the markdown files of your knowledge contributions. These contributions in your repository must use the markdown (.md) format.
+- ⭐ Knowledge submissions require you to create a Git repository, which can be with GitHub, that contains the markdown files of your knowledge contributions. These contributions in your repository must use the markdown (`.md`) format.
 - The `qna.yaml` includes parameters that contain information from your repository.
 
 !!! tip
     Guidelines for Knowledge contributions
 
     - Submit the most up-to-date version of the document
-    - All submissions must be text, images will be ignored
+    - All submissions must be text; images will be ignored
     - Do not use tables in your markdown freeform contribution
 
 The `qna.yaml` format must include the following fields:
 
-- `version`: The version of the qna.yaml file, this is the format of the file used for SDG. The value must be the number 3.
+- `version`: The version of the `qna.yaml` file; this is the format of the file that is used for SDG. The value must be the number 3.
 - `created_by`: Your GitHub username.
 - `domain`: Specify the category of the knowledge.
 - `seed_examples`: A collection of key/value entries.
-  - `context`: A chunk of information from the knowledge document. Each `qna.yaml` needs five `context` blocks and has a maximum word count of 500 words.
-  - `questions_and_answers`: The parameter that holds your questions and answers
-    - `question`: Specify a question for the model. Each `qna.yaml` file needs at least three question and answer pairs per `context` chunk with a maximum word count of 250 words.
-    - `answer`: Specify the desired answer from the model. Each `qna.yaml` file needs at least three question and answer pairs per `context` chunk with a maximum word count of 250 words.
+  - `context`: A chunk of information from the knowledge document. Each `qna.yaml` needs five `context` blocks. The context has a maximum token count of 500 tokens. Also, each `context` blocks should have at least 3 question and answer pairs, with a maximum token count of 250 for all 3 question and answer pairs.
+  - `questions_and_answers`: The parameter that holds your questions and answers.
+    - `question`: Specify a question for the model. Each `qna.yaml` file needs at least three question and answer pairs per `context` chunk.
+    - `answer`: Specify the desired answer from the model. Each `qna.yaml` file needs at least three question and answer pairs per `context` chunk.
 - `document_outline`: Describe an overview of the document your submitting.
 - `document`: The source of your knowledge contribution.
-  - `repo`: The URL to your repository that holds your knowledge markdown files.
+  - `repo`: The URL for your repository that holds your knowledge markdown files.
   - `commit`: The SHA of the commit in your repository with your knowledge markdown files.
-  - `patterns`: A list of glob patterns specifying the markdown files in your repository. Any glob pattern that starts with `*`, such as `*.md`, must be quoted due to YAML rules. For example, `"*.md"`.
+  - `patterns`: A list of glob patterns that specify the markdown files in your repository. Any glob pattern that starts with `*`, such as `*.md`, must be quoted due to YAML rules. For example, `"*.md"`.
 
 ### Knowledge: YAML examples
+
+*Example of a `qna.yaml` file*
 
 ```yaml
 version: 3
@@ -203,7 +204,7 @@ document:
       - phoenix_constellation.md
 ```
 
-*Example `attribution.txt` file*
+*Example of an `attribution.txt` file*
 
 ```text
 Title of work: Phoenix (constellation)
@@ -213,7 +214,11 @@ License of the work: CC-BY-SA-4.0
 Creator names: Wikipedia Authors
 ```
 
-This knowledge example references one markdown file: `phoenix_constellation.md`. You can also add multiple files for knowledge contributions.
+For more information on what to include in your `attribution.txt` file, see [For your attribution.txt file](https://github.com/instructlab/taxonomy/blob/main/CONTRIBUTING.md#for-your-attributiontxt-file) in the CONTRIBUTING.md file.
+
+### Knowledge: Markdown file example
+
+The previous knowledge example references one markdown file: `phoenix_constellation.md`. You can also add multiple markdown files for knowledge contributions.
 
 !!! note
     Due to the higher volume, **it will naturally take longer to receive acceptance for
@@ -223,7 +228,7 @@ This knowledge example references one markdown file: `phoenix_constellation.md`.
 What might these markdown files look like? They can be freeform. Here's what a
 snippet of `phoenix_constellation.md` might look like in your Git repository.
 
-#### Knowledge: Markdown file example
+*Example of a `.md` file*
 
 ```markdown
 # Phoenix (constellation)
@@ -246,9 +251,11 @@ universe. Phoenix is the radiant of two annual meteor showers: the Phoenicids in
 Phoenicids.
 ```
 
-In the taxonomy repository, here's what the previously referenced knowledge might look like in the tree:
+You can organize the knowledge markdown files in your repository however you want. You just need to ensure the YAML is pointing to the correct file.
 
-#### Knowledge: directory tree example
+### Knowledge: directory tree example
+
+In the taxonomy repository, here's what the previously referenced knowledge might look like in the tree:
 
 ```ascii
 [...]
@@ -265,7 +272,3 @@ In the taxonomy repository, here's what the previously referenced knowledge migh
         |              attribution.txt
 [...]
 ```
-
-For more information on what to include in your `attribution.txt` file, see [For your attribution.txt file](https://github.com/instructlab/taxonomy/blob/main/CONTRIBUTING.md#for-your-attributiontxt-file) in CONTRIBUTING.md.
-
-You can organize the knowledge markdown files in your repository however you want. You just need to ensure the YAML is pointing to the correct file.
