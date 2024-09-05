@@ -25,6 +25,7 @@ nav:
   - Taxonomy:
       - About Taxonomy: taxonomy/index.md
       - Skills Overview: taxonomy/skills/index.md
+      - Skills Guide: taxonomy/skills/skills_guide.md
       - Knowledge Overview: taxonomy/knowledge/index.md
       - Knowledge Guide: taxonomy/knowledge/guide.md
       - Knowledge Contribution Details: taxonomy/knowledge/contribution_details.md
