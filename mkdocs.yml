@@ -24,6 +24,7 @@ nav:
       - Slack Moderation Guide: community/InstructLab_SLACK_MODERATION_GUIDE.md
   - Taxonomy:
       - About Taxonomy: taxonomy/index.md
+      - qna.yaml Best Practices: taxonomy/qna_yaml_best_practices.md
       - Skills Overview: taxonomy/skills/index.md
       - Skills Guide: taxonomy/skills/skills_guide.md
       - Knowledge Overview: taxonomy/knowledge/index.md
