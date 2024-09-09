@@ -14,6 +14,7 @@ nav:
       - Mac Metal: getting-started/mac_metal.md
       - Linux NVIDIA: getting-started/linux_nvidia.md
       - Linux AMD: getting-started/linux_amd.md
+      - Creating a new Wikipedia based qna.yaml: getting-started/creating_new_wikipedia_based_qna.md
       - Creating New Knowledge or Skills: getting-started/creating_new_knowledge_or_skills.md
   - Community:
       - Code of Conduct: community/CODE_OF_CONDUCT.md
