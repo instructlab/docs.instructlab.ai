@@ -32,6 +32,7 @@ nav:
       - Knowledge Contribution Details: taxonomy/knowledge/contribution_details.md
   - Community Model Build:
       - About Community Model Build: cmb/index.md
+      - Community Model Build Process: cmb/build_process.md
   - References:
       - Additional Resources: resources/RESOURCES.md
       - Contributors: resources/CONTRIBUTORS.md
