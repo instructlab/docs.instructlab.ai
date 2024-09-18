@@ -24,4 +24,4 @@ This will:
 ./launch_server.sh
 ```
 
-3. Visit [https://127.0.0.1:8000/]() to see your changes in the browser.
+3. Visit [https://127.0.0.1:8000/](https://127.0.0.1:8000/) to see your changes in the browser.
