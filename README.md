@@ -9,10 +9,9 @@ We've included a server launching script for ease of use.
 1. Create a virtual environment for your installation.
 
 ```bash
-pyenv virtualenv 3.12 venv-ilabdocs-3.12
-pyenv activate venv-ilabdocs-3.12
+python -m venv venv-ilab-docs
+source venv-ilab-docs/bin/activate
 ```
-
 
 2. Launch the server.
 
