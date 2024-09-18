@@ -2,6 +2,9 @@
 !!! note
     This document is the Community Build Process, these are the general steps to get the cmb built.
 
+## Community Model Build diagram
+
+![](../images/instructlab_cmb_build.png)
 
 ## Add the PRs to the local tree
 
