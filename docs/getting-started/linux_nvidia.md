@@ -1,10 +1,10 @@
 ---
-title: Getting Started with Linux NVidia
+title: Install on Linux NVIDIA
 description: Steps to get ilab working on a Linux NVidia Machine
 logo: images/ilab_dog.png
 ---
 
-# Getting Started Linux NVidia
+# Install InstructLab on Linux NVIDIA
 
 ## tl;dr
 
@@ -32,9 +32,7 @@ ilab model convert --model-dir checkpoints/instructlab-granite-7b-lab-mlx-q
 ilab model serve --model-path instructlab-granite-7b-lab-trained/instructlab-granite-7b-lab-Q4_K_M.gguf
 ```
 
-## Steps
-
-### Install `ilab`
+## Installing `ilab`
 
 1) Create a new directory called `instructlab` to store the files the `ilab` CLI needs when running and `cd` into the directory by running the following command:
 
@@ -113,7 +111,7 @@ train     model train
 !!! important
     Every `ilab` command needs to be run from within your Python virtual environment. You can enter the Python environment by running the `source venv/bin/activate` command.
 
-5) Optional: You can enable tab completion for the `ilab` command.
+### Optional: Enabling tab completion for the `ilab` command
 
 #### Bash (version 4.4 or newer)
 
