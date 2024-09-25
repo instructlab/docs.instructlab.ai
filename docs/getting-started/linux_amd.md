@@ -1,10 +1,10 @@
 ---
-title: Getting Started with Linux AMD
+title: Installing on Linux AMD
 description: Steps to get ilab working on a Linux AMD Machine
 logo: images/ilab_dog.png
 ---
 
-# Getting Started Linux AMD
+# Install InstructLab on Linux AMD
 
 ## tl;dr
 
@@ -35,10 +35,7 @@ ilab model train
 ilab model convert --model-dir checkpoints/instructlab-granite-7b-lab-mlx-q
 ilab model serve --model-path instructlab-granite-7b-lab-trained/instructlab-granite-7b-lab-Q4_K_M.gguf
 ```
-
-## Steps
-
-### Install `ilab`
+## Installing `ilab`
 
 1) Create a new directory called `instructlab` to store the files the `ilab` CLI needs when running and `cd` into the directory by running the following command:
 
@@ -121,7 +118,7 @@ train     model train
 !!! important
     Every `ilab` command needs to be run from within your Python virtual environment. You can enter the Python environment by running the `source venv/bin/activate` command.
 
-5) Optional: You can enable tab completion for the `ilab` command.
+### Optional: Enabling tab completion for the `ilab` command
 
 #### Bash (version 4.4 or newer)
 
@@ -169,221 +166,3 @@ you can save the completion script and source it from `~/.bashrc`:
 ```sh
 _ILAB_COMPLETE=fish_source ilab > ~/.config/fish/completions/ilab.fish
 ```
-
-### 🏗️ Initialize `ilab`
-
-1) Initialize `ilab` by running the following command:
-
-```shell
-ilab config init
-```
-
-*Example output*
-
-```shell
-Welcome to InstructLab CLI. This guide will help you set up your environment.
-Please provide the following values to initiate the environment [press Enter for defaults]:
-Path to taxonomy repo [taxonomy]: <ENTER>
-```
-
-2) When prompted by the interface, press **Enter** to add a new default `config.yaml` file.
-
-3) When prompted, clone the `https://github.com/instructlab/taxonomy.git` repository into the current directory by typing **y**.
-
-   **Optional**: If you want to point to an existing local clone of the `taxonomy` repository, you can pass the path interactively or alternatively with the `--taxonomy-path` flag.
-
-   *Example output after initializing `ilab`*
-
-   ```shell
-   (venv) $ ilab config init
-   Welcome to InstructLab CLI. This guide will help you set up your environment.
-   Please provide the following values to initiate the environment [press Enter for defaults]:
-   Path to taxonomy repo [taxonomy]: <ENTER>
-   `taxonomy` seems to not exists or is empty. Should I clone https://github.com/instructlab/taxonomy.git for you? [y/N]: y
-   Cloning https://github.com/instructlab/taxonomy.git...
-   ```
-
-   `ilab` will use the default configuration file unless otherwise specified. You can override this behavior with the `--config` parameter for any `ilab` command.
-
-4) When prompted, provide the path to your default model. Otherwise, the default of a quantized [Merlinite](https://huggingface.co/instructlab/merlinite-7b-lab-GGUF) model will be used - you can download this model with `ilab model download` (see below).
-
-   ```shell
-   (venv) $ ilab config init
-   Welcome to InstructLab CLI. This guide will help you set up your environment.
-   Please provide the following values to initiate the environment [press Enter for defaults]:
-   Path to taxonomy repo [taxonomy]: <ENTER>
-   `taxonomy` seems to not exists or is empty. Should I clone https://github.com/instructlab/taxonomy.git for you? [y/N]: y
-   Cloning https://github.com/instructlab/taxonomy.git...
-   Path to your model [/home/user/.cache/instructlab/models/merlinite-7b-lab-Q4_K_M.gguf]: <ENTER>
-   ```
-
-5) When prompted, please choose a train profile. Train profiles are GPU specific profiles that enable accelerated training behavior. **YOU ARE ON LINUX**, please choose `No Profile (CPU-Only)` by hitting Enter. There are various flags you can utilize with individual `ilab` commands that will allow you to utilize your GPU if applicable.
-
-   ```shell
-   Welcome to InstructLab CLI. This guide will help you to setup your environment.
-   Please provide the following values to initiate the environment [press Enter for defaults]:
-   Path to taxonomy repo [/home/user/.local/share/instructlab/taxonomy]:
-   Path to your model [/home/user/.cache/instructlab/models/merlinite-7b-lab-Q4_K_M.gguf]:
-   Generating `/home/user/.config/instructlab/config.yaml`...
-   Please choose a train profile to use:
-   [0] No profile (CPU-only)
-   [1] A100_H100_x2.yaml
-   [2] A100_H100_x4.yaml
-   [3] A100_H100_x8.yaml
-   [4] L40_x4.yaml
-   [5] L40_x8.yaml
-   [6] L4_x8.yaml
-   Enter the number of your choice [hit enter for the default CPU-only profile] [0]:
-   Using default CPU-only train profile.
-   Initialization completed successfully, you're ready to start using `ilab`. Enjoy!
-   ```
-
-   The GPU profiles are listed by GPU type and number. If you happen to have a GPU configuration with a similar amount of VRAM as any of the above profiles, feel free to try them out!
-
-### `ilab` directory layout after initializing your system
-
-After running `ilab config init` your directories will look like the following on a Linux system:
-
-```shell
-├─ ~/.cache/instructlab/models/ (1)
-├─ ~/.local/share/instructlab/datasets (2)
-├─ ~/.local/share/instructlab/taxonomy (3)
-├─ ~/.local/share/instructlab/checkpoints (4)
-```
-
-1) `~/.cache/instructlab/models/`: Contains all downloaded large language models, including the saved output of ones you generate with ilab.
-2) `~/.local/share/instructlab/datasets/`: Contains data output from the SDG phase, built on modifications to the taxonomy repository.
-3) `~/.local/share/instructlab/taxonomy/`: Contains the skill and knowledge data.
-4) `~/.local/share/instructlab/checkpoints/`: Contains the output of the training process
-
-
-### 📥 Download the model
-
-- Run the `ilab model download` command.
-
-```shell
-ilab model download
-```
-
-`ilab model download` downloads a compact pre-trained version of the [model](https://huggingface.co/instructlab/) (~4.4G) from HuggingFace:
-
-```shell
-(venv) $ ilab model download
-Downloading model from Hugging Face: instructlab/merlinite-7b-lab-GGUF@main to /Users/USERNAME/Library/Caches/instructlab/models...
-...
-INFO 2024-08-01 15:05:48,464 huggingface_hub.file_download:1893: Download complete. Moving file to /home/user/.cache/instructlab/models/merlinite-7b-lab-Q4_K_M.gguf
-```
-
-!!! note
-    ⏳ This command can take few minutes or immediately depending on your internet connection or model is cached. If you have issues connecting to Hugging Face, refer to the [Hugging Face discussion forum](https://discuss.huggingface.co/) for more details.
-
-#### Downloading an entire Hugging Face repository (Safetensors Model)
-
-- Specify repository, and a Hugging Face token if necessary. For example:
-
-```shell
-HF_TOKEN=<YOUR HUGGINGFACE TOKEN GOES HERE> ilab model download --repository=TheBloke/Mixtral-8x7B-Instruct-v0.1-GGUF --filename=mixtral-8x7b-instruct-v0.1.Q4_K_M.gguf
-```
-
-These types of models are useful for GPU-enabled systems or anyone looking to serve a model using vLLM. InstructLab provides Safetensor versions of our Granite models on HuggingFace.
-
-#### Listing downloaded models
-
-All downloaded models can be seen with `ilab model list`.
-
-```shell
-ilab model list
-```
-
-*Example output of `ilab model list` after `ilab model download`*
-
-```shell
-(venv) $ ilab model list
-+------------------------------+---------------------+--------+
-| Model Name                   | Last Modified       | Size   |
-+------------------------------+---------------------+--------+
-| merlinite-7b-lab-Q4_K_M.gguf | 2024-08-01 15:05:48 | 4.1 GB |
-+------------------------------+---------------------+--------+
-```
-
-### 🍴 Serving the model
-
-- Serve the model by running the following command:
-
-```shell
-ilab model serve
-```
-
-erve a non-default model (e.g. Mixtral-8x7B-Instruct-v0.1):
-
-```shell
-ilab model serve --model-path models/mixtral-8x7b-instruct-v0.1.Q4_K_M.gguf
-```
-
-nce the model is served and ready, you'll see the following output:
-
-```shell
-(venv) $ ilab model serve
-INFO 2024-03-02 02:21:11,352 lab.py:201 Using model 'models/ggml-merlinite-7b-lab-Q4_K_M.gguf' with -1 gpu-layers and 4096 max context size.
-Starting server process
-After application startup complete see http://127.0.0.1:8000/docs for API.
-Press CTRL+C to shut down the server.
-```
-
-!!! note
-    If multiple `ilab` clients try to connect to the same InstructLab server at the same time, the 1st will connect to the server while the others will start their own temporary server. This will require additional resources on the host machine.
-
-- Serve a non-default Safetensors model (e.g. granite-7b-lab). NOTE: this requires a GPU.
-
-Ensure vllm is installed:
-
-```shell
-pip show vllm
-```
-
-If it is not, please run:
-
-```shell
-pip install vllm@git+https://github.com/opendatahub-io/vllm@2024.08.01
-```
-
-```shell
-ilab model serve --model-path ~/.cache/instructlab/models/instructlab/granite-7b-lab
-```
-
-### 📣 Chat with the model (Optional)
-
-Because you're serving the model in one terminal window, you will have to create a new window and re-activate your Python virtual environment to run `ilab model chat` command:
-
-```shell
-source venv/bin/activate
-ilab model chat
-```
-
-Chat with a non-default model (e.g. Mixtral-8x7B-Instruct-v0.1):
-
-```shell
-source venv/bin/activate
-ilab model chat --model models/mixtral-8x7b-instruct-v0.1.Q4_K_M.gguf
-```
-
-Please note that usage of `--model` necessitates that the existing server has that model. If not, you must exit the server. `--model` in `ilab model chat` has the ability to start a server on your behalf with the specified model if one is not already running on the port.
-
-Before you start adding new skills and knowledge to your model, you can check its baseline performance by asking it a question such as `what is the capital of Canada?`.
-
-!!! note
-    The model needs to be trained with the generated synthetic data to use the new skills or knowledge
-
-
-```shell
-(venv) $ ilab model chat
-╭────────────────────────────────────────────────────────────────────────────────────────────────────────────────── system ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
-│ Welcome to InstructLab Chat w/ GGML-MERLINITE-7B-lab-Q4_K_M (type /h for help)                                                                                                                                                                    │
-╰────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
->>> what is the capital of Canada                                                                                                                                                                                                 [S][default]
-╭────────────────────────────────────────────────────────────────────────────────────────────────────── ggml-merlinite-7b-lab-Q4_K_M ───────────────────────────────────────────────────────────────────────────────────────────────────────╮
-│ The capital city of Canada is Ottawa. It is located in the province of Ontario, on the southern banks of the Ottawa River in the eastern portion of southern Ontario. The city serves as the political center for Canada, as it is home to │
-│ Parliament Hill, which houses the House of Commons, Senate, Supreme Court, and Cabinet of Canada. Ottawa has a rich history and cultural significance, making it an essential part of Canada's identity.                                   │
-╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────── elapsed 12.008 seconds ─╯
-```
-

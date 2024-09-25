@@ -11,9 +11,13 @@ nav:
   - Welcome:
       - About InstructLab: index.md
   - Getting Started:
-      - Mac Metal: getting-started/mac_metal.md
-      - Linux NVIDIA: getting-started/linux_nvidia.md
-      - Linux AMD: getting-started/linux_amd.md
+      - Install on Mac Metal: getting-started/mac_metal.md
+      - Install on Linux NVIDIA: getting-started/linux_nvidia.md
+      - Install on Linux AMD: getting-started/linux_amd.md
+      - Initialize InstructLab: getting-started/initilize_ilab.md
+      - Download models: getting-started/download_models.md
+      - Intro to serve and chat: getting-started/serve_and_chat.md
+  - Adding data to a model: 
       - Creating a new Wikipedia based qna.yaml: getting-started/creating_new_wikipedia_based_qna.md
       - Creating New Knowledge or Skills: getting-started/creating_new_knowledge_or_skills.md
   - Community:
