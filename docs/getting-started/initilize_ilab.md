@@ -37,9 +37,9 @@ Path to taxonomy repo [taxonomy]: <ENTER>
    Cloning https://github.com/instructlab/taxonomy.git...
    ```
 
-   `ilab` will use the default configuration file unless otherwise specified. You can override this behavior with the `--config` parameter for any `ilab` command.
+`ilab` will use the default configuration file unless otherwise specified. You can override this behavior with the `--config` parameter for any `ilab` command.
 
-4) When prompted, provide the path to your default model. Otherwise, the default of a quantized [Merlinite](https://huggingface.co/instructlab/merlinite-7b-lab-GGUF) model will be used - you can download this model with `ilab model download`. The following example output displays the paths of a Mac instance. 
+4) When prompted, provide the path to your default model. Otherwise, the default of a quantized [Merlinite](https://huggingface.co/instructlab/merlinite-7b-lab-GGUF) model will be used - you can download this model with `ilab model download`. The following example output displays the paths of a Mac instance.
 
    ```shell
    (venv) $ ilab config init
@@ -51,7 +51,7 @@ Path to taxonomy repo [taxonomy]: <ENTER>
    Path to your model [/Users/USERNAME/Library/Caches/instructlab/models/merlinite-7b-lab-Q4_K_M.gguf]: <ENTER>
    ```
 
-5) When prompted, please choose a train profile. Train profiles are GPU specific profiles that enable accelerated training behavior. **YOU ARE ON MacOS**, please choose `No Profile (CPU, Apple Metal, AMD ROCm)` by hitting Enter. There are various flags you can utilize with individual `ilab` commands that will allow you to utilize your GPU if applicable. The following example output uses the Linux paths. 
+5) When prompted, please choose a train profile. Train profiles are GPU specific profiles that enable accelerated training behavior. **YOU ARE ON MacOS**, please choose `No Profile (CPU, Apple Metal, AMD ROCm)` by hitting Enter. There are various flags you can utilize with individual `ilab` commands that will allow you to utilize your GPU if applicable. The following example output uses the Linux paths.
 
    ```shell
     Welcome to InstructLab CLI. This guide will help you to setup your environment.
@@ -74,10 +74,11 @@ Path to taxonomy repo [taxonomy]: <ENTER>
     Initialization completed successfully, you're ready to start using `ilab`. Enjoy!
    ```
 
-   The GPU profiles are listed by GPU type and number. If you happen to have a GPU configuration with a similar amount of VRAM as any of the above profiles, feel free to try them out!
+The GPU profiles are listed by GPU type and number. If you happen to have a GPU configuration with a similar amount of VRAM as any of the above profiles, feel free to try them out!
 
 ## `ilab` directory layout after initializing your system
-### Mac directory 
+
+### Mac directory
 
 After running `ilab config init` your directories will look like the following on a Mac system:
 
@@ -89,11 +90,14 @@ After running `ilab config init` your directories will look like the following o
 ```
 
  1) `/Users/USERNAME/Library/Caches/instructlab/models/`: Contains all downloaded large language models, including the saved output of ones you generate with ilab.
+
  2) `~/Library/Application\ Support/instructlab/datasets/`: Contains data output from the SDG phase, built on modifications to the taxonomy repository.
+
  3) `~/Library/Application\ Support/instructlab/taxonomy/`: Contains the skill and knowledge data.
+
  4) `~/Users/USERNAME/Library/Caches/instructlab/checkpoints/`: Contains the output of the training process
 
- ### Linux directory
+### Linux directory
 
 After running `ilab config init` your directories will look like the following on a Linux system:
 
@@ -105,6 +109,9 @@ After running `ilab config init` your directories will look like the following o
 ```
 
 1) `~/.cache/instructlab/models/`: Contains all downloaded large language models, including the saved output of ones you generate with ilab.
+
 2) `~/.local/share/instructlab/datasets/`: Contains data output from the SDG phase, built on modifications to the taxonomy repository.
+
 3) `~/.local/share/instructlab/taxonomy/`: Contains the skill and knowledge data.
+
 4) `~/.local/share/instructlab/checkpoints/`: Contains the output of the training process
