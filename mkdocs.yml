@@ -17,9 +17,9 @@ nav:
       - Initialize InstructLab: getting-started/initilize_ilab.md
       - Download models: getting-started/download_models.md
       - Intro to serve and chat: getting-started/serve_and_chat.md
-  - Adding data to a model: 
-      - Creating a new Wikipedia based qna.yaml: getting-started/creating_new_wikipedia_based_qna.md
-      - Creating New Knowledge or Skills: getting-started/creating_new_knowledge_or_skills.md
+  - Adding data to a model:
+      - Creating a new Wikipedia based qna.yaml: adding-data-to-model/creating_new_wikipedia_based_qna.md
+      - Creating New Knowledge or Skills: adding-data-to-model/creating_new_knowledge_or_skills.md
   - Community:
       - Code of Conduct: community/CODE_OF_CONDUCT.md
       - Code of Conduct Committee: community/CODE_OF_CONDUCT_COMMITTEE.md
