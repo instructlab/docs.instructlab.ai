@@ -4,6 +4,8 @@ description: Setting up github OAuth and .env file
 logo: images/ilab_dog.png
 ---
 
+This chapter is dedicated to the settings for running the User Interface locally.
+
 ## .env
 
 ```bash
@@ -30,3 +32,15 @@ NEXT_PUBLIC_TAXONOMY_REPO=<REPO_NAME>
 ```
 
 ## OAuth 
+
+To set up the github OAuth settings for the UI, please refer to the steps below
+
+`Github settings` -> `Developer settings` -> `OAuth Apps` -> `Create New OAuth App` 
+
+Fill in the fields as shown below:
+
+![UI OAuth Details](../images/user-interface/ui_oauth_details.png)
+
+Set the `Homepage URL` and the `Authorization Callback URL` to `http://localhost:3000`.
+
+Update the .env files with the new ID and secret ID generated, `OAUTH_GITHUB_ID` = Client ID, `OAUTH_GITHUB_SECRET` = Client Secret

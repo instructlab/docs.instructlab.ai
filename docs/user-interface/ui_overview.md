@@ -9,6 +9,21 @@ contributions more accessible to the general user. Instead of having to edit a `
 users can fill out the contribution forms on the web. The user can also view their all of their contributions in a
 centralised list. You can also chat with the models directly on the playground.
 
+There are 2 ways to access the UI:
+
+1. Visit the website at [ui.instructlab.ai](https://ui.instructlab.ai/).
+
+2. Install and run the UI locally.
+
+
+!!! note
+    To log into the UI and submit Knowledge and Skills contributions, you must be a member of the [instructlab-public](https://github.com/instructlab-public) github repository.
+
+    If you aren't a member of the repository, but still wish to experiment with the UI, we recommend you to download it locally.
+
+!!! note
+    To become a member of the [instructlab-public](https://github.com/instructlab-public) github repository, join our slack channel and ask! For more information please visit the [slack guide](/community/InstructLab_SLACK_GUIDE/).
+
 
 ## Prerequisites 
 
@@ -86,6 +101,6 @@ The UI should now be up and running, you can visit it by entering `localhost:300
 
 For now, we will log in by entering `admin` and `password` in the username and password fields respectively. You can change the username and password by editing the `IL_UI_ADMIN_USERNAME` and `IL_UI_ADMIN_PASSWORD` values in the .env file.
 
-We are not able to log in with github right now since we haven't set up the github token in the .env file.
+We are not able to log in with github right now since we haven't set up the github token in the .env file. When logged in, you may see a popup saying that the UI is fetching your submissions, exit out of this notification. If you wish to set up the OAuth, visit the [.env and OAuth config page](/user-interface/env_oauth_config/).
 
 [Next Steps](/user-interface/playground_chat/){: .md-button .md-button--primary }
