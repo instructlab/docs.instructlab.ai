@@ -6,7 +6,7 @@ logo: images/ilab_dog.png
 
 The InstructLab User Interface (UI) is an additional component in the InstructLab project to make Knowledge/Skills 
 contributions more accessible to the general user. Instead of having to edit a `qna.yaml` file,
-users can fill out the contribution forms on the web. The user can also view their all of their contributions in a
+users can fill out the contribution forms on the web. The user can also view all of their contributions in a
 centralised list. You can also chat with the models directly on the playground.
 
 There are 2 ways to access the UI:
@@ -19,19 +19,16 @@ There are 2 ways to access the UI:
 !!! note
     To log into the UI and submit Knowledge and Skills contributions, you must be a member of the [instructlab-public](https://github.com/instructlab-public) github repository.
 
-    If you aren't a member of the repository, but still wish to experiment with the UI, we recommend you to download it locally.
-
 !!! note
-    To become a member of the [instructlab-public](https://github.com/instructlab-public) github repository, join our slack channel and ask! For more information please visit the [slack guide](/community/InstructLab_SLACK_GUIDE/).
-
+    If you aren't a member of the repository, but still wish to experiment with the UI, we recommend you to reach out to the UI Maintainers in our `#ui` [slack channel](https://join.slack.com/t/instruct-lab/shared_invite/zt-2kieyqiz9-zhXSxGnXk6uL_f3hVbD53g) for an invitation.
+    
+    If you wish to not join but still wish to experiment, download it locally.
 
 ## Prerequisites 
 
 Before you can run the User Interface locally, you first must: 
 
 * Have a [github](https://github.com/) account
-
-* Have InstructLab installed 
 
 * Have Node.js installed
 
@@ -96,6 +93,10 @@ When the install is finished, start the UI by running:
 The UI should now be up and running, you can visit it by entering `localhost:3000` in your browser, where it should bring you to the login screen.
 
 ![UI Login Screen](../images/user-interface/ui_login_screen.png)
+
+You may stop the UI at any time by running:
+
+`make stop-dev-local`
 
 4) Logging in 
 

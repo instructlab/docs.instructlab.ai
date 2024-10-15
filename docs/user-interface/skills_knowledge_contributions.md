@@ -31,7 +31,7 @@ Give a brief description on what skill you would like to teach.
 
 ### Taxonomy Directory Path
 
-Specify where in the taxonomy this skill would belong in. As the taxonomy fills, it will become more complex, make sure to give a concise location to keep the taxonomy organised.
+Specify where in the taxonomy repository directory structure this skill would belong in. As the taxonomy fills in with more skills, it will become more complex, make sure to give a concise location to keep the taxonomy organised. 
 
 ### Seed Examples
 
@@ -53,7 +53,7 @@ Give a brief description of what knowledge you are submitting, where you receive
 
 ### Taxonomy Directory Path
 
-fy where in the taxonomy this skill would belong in. As the taxonomy fills, it will become more complex, make sure to give a concise location to keep the taxonomy organised.
+specify where in the taxonomy repo directory structure this knowledge would belong in. As the taxonomy fills with more knowledge contributions, it will become more complex, make sure to give a concise location to keep the taxonomy organised.
 
 ### Seed Examples
 
@@ -68,6 +68,8 @@ You must prepare a markdown file version of the document you wish to use for the
 ![Forked Repository Showcase](../images//user-interface/ui_knowledge_repo_created.png)
 
 If you've already uploaded the markdown file to your github, you can switch to manually adding the document, and entering the `commit sha`.
+
+![UI Knowledge Document Manual Information](../images/user-interface/ui_knowledge_document_manual_info.png)
 
 
 ### Attribution Information

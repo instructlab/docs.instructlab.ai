@@ -10,17 +10,17 @@ If you go to `Playground > Chat` by using the side navigation bar, you can inter
 
 ![UI No Model Response](../images/user-interface/ui_no_model_response.png)
 
-However, the model won't reply because a granite/ merlinite model endpoint hasn't been given. Instead, we will create a new custom model endpoint, using our locally hosted quantised model from step 1.
+If you are running the ui within a dev environment, the model won't reply because a granite/merinite model endpoint hasn't been given. In this case, we will create a new custom model endpoint, using our locally hosted quantised model.
 
 To add a custom model endpoint, go to `Playground > Custom Model Endpoints` and press the `Add Endpoint` button on the right side. 
 
 You will have 3 fields to fill out
 
-* The URL, where your customised model is hosted, which would be `http://127.0.0.1:8000/`
+* The URL, where your customised model is hosted, if hosting locally, the URL would be `http://127.0.0.1:8000/`
 
 * The Model Name, `merlinite-7b-lab-Q4_K_M.gguf`
 
-* API Key, you may put any text in here, in this case I've put in `randomCharacters`
+* API Key, you may put any text in here; in this case I've used`randomCharacters`. If you are setting up an API key, please provide the key in this section.
 
 ![UI Custom Model Endpoint](../images/user-interface/ui_custom_model_endpoint.png)
 

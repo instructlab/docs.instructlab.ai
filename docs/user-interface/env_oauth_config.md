@@ -43,4 +43,9 @@ Fill in the fields as shown below:
 
 Set the `Homepage URL` and the `Authorization Callback URL` to `http://localhost:3000`.
 
+Once the app is created, there will be an option to create a secret. Press the Create Secret button and it will generate a secret for you.
+
 Update the .env files with the new ID and secret ID generated, `OAUTH_GITHUB_ID` = Client ID, `OAUTH_GITHUB_SECRET` = Client Secret
+
+!!! note 
+    If you prefer to not set up the OAuth, we recommend for you to reach out to the UI Maintainers in our `#ui` [slack channel](https://join.slack.com/t/instruct-lab/shared_invite/zt-2kieyqiz9-zhXSxGnXk6uL_f3hVbD53g) , where they will provide details for setting up an OAuth app for the instructlab-public org.
