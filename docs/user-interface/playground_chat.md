@@ -28,4 +28,4 @@ Go back to the playground chat, select newly added model and chat.
 
 ![UI Model Response](../images/user-interface/ui_model_response.png)
 
-[Next Steps](/user-interface/skills_knowledge_contributions/){: .md-button .md-button--primary }
+[Next Steps](/user-interface/knowledge_contributions/){: .md-button .md-button--primary }
