@@ -34,6 +34,7 @@ nav:
       - Knowledge Overview: taxonomy/knowledge/index.md
       - Knowledge Guide: taxonomy/knowledge/guide.md
       - Knowledge Contribution Details: taxonomy/knowledge/contribution_details.md
+      - Synthetic Data Generation Guidelines: taxonomy/sdg_guidelines.md
   - Community Model Build:
       - About Community Model Build: cmb/index.md
       - Community Model Build Process: cmb/build_process.md
