@@ -25,7 +25,7 @@ If you have found a missing skill in granite chat, you can create a skill contri
 
 Navigate to the Contribute section of the sidebar and click Skill. Here you will see the form to contribute a Skill to the open-source taxonomy tree.
 
-On this page you will find all the necessary pieces to fill in to create you Skill contribution, let's go through each one [here](/taxonomy/skills/skills_guide)
+On this page you will find all the necessary pieces to fill in to create you Skill contribution, let's go through each one [here](/taxonomy/skills/skills_guide).
 
 ### Author Information
 
@@ -35,19 +35,22 @@ Use your GitHub account email address and full name here. This will make sure th
 
 In the box for the submission summary, give a brief description of what your skill is. This will be used in the PR description after you submit. Below that you will fill in a detailed description of what your skill is teaching the model to do. For example, if your skill is extracting the date from a bean count ledger, you would fill in "Teaching the model to extract the date from a bean count ledger"
 
-!!! note The detailed description is very important for quality synthetic data generation. What you fill in for this box will be used as prompting during the SDG process. Imagine you are telling the teacher model: "The task is (your description here)"
+!!! note 
+    The detailed description is very important for quality synthetic data generation. What you fill in for this box will be used as prompting during the SDG process. Imagine you are telling the teacher model: "The task is (your description here)"
 
 ### Taxonomy Directory Path
 
 Using the dropdown menu, you will be able to select where you think your skill will fit the best in the taxonomy tree. If your skill is a grounded skill (meaning that it requires context to answer) you will need to navigate into the "grounded" section of the taxonomy tree before selecting the proper subsection. Otherwise, select the section you think best represents the subject of your skill.
 
-!!! note Proper placement within the taxonomy tree will allow other users to more accurately locate existing leaf nodes. Ask yourself: "What section of the library would I expect to find my skill under?"
+!!! note 
+    Proper placement within the taxonomy tree will allow other users to more accurately locate existing leaf nodes. Ask yourself: "What section of the library would I expect to find my skill under?"
 
 ### Seed Examples
 
 Here you will begin filling out your QNA examples that represent the skill you are trying to teach. You will need a minimum of 5 seed examples, which each example consisting of a Question and Answer. If your skill is a grounded skill and requires context, you will also add context for each QNA pair here.
 
-!!! note The QNA pairs that you create here should be diverse. You should try to rephrase questions in different ways and create unique contexts. For example, in the case of date extraction from bean count, you do not want to use the same date repeatedly in your seed examples, as this may have the unintended consequence of teaching the model to simply regurgitate the same date when asked any date extraction question.
+!!! note 
+    The QNA pairs that you create here should be diverse. You should try to rephrase questions in different ways and create unique contexts. For example, in the case of date extraction from bean count, you do not want to use the same date repeatedly in your seed examples, as this may have the unintended consequence of teaching the model to simply regurgitate the same date when asked any date extraction question.
 
 ### Attribution
 

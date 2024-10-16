@@ -21,7 +21,7 @@ For tips on writing Skills & Knowledge contributions, please visit the documenta
 
 ## Knowledge Contributions
 
-Firstly you will need to find a source document for your knowledge. Accepted sources can be found [here](/taxonomy/knowledge/guide)
+Firstly you will need to find a source document for your knowledge. Accepted sources can be found [here](/taxonomy/knowledge/guide).
 
 Navigate to the Contribute section of the sidebar and click Knowledge. Here you will see the form to contribute Knowledge to the open-source taxonomy tree.
 
@@ -33,15 +33,17 @@ Use your GitHub account email address and full name here. This will make sure th
 
 In the box for the submission summary, give a brief description of what your knowledge is. This will be used in the PR description after you submit. Below that you will fill in the domain the knowledge you are adding would fall under. For example, if you want to teach the model the winners at the 2024 Olympics, you might put "Olympic history" as the domain.
 
-!!! note The task domain is a critical part of the SDG process and will be part of the prompt when generating synthetic data. Ask your self: "What kind of textbook would contain the knowledge I am trying to teach the model?"
+!!! note 
+    The task domain is a critical part of the SDG process and will be part of the prompt when generating synthetic data. Ask your self: "What kind of textbook would contain the knowledge I am trying to teach the model?"
 
-The final box in Knowledge Information will contain an outline of the document. Using the example above, you may put "Document listing the medalists in the 2024 Summer Olympics"
+The final box in Knowledge Information will contain an outline of the document.
 
 ### Taxonomy Directory Path
 
 Using the dropdown menu, you will be able to select where you think your knowledge will fit the best in the taxonomy tree.
 
-!!! note Proper placement within the taxonomy tree will allow other users to more accurately locate existing leaf nodes. Ask yourself: "What section of the library would I expect to find my skill under?"
+!!! note 
+    Proper placement within the taxonomy tree will allow other users to more accurately locate existing leaf nodes. Ask yourself: "What section of the library would I expect to find my skill under?"
 
 ### Seed Examples
 
@@ -59,7 +61,8 @@ If you've already uploaded the markdown file to your github, you can switch to m
 
 ![UI Knowledge Document Manual Information](../images/user-interface/ui_knowledge_document_manual_info.png)
 
-!!! note Your knowledge document must be place in a public GitHub repo in order to be accepted. When your submission is being reviewed and merged, this document will need to be accessible publicly.
+!!! note 
+    Your knowledge document must be place in a public GitHub repo in order to be accepted. When your submission is being reviewed and merged, this document will need to be accessible publicly.
 
 
 ### Attribution Information
