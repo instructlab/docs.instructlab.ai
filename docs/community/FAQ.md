@@ -1,6 +1,9 @@
 # InstructLab FAQ
 
-Last updated: April 2024
+Last updated: October 2024
+
+> [!TIP]
+> AI is a rapidly-developing field with a lot of specialized terminology. You may wish read through [the glossary](https://docs.instructlab.ai/community/FAQ/#glossary) before getting started with the documentation.
 
 ## Table of Contents
 
@@ -39,16 +42,16 @@ Last updated: April 2024
 
 This page serves as a comprehensive FAQ for the InstructLab project, detailing how it works, how to begin contribution, and the goals behind the project. Key information includes:
 
-- **InstructLab Overview**: This open source project allows users to interact with and train the Merlinite-7b (default) or Granite-7b AI Large Language Models (LLMs) by contributing skills and knowledge.
-- **LAB Method**: A synthetic data-based tuning method for LLMs consisting of a taxonomy-driven data curation process, a synthetic data generator, and two-phased training with replay buffers.
-- **Contribution Process**: Contributors can add skills or knowledge to the LLM by creating YAML files and testing changes locally before submitting a pull request to InstructLab’s GitHub repository.
-- **Project Goals**: To democratize contributions to AI and LLMs, allowing rapid model development through community collaboration facilitated by weekly builds that integrate community contributions.
+- **InstructLab Overview**: This open source project allows users to interact with and train the Granite-7b community AI Large Language Model (LLM) by contributing skills and knowledge.
+- **LAB Method**: A synthetic data-based tuning method for LLMs consisting of a taxonomy-driven data curation process, a synthetic data generator, and two-phased training with replay buffers. Learn more in the [Large-Scale Alignment for ChatBots](https://arxiv.org/abs/2403.01081) paper outlining the methodology.
+- **Contribution Process**: [Contributors can add skills or knowledge to the LLM](https://docs.instructlab.ai/taxonomy/) by creating YAML files and testing changes locally before submitting a pull request to InstructLab’s GitHub taxonomy repository. Contributors may also [contribute to the InstructLab tooling](https://github.com/instructlab/instructlab/blob/main/CONTRIBUTING/CONTRIBUTING.md) and library codebases.
+- **Project Goal**: To democratize contributions to AI and LLMs.
 
 ## Documentation disclaimer
 
 There are currently three repositories that contain documentation crucial to getting users starting with the project:
 
-- [Community](https://github.com/instructlab/community) This repository shares InstructLab's activity and collaboration details across the community and include the most current information about the project. It should be approached as the primary repository for getting started, and contains procedures and links to relevant information to make the process as simple as possible.
+- [Community](https://github.com/instructlab/community) This repository shares InstructLab's activity and collaboration details across the community and include the most current information about the project, communication channels, and people processes.
 - [`ilab` command-line interface (CLI) tool](https://github.com/instructlab/instructlab). This repository is responsible for the `ilab` CLI tool. It provides information about how to download the `ilab` CLI, how to contribute to the `ilab` CLI tool, among others.
 - [Taxonomy Tree](https://github.com/instructlab/taxonomy). This repository is responsible for the taxonomy tree that allows you to create models tuned with your data. It provides information about what skills and knowledge are, how to create a pull request to contribute to the AI model, and expectations for pull request review.
 
@@ -60,7 +63,10 @@ Unless otherwise noted, all documentation for the InstructLab project is license
 
 ### What is InstructLab?
 
-InstructLab (**L**arge-scale **A**lignment for chat**B**ots) is an open source initiative that provides a platform for easy engagement with AI Large Language Models (LLM) by using the `ilab` command-line interface (CLI) tool. You can use the CLI to work with Merlinite-7b or Granite-7b to test new skills and knowledge, for example, asking it to write a poem or answer a question about a particular subject. Users can then augment the LLM’s capabilities by submitting the skills and knowledge they have tested to the project’s taxonomy repository on GitHub by creating a pull request. This approach encourages community-driven enhancements without the need for complex model forking or fine-tuning of the model, promoting rapid development through collaborative contributions.
+InstructLab (**L**arge-scale **A**lignment for chat**B**ots) is an open source initiative that provides a platform for easy engagement with AI Large Language Models (LLM) by using the `ilab` command-line interface (CLI) tool. You can use the CLI to work with Granite-7b to test new skills and knowledge, for example, asking it to write a meeting notes summary or answer a question about a particular subject. Users can then augment the LLM’s capabilities by submitting the skills and knowledge they have tested to the project’s taxonomy repository on GitHub by creating a pull request. This approach encourages community-driven enhancements without the need for complex model forking or fine-tuning of the model, promoting rapid development through collaborative contributions.
+
+> [!IMPORTANT]
+> Building models locally on consumer-grade hardware using quantized models with the `ilab` CLI is not meant for production-grade model creation. The `ilab` desktop configuration is meant for testing single knowledge or skill contributions on top of an already trained and quantized model. It is not for building a complete, production-grade model. For the full InstructLab production-grade model build process, multi-GPU hardware configurations are required, and the student model must be an untrained, unquantized base model.
 
 ### What is LAB?
 
@@ -80,9 +86,11 @@ InstructLab is driven by taxonomies and works by empowering users to add new [_s
 
 ### What are the goals of the InstructLab project?
 
-In its current state, openly contributing to a large language model (LLM) has been difficult because of the large compute infrastructure needed to run one.
+The goal on the InstructLab project is to emocratize contributions to AI and LLMs. There are two approaches to achieving this goal in our community:
 
-The InstructLab project seeks to democratize the contribution to AI and LLMs through its _taxonomy_ repository. When users contribute to the InstructLab project, the taxonomy repository resynthesizes the open source training data for InstructLab-trained LLMs. The model is then re-trained regularly (weekly builds), ensuring that community contributions are integrated while enriching the model’s capabilities over time.
+* Enabling collaborative contribution to a large language model (LLM) through [the project's _taxonomy_ repository](https://github.com/instructlab/taxonomy). When users contribute to this repository, the project resynthesizes its open source training data. Our community Granite-based model is then retrained, ensuring that community contributions are integrated while enriching the model’s capabilities over time.
+
+* Providing open source tooling to enable the InstructLab methodology and enabling community contributions to this toolset in accordance with open source project principles. This tooling includes [the InstructLab core engine & CLI](https://github.com/instructlab/instructlab) as well as libraries such as the [sdg](https://github.com/instructlab/sdg), [training](https://github.com/instructlab/training), and [evaluation](https://github.com/instructlab/eval) libraries.
 
 ### How can I contribute?
 
@@ -102,19 +110,13 @@ A list of common problems associated with downloading the `ilab` CLI tool can be
 
 ### Why should I contribute?
 
-InstructLab is designed to enable collaboration around Merlinite-7b and Granite-7b, an open source licensed LLM that contributors can access through [Hugging Face](https://huggingface.co/instructlab). Participating is an opportunity to contribute to open source AI regardless of technical background.
+InstructLab is designed to enable collaboration around the InstructLab Granite models, open source licensed LLMs that contributors can access through [Hugging Face](https://huggingface.co/instructlab). Participating is an opportunity to contribute to open source AI regardless of technical background.
 
 When contributors write an addition to the existing taxonomy, make a pull request, and get it reviewed and merged, their changes are rolled out in the next build. This update strategy expedites the model’s capabilities and allows contributors to see the impact that they have made on the model much sooner than other LLMs.
 
 ### What large language models (LLMs) am I contributing to through the InstructLab project?
 
-Contributions to the InstructLab project include fine-tuning Merlinite-7b or Granite-7b, an open-source licensed LLM. Contributors have direct access to the model they are improving through [Hugging Face](https://huggingface.co/instructlab).
-
-### What is Merlinite-7b?
-
-Merlinite-7b is a Mistral-7b derivative model fine-tuned with the LAB (**L**arge-scale **A**lignment for chat**B**ots) method using Mixtral-8x7b-Instruct as a teacher model.
-
-More information about the Merlinite-7b can be found on the [Hugging Face project page](https://huggingface.co/instructlab/merlinite-7b-lab).
+Contributions to the InstructLab project include fine-tuning Granite-7b, an open-source licensed LLM. Contributors have direct access to the model they are improving through [Hugging Face](https://huggingface.co/instructlab).
 
 ### What is Granite-7-lab?
 
@@ -126,9 +128,9 @@ More information about the Granite-7b can be found on the [Hugging Face project 
 
 In the context of InstructLab, a [_skill_](https://github.com/instructlab/taxonomy/blob/main/README.md#getting-started-with-skill-contributions) is a capability domain submitted by a contributor intending to train the AI model on the submitted information. In other words, when you submit a skill, you teach the AI model _how to do something_.
 
-InstructLab skills are broken down into two main categories:
+InstructLab skills are broken down into two main categories, compositional and foundational:
 
-- [**Composition skills.**](https://github.com/instructlab/taxonomy/blob/main/docs/SKILLS_GUIDE.md#compositional-skills) Composition or _performative_ skills allow AI models to perform specific tasks or functions. With InstructLab, there are two types of composition skills:
+- [**Compositional skills.**](https://github.com/instructlab/taxonomy/blob/main/docs/SKILLS_GUIDE.md#compositional-skills) Composition or _performative_ skills allow AI models to perform specific tasks or functions. With InstructLab, there are two types of composition skills:
   - [**Freeform compositional skills**](https://github.com/instructlab/taxonomy/blob/main/docs/SKILLS_GUIDE.md#freeform-compositional-skills) are performative skills that do not require additional context. For example, to train an AI model to write a poem, you would provide examples of poems.
   - [**Grounded compositional skills**](https://github.com/instructlab/taxonomy/blob/main/docs/SKILLS_GUIDE.md#grounded-compositional-skills) are performative skills that require additional context. One example is how an AI model reads the value of a cell in a table layout. To create the grounded skill to read a table formatted in Markdown, the additional context might be an example table layout.
 - **Foundational skills.** Foundational skills are skills like math, reasoning, and coding.
@@ -195,7 +197,7 @@ After a pull request is accepted, the changes are regularly incorporated into In
 
 ### What is the software license for InstructLab?
 
-The InstructLab project as well as the Merlinite-7b and Granite-7b models are distributed under [Apache License, Version 2.0](https://www.apache.org/licenses/LICENSE-2.0).
+The InstructLab project as well as the Granite-7b models are distributed under [Apache License, Version 2.0](https://www.apache.org/licenses/LICENSE-2.0).
 
 ### What is the content license for InstructLab documentation?
 
@@ -224,13 +226,13 @@ You can find more information about useful tools for managing DCO sign-off in ou
 
 ### Where can I download updated models of InstructLab?
 
-The latest version of InstructLab can be downloaded using the `ilab download` CLI command.
+The latest version of InstructLab can be downloaded using the `ilab download` CLI command, as well as from [InstructLab on Hugging Face](https://huggingface.co/instructlab).
 
 ### I have a question about the project. Where should I go?
 
 Currently, the best method for communicating with peers and project maintainers is in the Community Slack Channel. Visit our [InstructLab Slack Workspace Guide](https://github.com/instructlab/community/blob/main/InstructLabSlackGuide.md) for information on how to join.
 
-TODO: Update with mailing list details once these are created. Related issue <https://github.com/instructlab/community/issues/89>
+See our [community collaboration page](https://github.com/instructlab/community/blob/main/Collaboration.md), including information on our mailing list, meetings, and other ways of interacting with the community.
 
 ### What are the software and hardware requirements for using InstructLab?
 
@@ -246,6 +248,9 @@ To run and train InstructLab locally, you must meet the following requirements:
 - Approximately 10GB of free disk space to get through the `ilab generate` step
 - Approximately 60GB of free disk space is needed to run the entire process locally on Apple hardware
 - About 32 GB RAM
+
+> [!IMPORTANT]
+> Some of our community members have reported challenges in working with Windows and WSL for InstructLab support. If possible, you may want to work with Linux or Mac for the smoothest experience. We are continuing to work on improvements across our supported operating systems for the local desktop InstructLab tooling experience.
 
 ## Glossary
 
