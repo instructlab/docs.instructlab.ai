@@ -1,3 +1,3 @@
 # Additional resources
 
-TODO, but PRs accepted!
+- TechXchange 2024 [Open Source AI workshop](https://ibm.github.io/opensource-ai-workshop/)
