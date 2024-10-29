@@ -18,7 +18,7 @@ Serve a non-default model:
 ilab model serve --model-path models/granite-7b-instruct.GGUF
 ```
 
-nce the model is served and ready, you'll see the following output:
+Once the model is served and ready, you'll see the following output:
 
 ```shell
 (venv) $ ilab model serve
