@@ -34,6 +34,12 @@ nav:
       - Knowledge Overview: taxonomy/knowledge/index.md
       - Knowledge Guide: taxonomy/knowledge/guide.md
       - Knowledge Contribution Details: taxonomy/knowledge/contribution_details.md
+  - User Interface:
+      - UI Overview: user-interface/ui_overview.md
+      - Chat with the model: user-interface/playground_chat.md
+      - Contribute knowledge to community model: user-interface/knowledge_contributions.md
+      - Contribute skills to community model: user-interface/skills_contributions.md
+      - UI Configurations: user-interface/env_oauth_config.md
   - Community Model Build:
       - About Community Model Build: cmb/index.md
       - Community Model Build Process: cmb/build_process.md
