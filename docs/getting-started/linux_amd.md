@@ -12,17 +12,17 @@ logo: images/ilab_dog.png
     These steps will pull down a premade `qna.yaml` so you can do a local build. Skip the `wget`, `mv`, and `ilab taxonomy diff` if you don't want to do this.
 
 ```bash
-python3.11 -m venv venv-instructlab-0.18-3.11
-source venv-instructlab-0.18-3.11/bin/activate
+python3.11 -m venv --upgrade-deps venv
+source venv/bin/activate
 pip cache remove llama_cpp_python
-pip install 'instructlab[rocm]' \
-   --extra-index-url https://download.pytorch.org/whl/rocm6.0 \
-   -C cmake.args="-DLLAMA_HIPBLAS=on" \
-   -C cmake.args="-DAMDGPU_TARGETS=all" \
-   -C cmake.args="-DCMAKE_C_COMPILER=/opt/rocm/llvm/bin/clang" \
-   -C cmake.args="-DCMAKE_CXX_COMPILER=/opt/rocm/llvm/bin/clang++" \
-   -C cmake.args="-DCMAKE_PREFIX_PATH=/opt/rocm" \
-   -C cmake.args="-DLLAMA_NATIVE=off"
+CMAKE_ARGS="-DLLAMA_HIPBLAS=on \
+   -DAMDGPU_TARGETS=all \
+   -DCMAKE_C_COMPILER=/opt/rocm/llvm/bin/clang \
+   -DCMAKE_CXX_COMPILER=/opt/rocm/llvm/bin/clang++ \
+   -DCMAKE_PREFIX_PATH=/opt/rocm \
+   -DLLAMA_NATIVE=off" \
+   pip install 'instructlab[rocm]' \
+   --extra-index-url https://download.pytorch.org/whl/rocm6.0
 which ilab
 ilab config init
 cd ~/.local/share/instructlab
@@ -35,85 +35,69 @@ ilab model train
 ilab model convert --model-dir checkpoints/instructlab-granite-7b-lab-mlx-q
 ilab model serve --model-path instructlab-granite-7b-lab-trained/instructlab-granite-7b-lab-Q4_K_M.gguf
 ```
+
 ## Installing `ilab`
 
-1) Create a new directory called `instructlab` to store the files the `ilab` CLI needs when running and `cd` into the directory by running the following command:
-
-```shell
-mkdir instructlab
-cd instructlab
-```
-
-!!! note
-    The following steps in this document use [Python venv](https://docs.python.org/3/library/venv.html) for virtual environments. However, if you use another tool such as [pyenv](https://github.com/pyenv/pyenv) or [Conda Miniforge](https://github.com/conda-forge/miniforge) for managing Python environments on your machine continue to use that tool instead. Otherwise, you may have issues with packages that are installed but not found in `venv`.
-
-2) There are a few ways you can locally install the `ilab` CLI. Select your preferred installation method from the following instructions. You can then install `ilab` and activate your `venv` environment.
+The following steps in this document use [Python venv](https://docs.python.org/3/library/venv.html) for virtual environments. However, if you use another tool such as [pyenv](https://github.com/pyenv/pyenv) or [Conda Miniforge](https://github.com/conda-forge/miniforge) for managing Python environments on your machine continue to use that tool instead. Otherwise, you may have issues with packages that are installed but not found in `venv`.
 
 !!! note
     ⏳ `pip install` may take some time, depending on your internet connection. In case installation fails with error ``unsupported instruction `vpdpbusd'``, append `-C cmake.args="-DLLAMA_NATIVE=off"` to `pip install` command.
 
-3) Install with AMD ROCm
+1) Install with AMD ROCm
 
-```bash
-python3 -m venv --upgrade-deps venv
-source venv/bin/activate
-pip cache remove llama_cpp_python
-pip install 'instructlab[rocm]' \
-   --extra-index-url https://download.pytorch.org/whl/rocm6.0 \
-   -C cmake.args="-DLLAMA_HIPBLAS=on" \
-   -C cmake.args="-DAMDGPU_TARGETS=all" \
-   -C cmake.args="-DCMAKE_C_COMPILER=/opt/rocm/llvm/bin/clang" \
-   -C cmake.args="-DCMAKE_CXX_COMPILER=/opt/rocm/llvm/bin/clang++" \
-   -C cmake.args="-DCMAKE_PREFIX_PATH=/opt/rocm" \
-   -C cmake.args="-DLLAMA_NATIVE=off"
-```
+    ```bash
+    python3 -m venv --upgrade-deps venv
+    source venv/bin/activate
+    pip cache remove llama_cpp_python
+    pip install 'instructlab[rocm]' \
+    --extra-index-url https://download.pytorch.org/whl/rocm6.0 \
+    -C cmake.args="-DLLAMA_HIPBLAS=on" \
+    -C cmake.args="-DAMDGPU_TARGETS=all" \
+    -C cmake.args="-DCMAKE_C_COMPILER=/opt/rocm/llvm/bin/clang" \
+    -C cmake.args="-DCMAKE_CXX_COMPILER=/opt/rocm/llvm/bin/clang++" \
+    -C cmake.args="-DCMAKE_PREFIX_PATH=/opt/rocm" \
+    -C cmake.args="-DLLAMA_NATIVE=off"
+    ```
 
 On Fedora 40+, use `-DCMAKE_C_COMPILER=clang-17` and `-DCMAKE_CXX_COMPILER=clang++-17.`
 
-4) From your `venv` environment, verify `ilab` is installed correctly, by running the `ilab` command.
+2) From your `venv` environment, verify `ilab` is installed correctly, by running the `ilab` command.
 
-```shell
-ilab
-```
+    ```shell
+    ilab
+    ```
 
-*Example output of the `ilab` command*
+    *Example output of the `ilab` command*
 
-```shell
-(venv) $ ilab
-Usage: ilab [OPTIONS] COMMAND [ARGS]...
+    ```shell
+    (venv) $ ilab
+    Usage: ilab [OPTIONS] COMMAND [ARGS]...
 
-CLI for interacting with InstructLab.
+    CLI for interacting with InstructLab.
 
-If this is your first time running InstructLab, it's best to start with `ilab config init` to create the environment.
+    If this is your first time running ilab, it's best to start with `ilab
+    config init` to create the environment.
 
-Options:
---config PATH  Path to a configuration file.  [default:
-               /home/user/.config/instructlab/config.yaml]
--v, --verbose  Enable debug logging (repeat for even more verbosity)
---version      Show the version and exit.
---help         Show this message and exit.
+    Options:
+    --config PATH  Path to a configuration file.  [default:
+                    /Users/kellybrown/.config/instructlab/config.yaml]
+    -v, --verbose  Enable debug logging (repeat for even more verbosity)
+    --version      Show the version and exit.
+    --help         Show this message and exit.
 
-Commands:
-config    Command Group for Interacting with the Config of InstructLab.
-data      Command Group for Interacting with the Data generated by...
-model     Command Group for Interacting with the Models in InstructLab.
-system    Command group for all system-related command calls
-taxonomy  Command Group for Interacting with the Taxonomy of InstructLab.
+    Commands:
+    config    Command Group for Interacting with the Config of InstructLab.
+    data      Command Group for Interacting with the Data generated by...
+    model     Command Group for Interacting with the Models in InstructLab.
+    system    Command group for all system-related command calls
+    taxonomy  Command Group for Interacting with the Taxonomy of InstructLab.
 
-Aliases:
-chat      model chat
-convert   model convert
-diff      taxonomy diff
-download  model download
-evaluate  model evaluate
-generate  data generate
-init      config init
-list      model model_list
-serve     model serve
-sysinfo   system info
-test      model test
-train     model train
-```
+    Aliases:
+    chat      model chat
+    generate  data generate
+    serve     model serve
+    train     model train
+    ```
 
 !!! important
     Every `ilab` command needs to be run from within your Python virtual environment. You can enter the Python environment by running the `source venv/bin/activate` command.
