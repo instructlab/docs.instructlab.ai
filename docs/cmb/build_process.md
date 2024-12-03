@@ -25,14 +25,23 @@ ilab taxonomy diff
     `~/.local/share/instructlab/datasets` -- should be empty before starting
      Every gpu should be "empty", or `0%` check with `nvidia-smi`
 
+!!! note
+    These steps were tested on the `a100` x8 machine that was given to the team as of Dec
+    3rd, 2024. If you have different hardware you'll need a different profile, and different
+    options.
+
 ## Create the data
 ```bash
-ilab data generate
+# annouce the start of the SDG
+ilab data generate --pipeline full --gpus 8
+# annouce the completion of the SDG
 ```
 
 ## Run the training after the generate is complete
 ```bash
-ilab model train --strategy lab-multiphase --phased-phase1-data ~/.local/share/instructlab/datasets/knowledge_train_msgs_XXXXXXX.jsonl --phased-phase2-data ~/.local/share/instructlab/datasets/skills_train_msgs_XXXXXXX.jsonl
+# annouce the start of the training
+ilab model train --strategy lab-multiphase --phased-phase1-data ~/.local/share/instructlab/datasets/knowledge_train_msgs_XXXXXXX.jsonl --phased-phase2-data ~/.local/share/instructlab/datasets/skills_train_msgs_XXXXXXX.jsonl --skip-user-confirm --pipeline accelerated --force-clear-phased-cache
+# annouce the completion of the training
 ```
 
 ## Post training evaluation steps
@@ -71,6 +80,9 @@ ilab model evaluate --benchmark mt_bench_branch --model ~/.local/share/checkpoin
 
 ## Hosting the release candidates
 
+!!! warning
+    This needs to be revisited as a process, this was a hack to start.
+
 rsync over the files
 ```bash
 mkdir $(date +%F)
@@ -108,6 +120,7 @@ Find the `ilab` random command to host the model, send that on after the PR lett
 ```
 cat model_ilab_scripting.sh
 ```
+
 ## Form letter for PRs
 
 Hi! 👋
@@ -124,6 +137,7 @@ With confirmed success, tag the PR with "ready-for-merge" and remove the "commun
 After you have merged in the PRs to the taxonomy, now you need to push this to huggingface, if you don't have access to HuggingFace, you will need to find someone to add you to it ;).
 
 1) Clone down the repository on the staging box if you haven't already
+
 ```bash
 git clone https://huggingface.co/instructlab/granite-7b-lab
 cd granite-7b-lab
@@ -131,10 +145,12 @@ vi .git/config
 # url = git@hf.co:instructlab/granite-7b-lab
 # verify you can authenticate with hf.com: ssh -T git@hf.co
 ```
+
 2) Copy in the `samples_xxxx` into the granite-7b-lab
 3) `git add . && git commit`
 4) Write up a good commit message
 5) tag and push
+
 ```bash
 git tag cmb-run-XXXXX
 git push origin main
