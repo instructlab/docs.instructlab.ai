@@ -11,9 +11,8 @@ logo: images/ilab_dog.png
 !!! note
     These steps will pull down a premade `qna.yaml` so you can do a local build. Skip the `wget`, `mv`, and `ilab taxonomy diff` if you don't want to do this.
 
-```bash
-python3.11 -m venv venv-instructlab-0.18-3.11
-source venv-instructlab-0.18-3.11/bin/activate
+python3.11 -m venv --upgrade-deps venv
+source venv/bin/activate
 pip cache remove llama_cpp_python
 pip install 'instructlab[cuda]' \
    -C cmake.args="-DLLAMA_CUDA=on" \
