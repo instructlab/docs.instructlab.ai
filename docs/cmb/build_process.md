@@ -57,7 +57,7 @@ mkdir /home/instructlab/.local/share/instructlab/phased
 mkdir /home/instructlab/.local/share/instructlab/datasets
 ```
 
-## Add the `insturctlab_community` mixin
+## Add the `instructlab_community` mixin
 For the community build, off the `base` model, you should add the community data set, these are the steps:
 ```bash
 cd ~/.local/share/instructlab/datasets/
