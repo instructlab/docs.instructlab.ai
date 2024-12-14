@@ -87,7 +87,7 @@ use_legacy_tmpl must be true in order to generate data for and train the granite
 ## Create the data
 ```bash
 # annouce the start of the SDG
-ilab data generate --use-legacy-tmpl --pipeline full --gpus 8
+ilab data generate --pipeline full --gpus 8
 # annouce the completion of the SDG
 ```
 
