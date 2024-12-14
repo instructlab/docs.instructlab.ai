@@ -94,7 +94,7 @@ ilab data generate --pipeline full --gpus 8
 ## Run the training after the generate is complete
 ```bash
 # annouce the start of the training
-ilab model train --use-legacy-tmpl --strategy lab-multiphase --phased-phase1-data /home/instructlab/.local/share/instructlab/datasets/knowledge_train_msgs_*.jsonl --phased-phase2-data /home/instructlab/.local/share/instructlab/datasets/skills_train_msgs_*.jsonl --skip-user-confirm --force-clear-phased-cache
+ilab model train --strategy lab-multiphase --phased-phase1-data /home/instructlab/.local/share/instructlab/datasets/knowledge_train_msgs_*.jsonl --phased-phase2-data /home/instructlab/.local/share/instructlab/datasets/skills_train_msgs_*.jsonl --skip-user-confirm --force-clear-phased-cache
 # annouce the completion of the training
 ```
 
