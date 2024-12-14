@@ -64,7 +64,26 @@ cd ~/.local/share/instructlab/datasets/
 wget https://huggingface.co/datasets/instructlab/InstructLabCommunity/resolve/main/instructlab_community.jsonl
 cd ~
 ```
+## Modify your config
+`ilab config edit`
 
+find the general section of your config and ensure it matches the following:
+
+general:
+  # Debug level for logging.
+  # Default: 0
+  debug_level: 0
+  # Log format. https://docs.python.org/3/library/logging.html#logrecord-attributes
+  # Default: %(levelname)s %(asctime)s %(name)s:%(lineno)d: %(message)s
+  log_format: '%(levelname)s %(asctime)s %(name)s:%(lineno)d: %(message)s'
+  # Log level for logging.
+  # Default: INFO
+  log_level: INFO
+  # Use legacy IBM Granite chat template (default uses 3.0 Instruct template)
+  # Default: False
+  use_legacy_tmpl: true 
+  
+use_legacy_tmpl must be true in order to generate data for and train the granite-3.0-8b-base model
 ## Create the data
 ```bash
 # annouce the start of the SDG
