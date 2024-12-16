@@ -38,7 +38,7 @@ ilab model download --hf-token <your-huggingface-token>
 ```
 
 !!! note
-    ⏳ This command can take few minutes or immediately depending on your internet connection or model is cached. If you have issues connecting to Hugging Face, refer to the [Hugging Face discussion forum](https://discuss.huggingface.co/) for more details.
+    ⏳ This command can take few minutes to run, or it can finish immediately. The speed depends on your internet connection and whether or not model is cached. If you have issues connecting to Hugging Face, refer to the [Hugging Face discussion forum](https://discuss.huggingface.co/) for more details.
 
 ## Downloading an entire Hugging Face repository (Safetensors Model)
 
