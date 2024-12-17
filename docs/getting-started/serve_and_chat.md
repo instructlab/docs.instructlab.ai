@@ -6,19 +6,19 @@ logo: images/ilab_dog.png
 
 # 🍴 Serving the model
 
-- Serve the model by running the following command:
+Serve the model by running the following command:
 
 ```shell
 ilab model serve
 ```
 
-Serve a non-default model:
+Serve a non-default model with the following command:
 
 ```shell
 ilab model serve --model-path models/granite-7b-instruct.GGUF
 ```
 
-nce the model is served and ready, you'll see the following output:
+*Example output of a model that is served and ready*
 
 ```shell
 (venv) $ ilab model serve
@@ -31,15 +31,15 @@ Press CTRL+C to shut down the server.
 !!! note
     If multiple `ilab` clients try to connect to the same InstructLab server at the same time, the 1st will connect to the server while the others will start their own temporary server. This will require additional resources on the host machine.
 
-- Serve a non-default Safetensors model (e.g. granite-7b-lab). NOTE: this requires a GPU.
+Serve a non-default Safetensors model (e.g. granite-7b-lab). NOTE: this requires a GPU.
 
-Ensure vllm is installed:
+a. Ensure vllm is installed:
 
 ```shell
 pip show vllm
 ```
 
-If it is not, please run:
+b. If it is not, please run:
 
 ```shell
 pip install vllm@git+https://github.com/opendatahub-io/vllm@2024.08.01
@@ -69,8 +69,8 @@ Please note that usage of `--model` necessitates that the existing server has th
 
 Before you start adding new skills and knowledge to your model, you can check its baseline performance by asking it a question such as `what is the capital of Canada?`.
 
-> [!NOTE]
-> The model needs to be trained with the generated synthetic data to use the new skills or knowledge
+!!! note
+    The model needs to be trained with the generated synthetic data to use any new skills or knowledge
 
 
 ```shell

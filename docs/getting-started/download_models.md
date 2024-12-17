@@ -6,7 +6,7 @@ logo: images/ilab_dog.png
 
 # 📥 Download the model
 
-- Run the `ilab model download` command.
+1) Run the ilab model download command to download a compact pre-trained version of the `granite-7b-lab-GGUF`, `merlinite-7b-lab-GGUF`, and `Mistral-7B-Instruct-v0.2-GGUF` models (~4.4G each) from HuggingFace.
 
 ```shell
 ilab model download
@@ -14,22 +14,38 @@ ilab model download
 
 `ilab model download` downloads a compact pre-trained version of the [model](https://huggingface.co/instructlab/) (~4.4G) from HuggingFace:
 
+*Example output of the models downloading*
+
 ```shell
-(venv) $ ilab model download
-Downloading model from Hugging Face: instructlab/merlinite-7b-lab-GGUF@main to /Users/USERNAME/Library/Caches/instructlab/models...
-...
-INFO 2024-08-01 15:05:48,464 huggingface_hub.file_download:1893: Download complete. Moving file to /Users/USERNAME/Library/Caches/instructlab/models/merlinite-7b-lab-Q4_K_M.gguf
+Downloading model from Hugging Face:
+    Model: instructlab/granite-7b-lab-GGUF@main
+    Destination: /Users/<user>/.cache/instructlab/models
+Downloading model from Hugging Face:
+    Model: instructlab/merlinite-7b-lab-GGUF@main
+    Destination: /Users/<user>/.cache/instructlab/models
+Downloading model from Hugging Face:
+    Model: TheBloke/Mistral-7B-Instruct-v0.2-GGUF@main
+    Destination: /Users/<user>/.cache/instructlab/models
+
+TheBloke/Mistral-7B-Instruct-v0.2-GGUF requires a HF Token to be set.
+Please use '--hf-token' or 'export HF_TOKEN' to download all necessary models.
+```
+
+a) You may be prompted to use your Hugging Face token to download the `Mistral-7B-Instruct-v0.2-GGUF` model.
+
+```shell
+ilab model download --hf-token <your-huggingface-token>
 ```
 
 !!! note
-    ⏳ This command can take few minutes or immediately depending on your internet connection or model is cached. If you have issues connecting to Hugging Face, refer to the [Hugging Face discussion forum](https://discuss.huggingface.co/) for more details.
+    ⏳ This command can take few minutes to run, or it can finish immediately. The speed depends on your internet connection and whether or not the model is cached. If you have issues connecting to Hugging Face, refer to the [Hugging Face discussion forum](https://discuss.huggingface.co/) for more details.
 
 ## Downloading an entire Hugging Face repository (Safetensors Model)
 
-- Specify repository, and a Hugging Face token if necessary. For example:
+1) Specify repository, and a Hugging Face token if necessary. For example:
 
 ```shell
-HF_TOKEN=<YOUR HUGGINGFACE TOKEN GOES HERE> ilab model download --repository=instructlab/granite-7b-lab
+ilab model download --repository instructlab/granite-7b-lab-GGUF --filename granite-7b-lab-Q4_K_M.gguf --hf-token <your-huggingface-token>
 ```
 
 These types of models are useful for GPU-enabled systems or anyone looking to serve a model using vLLM. InstructLab provides Safetensor versions of our Granite models on HuggingFace.
@@ -46,9 +62,11 @@ ilab model list
 
 ```shell
 (venv) $ ilab model list
-+------------------------------+---------------------+--------+
-| Model Name                   | Last Modified       | Size   |
-+------------------------------+---------------------+--------+
-| merlinite-7b-lab-Q4_K_M.gguf | 2024-08-01 15:05:48 | 4.1 GB |
-+------------------------------+---------------------+--------+
++-------------------------------------+---------------------+--------+
+| Model Name                          | Last Modified       | Size   |
++-------------------------------------+---------------------+--------+
+| granite-7b-lab-Q4_K_M.gguf          | 2024-08-01 15:05:48 | 4.1 GB |
+| merlinite-7b-lab-Q4_K_M.gguf        | 2024-08-01 15:05:48 | 4.1 GB |
+| mistral-7b-instruct-v0.2.Q4_K_M.gguf| 2024-08-01 15:05:48 | 4.1 GB |
++-------------------------------------+---------------------+--------+
 ```

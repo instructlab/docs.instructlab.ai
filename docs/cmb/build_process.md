@@ -1,19 +1,31 @@
 
 !!! note
     This document is the Community Build Process, these are the general steps to get the cmb built.
+    If you are looking for the [config.yaml](https://gist.github.com/jjasghar/436931fbee1d34f029f3c099311301c3) that worked for `granite-3.0-8b-base` there it is.
+
 
 ## Community Model Build diagram
 
 ![](../images/instructlab_cmb_build.png)
 
-## Add the PRs to the local tree
+We have created a default `build.sh` script, which will live in a repository (soon). The actual commands are
+explained here, and this should be considered the source of truth.
 
-Add the PRs you want to be built into the run. Tag the PRs with "cmb-running."
+## Add the PRs to the build machine's taxonomy tree
 
+Add the [PRs](https://github.com/instructlab/taxonomy/pulls) you want to be built into the run. Tag the PRs with "cmb-running."
+
+Example:
 ```bash
 mkdir -p compositional_skills/general/synonyms
 vi compositional_skills/general/synonyms/attribution.txt
 vi compositional_skills/general/synonyms/qna.yaml
+```
+Or if you are pulling from GitHub:
+```bash
+cd ~/.local/share/instructlab/taxonomy
+git fetch origin pull/ID/head:BRANCH_NAME
+git checkout BRANCHNAME
 ```
 
 ## Verify changes
@@ -25,17 +37,70 @@ ilab taxonomy diff
     `~/.local/share/instructlab/datasets` -- should be empty before starting
      Every gpu should be "empty", or `0%` check with `nvidia-smi`
 
+!!! note
+    These steps were tested on the `a100` x8 machine that was given to the team as of Dec
+    3rd, 2024. If you have different hardware you'll need a different profile, and different
+    options.
+
+## Reset the build directories
+
+Move the old build directories away, or save them. Something along these lines:
+```bash
+mv /home/instructlab/.local/share/instructlab/phased/journalfile.yaml /home/instructlab/.local/share/instructlab/phased/journalfile.yaml_$DATE
+mv /home/instructlab/.local/share/instructlab/datasets /home/instructlab/.local/share/instructlab/datasets_$DATE
+mv /home/instructlab/.local/share/instructlab/phased /home/instructlab/.local/share/instructlab/phased_$DATE
+```
+
+Create the directories you moved away:
+```bash
+mkdir /home/instructlab/.local/share/instructlab/phased
+mkdir /home/instructlab/.local/share/instructlab/datasets
+```
+
+## Add the `instructlab_community` mixin
+For the community build, off the `base` model, you should add the community data set, these are the steps:
+```bash
+cd ~/.local/share/instructlab/datasets/
+wget https://huggingface.co/datasets/instructlab/InstructLabCommunity/resolve/main/instructlab_community.jsonl
+cd ~
+```
+## Modify your config
+`ilab config edit`
+
+find the general section of your config and ensure it matches the following:
+
+```yaml
+general:
+  # Debug level for logging.
+  # Default: 0
+  debug_level: 0
+  # Log format. https://docs.python.org/3/library/logging.html#logrecord-attributes
+  # Default: %(levelname)s %(asctime)s %(name)s:%(lineno)d: %(message)s
+  log_format: '%(levelname)s %(asctime)s %(name)s:%(lineno)d: %(message)s'
+  # Log level for logging.
+  # Default: INFO
+  log_level: INFO
+  # Use legacy IBM Granite chat template (default uses 3.0 Instruct template)
+  # Default: False
+  use_legacy_tmpl: true 
+```
+
+use_legacy_tmpl must be true in order to generate data for and train the granite-3.0-8b-base model
 ## Create the data
 ```bash
-ilab data generate
+# annouce the start of the SDG
+ilab data generate --pipeline full --gpus 8
+# annouce the completion of the SDG
 ```
 
 ## Run the training after the generate is complete
 ```bash
-ilab model train --strategy lab-multiphase --phased-phase1-data ~/.local/share/instructlab/datasets/knowledge_train_msgs_XXXXXXX.jsonl --phased-phase2-data ~/.local/share/instructlab/datasets/skills_train_msgs_XXXXXXX.jsonl
+# annouce the start of the training
+ilab model train --strategy lab-multiphase --phased-phase1-data /home/instructlab/.local/share/instructlab/datasets/knowledge_train_msgs_*.jsonl --phased-phase2-data /home/instructlab/.local/share/instructlab/datasets/skills_train_msgs_*.jsonl --skip-user-confirm --force-clear-phased-cache
+# annouce the completion of the training
 ```
 
-## Post training evaluation steps
+## (optional) Post training evaluation steps
 
 If you want to send a sanity check, you can set these two variables to do a subset of the training:
 ```bash
@@ -43,7 +108,7 @@ export INSTRUCTLAB_EVAL_FIRST_N_QUESTIONS=10 # mtbench
 export INSTRUCTLAB_EVAL_MMLU_MIN_TASKS=true # mmlu
 ```
 
-(optional in case of sanity of a specific Sample Model creation)
+(In case of sanity of a specific Sample Model creation)
 ```bash
 ilab model evaluate --benchmark mt_bench --model ~/.local/share/instructlab/checkpoints/hf_format/samples_XXXXXX
 ```
@@ -54,6 +119,7 @@ ilab model evaluate --benchmark mt_bench --model ~/.local/share/instructlab/chec
 
 - `mmlu`: general model knowledge, general facts, it's a knowledge number out of 100
 - `mt_bench`: is a skill based, extraction, etc, out of 10
+
 !!! note
     we want around 7.1 for `mt_bench` average for a model candidate
 
@@ -69,86 +135,24 @@ ilab model evaluate --benchmark mmlu_branch --model ~/.local/share/checkpoints/h
 ilab model evaluate --benchmark mt_bench_branch --model ~/.local/share/checkpoints/hf_format/<checkpoint> --taxonomy-path ~/.local/share/instructlab/taxonomy --judge-model ~/.cache/instructlab/models/prometheus-8x7b-v2-0 --base-model ~/.cache/instructlab/models/granite-7b-redhat-lab --base-branch main --branch main
 ```
 
-## Hosting the release candidates
+## Publish to Huggingface
 
-rsync over the files
+Sanity check the model to make sure it does what you are expecting:
 ```bash
-mkdir $(date +%F)
-cd $(date +%F)
-rsync --info=progress2 -avz -e <USERNAME>@<REMOTE>:~/.local/share/checkpoints/hf_format/samples_xxxxx ./
+ilab model chat --model /home/instructlab/.local/share/instructlab/phased/phase2/checkpoints/hf_format/samples_XXXXX
 ```
 
-Set up (if needed)
+Copy the checkpoint to the repository directory:
 ```bash
-python3.11 -m venv venv
-source venv/bin/activate
-pip install vllm
-./run.sh
+cp /home/instructlab/.local/share/instructlab/phased/phase2/checkpoints/hf_format/samples_XXXX/* ~/huggingface_repos/granite-3.0-8b-lab-community/
 ```
 
-`run.sh`
+Add and commit the changes to the repository:
 ```bash
-#!/bin/bash
-
-DIRECTORY=$1
-
-DATE=$(date +%F)
-RANDOM_STRING=$(tr -dc A-Za-z0-9 </dev/urandom | head -c 10; echo)
-RANDOM_PORT=$(shuf -i 8001-8800 -n 1)
-API_KEY=$RANDOM_STRING-$DATE
-
-echo "$DIRECTORY,$API_KEY,$RANDOM_PORT" >> model_hosting.csv
-
-echo "ilab model chat --endpoint-url http://cmb-staging.DOMAIN.xx:$RANDOM_PORT/v1 --api-key $API_KEY --model $DIRECTORY" >> model_ilab_scripting.sh
-
-python -m vllm.entrypoints.openai.api_server --model $DIRECTORY --api-key $API_KEY --host 0.0.0.0 --port $RANDOM_PORT --tensor-parallel-size 2
-```
-
-Find the `ilab` random command to host the model, send that on after the PR letter
-```
-cat model_ilab_scripting.sh
-```
-## Form letter for PRs
-
-Hi! 👋
-Thank you for submitting this PR. We are ready to do some validation now, and we have a few candidates to see if they improve the model.
-We some resources to run these release candidates, but we need _you_ to help us. Can you reach out to me either on Slack (@awesome) or email me at awesomeATinstructlab.ai so I can get you access via `ilab model chat`?
-We can only run these models for a "week" or so, so please reach out as soon as possible and tell me which one is best for you on this PR.
-
-## With confirmed success
-
-With confirmed success, tag the PR with "ready-for-merge" and remove the "community-build-ready" tags. Wait till the "week" before shutting down the staging instance, and merge in all the ones that have been tagged.
-
-## Steps to Merge and Release
-
-After you have merged in the PRs to the taxonomy, now you need to push this to huggingface, if you don't have access to HuggingFace, you will need to find someone to add you to it ;).
-
-1) Clone down the repository on the staging box if you haven't already
-```bash
-git clone https://huggingface.co/instructlab/granite-7b-lab
-cd granite-7b-lab
-vi .git/config
-# url = git@hf.co:instructlab/granite-7b-lab
-# verify you can authenticate with hf.com: ssh -T git@hf.co
-```
-2) Copy in the `samples_xxxx` into the granite-7b-lab
-3) `git add . && git commit`
-4) Write up a good commit message
-5) tag and push
-```bash
-git tag cmb-run-XXXXX
+cd ~/huggingface_repos/granite-3.0-8b-lab-community/
+git add .
+git commit -s
 git push origin main
-git push origin cmb-run-XXXXX
 ```
 
-## Convert to `gguf`
-```bash
-git clone https://github.com/ggerganov/llama.cpp.git
-cd llama.cpp/
-pip install -r requirements.txt
-make -j8
-./convert_hf_to_gguf.py ../granite-7b-lab --outfile granite-7b-fp16.gguf
-./llama-quantize granite-7b-fp16.gguf granite-7b-_Q4_K_M.gguf Q4_K_M/
-./llama-cli -m granite-7b-_Q4_K_M.gguf -p "who is batman?" -n 128
-```
-
+Congratulations, this is the core steps to building out the safe-tensors to publish to hugging face.

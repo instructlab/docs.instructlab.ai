@@ -11,8 +11,8 @@ logo: images/ilab_dog.png
     These steps will pull down a premade `qna.yaml` so you can do a local build. Skip the `wget`, `mv`, and `ilab taxonomy diff` if you don't want to do this.
 
 ```bash
-python3.11 -m venv venv-instructlab-0.18-3.11
-source venv-instructlab-0.18-3.11/bin/activate
+python3.11 -m venv --upgrade-deps venv
+source venv/bin/activate
 pip install 'instructlab[mps]'
 which ilab
 ilab config init
@@ -26,37 +26,28 @@ ilab model train
 ilab model convert --model-dir checkpoints/instructlab-granite-7b-lab-mlx-q
 ilab model serve --model-path instructlab-granite-7b-lab-trained/instructlab-granite-7b-lab-Q4_K_M.gguf
 ```
-## Installing `ilab`
 
-1) Create a new directory called `instructlab` to store the files the `ilab` CLI needs when running and `cd` into the directory by running the following command:
+## Installing `ilab` 
+
+The following steps in this document use [Python venv](https://docs.python.org/3/library/venv.html) for virtual environments. However, if you use another tool such as [pyenv](https://github.com/pyenv/pyenv) or [Conda Miniforge](https://github.com/conda-forge/miniforge) for managing Python environments on your machine continue to use that tool instead. Otherwise, you may have issues with packages that are installed but not found in `venv`.
+
+!!! note
+    ⏳ `pip install` may take some time, depending on your internet connection. In case installation fails with error ``unsupported instruction `vpdpbusd'``, append `-C cmake.args="-DLLAMA_NATIVE=off"` to the `pip install` command.
+
+1) Install with Apple Metal on M1/M2/M3 Macs:
 
 ```shell
-mkdir instructlab
-cd instructlab
+python3.11 -m venv --upgrade-deps venv
+source venv/bin/activate
+pip cache remove llama_cpp_python
+pip install instructlab
 ```
-
-!!! note
-    The following steps in this document use [Python venv](https://docs.python.org/3/library/venv.html) for virtual environments. However, if you use another tool such as [pyenv](https://github.com/pyenv/pyenv) or [Conda Miniforge](https://github.com/conda-forge/miniforge) for managing Python environments on your machine continue to use that tool instead. Otherwise, you may have issues with packages that are installed but not found in `venv`.
-
-2) There are a few ways you can locally install the `ilab` CLI. Select your preferred installation method from the following instructions. You can then install `ilab` and activate your `venv` environment.
-
-!!! note
-    ⏳ `pip install` may take some time, depending on your internet connection. In case installation fails with error ``unsupported instruction `vpdpbusd'``, append `-C cmake.args="-DLLAMA_NATIVE=off"` to `pip install` command.
-
-3) Install with Apple Metal on M1/M2/M3 Macs
 
 !!! note
     Make sure your system Python build is `Mach-O 64-bit executable arm64` by using `file -b $(command -v python)`,
     or if your system is setup with [pyenv](https://github.com/pyenv/pyenv) by using the `file -b $(pyenv which python)` command.
 
-```shell
-python3 -m venv --upgrade-deps venv
-source venv/bin/activate
-pip cache remove llama_cpp_python
-pip install 'instructlab[mps]'
-```
-
-4) From your `venv` environment, verify `ilab` is installed correctly, by running the `ilab` command.
+2) From your `venv` environment, verify `ilab` is installed correctly, by running the `ilab` command.
 
 ```shell
 ilab
@@ -70,11 +61,12 @@ Usage: ilab [OPTIONS] COMMAND [ARGS]...
 
 CLI for interacting with InstructLab.
 
-If this is your first time running InstructLab, it's best to start with `ilab config init` to create the environment.
+If this is your first time running ilab, it's best to start with `ilab
+config init` to create the environment.
 
 Options:
 --config PATH  Path to a configuration file.  [default:
-               /home/user/.config/instructlab/config.yaml]
+                    /Users/kellybrown/.config/instructlab/config.yaml]
 -v, --verbose  Enable debug logging (repeat for even more verbosity)
 --version      Show the version and exit.
 --help         Show this message and exit.
@@ -88,16 +80,8 @@ taxonomy  Command Group for Interacting with the Taxonomy of InstructLab.
 
 Aliases:
 chat      model chat
-convert   model convert
-diff      taxonomy diff
-download  model download
-evaluate  model evaluate
 generate  data generate
-init      config init
-list      model model_list
 serve     model serve
-sysinfo   system info
-test      model test
 train     model train
 ```
 
