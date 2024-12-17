@@ -15,7 +15,7 @@ The InstructLab Project has a two-level governance structure with an Oversight C
 
 Except where otherwise noted, decisions should always start at the most local level of project governance. For example, decisions that affect only one project, such as the taxonomy repository and not the `ilab` CLI tool, can happen within the taxonomy project. While communication between the different project teams is important as they are all interconnected, minor decisions do not need organization-wide consensus and can be moved forward at the project level.
 
-Changes in maintainership and other governance are currently announced on the InstructLab community Slack channel. Directions to join the Slack channel can be found [here](https://github.com/instructlab/community/blob/main/InstructLabSlackGuide.md). Changes are also announced to the [announce mailing list](https://github.com/instructlab/community/blob/main/Collaboration.md#email-lists).
+Changes in maintainership and other governance are currently announced on the InstructLab community Discord and Slack servers. Directions to join the Discord server can be found [here](https://github.com/instructlab/community/blob/main/InstructLab_DISCORD_GUIDE.md), and instructions for the Slack server can be found [here](https://github.com/instructlab/community/blob/main/InstructLab_SLACK_GUIDE.md). Changes are also announced to the [announce mailing list](https://github.com/instructlab/community/blob/main/Collaboration.md#email-lists).
 
 ## Project Maintainers overview
 

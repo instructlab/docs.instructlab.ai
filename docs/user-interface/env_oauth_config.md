@@ -48,4 +48,4 @@ Once the app is created, there will be an option to create a secret. Press the C
 Update the .env files with the new ID and secret ID generated, `OAUTH_GITHUB_ID` = Client ID, `OAUTH_GITHUB_SECRET` = Client Secret
 
 !!! note 
-    If you prefer to not set up the OAuth, we recommend for you to reach out to the UI Maintainers in our `#ui` [slack channel](https://join.slack.com/t/instruct-lab/shared_invite/zt-2kieyqiz9-zhXSxGnXk6uL_f3hVbD53g) , where they will provide details for setting up an OAuth app for the instructlab-public org.
+    If you prefer to not set up the OAuth, we recommend for you to reach out to the UI Maintainers in our `#ui` [discord server](https://instructlab.ai/discord) or [slack channel](https://join.slack.com/t/instruct-lab/shared_invite/zt-2kieyqiz9-zhXSxGnXk6uL_f3hVbD53g) , where they will provide details for setting up an OAuth app for the instructlab-public org.

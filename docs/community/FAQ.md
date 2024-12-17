@@ -94,7 +94,7 @@ The goal on the InstructLab project is to emocratize contributions to AI and LLM
 
 ### How can I contribute?
 
-You can begin your contribution journey by reading over the [Contributing](https://github.com/instruct-lab/community/blob/main/CONTRIBUTING.md) guide and joining the [Community Slack Channel](https://github.com/instructlab/community/blob/main/InstructLabSlackGuide.md).
+You can begin your contribution journey by reading over the [Contributing](https://github.com/instruct-lab/community/blob/main/CONTRIBUTING.md) guide and joining the [Community Discord Server](https://instructlab.ai/discord) or the [Community Slack Channel](https://github.com/instructlab/community/blob/main/InstructLabSlackGuide.md).
 
 When you're ready to start contributing, you can follow the [Getting Started](https://github.com/instruct-lab/community/blob/main/README.md#getting-started-with-the-instructlab-project-workstreams) guide. This guide shows you how to
 
@@ -230,7 +230,7 @@ The latest version of InstructLab can be downloaded using the `ilab download` CL
 
 ### I have a question about the project. Where should I go?
 
-Currently, the best method for communicating with peers and project maintainers is in the Community Slack Channel. Visit our [InstructLab Slack Workspace Guide](https://github.com/instructlab/community/blob/main/InstructLabSlackGuide.md) for information on how to join.
+Currently, the best method for communicating with peers and project maintainers is in the Community Discord/Slack servers. Visit our [InstructLab Slack Workspace Guide](https://github.com/instructlab/community/blob/main/InstructLab_DISCORD_GUIDE.md), [InstructLab Slack Workspace Guide](https://github.com/instructlab/community/blob/main/InstructLab_SLACK_GUIDE.md) for information on how to join.
 
 See our [community collaboration page](https://github.com/instructlab/community/blob/main/Collaboration.md), including information on our mailing list, meetings, and other ways of interacting with the community.
 
@@ -284,13 +284,18 @@ To run and train InstructLab locally, you must meet the following requirements:
 
 ## Additional Resources
 
-Additional resources, including the Code of Conduct, Code of Conduct Committee members, how to contribute, how to join the Slack channel, and more, can be found in the following repositories:
+Additional resources, including the Code of Conduct, Code of Conduct Committee members, how to contribute, how to join the Discord or Slack server, and more, can be found in the following repositories:
 
 [InstructLab Taxonomy Repository](https://github.com/instructlab/taxonomy)
 
 [InstructLab CLI Repository](https://github.com/instructlab/instructlab)
 
 [InstructLab Community Repository](https://github.com/instructlab/community)
+
+Discord and communication
+
+- [Joining the Discord Server](https://github.com/instructlab/community/blob/main/InstructLab_DISCORD_GUIDE.md)
+- [Discord Moderation](https://github.com/instructlab/community/blob/main/InstructLab_DISCORD_MODERATION_GUIDE.md)
 
 Slack and communication
 
