@@ -69,6 +69,7 @@ cd ~
 
 find the general section of your config and ensure it matches the following:
 
+```yaml
 general:
   # Debug level for logging.
   # Default: 0
@@ -82,7 +83,8 @@ general:
   # Use legacy IBM Granite chat template (default uses 3.0 Instruct template)
   # Default: False
   use_legacy_tmpl: true 
-  
+```
+
 use_legacy_tmpl must be true in order to generate data for and train the granite-3.0-8b-base model
 ## Create the data
 ```bash
