@@ -20,7 +20,7 @@ There are 2 ways to access the UI:
     To log into the UI and submit Knowledge and Skills contributions, you must be a member of the [instructlab-public](https://github.com/instructlab-public) github repository.
 
 !!! note
-    If you aren't a member of the repository, but still wish to experiment with the UI, we recommend you to reach out to the UI Maintainers in our `#ui` [slack channel](https://join.slack.com/t/instruct-lab/shared_invite/zt-2kieyqiz9-zhXSxGnXk6uL_f3hVbD53g) for an invitation.
+    If you aren't a member of the repository, but still wish to experiment with the UI, we recommend you to reach out to the UI Maintainers in our `#ui` [Discord server](https://instructlab.ai/discord) or [slack channel](https://join.slack.com/t/instruct-lab/shared_invite/zt-2kieyqiz9-zhXSxGnXk6uL_f3hVbD53g) for an invitation.
     
     If you wish to not join but still wish to experiment, download it locally.
 
