@@ -1,1 +1,9 @@
 venv*
+
+# uv
+uv.lock
+pyproject.toml
+.python-version
+
+# pycharm
+.idea

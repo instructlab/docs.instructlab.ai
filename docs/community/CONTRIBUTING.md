@@ -66,7 +66,7 @@ Once you've created a pull request (PR), maintainers will review your code and m
 * Write detailed commit messages
 * Break large changes into a logical series of smaller patches, which are easy to understand individually and combine to solve a broader issue
 
-For a list of the maintainers and triagers, see the [MAINTAINERS.md](MAINTAINERS.md) page.
+For a list of the maintainers and triagers, see the [MAINTAINERS.md](https://github.com/instructlab/community/blob/main/MAINTAINERS.md) page.
 
 ### Proposing new features
 
@@ -93,7 +93,7 @@ Distributed under the [Apache License, Version 2.0](http://www.apache.org/licens
 
 SPDX-License-Identifier: [Apache-2.0](https://spdx.org/licenses/Apache-2.0)
 
-If you would like to see the detailed LICENSE click [here](LICENSE).
+If you would like to see the detailed LICENSE click [here](../LICENSE).
 
 ### Developer Certificate of Origin (DCO)
 
@@ -118,7 +118,7 @@ We automatically verify that all commit messages contain a `Signed-off-by:` line
 
 There are a number of tools that make it easier for developers to manage DCO signoffs.
 
-* DCO command line tool, which let's you do a single signoff for an entire repo ( <https://github.com/coderanger/dco> )
+* DCO command line tool, which lets you do a single signoff for an entire repo ( <https://github.com/coderanger/dco> )
 * GitHub UI integrations for adding the signoff automatically ( <https://github.com/scottrigby/dco-gh-ui> )
 * Chrome - <https://chrome.google.com/webstore/detail/dco-github-ui/onhgmjhnaeipfgacbglaphlmllkpoijo>
 * Firefox - <https://addons.mozilla.org/en-US/firefox/addon/scott-rigby/?src=search>
@@ -133,9 +133,9 @@ The following resources include additional information about each repository, su
 
 ### ilab CLI tool additional resources
 
-* [`ilab` CLI tool README.md](https://github.com/instructlab/instructlab/blob/main/README.md#). This resources provides information about the `ilab` CLI tool, including an overview, getting started, training the model, submitting a pull request, etc.
+* [`ilab` CLI tool README.md](https://github.com/instructlab/instructlab/blob/main/README.md#). This resource provides information about the `ilab` CLI tool, including an overview, getting started, training the model, submitting a pull request, etc.
 
-* [`ilab` CLI tool CONTRIBUTING.md](https://github.com/instructlab/instructlab/blob/main/CONTRIBUTING/CONTRIBUTING.md). This resources provides information about contributing to the `ilab` CLI tool repository, reporting bugs, testing, coding styles, etc.
+* [`ilab` CLI tool CONTRIBUTING.md](https://github.com/instructlab/instructlab/blob/main/CONTRIBUTING/CONTRIBUTING.md). This resource provides information about contributing to the `ilab` CLI tool repository, reporting bugs, testing, coding styles, etc.
 
 ### Taxonomy additional resources
 
