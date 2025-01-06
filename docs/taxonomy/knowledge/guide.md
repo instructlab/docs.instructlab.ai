@@ -5,11 +5,11 @@ logo: images/ilab_dog.png
 ---
 # What is "Knowledge"?
 
-Knowledge consists of data and facts and is backed by documents. When you create knowledge for a model, you're giving it additional data to more accurately answer questions.
+In the InstructLab world, knowledge consists of data and facts and is backed by documents. When you create knowledge for a model, you're giving it additional data to more accurately answer questions.
 
-Knowledge contributions in this project contain a few things.
+Knowledge contributions in this project contain a few things:
 
-- A file in a git repository that holds your information. For example, these repositories can include markdown versions of information on: Oscar 2024 winners, Law books, Shakespeare, Sports, Chemistry, etc.
+- A file in a git repository that holds your information. For example, these repositories can include markdown versions of information on Oscar 2024 winners, Law books, Shakespeare, Sports, Chemistry, etc.
 - A `qna.yaml` file that asks and answers questions about the information in the git repository.
 - An `attribution.txt` file that includes the sources for the information used in the `qna.yaml`.
 
@@ -58,7 +58,7 @@ We received many joke and poem submissions at the beginning of the project, and 
 
 LLMs have inherent limitations that make certain tasks extremely difficult, like doing math problems. They're great at other tasks, like creative writing. And they could be better at things like logical reasoning.
 
-An LLM with knowledge helps it create a basis of information that it can learn from, then you can teach it to use this knowledge via the `qna.yaml` files.
+Providing an LLM training pipeline with knowledge helps create a basis of information that the model can learn from. With InstructLab, you can teach it to use this knowledge via the `qna.yaml` files.
 
 For example, you can give an LLM the entire periodic table, then in a `qna.yaml` add something like:
 
@@ -68,7 +68,7 @@ answer: |
   The symbol for chlorine is Cl and the atomic number is 17.
 ```
 
-With a few of these qna's, the model will learn the periodic table because it has the knowledge data.
+With a few of these question-and-answer pairs, the model will learn the periodic table because it has the knowledge data.
 
 ### LLMs are great at
 
