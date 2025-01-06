@@ -5,18 +5,13 @@ logo: images/ilab_dog.png
 ---
 ## Welcome to the InstructLab Taxonomy
 
-InstructLab 🐶 uses a novel synthetic data-based alignment tuning method for
-Large Language Models (LLMs.) The "**lab**" in Instruct**Lab** 🐶 stands for
-[**L**arge-Scale **A**lignment for Chat**B**ots](https://arxiv.org/abs/2403.01081) [1].
+InstructLab 🐶 uses a novel synthetic data-based alignment tuning method for Large Language Models (LLMs.) The "**lab**" in Instruct**Lab** 🐶 stands for [**L**arge-Scale **A**lignment for Chat**B**ots](https://arxiv.org/abs/2403.01081) [^1].
 
-The LAB method is driven by taxonomies, which are largely created manually and
-with care.
+The LAB method is driven by taxonomies, which are largely created manually and with care.
 
-This repository contains a taxonomy tree that allows you to create models
-tuned with your data (enhanced via synthetic data generation) using the LAB 🐶
-method.
+The [instructlab/taxonomy](https://github.com/instructlab/taxonomy) repository contains a taxonomy tree that allows you to create models tuned with your data (enhanced via synthetic data generation) using the LAB 🐶 method.
 
-[1] Shivchander Sudalairaj*, Abhishek Bhandwaldar*, Aldo Pareja*, Kai Xu, David D. Cox, Akash Srivastava*. "LAB: Large-Scale Alignment for ChatBots", arXiv preprint arXiv: 2403.01081, 2024. (* denotes equal contributions)
+[^1]: Shivchander Sudalairaj*, Abhishek Bhandwaldar*, Aldo Pareja*, Kai Xu, David D. Cox, Akash Srivastava*. "LAB: Large-Scale Alignment for ChatBots", arXiv preprint arXiv: 2403.01081, 2024. (* denotes equal contributions)
 
 ## Choosing domains for the taxonomy
 
@@ -28,19 +23,17 @@ If you are unsure where to put your knowledge or compositional skill, create a f
 
 Learn about the concepts of "skills" and "knowledge" in our [InstructLab Community Learning Guide](https://github.com/instructlab/community/blob/main/docs/README.md).
 
-## Taxonomy tree Layout
+## Taxonomy tree layout
 
-The taxonomy tree is organized in a cascading directory structure. At the end of
-each branch, there is a YAML file (qna.yaml) that contains the examples for that
-domain. Maintainers can decide to change the names of the existing branches or to add new branches.
+The taxonomy tree is organized in a cascading directory structure. At the end of each branch, there is a YAML file (`qna.yaml`) that contains the examples for that domain along with any attribution files (`attribution.txt`). Maintainers can decide to change the names of the existing branches or to add new branches.
 
 !!! important
     Folder names do not have spaces. Use underscores between words.
 
-## Taxonomy diagram
+### Taxonomy diagram
 
 !!! note
-    These diagrams shows a subset of the taxonomy. It is not a complete representation.
+    These diagrams show subsets of the taxonomy. They are not a complete representation.
 
 ```mermaid
  flowchart TD;
@@ -110,7 +103,7 @@ By contributing your skills and knowledge to this repository, you will see your 
 
 While public contributions are welcome to help drive community progress, you can also fork this repository under [the Apache License, Version 2.0](../LICENSE), add your own internal skills, and train your own models internally. However, you might need your own access to significant compute infrastructure to perform sufficient retraining.
 
-## Ways to Contribute
+### Ways to contribute
 
 You can contribute to the taxonomy in the following two ways:
 
@@ -119,14 +112,14 @@ You can contribute to the taxonomy in the following two ways:
 
 For more information, see the [Ways of contributing to the taxonomy repository](https://github.com/instructlab/taxonomy/blob/main/CONTRIBUTING.md#ways-of-contributing-to-the-taxonomy-repository) documentation.
 
-## How to contribute skills and knowledge
+### How to contribute skills and knowledge
 
 To contribute to this repo, you'll use the *Fork and Pull* model common in many open source repositories. You can add your skills and knowledge to the taxonomy in multiple ways; for additional information on how to make a contribution, see the [Documentation on contributing](../community/CONTRIBUTING.md). You can also use the following guides to help with contributing:
 
 - Contributing using the [GitHub webpage UI](https://github.com/instructlab/taxonomy/blob/main/docs/contributing_via_GH_UI.md).
 - Contributing knowledge to the taxonomy in the [Knowledge contribution guidelines](../taxonomy/knowledge/guide.md).
 
-### Why should I contribute?
+#### Why should I contribute?
 
 This taxonomy repository will be used as the seed to synthesize the training
 data for InstructLab-trained models. We intend to retrain the model(s) using the main
