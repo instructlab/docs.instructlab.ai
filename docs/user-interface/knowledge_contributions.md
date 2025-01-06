@@ -8,7 +8,7 @@ The UI Simplifies the process for Skills & Knowledge contributions by:
 
 * Minimising risk of human error when writing YAML by using the web form. 
 
-* Directly submit a github pull request with a press of a button.
+* Directly submit a GitHub pull request with a press of a button.
 
 When the form is filled out, you also are given the option to download the YAML and attribution files to your local machine, and to view the form in its original YAML structure before submission.
 
@@ -17,11 +17,11 @@ You can view all your submissions on the dashboard page.
 !!! warning
     Even when running the UI locally, you must be logged in via github to successfully submit your Knowledge and Skills contributions. You can still fill out the form, and download the YAML and attribution files.
 
-For tips on writing Skills & Knowledge contributions, please visit the documentation under the [Taxonomy](/taxonomy/) heading.
+For tips on writing Skills & Knowledge contributions, please visit the documentation under the [Taxonomy](../taxonomy/index.md) heading.
 
 ## Knowledge Contributions
 
-Firstly you will need to find a source document for your knowledge. Accepted sources can be found [here](/taxonomy/knowledge/guide).
+Firstly you will need to find a source document for your knowledge. Accepted sources can be found [here](../taxonomy/knowledge/guide.md).
 
 Navigate to the Contribute section of the sidebar and click Knowledge. Here you will see the form to contribute Knowledge to the open-source taxonomy tree.
 
@@ -51,13 +51,13 @@ Here you will begin filling out your QNA examples that represent the knowledge y
 
 ### Document Information
 
-You must prepare a markdown file version of the document you wish to use for the knowledge submission. By dragging and dropping the markdown file into the box, and clicking the submit files button, a forked version of the taxonomy repository will be automatically created on your github profile. 
+You must prepare a markdown file version of the document you wish to use for the knowledge submission. By dragging and dropping the markdown file into the box, and clicking the submit files button, a forked version of the taxonomy repository will be automatically created on your GitHub profile. 
 
 ![UI Knowledge Document Information](../images/user-interface/ui_knowledge_document_info.png)
 
-![Forked Repository Showcase](../images//user-interface/ui_knowledge_repo_created.png)
+![Forked Repository Showcase](../images/user-interface/ui_knowledge_repo_created.png)
 
-If you've already uploaded the markdown file to your github, you can switch to manually adding the document, and entering the `commit sha`.
+If you've already uploaded the markdown file to your GitHub, you can switch to manually adding the document, and entering the `commit sha`.
 
 ![UI Knowledge Document Manual Information](../images/user-interface/ui_knowledge_document_manual_info.png)
 
@@ -77,4 +77,4 @@ Once you have submitted a Skills or Knowledge Contribution, you can view it on y
 
 ![UI Dashboard With Contribution](../images/user-interface/ui_dashboard_with_submission.png)
 
-[Next Steps](/user-interface/skills_contributions/){: .md-button .md-button--primary }
+[Next Steps](skills_contributions.md){: .md-button .md-button--primary }

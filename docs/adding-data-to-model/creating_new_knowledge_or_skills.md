@@ -162,7 +162,7 @@ ilab model train
 
 ⏳ This step can potentially take **several hours** to complete depending on your computing resources. Please stop `ilab model chat` and `ilab model serve` first to free resources.
 
-When running multi phase training evaluation is run on each phase, we will tell you which checkpoint in this folder performs the best.
+When running multiphase training evaluation is run on each phase, we will tell you which checkpoint in this folder performs the best.
 
 #### Train the model locally on an M-series Mac or on Linux using the full pipeline
 
@@ -237,7 +237,7 @@ On a Mac `ilab model train` outputs a brand-new model that is saved in the `<mod
 
 #### Train the model locally with GPU acceleration
 
-Training has support for GPU acceleration with Nvidia CUDA or AMD ROCm. Please see [the GPU acceleration documentation](./docs/gpu-acceleration.md) for more details. At present, hardware acceleration requires a data center GPU or high-end consumer GPU with at least 18 GB free memory.
+Training has support for GPU acceleration with Nvidia CUDA or AMD ROCm. Please see [the GPU acceleration documentation](https://github.com/instructlab/instructlab/blob/main/docs/gpu-acceleration.md) for more details. At present, hardware acceleration requires a data center GPU or high-end consumer GPU with at least 18 GB free memory.
 
 ```shell
 ilab model train --pipeline accelerated --device cuda --data-path <path-to-sdg-data>
@@ -251,9 +251,9 @@ ilab model train --pipeline full --device cpu --data-path ~/.local/share/instruc
 
 This version of `ilab model train` outputs brand-new models that can be served in the `~/.local/share/instructlab/checkpoints` directory.  These models can be run through `ilab model evaluate` to choose the best one.
 
-#### Train the model locally with multi-phase training and GPU acceleration
+#### Train the model locally with multiphase training and GPU acceleration
 
-`ilab model train` supports multi-phase training. This results in the following workflow:
+`ilab model train` supports multiphase training. This results in the following workflow:
 
 1. We train the model on knowledge
 2. Evaluate the trained model to find the best checkpoint
@@ -264,13 +264,13 @@ This version of `ilab model train` outputs brand-new models that can be served i
 ilab model train --strategy lab-multiphase --phased-phase1-data <knowledge train messages jsonl> --phased-phase2-data <skills train messages jsonl> -y
 ```
 
-This command takes in two `.jsonl` files from your `datasets` directory, one is the knowledge jsonl and the other is a skills jsonl. The `-y` flag skips an interactive prompt asking the user if they are sure they want to run multi-phase training.
+This command takes in two `.jsonl` files from your `datasets` directory, one is the knowledge jsonl and the other is a skills jsonl. The `-y` flag skips an interactive prompt asking the user if they are sure they want to run multiphase training.
 
 ⏳ This command may take 3 or more hours depending on the size of the data and number of training epochs you run.
 
 #### Train the model in the cloud
 
-Follow the instructions in [Training](./notebooks/README.md).
+Follow the instructions in [Training](https://github.com/instructlab/instructlab/blob/main/notebooks/README.md).
 
 ⏳ Approximate amount of time taken on each platform:
 
@@ -452,7 +452,7 @@ argument to specify your new model:
    ilab model chat -m <New model path>
    ```
 
-   If you are interested in optimizing the quality of the model's responses, please see [`TROUBLESHOOTING.md`](./TROUBLESHOOTING.md#model-fine-tuning-and-response-optimization)
+   If you are interested in optimizing the quality of the model's responses, please see [`TROUBLESHOOTING.md`](https://github.com/instructlab/instructlab/blob/main/TROUBLESHOOTING.md#model-fine-tuning-and-response-optimization)
 
 ## 🎁 Submit your new knowledge or skills
 
@@ -460,4 +460,4 @@ Of course, the final step is, if you've improved the model, to open a pull-reque
 
 ## 📬 Contributing
 
-Check out our [contributing](CONTRIBUTING/CONTRIBUTING.md) guide to learn how to contribute.
+Check out our [contributing](../community/CONTRIBUTING.md) guide to learn how to contribute.

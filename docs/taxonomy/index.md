@@ -66,11 +66,11 @@ domain. Maintainers can decide to change the names of the existing branches or t
    knowledge --> knowledge/miscellaneous_unknown
    knowledge --> knowledge/science
    knowledge --> knowledge/technology
-   knowledge/science --> animals --> birds --> black_capped_chickadee --> black_capped_chikadee-a & black_capped_chikadee-q
+   knowledge/science --> animals --> birds --> black_capped_chickadee --> black_capped_chickadee-a & black_capped_chickadee-q
    knowledge/science --> astronomy --> constellations --> phoenix --> phoenix-a & phoenix-q
 
-   black_capped_chikadee-a{attribution.txt}
-   black_capped_chikadee-q{qna.yaml}
+   black_capped_chickadee-a{attribution.txt}
+   black_capped_chickadee-q{qna.yaml}
    phoenix-a{attribution.txt}
    phoenix-q{qna.yaml}
    classDef na fill:#EEE
@@ -108,7 +108,7 @@ This taxonomy repository will be used as the seed to synthesize the training dat
 
 By contributing your skills and knowledge to this repository, you will see your changes built into an LLM within days of your contribution rather than months or years! If you are working with a model and notice its knowledge or ability lacking, you can correct it by contributing knowledge or skills and check if it's improved after your changes are built.
 
-While public contributions are welcome to help drive community progress, you can also fork this repository under [the Apache License, Version 2.0](LICENSE), add your own internal skills, and train your own models internally. However, you might need your own access to significant compute infrastructure to perform sufficient retraining.
+While public contributions are welcome to help drive community progress, you can also fork this repository under [the Apache License, Version 2.0](../LICENSE), add your own internal skills, and train your own models internally. However, you might need your own access to significant compute infrastructure to perform sufficient retraining.
 
 ## Ways to Contribute
 
@@ -121,10 +121,10 @@ For more information, see the [Ways of contributing to the taxonomy repository](
 
 ## How to contribute skills and knowledge
 
-To contribute to this repo, you'll use the *Fork and Pull* model common in many open source repositories. You can add your skills and knowledge to the taxonomy in multiple ways; for additional information on how to make a contribution, see the [Documentation on contributing](CONTRIBUTING.md). You can also use the following guides to help with contributing:
+To contribute to this repo, you'll use the *Fork and Pull* model common in many open source repositories. You can add your skills and knowledge to the taxonomy in multiple ways; for additional information on how to make a contribution, see the [Documentation on contributing](../community/CONTRIBUTING.md). You can also use the following guides to help with contributing:
 
-- Contributing using the [GitHub webpage UI](docs/contributing_via_GH_UI.md).
-- Contributing knowledge to the taxonomy in the [Knowledge contribution guidelines](docs/knowledge-contribution-guide.md).
+- Contributing using the [GitHub webpage UI](https://github.com/instructlab/taxonomy/blob/main/docs/contributing_via_GH_UI.md).
+- Contributing knowledge to the taxonomy in the [Knowledge contribution guidelines](../taxonomy/knowledge/guide.md).
 
 ### Why should I contribute?
 

@@ -86,7 +86,7 @@ InstructLab is driven by taxonomies and works by empowering users to add new [_s
 
 ### What are the goals of the InstructLab project?
 
-The goal on the InstructLab project is to emocratize contributions to AI and LLMs. There are two approaches to achieving this goal in our community:
+The goal on the InstructLab project is to democratize contributions to AI and LLMs. There are two approaches to achieving this goal in our community:
 
 * Enabling collaborative contribution to a large language model (LLM) through [the project's _taxonomy_ repository](https://github.com/instructlab/taxonomy). When users contribute to this repository, the project resynthesizes its open source training data. Our community Granite-based model is then retrained, ensuring that community contributions are integrated while enriching the model’s capabilities over time.
 
@@ -117,6 +117,12 @@ When contributors write an addition to the existing taxonomy, make a pull reques
 ### What large language models (LLMs) am I contributing to through the InstructLab project?
 
 Contributions to the InstructLab project include fine-tuning Granite-7b, an open-source licensed LLM. Contributors have direct access to the model they are improving through [Hugging Face](https://huggingface.co/instructlab).
+
+### What is Merlinite-7b?
+
+Merlinite-7b is a Mistral-7b derivative model fine-tuned with the LAB (**L**arge-scale **A**lignment for chat**B**ots) method using Mixtral-8x7b-Instruct as a teacher model.
+
+More information about the Merlinite-7b can be found on the [Hugging Face project page](https://huggingface.co/instructlab/merlinite-7b-lab).
 
 ### What is Granite-7-lab?
 
