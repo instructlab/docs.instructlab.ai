@@ -1,0 +1,1724 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://docs.instructlab.ai/cmb/build_process/">
+      
+      
+        <link rel="prev" href="../">
+      
+      
+        <link rel="next" href="../../resources/RESOURCES/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.49">
+    
+    
+      
+        <title>Community Model Build Process - docs.instructlab.ai</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.6f8fc17f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="{'primary':-'custom'}" data-md-color-accent="purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#community-model-build-diagram" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="docs.instructlab.ai" class="md-header__button md-logo" aria-label="docs.instructlab.ai" data-md-component="logo">
+      
+  <img src="../../images/ilab_dog.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            docs.instructlab.ai
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Community Model Build Process
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/instructlab/docs.instructlab.ai" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    docs.instructlab.ai
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="docs.instructlab.ai" class="md-nav__button md-logo" aria-label="docs.instructlab.ai" data-md-component="logo">
+      
+  <img src="../../images/ilab_dog.png" alt="logo">
+
+    </a>
+    docs.instructlab.ai
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/instructlab/docs.instructlab.ai" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    docs.instructlab.ai
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Welcome
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Welcome
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About InstructLab
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Getting Started
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Getting Started
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/mac_metal/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Install on Mac Metal
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/linux_nvidia/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Install on Linux NVIDIA
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/linux_amd/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Install on Linux AMD
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/initilize_ilab/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Initialize InstructLab
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/download_models/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Download models
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/serve_and_chat/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Intro to serve and chat
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Adding data to a model
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Adding data to a model
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../adding-data-to-model/creating_new_wikipedia_based_qna/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Creating a new Wikipedia based qna.yaml
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../adding-data-to-model/creating_new_knowledge_or_skills/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Creating New Knowledge or Skills
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Community
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Community
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/CODE_OF_CONDUCT/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Code of Conduct
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/CODE_OF_CONDUCT_COMMITTEE/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Code of Conduct Committee
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/FAQ/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FAQ
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/GOVERNANCE/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Governance Policy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/InstructLab_DISCORD_GUIDE/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Discord Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/InstructLab_DISCORD_MODERATION_GUIDE/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Discord Moderation Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/InstructLab_SLACK_GUIDE/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Slack Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/InstructLab_SLACK_MODERATION_GUIDE/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Slack Moderation Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Taxonomy
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Taxonomy
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../taxonomy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About Taxonomy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../taxonomy/skills/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Skills Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../taxonomy/skills/skills_guide/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Skills Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../taxonomy/knowledge/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Knowledge Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../taxonomy/knowledge/guide/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Knowledge Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../taxonomy/knowledge/contribution_details/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Knowledge Contribution Details
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    User Interface
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            User Interface
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-interface/ui_overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UI Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-interface/playground_chat/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chat with the model
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-interface/knowledge_contributions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contribute knowledge to community model
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-interface/skills_contributions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contribute skills to community model
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-interface/env_oauth_config/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UI Configurations
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Community Model Build
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Community Model Build
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About Community Model Build
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Community Model Build Process
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Community Model Build Process
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#community-model-build-diagram" class="md-nav__link">
+    <span class="md-ellipsis">
+      Community Model Build diagram
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#add-the-prs-to-the-build-machines-taxonomy-tree" class="md-nav__link">
+    <span class="md-ellipsis">
+      Add the PRs to the build machine's taxonomy tree
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verify-changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Verify changes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reset-the-build-directories" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reset the build directories
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#add-the-instructlab_community-mixin" class="md-nav__link">
+    <span class="md-ellipsis">
+      Add the instructlab_community mixin
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modify-your-config" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modify your config
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-the-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create the data
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#run-the-training-after-the-generate-is-complete" class="md-nav__link">
+    <span class="md-ellipsis">
+      Run the training after the generate is complete
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#optional-post-training-evaluation-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      (optional) Post training evaluation steps
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#general-benchmarking" class="md-nav__link">
+    <span class="md-ellipsis">
+      General Benchmarking
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#specific-benchmarking" class="md-nav__link">
+    <span class="md-ellipsis">
+      Specific Benchmarking
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#publish-to-huggingface" class="md-nav__link">
+    <span class="md-ellipsis">
+      Publish to Huggingface
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    References
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            References
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../resources/RESOURCES/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Additional Resources
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../resources/CONTRIBUTORS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contributors
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../resources/MKDOCS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MkDocs Cheatsheet
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#community-model-build-diagram" class="md-nav__link">
+    <span class="md-ellipsis">
+      Community Model Build diagram
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#add-the-prs-to-the-build-machines-taxonomy-tree" class="md-nav__link">
+    <span class="md-ellipsis">
+      Add the PRs to the build machine's taxonomy tree
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verify-changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Verify changes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reset-the-build-directories" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reset the build directories
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#add-the-instructlab_community-mixin" class="md-nav__link">
+    <span class="md-ellipsis">
+      Add the instructlab_community mixin
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modify-your-config" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modify your config
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-the-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create the data
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#run-the-training-after-the-generate-is-complete" class="md-nav__link">
+    <span class="md-ellipsis">
+      Run the training after the generate is complete
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#optional-post-training-evaluation-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      (optional) Post training evaluation steps
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#general-benchmarking" class="md-nav__link">
+    <span class="md-ellipsis">
+      General Benchmarking
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#specific-benchmarking" class="md-nav__link">
+    <span class="md-ellipsis">
+      Specific Benchmarking
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#publish-to-huggingface" class="md-nav__link">
+    <span class="md-ellipsis">
+      Publish to Huggingface
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+  <h1>Community Model Build Process</h1>
+
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This document is the Community Build Process, these are the general steps to get the cmb built.
+If you are looking for the <a href="https://gist.github.com/jjasghar/436931fbee1d34f029f3c099311301c3">config.yaml</a> that worked for <code>granite-3.0-8b-base</code> there it is.</p>
+</div>
+<h2 id="community-model-build-diagram">Community Model Build diagram<a class="headerlink" href="#community-model-build-diagram" title="Permanent link">&para;</a></h2>
+<p><img alt="" src="../../images/instructlab_cmb_build.png" /></p>
+<p>We have created a default <code>build.sh</code> script, which will live in a repository (soon). The actual commands are
+explained here, and this should be considered the source of truth.</p>
+<h2 id="add-the-prs-to-the-build-machines-taxonomy-tree">Add the PRs to the build machine's taxonomy tree<a class="headerlink" href="#add-the-prs-to-the-build-machines-taxonomy-tree" title="Permanent link">&para;</a></h2>
+<p>Add the <a href="https://github.com/instructlab/taxonomy/pulls">PRs</a> you want to be built into the run. Tag the PRs with "cmb-running."</p>
+<p>Example:
+<div class="highlight"><pre><span></span><code>mkdir<span class="w"> </span>-p<span class="w"> </span>compositional_skills/general/synonyms
+vi<span class="w"> </span>compositional_skills/general/synonyms/attribution.txt
+vi<span class="w"> </span>compositional_skills/general/synonyms/qna.yaml
+</code></pre></div>
+Or if you are pulling from GitHub:
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>~/.local/share/instructlab/taxonomy
+git<span class="w"> </span>fetch<span class="w"> </span>origin<span class="w"> </span>pull/ID/head:BRANCH_NAME
+git<span class="w"> </span>checkout<span class="w"> </span>BRANCHNAME
+</code></pre></div></p>
+<h2 id="verify-changes">Verify changes<a class="headerlink" href="#verify-changes" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code>ilab<span class="w"> </span>taxonomy<span class="w"> </span>diff
+</code></pre></div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><code>~/.local/share/instructlab/datasets</code> -- should be empty before starting
+ Every gpu should be "empty", or <code>0%</code> check with <code>nvidia-smi</code></p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>These steps were tested on the <code>a100</code> x8 machine that was given to the team as of Dec
+3<sup>rd</sup>, 2024. If you have different hardware you'll need a different profile, and different
+options.</p>
+</div>
+<h2 id="reset-the-build-directories">Reset the build directories<a class="headerlink" href="#reset-the-build-directories" title="Permanent link">&para;</a></h2>
+<p>Move the old build directories away, or save them. Something along these lines:
+<div class="highlight"><pre><span></span><code>mv<span class="w"> </span>/home/instructlab/.local/share/instructlab/phased/journalfile.yaml<span class="w"> </span>/home/instructlab/.local/share/instructlab/phased/journalfile.yaml_<span class="nv">$DATE</span>
+mv<span class="w"> </span>/home/instructlab/.local/share/instructlab/datasets<span class="w"> </span>/home/instructlab/.local/share/instructlab/datasets_<span class="nv">$DATE</span>
+mv<span class="w"> </span>/home/instructlab/.local/share/instructlab/phased<span class="w"> </span>/home/instructlab/.local/share/instructlab/phased_<span class="nv">$DATE</span>
+</code></pre></div></p>
+<p>Create the directories you moved away:
+<div class="highlight"><pre><span></span><code>mkdir<span class="w"> </span>/home/instructlab/.local/share/instructlab/phased
+mkdir<span class="w"> </span>/home/instructlab/.local/share/instructlab/datasets
+</code></pre></div></p>
+<h2 id="add-the-instructlab_community-mixin">Add the <code>instructlab_community</code> mixin<a class="headerlink" href="#add-the-instructlab_community-mixin" title="Permanent link">&para;</a></h2>
+<p>For the community build, off the <code>base</code> model, you should add the community data set, these are the steps:
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>~/.local/share/instructlab/datasets/
+wget<span class="w"> </span>https://huggingface.co/datasets/instructlab/InstructLabCommunity/resolve/main/instructlab_community.jsonl
+<span class="nb">cd</span><span class="w"> </span>~
+</code></pre></div></p>
+<h2 id="modify-your-config">Modify your config<a class="headerlink" href="#modify-your-config" title="Permanent link">&para;</a></h2>
+<p><code>ilab config edit</code></p>
+<p>find the general section of your config and ensure it matches the following:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">general</span><span class="p">:</span>
+<span class="w">  </span><span class="c1"># Debug level for logging.</span>
+<span class="w">  </span><span class="c1"># Default: 0</span>
+<span class="w">  </span><span class="nt">debug_level</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">  </span><span class="c1"># Log format. https://docs.python.org/3/library/logging.html#logrecord-attributes</span>
+<span class="w">  </span><span class="c1"># Default: %(levelname)s %(asctime)s %(name)s:%(lineno)d: %(message)s</span>
+<span class="w">  </span><span class="nt">log_format</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;%(levelname)s</span><span class="nv"> </span><span class="s">%(asctime)s</span><span class="nv"> </span><span class="s">%(name)s:%(lineno)d:</span><span class="nv"> </span><span class="s">%(message)s&#39;</span>
+<span class="w">  </span><span class="c1"># Log level for logging.</span>
+<span class="w">  </span><span class="c1"># Default: INFO</span>
+<span class="w">  </span><span class="nt">log_level</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">INFO</span>
+<span class="w">  </span><span class="c1"># Use legacy IBM Granite chat template (default uses 3.0 Instruct template)</span>
+<span class="w">  </span><span class="c1"># Default: False</span>
+<span class="w">  </span><span class="nt">use_legacy_tmpl</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w"> </span>
+</code></pre></div>
+<p>use_legacy_tmpl must be true in order to generate data for and train the granite-3.0-8b-base model</p>
+<h2 id="create-the-data">Create the data<a class="headerlink" href="#create-the-data" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><span class="c1"># annouce the start of the SDG</span>
+ilab<span class="w"> </span>data<span class="w"> </span>generate<span class="w"> </span>--pipeline<span class="w"> </span>full<span class="w"> </span>--gpus<span class="w"> </span><span class="m">8</span>
+<span class="c1"># annouce the completion of the SDG</span>
+</code></pre></div>
+<h2 id="run-the-training-after-the-generate-is-complete">Run the training after the generate is complete<a class="headerlink" href="#run-the-training-after-the-generate-is-complete" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><span class="c1"># annouce the start of the training</span>
+ilab<span class="w"> </span>model<span class="w"> </span>train<span class="w"> </span>--strategy<span class="w"> </span>lab-multiphase<span class="w"> </span>--phased-phase1-data<span class="w"> </span>/home/instructlab/.local/share/instructlab/datasets/knowledge_train_msgs_*.jsonl<span class="w"> </span>--phased-phase2-data<span class="w"> </span>/home/instructlab/.local/share/instructlab/datasets/skills_train_msgs_*.jsonl<span class="w"> </span>--skip-user-confirm<span class="w"> </span>--force-clear-phased-cache
+<span class="c1"># annouce the completion of the training</span>
+</code></pre></div>
+<h2 id="optional-post-training-evaluation-steps">(optional) Post training evaluation steps<a class="headerlink" href="#optional-post-training-evaluation-steps" title="Permanent link">&para;</a></h2>
+<p>If you want to send a sanity check, you can set these two variables to do a subset of the training:
+<div class="highlight"><pre><span></span><code><span class="nb">export</span><span class="w"> </span><span class="nv">INSTRUCTLAB_EVAL_FIRST_N_QUESTIONS</span><span class="o">=</span><span class="m">10</span><span class="w"> </span><span class="c1"># mtbench</span>
+<span class="nb">export</span><span class="w"> </span><span class="nv">INSTRUCTLAB_EVAL_MMLU_MIN_TASKS</span><span class="o">=</span><span class="nb">true</span><span class="w"> </span><span class="c1"># mmlu</span>
+</code></pre></div></p>
+<p>(In case of sanity of a specific Sample Model creation)
+<div class="highlight"><pre><span></span><code>ilab<span class="w"> </span>model<span class="w"> </span>evaluate<span class="w"> </span>--benchmark<span class="w"> </span>mt_bench<span class="w"> </span>--model<span class="w"> </span>~/.local/share/instructlab/checkpoints/hf_format/samples_XXXXXX
+</code></pre></div></p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>We should do the revaluation because we want to reverify the numbers before going any farther.</p>
+</div>
+<h2 id="general-benchmarking">General Benchmarking<a class="headerlink" href="#general-benchmarking" title="Permanent link">&para;</a></h2>
+<ul>
+<li><code>mmlu</code>: general model knowledge, general facts, it's a knowledge number out of 100</li>
+<li><code>mt_bench</code>: is a skill based, extraction, etc, out of 10</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>we want around 7.1 for <code>mt_bench</code> average for a model candidate</p>
+</div>
+<h2 id="specific-benchmarking">Specific Benchmarking<a class="headerlink" href="#specific-benchmarking" title="Permanent link">&para;</a></h2>
+<p><code>mmlu_branch</code>: these are specific to the general knowledge</p>
+<div class="highlight"><pre><span></span><code>ilab<span class="w"> </span>model<span class="w"> </span>evaluate<span class="w"> </span>--benchmark<span class="w"> </span>mmlu_branch<span class="w"> </span>--model<span class="w"> </span>~/.local/share/checkpoints/hf_format/&lt;checkpoint&gt;<span class="w"> </span>--tasks-dir<span class="w"> </span>~/.local/share/instructlab/datasets/&lt;node-dataset&gt;<span class="w"> </span>--base-model<span class="w"> </span>~/.cache/instructlab/models/granite-7b-redhat-lab
+</code></pre></div>
+<p><code>mt_bench_branch</code>:  these are specific for the skills
+<div class="highlight"><pre><span></span><code>ilab<span class="w"> </span>model<span class="w"> </span>evaluate<span class="w"> </span>--benchmark<span class="w"> </span>mt_bench_branch<span class="w"> </span>--model<span class="w"> </span>~/.local/share/checkpoints/hf_format/&lt;checkpoint&gt;<span class="w"> </span>--taxonomy-path<span class="w"> </span>~/.local/share/instructlab/taxonomy<span class="w"> </span>--judge-model<span class="w"> </span>~/.cache/instructlab/models/prometheus-8x7b-v2-0<span class="w"> </span>--base-model<span class="w"> </span>~/.cache/instructlab/models/granite-7b-redhat-lab<span class="w"> </span>--base-branch<span class="w"> </span>main<span class="w"> </span>--branch<span class="w"> </span>main
+</code></pre></div></p>
+<h2 id="publish-to-huggingface">Publish to Huggingface<a class="headerlink" href="#publish-to-huggingface" title="Permanent link">&para;</a></h2>
+<p>Sanity check the model to make sure it does what you are expecting:
+<div class="highlight"><pre><span></span><code>ilab<span class="w"> </span>model<span class="w"> </span>chat<span class="w"> </span>--model<span class="w"> </span>/home/instructlab/.local/share/instructlab/phased/phase2/checkpoints/hf_format/samples_XXXXX
+</code></pre></div></p>
+<p>Copy the checkpoint to the repository directory:
+<div class="highlight"><pre><span></span><code>cp<span class="w"> </span>/home/instructlab/.local/share/instructlab/phased/phase2/checkpoints/hf_format/samples_XXXX/*<span class="w"> </span>~/huggingface_repos/granite-3.0-8b-lab-community/
+</code></pre></div></p>
+<p>Add and commit the changes to the repository:
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>~/huggingface_repos/granite-3.0-8b-lab-community/
+git<span class="w"> </span>add<span class="w"> </span>.
+git<span class="w"> </span>commit<span class="w"> </span>-s
+git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>main
+</code></pre></div></p>
+<p>Congratulations, this is the core steps to building out the safe-tensors to publish to hugging face.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2024- Red Hat Inc.
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.88dd0f4e.min.js"></script>
+      
+    
+  </body>
+</html>
