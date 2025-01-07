@@ -98,7 +98,7 @@ Enable tab completion in `bash` with the following command:
 eval "$(_ILAB_COMPLETE=bash_source ilab)"
 ```
 
-To have this enabled automatically every time you open a new shell,
+To enable tab completion automatically every time you open a new shell,
 you can save the completion script and source it from `~/.bashrc`:
 
 ```sh
@@ -113,8 +113,14 @@ Enable tab completion in `zsh` with the following command:
 ```sh
 eval "$(_ILAB_COMPLETE=zsh_source ilab)"
 ```
+!!! note
+    If you receive an error message about `compdef`, add the following lines to your `~/.zshrc` and reload your configuration:
+    ```sh
+    autoload -Uz compinit
+    compinit
+    ```
 
-To have this enabled automatically every time you open a new shell,
+To enable tab completion automatically every time you open a new shell,
 you can save the completion script and source it from `~/.zshrc`:
 
 ```sh
@@ -130,7 +136,7 @@ Enable tab completion in `fish` with the following command:
 _ILAB_COMPLETE=fish_source ilab | source
 ```
 
-To have this enabled automatically every time you open a new shell,
+To enable tab completion automatically every time you open a new shell,
 you can save the completion script and source it from `~/.bashrc`:
 
 ```sh
