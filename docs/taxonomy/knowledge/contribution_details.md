@@ -4,6 +4,9 @@ description: The overview of 🐶 InstructLab's Knowledge contribution guideline
 logo: images/ilab_dog.png
 ---
 
+!!! info
+    The following information is if you are comfortable contributing using GitHub, a version control system primarily used for code. If you are **not** comfortable with this platform, you can use the InstructLab UI to submit knowledge. To learn more, [head to the UI overview page](../../user-interface/ui_overview.md).
+
 You can create a Git repository to host your knowledge contributions anywhere (GitLab, Gerrit, etc.), but it might be favorable to create one on GitHub. At the current time, we require a GitHub username to contribute, and all work is done in GitHub.
 
 The following instructions show you how to create a knowledge repository in GitHub and contribute to the taxonomy.
