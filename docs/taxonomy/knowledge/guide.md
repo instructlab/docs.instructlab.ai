@@ -15,12 +15,36 @@ Knowledge contributions in this project contain a few things:
 
 You can learn more about the knowledge structure in [Getting Started with Knowledge contributions](https://github.com/instructlab/taxonomy/blob/main/README.md#getting-started-with-knowledge-contributions).
 
-## Accepted Knowledge
+## Accepted Sources of Knowledge
 
 !!! important
     We are currently only accepting knowledge contributions as a limited private beta and sources will be limited to articles from Wikipedia.
 
 These are the main knowledge domains that we are currently accepting knowledge contributions for:  arts, engineering, geography, history, linguistics, mathematics, philosophy, religion, science, and technology.
+
+Due to the open source nature of InstructLab, all content has to meet specific licensing requirements. This list has currently approved sources for knowledge. If you wish to use a different source, we need to approve it, and that means your submission will be on hold until we get legal review and approval. Please be patient!
+
+Domain Name | Status | Notes
+--|--|--
+[Wikipedia](https://en.wikipedia.org/wiki/Main_Page) | approved | -
+[Project Gutenberg](https://www.gutenberg.org) | approved | Pre-1927 works; public domain under US copyright law
+[Wikisource](https://en.wikisource.org) (library) | approved | "free library that anyone can improve"
+[OpenStax textbooks family of publications](https://openstax.org/subjects) | approved | -
+[The Open Organization publications](https://theopenorganization.org) | approved | -
+[The Scrum Guide](https://scrumguides.org/index.html) | approved | -
+[US Congress site](https://www.congress.gov) | reviewed - manually verify | US government sources may have different licensing; a legal review will need to verify each source
+[US White House site](https://www.whitehouse.gov) | reviewed - manually verify | US government sources may have different licensing; a legal review will need to verify each source
+[US Senate site](https://www.senate.gov) | reviewed - manually verify | US government sources may have different licensing; a legal review will need to verify each source
+[US IRS site](https://www.irs.gov) | reviewed - manually verify | US government sources may have different licensing; a legal review will need to verify each source
+[NASA](https://www.nasa.gov) | reviewed - manually verify | [See guidelines](https://www.nasa.gov/nasa-brand-center/images-and-media/)
+[Smithsonian Libraries](https://library.si.edu/) | reviewed - manually verify | For any material marked \"No Copyright - United States" or "CC0" as [described here](https://library.si.edu/copyright)
+[European Union (EU) site](https://european-union.europa.eu/) | reviewed - manually verify | Specifically documents submitted under "public registrars" as [described here](https://european-union.europa.eu/principles-countries-history/principles-and-values/access-information_en)
+[Internet Archive](https://archive.org/) | reviewed - manually verify | Pre-1927 works; public domain under US copyright law
+[PLOS family of open access journals](https://plos.org/publish) | reviewed - manually verify | -
+[Open Practice Library](https://openpracticelibrary.com/) | reviewed - manually verify | -
+[Cynefin.io wiki](https://cynefin.io/wiki/Main_Page) | reviewed - manually verify | -
+[The Open Education Project](https://research.redhat.com/blog/research_project/foundations-in-open-source-education/) | reviewed - manually verify | -
+
 
 ## Avoid These Topics
 
