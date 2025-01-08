@@ -17,9 +17,27 @@ nav:
       - Initialize InstructLab: getting-started/initilize_ilab.md
       - Download models: getting-started/download_models.md
       - Intro to serve and chat: getting-started/serve_and_chat.md
+  - Creating new knowledge or skills:
+      - About taxonomy trees and QnA YAMLs: creating-skills-knowledge/index.md
+      - Skills Creation: creating-skills-knowledge/skills/index.md
+      - Skills Guidelines: creating-skills-knowledge/skills/skills_guide.md
+      - Knowledge Creation: creating-skills-knowledge/knowledge/index.md
+      - Knowledge Guidelines: creating-skills-knowledge/knowledge/guide.md
   - Adding data to a model:
+      - Teaching a model new skills and knowledge: adding-data-to-model/creating_new_knowledge_or_skills.md
       - Creating a new Wikipedia based qna.yaml: adding-data-to-model/creating_new_wikipedia_based_qna.md
-      - Creating New Knowledge or Skills: adding-data-to-model/creating_new_knowledge_or_skills.md
+  - Contributing to the InstructLab taxonomy:
+      - About Taxonomy: taxonomy/index.md
+      - Knowledge Contribution Details: taxonomy/knowledge/contribution_details.md
+  - User Interface:
+      - UI Overview: user-interface/ui_overview.md
+      - Chat with the model: user-interface/playground_chat.md
+      - Contribute knowledge to community model: user-interface/knowledge_contributions.md
+      - Contribute skills to community model: user-interface/skills_contributions.md
+      - UI Configurations: user-interface/env_oauth_config.md
+  - Community Model Builds:
+      - About Community Model Builds: cmb/index.md
+      - Community Model Build Process: cmb/build_process.md
   - Community:
       - Code of Conduct: community/CODE_OF_CONDUCT.md
       - Code of Conduct Committee: community/CODE_OF_CONDUCT_COMMITTEE.md
@@ -29,22 +47,6 @@ nav:
       - Discord Moderation Guide: community/InstructLab_DISCORD_MODERATION_GUIDE.md
       - Slack Guide: community/InstructLab_SLACK_GUIDE.md
       - Slack Moderation Guide: community/InstructLab_SLACK_MODERATION_GUIDE.md
-  - Taxonomy:
-      - About Taxonomy: taxonomy/index.md
-      - Skills Overview: taxonomy/skills/index.md
-      - Skills Guide: taxonomy/skills/skills_guide.md
-      - Knowledge Overview: taxonomy/knowledge/index.md
-      - Knowledge Guide: taxonomy/knowledge/guide.md
-      - Knowledge Contribution Details: taxonomy/knowledge/contribution_details.md
-  - User Interface:
-      - UI Overview: user-interface/ui_overview.md
-      - Chat with the model: user-interface/playground_chat.md
-      - Contribute knowledge to community model: user-interface/knowledge_contributions.md
-      - Contribute skills to community model: user-interface/skills_contributions.md
-      - UI Configurations: user-interface/env_oauth_config.md
-  - Community Model Build:
-      - About Community Model Build: cmb/index.md
-      - Community Model Build Process: cmb/build_process.md
   - References:
       - Additional Resources: resources/RESOURCES.md
       - Contributors: resources/CONTRIBUTORS.md
