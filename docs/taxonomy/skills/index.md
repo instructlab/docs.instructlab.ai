@@ -100,18 +100,15 @@ If you have not written YAML before, YAML is a text file where indentation matte
 
     - Spaces and indentation matter in YAML. Use two spaces to indent.
         - Don't use tabs!
-    - Be careful to not have trailing spaces at the end of a line.
-    - Each example in `seed_examples` begins with a "-". Place this "-" in
+    - Do not have trailing spaces at the end of a line.
+    - Each example in `seed_examples` begins with a dash (`-`). Place this dash in
     front of the first field (`question` or `context`). The remaining keys in the
-    example should not have this "-".
-    - Some special characters such as " and ' need to be escaped with backslash. This is why some
-    of the lines for keys in the example YAML start the value with the '|' character followed a new line and then an indented multi-line string.
-    This character disables all of the special characters in the value for the key.
-    You might also want to use the '|' character for multi-line strings.
-    - Consider quoting all values with " to avoid surprising YAML parser behavior
+    example should not have this dash.
+    - Some special characters such as a double quotation mark (`"`) and an apostrophe or single quotation mark (`'`) need to be escaped with backslash. This is why some of the lines for keys in the example YAML start the value with the pipe character (`|`) followed a new line and then an indented multi-line string. This character disables all of the special characters in the value for the key.<br/><br/>You might also want to use the pipe character (`|`) for multi-line strings.
+    - Consider quoting all values with double quotation marks (`"`) to avoid surprising YAML parser behavior
     (e.g. Yes answer can be interpreted by the parser as a boolean of `True`
     value, unless "Yes" is quoted.)
-    - See https://yaml-multiline.info/ for more info.
+    - See [yaml-multiline.info](https://yaml-multiline.info/) for more info.
 
 It is recommended that you **lint**, or verify, your YAML using a tool. One linter option is [yamllint.com](https://yamllint.com). You can copy/paste your YAML into the box and click **Go** to have it analyze your YAML and make recommendations. Online tools like [prettified](https://onlineyamltools.com/prettify-yaml) and [yaml-validator](https://jsonformatter.org/yaml-validator) can automatically reformat your YAML to adhere to our `yamllint` PR checks, such as breaking lines longer than 120 characters.
 
