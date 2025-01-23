@@ -68,8 +68,8 @@ the place that it is in.
 | --- | --- | --- | --- |
 | | Contributor | Submit PR | - |
 | | Contributor | Fix failed PR checks | - |
-| https://github.com/instructlab/taxonomy/labels/triage-needed | Triager | Review PR, ask for changes | Days |
-| https://github.com/instructlab/taxonomy/labels/triage-requested-changes | Contributor | Make requested changes | Days |
-| https://github.com/instructlab/taxonomy/labels/precheck-generate-ready | Triager | Run prechecks and generate  | Days |
-| https://github.com/instructlab/taxonomy/labels/community-build-ready | Backend | Model gets retrained | Weeks |
+| [triage-needed](https://github.com/instructlab/taxonomy/labels/triage-needed) | Triager | Review PR, ask for changes | Days |
+| [triage-requested-changes](https://github.com/instructlab/taxonomy/labels/triage-requested-changes) | Contributor | Make requested changes | Days |
+| [precheck-generate-ready](https://github.com/instructlab/taxonomy/labels/precheck-generate-ready) | Triager | Run prechecks and generate  | Days |
+| [community-build-ready](https://github.com/instructlab/taxonomy/labels/community-build-ready) | Backend | Model gets retrained | Weeks |
 | | Triager | Check the numbers and PR merged or closed | - |
