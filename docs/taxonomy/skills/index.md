@@ -7,11 +7,10 @@ logo: images/ilab_dog.png
 
 Skills require a much smaller volume of content than knowledge contributions. An entire skill contribution to the taxonomy tree can be just a few lines of YAML in the `qna.yaml` file ("qna" is short for "questions and answers") and an `attribution.txt` file for citing sources.
 
-Your skills contribution pull requests must include the following:
+Your skills contribution pull requests include the following:
 
-- A `qna.yaml` that contains a set of key/value entries with the following keys
-  - Each `qna.yaml` file requires a minimum of five question and answer pairs.
-- An `attribution.txt` that includes the sources for the information used in the `qna.yaml`
+- A `qna.yaml` that contains a set of key/value entries
+- An `attribution.txt` that includes the sources for the information used in the `qna.yaml`. Even if you are authoring the skill with no additional sources, you must have this file for legal purposes.
 
 !!! tip
     The skill taxonomy structure is used in several ways:
@@ -27,21 +26,26 @@ Your skills contribution pull requests must include the following:
 
 Compositional skills can either be grounded (includes a context) or ungrounded (does not include a context).  Grounded or ungrounded is declared in the taxonomy tree, for example: `linguistics/writing/poetry/haiku/` (ungrounded) or `grounded/linguistics/grammar` (grounded). The `qna.yaml` is in the final node.
 
+### The structure of the `qna.yaml` file
+
 Taxonomy skill files must be a valid [YAML](https://yaml.org/) file named `qna.yaml`. Each `qna.yaml` file contains a set of key/value entries with the following keys:
 
-- `version`: The value must be the number 2. **Required**
-- `task_description`: A description of the skill. **Required**
-- `created_by`: The GitHub username of the contributor. **Required**
-- `seed_examples`: A collection of key/value entries. New
-  submissions should have at least five entries, although
-  older files may have fewer. **Required**
-  - `context`: Grounded skills require the user to provide context containing information that the model is expected to take into account during processing. This is different from knowledge, where the model is expected to gain facts and background knowledge from the tuning process. The context key should not be used for ungrounded skills.
-  - `question`: A question for the model. **Required**
-  - `answer`: The desired response from the model. **Required**
+Field | Required? | Content
+--|--|--
+`version` | yes | The value must be the number 3.
+`task_description` | yes | A description of the skill.
+`created_by` | yes | The GitHub username of the contributor.
+`seed_examples` | yes | A collection of key/value entries. New submissions should have at least five entries, although older files may have fewer.<br/><br/>Note collections are nested lists, like subentries in a bulleted list.
+`context` | only for grounded skills | Part of the `seed_examples` collection.<br/><br/>Grounded skills require the user to provide context containing information that the model is expected to take into account during processing. This is different from knowledge, where the model is expected to gain facts and background knowledge from the tuning process.<br/><br/>**Note:** The context key should not be used for ungrounded skills.
+ `question` | yes | Part of the `seed_examples` collection.<br/><br/>A question for the model.
+`answer` | yes | Part of the `seed_examples` collection.<br/><br/>The desired response from the model.
 
 Other keys at any level are currently ignored.
 
-### Skills: YAML examples
+!!! important
+    Each `qna.yaml` file requires a minimum of five question and answer pairs.
+
+### Submissions
 
 To make the `qna.yaml` files easier and faster for humans to read, it is recommended to specify `version` first, followed by `task_description`, then `created_by`, and finally `seed_examples`.
 In `seed_examples`, it is recommended to specify `context` first (if applicable), followed by `question` and `answer`.
@@ -64,9 +68,9 @@ seed_examples:
   ...
 ```
 
-Then, you create an `attribution.txt` file that includes the sources of your information. These can also be self authored sources.
+Then, you create an `attribution.txt` file that includes the sources of your information, if any. These sources can also be self-authored sources for skills.
 
-*Example `attribution.txt`*
+*Fields in `attribution.txt`*
 
 ```text
 [Link to source]
@@ -75,28 +79,40 @@ Then, you create an `attribution.txt` file that includes the sources of your inf
 [Creator name]
 ```
 
+*Example of a self-authored source `attribution.txt`*
+
+```text
+Title of work: Customizing an order for tea
+Link to work: -
+License of the work: CC BY-SA-4.0
+Creator names: Jean-Luc Picard
+```
+
+You may copy this example and replace the title of the work (your skill) and the creator name to submit a skill. The license is [Creative Commons Attribution-ShareAlike 4.0 International](https://creativecommons.org/licenses/by-sa/4.0/), which is shortened to `CC BY-SA-4.0`.
+
 For more information on what to include in your `attribution.txt` file, see [For your attribution.txt file](https://github.com/instructlab/taxonomy/blob/main/CONTRIBUTING.md#for-your-attributiontxt-file) in CONTRIBUTING.md.
 
-If you have not written YAML before, don't be intimidated - it's just text.
+### Writing YAML
+
+If you have not written YAML before, YAML is a text file where indentation matters.
 
 !!! tip
 
-    - Spaces and indentation matter in YAML. Two spaces to indent.
-    - Don't use tabs!
-    - Be careful to not have trailing spaces at the end of a line.
-    - Each example in `seed_examples` begins with a "-". Place this "-" in
+    - Spaces and indentation matter in YAML. Use two spaces to indent.
+        - Don't use tabs!
+    - Do not have trailing spaces at the end of a line.
+    - Each example in `seed_examples` begins with a dash (`-`). Place this dash in
     front of the first field (`question` or `context`). The remaining keys in the
-    example should not have this "-".
-    - Some special characters such as " and ' need to be escaped with backslash. This is why some
-    of the lines for keys in the example YAML start the value with the '|' character followed a new line and then an indented multi-line string.
-    This character disables all of the special characters in the value for the key.
-    You might also want to use the '|' character for multi-line strings.
-    - Consider quoting all values with " to avoid surprising YAML parser behavior
+    example should not have this dash.
+    - Some special characters such as a double quotation mark (`"`) and an apostrophe or single quotation mark (`'`) need to be escaped with backslash. This is why some of the lines for keys in the example YAML start the value with the pipe character (`|`) followed a new line and then an indented multi-line string. This character disables all of the special characters in the value for the key.<br/><br/>You might also want to use the pipe character (`|`) for multi-line strings.
+    - Consider quoting all values with double quotation marks (`"`) to avoid surprising YAML parser behavior
     (e.g. Yes answer can be interpreted by the parser as a boolean of `True`
     value, unless "Yes" is quoted.)
-    - See https://yaml-multiline.info/ for more info.
+    - See [yaml-multiline.info](https://yaml-multiline.info/) for more info.
 
 It is recommended that you **lint**, or verify, your YAML using a tool. One linter option is [yamllint.com](https://yamllint.com). You can copy/paste your YAML into the box and click **Go** to have it analyze your YAML and make recommendations. Online tools like [prettified](https://onlineyamltools.com/prettify-yaml) and [yaml-validator](https://jsonformatter.org/yaml-validator) can automatically reformat your YAML to adhere to our `yamllint` PR checks, such as breaking lines longer than 120 characters.
+
+### Examples
 
 #### Ungrounded compositional skill: YAML example
 
@@ -116,8 +132,6 @@ seed_examples:
   - question: What are 5 words that rhyme with bake?
     answer: wake, lake, steak, make, and quake.
 ```
-
-Seriously, that's it.
 
 Here is the location of this YAML in the taxonomy tree. Note that the YAML file
 itself, plus any added directories that contain the file, is the entirety of the skill
@@ -148,7 +162,6 @@ in terms of a taxonomy contribution:
 Remember that [grounded compositional skills](skills_guide.md#grounded-compositional-skills) require additional context and include a `context` field.
 
 This example snippet assumes the GitHub username `mairin` and shows some of the question/answer pairs present in the actual file:
-
 
 ```yaml
 version: 2
