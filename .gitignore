@@ -7,3 +7,5 @@ pyproject.toml
 
 # pycharm
 .idea
+
+.cache
