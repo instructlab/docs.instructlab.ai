@@ -38,7 +38,7 @@ Take a look at "lab-enhanced" models on the [InstructLab Hugging Face page](http
 - Approximately 60GB disk space (entire process)
 
 !!! note
-    Python 3.12 is currently not supported, because some dependencies don't work on Python 3.12, yet. As of now, we only support Python 3.10 or Python 3.11 (preferred). Any other Python version would install an older version of InstructLab (e.g. 0.17).
+    Python 3.12 is currently not supported, because some dependencies don't work on Python 3.12, yet. As of now, we only support Python 3.10 or Python 3.11 (preferred). Any other Python version would install an older version of InstructLab (e.g., 0.17).
 
 !!! tip
     When installing the `ilab` CLI on macOS, you may have to run the `xcode-select --install` command, installing the required packages previously listed.

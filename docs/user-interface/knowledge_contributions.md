@@ -21,7 +21,7 @@ For tips on writing Skills & Knowledge contributions, please visit the documenta
 
 ## Knowledge Contributions
 
-Firstly you will need to find a source document for your knowledge. Accepted sources can be found [here](../taxonomy/knowledge/guide.md).
+Firstly you will need to find a source document for your knowledge. Accepted sources can be found [here](../taxonomy/knowledge/contribution_details.md).
 
 Navigate to the Contribute section of the sidebar and click Knowledge. Here you will see the form to contribute Knowledge to the open-source taxonomy tree.
 

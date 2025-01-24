@@ -31,10 +31,10 @@ nav:
       - Slack Moderation Guide: community/InstructLab_SLACK_MODERATION_GUIDE.md
   - Taxonomy:
       - About Taxonomy: taxonomy/index.md
+      - Taxonomy Contributions: taxonomy/contribution_guidelines.md
       - Skills Overview: taxonomy/skills/index.md
-      - Skills Guide: taxonomy/skills/skills_guide.md
+      - Skills Contribution Details: taxonomy/skills/contribution_details.md
       - Knowledge Overview: taxonomy/knowledge/index.md
-      - Knowledge Guide: taxonomy/knowledge/guide.md
       - Knowledge Contribution Details: taxonomy/knowledge/contribution_details.md
   - User Interface:
       - UI Overview: user-interface/ui_overview.md

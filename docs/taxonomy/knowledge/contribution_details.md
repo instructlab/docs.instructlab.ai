@@ -26,8 +26,35 @@ If you are using the [UI](https://ui.instructlab.ai) to submit:
 
 You need to set up your source documents as Markdown files in a git repository.
 
+## Accepted Sources of Knowledge
+
 !!! warning
-    **We are currently only accepting sources from [this list](https://github.com/instructlab/community/blob/main/docs/DataSources.md) at this time due to legal requirements to keep InstructLab open source.** Our taxonomy triage team will reject any contributions that do not match this pattern. Thanks for helping us keep InstructLab 100% open source!
+    **We are currently only accepting sources from [this list](https://github.com/instructlab/community/blob/main/docs/DataSources.md) at this time due to legal requirements to keep InstructLab open source.** We prefer that you keep your submission to articles from Wikipedia at this time. Our taxonomy triage team will reject any contributions that do not match this pattern. Thanks for helping us keep InstructLab 100% open source!
+
+These are the main knowledge domains that we are currently accepting knowledge contributions for:  arts, engineering, geography, history, linguistics, mathematics, philosophy, religion, science, and technology.
+
+Due to the open source nature of InstructLab, all content has to meet specific licensing requirements. This list has currently approved sources for knowledge. If you wish to use a different source, we need to approve it, and that means your submission will be on hold until we get legal review and approval. Please be patient!
+
+Domain Name | Status | Notes
+--|--|--
+[Wikipedia](https://en.wikipedia.org/wiki/Main_Page) | approved | -
+[Project Gutenberg](https://www.gutenberg.org) | approved | Pre-1927 works; public domain under US copyright law
+[Wikisource](https://en.wikisource.org) (library) | approved | "free library that anyone can improve"
+[OpenStax textbooks family of publications](https://openstax.org/subjects) | approved | -
+[The Open Organization publications](https://theopenorganization.org) | approved | -
+[The Scrum Guide](https://scrumguides.org/index.html) | approved | -
+[US Congress site](https://www.congress.gov) | reviewed - manually verify | US government sources may have different licensing; a legal review will need to verify each source
+[US White House site](https://www.whitehouse.gov) | reviewed - manually verify | US government sources may have different licensing; a legal review will need to verify each source
+[US Senate site](https://www.senate.gov) | reviewed - manually verify | US government sources may have different licensing; a legal review will need to verify each source
+[US IRS site](https://www.irs.gov) | reviewed - manually verify | US government sources may have different licensing; a legal review will need to verify each source
+[NASA](https://www.nasa.gov) | reviewed - manually verify | [See guidelines](https://www.nasa.gov/nasa-brand-center/images-and-media/)
+[Smithsonian Libraries](https://library.si.edu/) | reviewed - manually verify | For any material marked \"No Copyright - United States" or "CC0" as [described here](https://library.si.edu/copyright)
+[European Union (EU) site](https://european-union.europa.eu/) | reviewed - manually verify | Specifically documents submitted under "public registrars" as [described here](https://european-union.europa.eu/principles-countries-history/principles-and-values/access-information_en)
+[Internet Archive](https://archive.org/) | reviewed - manually verify | Pre-1927 works; public domain under US copyright law
+[PLOS family of open access journals](https://plos.org/publish) | reviewed - manually verify | -
+[Open Practice Library](https://openpracticelibrary.com/) | reviewed - manually verify | -
+[Cynefin.io wiki](https://cynefin.io/wiki/Main_Page) | reviewed - manually verify | -
+[The Open Education Project](https://research.redhat.com/blog/research_project/foundations-in-open-source-education/) | reviewed - manually verify | -
 
 ### Creating your own knowledge repository
 
@@ -115,12 +142,13 @@ Here are a few things to check before seeking reviews for your contribution:
 
 The following table outlines the expected timing for the PRs you have submitted. The PRs go through a few steps, and checks, but you should be able to map your `label` to the place that it is in.
 
-| Label | Actor | Action | Duration |
-| --- | --- | --- | --- |
-| | Contributor | Submit PR | - |
-| | Contributor | Fix failed PR checks | - |
-| [triage-needed](https://github.com/instructlab/taxonomy/labels/triage-needed) | Triager | Review PR, ask for changes | Days |
-| [triage-requested-changes](https://github.com/instructlab/taxonomy/labels/triage-requested-changes) | Contributor | Make requested changes | Days |
-| [precheck-generate-ready](https://github.com/instructlab/taxonomy/labels/precheck-generate-ready) | Triager | Run prechecks and generate  | Days |
-| [community-build-ready](https://github.com/instructlab/taxonomy/labels/community-build-ready) | Backend | Model gets retrained | Weeks |
-| | Triager | Check the numbers and PR merged or closed | - |
+Label | Actor | Action | Duration
+--|--|--|--
+- | Contributor | Submit PR | -
+- | Contributor | Fix failed PR checks | -
+[triage-needed](https://github.com/instructlab/taxonomy/labels/triage-needed) | Triager | Review PR, ask for changes | Days
+[triage-dco-requested](https://github.com/instructlab/taxonomy/labels/triage-dco-requested) | Contributor | Fix DCO | -
+[triage-requested-changes](https://github.com/instructlab/taxonomy/labels/triage-requested-changes) | Contributor | Make requested changes | Days
+ [precheck-generate-ready](https://github.com/instructlab/taxonomy/labels/precheck-generate-ready) | Triager | Run prechecks and generate  | Days
+ [community-build-ready](https://github.com/instructlab/taxonomy/labels/community-build-ready) | Backend | Model gets retrained | Weeks
+ | Triager | Check the numbers and PR merged or closed | -

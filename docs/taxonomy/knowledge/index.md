@@ -1,8 +1,20 @@
 ---
-title: Getting Started with Knowledge Contributions
-description: Adding knowledge to 🐶 InstructLab
+title: Knowledge Overview
+description: Knowledge in 🐶 InstructLab's Taxonomy
 logo: images/ilab_dog.png
 ---
+# What is "Knowledge"?
+
+In the InstructLab world, knowledge consists of data and facts and is backed by documents. When you create knowledge for a model, you're giving it additional data to more accurately answer questions.
+
+Knowledge contributions in this project contain a few things:
+
+- A Markdown or PDF file in a git repository that holds your information. For example, these repositories can include Markdown or PDF versions of information on Oscar 2024 winners, Law books, Shakespeare, Sports, Chemistry, etc. Note that sources must be licensed using a compatible license. Learn more from [our list of accepted sources](replaceme.md).
+- A `qna.yaml` file that asks and answers questions about the information in the git repository.
+- An `attribution.txt` file that includes the sources for the information used in the `qna.yaml`.
+
+You can learn more about the knowledge structure in [the contribution details for knowledge](contribution_details.md).
+
 ## Getting Started with Knowledge Contributions
 
 While skills are foundational or performative, knowledge is based more on answering questions that involve facts, data, or references.
