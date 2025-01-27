@@ -31,11 +31,13 @@ nav:
       - Slack Moderation Guide: community/InstructLab_SLACK_MODERATION_GUIDE.md
   - Taxonomy:
       - About Taxonomy: taxonomy/index.md
-      - Taxonomy Contributions: taxonomy/contribution_guidelines.md
-      - Skills Overview: taxonomy/skills/index.md
-      - Skills Contribution Details: taxonomy/skills/contribution_details.md
-      - Knowledge Overview: taxonomy/knowledge/index.md
-      - Knowledge Contribution Details: taxonomy/knowledge/contribution_details.md
+      - Upstream Taxonomy Contributions: taxonomy/contribution_guidelines.md
+      - Skills:
+        - Skills Overview: taxonomy/skills/index.md
+        - Skills Contribution Details: taxonomy/skills/contribution_details.md
+      - Knowledge:
+        - Knowledge Overview: taxonomy/knowledge/index.md
+        - Knowledge Contribution Details: taxonomy/knowledge/contribution_details.md
   - User Interface:
       - UI Overview: user-interface/ui_overview.md
       - Chat with the model: user-interface/playground_chat.md
@@ -68,6 +70,12 @@ theme:
 
 # Plugins
 plugins:
+  - git-authors
+  - git-committers:
+      repository: instructlab/docs.instructlab.ai
+      branch: main
+  - git-revision-date-localized:
+      enable_creation_date: true
   - search
 
 # Extensions
