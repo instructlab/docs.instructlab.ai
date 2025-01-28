@@ -38,7 +38,7 @@ This helps the synthetic data generation process and training process parse the 
 
 ### Sorting knowledge and skills
 
-For each piece of knowledge, you should have a single `qna.yaml` file. For example, if you are fine-tuning a model to talk about cloud formations, you would make a leaf node directory for each type of cloud formation (e.g., `cumulonimbus`, `cirrus`, `cumulus`, `incus`, `lenticular`) and then have a `qna.yaml` file dedicated to each formation with a document for each one. You would not lump all of the cloud formations together into one YAML file with five or six documents as sources as the synthetic data generation process would not group the resulting data based on cloud formation, thereby making the resulting model possibly provide information about one cloud formation when asked about another.
+For each piece of knowledge, you should have a single `qna.yaml` file. For example, if you are fine-tuning a model to talk about cloud formations, you would make a leaf node directory for each type of cloud formation (e.g., `cumulonimbus`, `cirrus`, `cumulus`, `incus`, `lenticular`) and then have a `qna.yaml` file dedicated to each formation with a document for each one. You would not lump all the cloud formations together into one YAML file with five or six documents as sources as the synthetic data generation process would not group the resulting data based on cloud formation, thereby making the resulting model possibly provide information about one cloud formation when asked about another.
 
 The same thought applies to skills. A single skill should be in one leaf node directory, even if it is related to another skill. Do not create a `qna.yaml` file that has multiple skills in it.
 
@@ -150,7 +150,7 @@ For more information, see the [Ways of contributing to the taxonomy repository](
 To contribute to the repo, you'll use the *Fork and Pull* model common in many open source repositories. You can add your skills and knowledge to the taxonomy in multiple ways; for additional information on how to make a contribution, see the [Documentation on contributing](../community/CONTRIBUTING.md). You can also use the following guides to help with contributing:
 
 - Contributing using the [GitHub webpage UI](https://github.com/instructlab/taxonomy/blob/main/docs/contributing_via_GH_UI.md).
-- Contributing knowledge to the taxonomy in the [Knowledge contribution guidelines](../taxonomy/knowledge/contribution_details.md).
+- Contributing knowledge to the taxonomy in the [Knowledge contribution guidelines](../taxonomy/upstream/knowledge_contribution_details.md).
 
 ###### Why should I contribute?
 

@@ -33,15 +33,15 @@ Compositional skills can either be grounded (includes a context) or ungrounded (
 
 Taxonomy skill files must be a valid [YAML](https://yaml.org/) file named `qna.yaml`. Each `qna.yaml` file contains a set of key/value entries with the following keys:
 
-Field | Required? | Content
---|--|--
-`version` | yes | The value must be the number 3.
-`task_description` | yes | A description of the skill.
-`created_by` | yes | The GitHub username of the contributor.
-`seed_examples` | yes | A collection of key/value entries. New submissions should have at least five entries, although older files may have fewer.<br/><br/>Note collections are nested lists, like sub-entries in a bulleted list.
-`context` | only for grounded skills | Part of the `seed_examples` collection.<br/><br/>Grounded skills require the user to provide context containing information that the model is expected to take into account during processing. This is different from knowledge, where the model is expected to gain facts and background knowledge from the tuning process.<br/><br/>**Note:** The context key should not be used for ungrounded skills.
- `question` | yes | Part of the `seed_examples` collection.<br/><br/>A question for the model.
-`answer` | yes | Part of the `seed_examples` collection.<br/><br/>The desired response from the model.
+Field | Type | Required? | Content
+--|--|--|--
+`version` | integer | yes | The value must be the number 3.
+`task_description` | string | yes | A description of the task which is used in prompts to the teacher model during synthetic data generation. The description should be detailed and prescriptive to improve the teacher model's responses.
+`created_by` | string | yes | The GitHub username of the contributor.
+`seed_examples` | array | yes | A collection of key/value entries. New submissions should have at least five entries, although older files may have fewer.<br/><br/>Note collections are nested lists, like sub-entries in a bulleted list.
+`context` | string | only for grounded skills | Part of the `seed_examples` collection.<br/><br/>Grounded skills require the user to provide context containing information that the model is expected to take into account during processing. This is different from knowledge, where the model is expected to gain facts and background knowledge from the tuning process.<br/><br/>**Note:** The context key should not be used for ungrounded skills.
+ `question` | string | yes | Part of the `seed_examples` collection.<br/><br/>A question for the model.
+`answer` | string | yes | Part of the `seed_examples` collection.<br/><br/>The desired response from the model.
 
 Other keys at any level are currently ignored.
 
@@ -155,7 +155,7 @@ Here is the location of this YAML in the taxonomy tree. Note that the YAML file 
 
 #### Grounded compositional skill: YAML example
 
-Remember that [grounded compositional skills](index.md#grounded-compositional-skills) require additional context and include a `context` field.
+Remember that [grounded compositional skills](../skills/index.md#grounded-compositional-skills) require additional context and include a `context` field.
 
 This example snippet assumes the GitHub username `mairin` and shows some of the question/answer pairs present in the actual file:
 

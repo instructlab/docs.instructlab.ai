@@ -3,8 +3,6 @@ title: Skills Overview
 description: Skills in 🐶 InstructLab's Taxonomy
 logo: images/ilab_dog.png
 ---
-## Skills Overview
-
 ## What is a "skill"?
 
 There are various types of skills that you can contribute to the taxonomy.

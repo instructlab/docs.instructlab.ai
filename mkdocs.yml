@@ -31,13 +31,16 @@ nav:
       - Slack Moderation Guide: community/InstructLab_SLACK_MODERATION_GUIDE.md
   - Taxonomy:
       - About Taxonomy: taxonomy/index.md
-      - Upstream Taxonomy Contributions: taxonomy/contribution_guidelines.md
+      - Upstream Taxonomy Contributions:
+        - General Guidelines: taxonomy/upstream/contribution_guidelines.md
+        - Knowledge Guidelines: taxonomy/upstream/knowledge_contribution_details.md
+        - Skill Guidelines: taxonomy/upstream/skills_contribution_details.md
       - Skills:
-        - Skills Overview: taxonomy/skills/index.md
-        - Skills Contribution Details: taxonomy/skills/contribution_details.md
+        - Overview: taxonomy/skills/index.md
+        - File Structure: taxonomy/skills/file_structure.md
       - Knowledge:
-        - Knowledge Overview: taxonomy/knowledge/index.md
-        - Knowledge Contribution Details: taxonomy/knowledge/contribution_details.md
+        - Overview: taxonomy/knowledge/index.md
+        - File Structure: taxonomy/knowledge/file_structure.md
   - User Interface:
       - UI Overview: user-interface/ui_overview.md
       - Chat with the model: user-interface/playground_chat.md
@@ -60,6 +63,7 @@ copyright: Copyright &copy; 2024- Red Hat Inc.
 theme:
   name: material
   icon:
+    annotation: material/star-four-points-small
     logo: material/library
   logo: images/ilab_dog.png
   palette:
@@ -86,6 +90,7 @@ markdown_extensions:
   - attr_list
   - def_list
   - footnotes
+  - md_in_html
   - meta
   - toc:
       permalink: true
@@ -104,13 +109,16 @@ markdown_extensions:
   - pymdownx.mark
   - pymdownx.smartsymbols
   - pymdownx.snippets:
+      auto_append:
+        - includes/abbreviations.md
       check_paths: true
   - pymdownx.superfences:
       custom_fences:
         - name: mermaid
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format
-  - pymdownx.tabbed
+  - pymdownx.tabbed:
+      alternate_style: true
   - pymdownx.tasklist:
       custom_checkbox: true
   - pymdownx.tilde

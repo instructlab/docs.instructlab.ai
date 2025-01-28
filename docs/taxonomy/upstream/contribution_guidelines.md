@@ -6,18 +6,23 @@ logo: images/ilab_dog.png
 
 # Taxonomy Contribution Guidelines
 
-A contribution to the InstructLab taxonomy involves
+A contribution to [the upstream InstructLab taxonomy](https://github.com/instructlab/taxonomy)(1) involves
+{ .annotate }
 
-- identifying whether your submission is [a knowledge submission](knowledge/index.md) or [a skills submission](skills/index.md),
+1. `upstream` here refers to the idea in open source of an "upstream" project that is before your product in a workstream.
+
+- identifying whether your submission is [a knowledge submission](../knowledge/index.md) or [a skills submission](../skills/index.md),
 - defining the domain for the submission, or the branches and leaf node that will contain your knowledge,
 - converting any source data to Markdown or PDF and storing them in a git-based repository (required for knowledge submissions),
 - writing a YAML file called `qna.yaml` that contains the seed content that will inform synthetic data generation and the repo URL where your converted source data is stored,
 - creating an attribution file called `attribution.txt` that provides licensing information for source data, and
 - submitting those two files in the proper spot in the taxonomy tree to the InstructLab taxonomy.
 
-You can submit knowledge or compositional skills.
+You can submit knowledge or compositional skills. More information on the two types of contribution can be found in [our knowledge contribution details guide](knowledge_contribution_details.md) or [our compositional skills contribution guide](skills_contribution_details.md).
 
 ## Considerations
+
+When working with the upstream taxonomy, there are some things to keep in mind, like [topics to avoid](#avoid-these-topics), [what LLMs are great at doing](#llms-are-great-at), and [what LLMs will fail at](#llms-are-not-so-great-at). Explore this information before deciding what to contribute, especially the note about hallucinations at the end of this page.
 
 ### Avoid These Topics
 
