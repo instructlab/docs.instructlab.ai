@@ -477,11 +477,6 @@ For more information on what to include in your `attribution.txt` file, see [For
 
 The previous knowledge example references one Markdown file: `phoenix_constellation.md`. You can also add multiple Markdown files or PDFs for knowledge contributions.
 
-!!! note
-    Due to the higher volume, **it will naturally take longer to receive acceptance for
-    a knowledge contribution pull request than for a skill pull request**. Smaller
-    pull requests are simpler and require less time and effort to review.
-
 Here's what a snippet of `phoenix_constellation.md` might look like in your Git repository.
 
 *Example of a `.md` file*
