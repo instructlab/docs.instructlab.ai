@@ -71,6 +71,10 @@ theme:
     primary:
       primary: custom
     accent: purple
+  features:
+    - content.code.annotate
+    - content.code.copy
+    - content.code.select
 
 # Plugins
 plugins:
