@@ -93,13 +93,7 @@ For the upstream taxonomy specifically, reference the structure provided in the 
 
 The previous knowledge example references one markdown file: `phoenix_constellation.md`. You can also add multiple markdown files for knowledge contributions.
 
-!!! note
-    Due to the higher volume, **it will naturally take longer to receive acceptance for
-    a knowledge contribution pull request than for a skill pull request**. Smaller
-    pull requests are simpler and require less time and effort to review.
-
-What might these markdown files look like? They can be freeform. Here's what a
-snippet of `phoenix_constellation.md` might look like in your Git repository.
+What might these markdown files look like? They can be freeform. Here's what a snippet of `phoenix_constellation.md` might look like in your Git repository.
 
 *Example of a `.md` file*
 

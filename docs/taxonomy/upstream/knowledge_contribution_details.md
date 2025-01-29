@@ -22,6 +22,9 @@ If you are using the [UI](https://ui.instructlab.ai) to submit:
 - You have a GitHub account
 - You have verified that the model does not already know the knowledge you want to submit
 
+!!! note
+    Due to the higher volume, **it will naturally take longer to receive acceptance for a knowledge contribution pull request than for a skill pull request**. Smaller pull requests are simpler and require less time and effort to review.
+
 ## Preparing your knowledge documents
 
 You need to set up your source documents as Markdown files in a git repository.
@@ -66,11 +69,11 @@ The specific steps are listed as follows:
 2. This takes you to a page titled “Create a new repository”. Create a custom name for your repository and add a `README.md` file. For example, “knowledge_contributions” could be a good name for your repository.
 3. Click “Create” when you are all set.
 
-### Convert your knowledge documentation to Markdown
+### Convert your knowledge documentation to Markdown or PDF
 
 There are many online tools that can help you convert your documents to Markdown. If you are using a wiki page for your contributions, you can use [pandocs](https://pandoc.org/try/) to convert the documents. For Wikipedia sources on pandoc, use `from: mediawiki` and convert `to: markdown_strict` to access the proper Markdown format.
 
-### Add the Markdown file to your repository
+### Add the Markdown or PDF file to your repository
 
 To add a file to your GitHub repository, follow the GitHub documentation in [Adding a file to a repository](https://docs.github.com/en/repositories/working-with-files/managing-files/adding-a-file-to-a-repository).
 
@@ -129,6 +132,27 @@ There are a few ways you can create a pull request:
 
 - For details on the local process, check out [The GitHub Workflow Guide](https://github.com/kubernetes/community/blob/master/contributors/guide/github-workflow.md) in the Kubernetes documentation and the [GitHub flow](https://docs.github.com/en/get-started/using-github/github-flow) in the GitHub documentation.
 - For details on contributing using the GitHub webpage UI, see [Contributing using the GH UI](https://github.com/instructlab/taxonomy/docs/contributing_via_GH_UI.md) or [Creating a pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request?tool=webui) in the GitHub documentation.
+
+
+### Example of a directory tree
+
+In the taxonomy repository, here's what the previously referenced knowledge might look like in the tree:
+
+```ascii
+[...]
+
+└── knowledge
+    └── science
+        ├── astronomy
+        │ └── constellations
+        │     └── Phoenix <=== here it is :)
+        │     |    └── qna.yaml
+        |     |        attribution.txt
+        │     └── Orion
+        │          └── qna.yaml
+        |              attribution.txt
+[...]
+```
 
 ## Verification
 
