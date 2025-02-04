@@ -21,10 +21,13 @@ While skills are foundational or performative, knowledge is based more on answer
 
 Knowledge is supported by documents, such as a textbook, technical manual, encyclopedia, journal, or magazine.
 
-Knowledge in the taxonomy tree consists of a few more elements than skills:
+!!! important
+    If you are using InstructLab version `0.21.0` or above, you can specify PDF files in your knowledge `qna.yaml` file as a valid document type. Any previous version of InstructLab still only consumes knowledge documents in Markdown format.
+
+Knowledge in a taxonomy tree consists of a few more elements than skills:
 
 - Each knowledge node in the tree has a `qna.yaml`, similar to the format of the `qna.yaml` for skills.
-- ⭐ Currently, for the synthetic data generation (SDG) process to work, knowledge submissions require you to create a Git repository, which can be with GitHub, that contains the markdown files of your knowledge contributions. These contributions in your repository must either be in Markdown (`.md`) format or as a PDF (`.pdf`).
+- ⭐ Currently, for the synthetic data generation (SDG) process to work, knowledge submissions require you to create a Git repository, which can be with GitHub, that contains the source files of your knowledge contributions. These contributions in your repository must either be in Markdown (`.md`) format or as a PDF (`.pdf`).
 - The `qna.yaml` includes parameters that contain information from your repository.
 
 !!! tip

@@ -6,10 +6,12 @@ logo: images/ilab_dog.png
 
 # Taxonomy Contribution Guidelines
 
-A contribution to [the upstream InstructLab taxonomy](https://github.com/instructlab/taxonomy)(1) involves
+We welcome contributions to [the upstream InstructLab taxonomy.](https://github.com/instructlab/taxonomy)(1)
 { .annotate }
 
 1. `upstream` here refers to the idea in open source of an "upstream" project that is before your product in a workstream.
+
+A contribution to the upstream taxonomy involves
 
 - identifying whether your submission is [a knowledge submission](../knowledge/index.md) or [a skills submission](../skills/index.md),
 - defining the domain for the submission, or the branches and leaf node that will contain your knowledge,
@@ -19,6 +21,94 @@ A contribution to [the upstream InstructLab taxonomy](https://github.com/instruc
 - submitting those two files in the proper spot in the taxonomy tree to the InstructLab taxonomy.
 
 You can submit knowledge or compositional skills. More information on the two types of contribution can be found in [our knowledge contribution details guide](knowledge_contribution_details.md) or [our compositional skills contribution guide](skills_contribution_details.md).
+
+## `attribution.txt`
+
+An important part of contributing to the InstructLab project is citing your sources of information. This comes in the form of your attribution.txt that you add to the pull requests. Almost all instances of attribution can be covered by the parameters required for Creative Commons Attribution licenses. Some parameters are as follows:
+
+- Title of work
+- Link to work
+- Include link to a specific revision where possible
+- License of the work
+- Include an SPDX identifier where possible
+- Creator names
+- Copyright information
+- Modification information
+- Indicate if work was itself derived from another openly licensed work
+
+- You can also see this citation style in the [Data sources documentation](https://github.com/instructlab/community/blob/main/docs/DataSources.md).
+
+## Taxonomy tree layout
+
+The taxonomy tree is organized in a cascading directory structure. At the end of each branch, there is a YAML file (qna.yaml) that contains the examples for that domain. Maintainers can decide to change the names of the existing branches or to add new branches.
+
+> [!IMPORTANT]
+> Folder names do not have spaces. Use underscores between words.
+
+Below is an illustrative directory structure to show this layout:
+
+```ascii
+.
+└── linguistics
+    ├── writing
+    │   ├── brainstorming
+    │   │   ├── idea_generation
+    |   │       └── qna.yaml
+    │   │           attribution.txt
+    │   │   ├── refute_claim
+    |   │       └── qna.yaml
+    │   │           attribution.txt
+    │   ├── prose
+    │   │   ├── articles
+    │   │       └── qna.yaml
+    │   │           attribution.txt
+    └── grammar
+        └── qna.yaml
+        │   attribution.txt
+        └── spelling
+            └── qna.yaml
+                attribution.txt
+```
+
+### Taxonomy diagram
+
+> [!Note]
+> This diagram shows a subset of the taxonomy. It is not a complete representation.
+
+```mermaid
+ flowchart TD;
+   na[not accepting contributions\n at this time]:::na
+   taxonomy --> foundational_skill & compositional_skills & knowledge
+
+   foundational_skill:::na --> reasoning:::na
+   reasoning:::na --> common_sense_reasoning:::na
+   reasoning:::na --> mathematical_reasoning:::na
+   reasoning:::na --> theory_of_mind:::na
+
+   compositional_skills --> engineering
+   compositional_skills --> grounded
+   compositional_skills --> lingustics
+
+   grounded --> grounded/arts
+   grounded --> grounded/geography
+   grounded --> grounded/history
+   grounded --> grounded/science
+
+   knowledge --> knowledge/arts
+
+   knowledge --> knowledge/miscellaneous_unknown
+   knowledge --> knowledge/science
+   knowledge --> knowledge/technology
+   knowledge/science --> animals --> birds --> black_capped_chickadee --> black_capped_chickadee-a & black_capped_chickadee-q
+   knowledge/science --> astronomy --> constellations --> phoenix --> phoenix-a & phoenix-q
+
+   black_capped_chickadee-a{attribution.txt}
+   black_capped_chickadee-q{qna.yaml}
+   phoenix-a{attribution.txt}
+   phoenix-q{qna.yaml}
+   classDef na fill:#EEE
+```
+
 
 ## Considerations
 

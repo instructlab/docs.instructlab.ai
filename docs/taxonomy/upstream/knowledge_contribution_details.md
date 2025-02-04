@@ -27,7 +27,7 @@ If you are using the [UI](https://ui.instructlab.ai) to submit:
 
 ## Preparing your knowledge documents
 
-You need to set up your source documents as Markdown files in a git repository.
+You need to set up your source documents as Markdown or PDF files in a git repository. You can organize the knowledge files in your repository however you want. You just need to ensure the YAML is pointing to the correct file.
 
 ## Accepted Sources of Knowledge
 
