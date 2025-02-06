@@ -176,3 +176,50 @@ Label | Actor | Action | Duration
  [precheck-generate-ready](https://github.com/instructlab/taxonomy/labels/precheck-generate-ready) | Triager | Run prechecks and generate  | Days
  [community-build-ready](https://github.com/instructlab/taxonomy/labels/community-build-ready) | Backend | Model gets retrained | Weeks
  | Triager | Check the numbers and PR merged or closed | -
+
+
+### Submissions
+
+To make the `qna.yaml` files easier and faster for humans to read, it is recommended to specify `version` first, followed by `task_description`, then `created_by`, and finally `seed_examples`. In `seed_examples`, it is recommended to specify `context` first (if applicable), followed by `question` and `answer`.
+
+*Example `qna.yaml`*
+
+```yaml
+version: 2
+task_description: <string>
+created_by: <string>
+seed_examples:
+  - question: <string>
+    answer: |
+      <multi-line string>
+  - context: |
+      <multi-line string>
+    question: <string>
+    answer: |
+      <multi-line string>
+  # ...
+```
+
+Then, you create an `attribution.txt` file that includes the sources of your information, if any. These sources can also be self-authored sources for skills.
+
+*Fields in `attribution.txt`*
+
+```text
+[Link to source]
+[Link to work]
+[License of the work]
+[Creator name]
+```
+
+*Example of a self-authored source `attribution.txt`*
+
+```text
+Title of work: Customizing an order for tea
+Link to work: -
+License of the work: CC BY-SA-4.0
+Creator names: Jean-Luc Picard
+```
+
+You may copy this example and replace the title of the work (your skill) and the creator name to submit a skill. The license is [Creative Commons Attribution-ShareAlike 4.0 International](https://creativecommons.org/licenses/by-sa/4.0/), which is shortened to `CC BY-SA-4.0`.
+
+For more information on what to include in your `attribution.txt` file, reference [the general contribution guidelines](contribution_guidelines.md#attributiontxt).

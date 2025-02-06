@@ -220,6 +220,8 @@ document:
 
 ### `document_outline`
 
+The `document_outline` field is a short description of the knowledge document's topic.
+
 ```yaml hl_lines="5-7" title="qna.yaml" linenums="1"
 version: # ...
 domain: # ...
@@ -250,6 +252,8 @@ document:
 
 ### `repo`
 
+As InstructLab currently requires a git repository, you would provide an address to a git repository here in the `repo` field. That repository may be a local one or one hosted on version control providers like GitHub or GitLab.
+
 ```yaml hl_lines="7" title="qna.yaml" linenums="1"
 version: # ...
 domain: # ...
@@ -264,6 +268,8 @@ document:
 
 ### `commit`
 
+The `commit` field holds the git-based commit hash where the exact version of your knowledge document can be found. This field allows you to pin a document version.
+
 ```yaml hl_lines="8" title="qna.yaml" linenums="1"
 version: # ...
 domain: # ...
@@ -277,6 +283,8 @@ document:
 ```
 
 ### `patterns`
+
+The `patterns` field indicates what kind of files the SDG process should use. You can give an exact name, like `phoenix_constellation.md`, or a glob pattern, like `*.md`. This is a list of patterns, so there may be more than one.
 
 ```yaml hl_lines="9-10" title="qna.yaml" linenums="1"
 version: # ...
@@ -471,7 +479,7 @@ You can review a full example of a knowledge submission for the upstream taxonom
     Creator names: Wikipedia Authors
     ```
 
-For more information on what to include in your `attribution.txt` file, see [For your attribution.txt file](https://github.com/instructlab/taxonomy/blob/main/CONTRIBUTING.md#for-your-attributiontxt-file) in the CONTRIBUTING.md file.
+For more information on what to include in your `attribution.txt` file for an upstream submission, reference [the upstream contribution document on knowledge](../upstream/knowledge_contribution_details.md#the-attributiontxt-file).
 
 ### Example of a knowledge document file
 
@@ -502,5 +510,5 @@ universe. Phoenix is the radiant of two annual meteor showers: the Phoenicids in
 Phoenicids.
 ```
 
-You can organize the knowledge files in your repository however you want. You need to ensure the YAML is pointing to the correct file.
+You can organize the knowledge files in your repository however you want. You need to ensure the `document` section of the YAML file is pointing to the correct file.
 

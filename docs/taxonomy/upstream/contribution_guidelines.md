@@ -24,26 +24,26 @@ You can submit knowledge or compositional skills. More information on the two ty
 
 ## `attribution.txt`
 
-An important part of contributing to the InstructLab project is citing your sources of information. This comes in the form of your attribution.txt that you add to the pull requests. Almost all instances of attribution can be covered by the parameters required for Creative Commons Attribution licenses. Some parameters are as follows:
+An important part of contributing to the InstructLab project is citing your sources of information. This comes in the form of your `attribution.txt` that you add to the pull requests. Almost all instances of attribution can be covered by the parameters required for Creative Commons Attribution licenses. Some parameters are as follows:
 
 - Title of work
 - Link to work
-- Include link to a specific revision where possible
+    - Include link to a specific revision where possible
 - License of the work
-- Include an SPDX identifier where possible
+    - Include an SPDX identifier where possible
 - Creator names
 - Copyright information
 - Modification information
-- Indicate if work was itself derived from another openly licensed work
+    - Indicate if work was itself derived from another openly licensed work
 
-- You can also see this citation style in the [Data sources documentation](https://github.com/instructlab/community/blob/main/docs/DataSources.md).
+You can also see this citation style in the [Data sources documentation](https://github.com/instructlab/community/blob/main/docs/DataSources.md).
 
-## Taxonomy tree layout
+## Upstream taxonomy tree layout
 
-The taxonomy tree is organized in a cascading directory structure. At the end of each branch, there is a YAML file (qna.yaml) that contains the examples for that domain. Maintainers can decide to change the names of the existing branches or to add new branches.
+The upstream taxonomy tree is organized in a cascading directory structure. At the end of each branch, there is a YAML file (`qna.yaml`) that contains the examples for that domain. Maintainers can decide to change the names of the existing branches or to add new branches.
 
-> [!IMPORTANT]
-> Folder names do not have spaces. Use underscores between words.
+!!! important
+    Folder names do not have spaces. Use underscores between words.
 
 Below is an illustrative directory structure to show this layout:
 
@@ -70,10 +70,10 @@ Below is an illustrative directory structure to show this layout:
                 attribution.txt
 ```
 
-### Taxonomy diagram
+### Upstream taxonomy diagram
 
-> [!Note]
-> This diagram shows a subset of the taxonomy. It is not a complete representation.
+!!! note
+    This diagram shows a subset of the upstream taxonomy. It is not a complete representation.
 
 ```mermaid
  flowchart TD;

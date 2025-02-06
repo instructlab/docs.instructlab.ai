@@ -37,7 +37,7 @@ Grounded skills include things like:
 * Summarizing or extracting from a piece of text
 * Find unresolved items in a meeting transcript
 
-[Example Grounded compositional skill pull request](https://github.com/instructlab/taxonomy/pull/250)
+[Example of a grounded compositional skill pull request in the upstream repository](https://github.com/instructlab/taxonomy/pull/250)
 
 ### Core or foundational skills
 

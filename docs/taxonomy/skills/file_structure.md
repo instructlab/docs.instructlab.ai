@@ -9,11 +9,11 @@ logo: images/ilab_dog.png
 Taxonomy trees in InstructLab have leaf-node directories. These leaf nodes contain at least one file, and usually two:
 
 - A `qna.yaml` file that asks and answers questions about the information in the git repository where you have stored a knowledge document.
-- An `attribution.txt` file that includes the sources for the information used in the `qna.yaml`. This file is only required when submitting knowledge [to the InstructLab taxonomy repository](https://github.com/instructlab/taxonomy).
+- An `attribution.txt` file that includes the sources for the information used in the `qna.yaml`. This file is only required when submitting knowledge [to the InstructLab taxonomy repository](https://github.com/instructlab/taxonomy). Learn more about this file in [the upstream skill contribution guidelines](../upstream/skills_contribution_details.md).
 
 - Skills require a much smaller volume of content than knowledge contributions. An entire skill contribution can be just a few lines of YAML in the `qna.yaml` file.
 
-Compositional skills can either be grounded (includes a context) or ungrounded (does not include a context).  Grounded or ungrounded is declared in the taxonomy tree, for example: `linguistics/writing/poetry/haiku/` (ungrounded) or `grounded/linguistics/grammar` (grounded). The `qna.yaml` is in the final node.
+Compositional skills can either be grounded (includes a context) or ungrounded (does not include a context).  Grounded or ungrounded is declared by placement in a taxonomy tree, such as `linguistics/writing/poetry/haiku/` for an ungrounded skill or `grounded/linguistics/grammar` for a grounded skill. The `qna.yaml` is in the final node.
 
 ## The structure of the `qna.yaml` file
 
@@ -26,7 +26,7 @@ Field | Type | Required? | Content
 `created_by` | string | yes | The GitHub username of the contributor.
 `seed_examples` | array | yes | A collection of key/value entries. New submissions should have at least five entries, although older files may have fewer.<br/><br/>Note collections are nested lists, like sub-entries in a bulleted list.
 `context` | string | only for grounded skills | Part of the `seed_examples` collection.<br/><br/>Grounded skills require the user to provide context containing information that the model is expected to take into account during processing. This is different from knowledge, where the model is expected to gain facts and background knowledge from the tuning process.<br/><br/>**Note:** The context key should not be used for ungrounded skills.
- `question` | string | yes | Part of the `seed_examples` collection.<br/><br/>A question for the model.
+`question` | string | yes | Part of the `seed_examples` collection.<br/><br/>A question for the model.
 `answer` | string | yes | Part of the `seed_examples` collection.<br/><br/>The desired response from the model.
 
 Other keys at any level are currently ignored.
@@ -34,53 +34,259 @@ Other keys at any level are currently ignored.
 !!! important
     Each `qna.yaml` file requires a minimum of five question and answer pairs.
 
-### Submissions
+### `version`
 
-To make the `qna.yaml` files easier and faster for humans to read, it is recommended to specify `version` first, followed by `task_description`, then `created_by`, and finally `seed_examples`. In `seed_examples`, it is recommended to specify `context` first (if applicable), followed by `question` and `answer`.
+The `version` field is the version of the [schema](https://github.com/instructlab/schema) that is in use. Currently, the value here should be `3`.
 
-*Example `qna.yaml`*
+=== "Ungrounded"
 
-```yaml
-version: 2
-task_description: <string>
-created_by: <string>
-seed_examples:
-  - question: <string>
-    answer: |
-      <multi-line string>
-  - context: |
-      <multi-line string>
-    question: <string>
-    answer: |
-      <multi-line string>
-  ...
-```
+    ```yaml hl_lines="1" title="qna.yaml" linenums="1"
+    version: 3
+    task_description: # ...
+    created_by: # ...
+    seed_examples:
+      # ...
+    ```
 
-Then, you create an `attribution.txt` file that includes the sources of your information, if any. These sources can also be self-authored sources for skills.
+=== "Grounded"
 
-*Fields in `attribution.txt`*
+    ```yaml hl_lines="1" title="qna.yaml" linenums="1"
+    version: 3
+    task_description: # ...
+    created_by: # ...
+    seed_examples:
+      # ...
+    ```
 
-```text
-[Link to source]
-[Link to work]
-[License of the work]
-[Creator name]
-```
+### `task_description`
 
-*Example of a self-authored source `attribution.txt`*
+The `task_description` field is
 
-```text
-Title of work: Customizing an order for tea
-Link to work: -
-License of the work: CC BY-SA-4.0
-Creator names: Jean-Luc Picard
-```
+=== "Ungrounded"
 
-You may copy this example and replace the title of the work (your skill) and the creator name to submit a skill. The license is [Creative Commons Attribution-ShareAlike 4.0 International](https://creativecommons.org/licenses/by-sa/4.0/), which is shortened to `CC BY-SA-4.0`.
+    ```yaml hl_lines="2" title="qna.yaml" linenums="1"
+    version: # ...
+    task_description: 'Teach the model how to rhyme.'
+    created_by: # ...
+    seed_examples:
+      # ...
+    ```
 
-For more information on what to include in your `attribution.txt` file, see [For your attribution.txt file](https://github.com/instructlab/taxonomy/blob/main/CONTRIBUTING.md#for-your-attributiontxt-file) in CONTRIBUTING.md.
+=== "Grounded"
 
-### Writing YAML
+    ```yaml hl_lines="2-3" title="qna.yaml" linenums="1"
+    version: # ...
+    task_description: |
+        This skill provides the ability to read a markdown-formatted table.
+    created_by: # ...
+    seed_examples:
+      # ...
+    ```
+
+### `created_by`
+
+The `created_by` field defines the user who submitted the skill. If you're working upstream, it would be your GitHub username. If you're working on your own taxonomy, it would be some kind of identifier with no spaces.
+
+=== "Ungrounded"
+
+    ```yaml hl_lines="3" title="qna.yaml" linenums="1"
+    version: # ...
+    task_description: # ...
+    created_by: juliadenham
+    seed_examples:
+      # ...
+    ```
+
+=== "Grounded"
+
+    ```yaml hl_lines="3" title="qna.yaml" linenums="1"
+    version: # ...
+    task_description: # ...
+    created_by: mairin
+    seed_examples:
+      # ...
+    ```
+
+### `seed_examples`
+
+The `seed_examples` field does not have anything next to it because it is an array. An array in YAML is a collection of other values, and those values are indicated through indentation on subsequent lines.
+
+=== "Ungrounded"
+
+    ```yaml hl_lines="4" title="qna.yaml" linenums="1"
+    version: # ...
+    task_description: # ...
+    created_by: # ...
+    seed_examples:
+      - question: # ...
+        answer: # ...
+      - question: # ...
+        answer: # ...
+      - question: # ...
+        answer: # ...
+      - question: # ...
+        answer: # ...
+      - question: # ...
+        answer: # ...
+    ```
+
+=== "Grounded"
+
+    ```yaml hl_lines="4" title="qna.yaml" linenums="1"
+    version: # ...
+    task_description: # ...
+    created_by: # ...
+    seed_examples:
+      - context: # ...
+        question: # ...
+        answer: # ...
+      - context: # ...
+        question: # ...
+        answer: # ...
+      - context: # ...
+        question: # ...
+        answer: # ...
+      - context: # ...
+        question: # ...
+        answer: # ...
+      - context: # ...
+        question: # ...
+        answer: # ...
+    ```
+
+### `context` (grounded skills only)
+
+The `seed_examples` field does not have anything next to it because it is an array. An array in YAML is a collection of other values, and those values are indicated through indentation on subsequent lines.
+
+=== "Ungrounded"
+    
+    N/A
+
+=== "Grounded"
+
+    ```yaml hl_lines="5-11 14-21 24-29" title="qna.yaml" linenums="1"
+    version: # ...
+    task_description: # ...
+    created_by: # ...
+    seed_examples:
+      - context: |
+          | **Breed**      | **Size**     | **Barking** | **Energy** |
+          |----------------|--------------|-------------|------------|
+          | Afghan Hound   | 25-27 in     | 3/5         | 4/5        |
+          | Labrador       | 22.5-24.5 in | 3/5         | 5/5        |
+          | Cocker Spaniel | 14.5-15.5 in | 3/5         | 4/5        |
+          | Poodle (Toy)   | <= 10 in     | 4/5         | 4/5        |
+        question: # ...
+        answer: # ...
+      - context: |
+          | **Name** | **Date** | **Color** | **Letter** | **Number** |
+          |----------|----------|-----------|------------|------------|
+          | George   | Mar 5    | Green     | A          | 1          |
+          | Gráinne  | Dec 31   | Red       | B          | 2          |
+          | Abigail  | Jan 17   | Yellow    | C          | 3          |
+          | Bhavna   | Apr 29   | Purple    | D          | 4          |
+          | Rémy     | Sep 9    | Blue      | E          | 5          |
+        question: # ...
+        answer: # ...
+      - context: |
+          | Banana | Apple      | Blueberry | Strawberry |
+          |--------|------------|-----------|------------|
+          | Yellow | Red, Green | Blue      | Red        |
+          | Large  | Medium     | Small     | Small      |
+          | Peel   | Peel       | No peel   | No peel    |
+        question: # ...
+        answer: # ...
+    ```
+
+### `question`
+
+The `question` field is a sample question that a teacher model would use to train a student model on the skill.
+
+=== "Ungrounded"
+
+    ```yaml hl_lines="5 7 9 11 13" title="qna.yaml" linenums="1"
+    version: # ...
+    task_description: # ...
+    created_by: # ...
+    seed_examples:
+      - question: What are 5 words that rhyme with horn?
+        answer: # ...
+      - question: What are 5 words that rhyme with cat?
+        answer: # ...
+      - question: What are 5 words that rhyme with poor?
+        answer: # ...
+      - question: What are 5 words that rhyme with bank?
+        answer: # ...
+      - question: What are 5 words that rhyme with bake?
+        answer: # ...
+    ```
+
+=== "Grounded"
+
+    ```yaml hl_lines="6-7 10-11 14-15" title="qna.yaml" linenums="1"
+    version: # ...
+    task_description: # ...
+    created_by: # ...
+    seed_examples:
+      - context: # ...
+        question: |
+          Which breed has the most energy?
+        answer: # ...
+      - context: # ...
+        question: |
+          What is Gráinne's letter and what is her color?
+        answer: # ...
+      - context: # ...
+        question: |
+          Which fruit is blue, small, and has no peel?
+        answer: # ...
+    ```
+
+### `answer`
+
+The `answer` field is an example answer that the teacher model uses to check the answer from a student model and train it to answer more accurately. Note that this would not be an exact answer the final student model would eventually give every time as the goal of fine-tuning with InstructLab is that it will give similar answers.
+
+=== "Ungrounded"
+
+    ```yaml hl_lines="6 8 10 12 14" title="qna.yaml" linenums="1"
+    version: # ...
+    task_description: # ...
+    created_by: # ...
+    seed_examples:
+      - question: # ...
+        answer: warn, torn, born, thorn, and corn.
+      - question: # ...
+        answer: bat, gnat, rat, vat, and mat.
+      - question: # ...
+        answer: door, shore, core, bore, and tore.
+      - question: # ...
+        answer: tank, rank, prank, sank, and drank.
+      - question: # ...
+        answer: wake, lake, steak, make, and quake.
+    ```
+
+=== "Grounded"
+
+    ```yaml hl_lines="7-8 11-12 15-16" title="qna.yaml" linenums="1"
+    version: # ...
+    task_description: # ...
+    created_by: # ...
+    seed_examples:
+      - context: # ...
+        question: # ...
+        answer: |
+          The breed with the most energy is the Labrador.
+      - context: # ...
+        question: # ...
+        answer: |
+          Gráinne's letter is B and her color is red.
+      - context: # ...
+        question: # ...
+        answer: |
+          The blueberry is blue, small, and has no peel.
+    ```
+
+## Writing YAML
 
 If you have not written YAML before, YAML is a text file where indentation matters.
 
@@ -94,7 +300,7 @@ If you have not written YAML before, YAML is a text file where indentation matte
     - Consider quoting all values with double quotation marks (`"`) to avoid surprising YAML parser behavior (e.g., Yes answer can be interpreted by the parser as a boolean of `True` value, unless "Yes" is quoted.)
     - See [yaml-multiline.info](https://yaml-multiline.info/) for more info.
 
-We recommend you **lint**, or verify, your YAML using a tool. One linter option is [yamllint.com](https://yamllint.com). You can copy/paste your YAML into the box and select **Go** to have it analyze your YAML and make recommendations. Online tools like [prettified](https://onlineyamltools.com/prettify-yaml) and [yaml-validator](https://jsonformatter.org/yaml-validator) can automatically reformat your YAML to adhere to our `yamllint` PR checks, such as breaking lines longer than 120 characters.
+We recommend you **lint**, or verify, your YAML using a tool. One linter option is [yamllint.com](https://yamllint.com). You can copy/paste your YAML into the box and select **Go** to have it analyze your YAML and make recommendations. Online tools like [prettified](https://onlineyamltools.com/prettify-yaml) and [yaml-validator](https://jsonformatter.org/yaml-validator) can automatically reformat your YAML to adhere to default `yamllint` parameters, such as breaking lines longer than 80 characters.
 
 ### Examples
 
@@ -117,13 +323,13 @@ seed_examples:
     answer: wake, lake, steak, make, and quake.
 ```
 
-Here is the location of this YAML in the taxonomy tree. Note that the YAML file itself, plus any added directories that contain the file, is the entirety of the skill in terms of a taxonomy contribution:
+Here is the location of this YAML in a sample taxonomy tree. Note that the YAML file itself, plus any added directories that contain the file, is the entirety of the skill in terms of a taxonomy contribution:
 
 #### Ungrounded compositional skill: Directory tree example
 
 ```ascii
 [...]
-
+compositional_skills
 └── writing
     └── poetry
     |   └── haiku <=== here it is :)
@@ -190,21 +396,21 @@ seed_examples:
 
 ```ascii
 [...]
-
-grounded
-└── technology
-    └── machine_learning
-        └── natural_language_processing
-    |   |     └── information_extraction
-    |            └── inference
-    |   |            └── qualitative
-    |   |               ├── sentiment
-    |   |               |     └── qna.yaml
-    |   |               |         attribution.txt
-    │                   ├── quantitative
-    │   │                   ├── table_analysis <=== here it is :)
-    │   |   |               |     └── qna.yaml
-    │   │   │               |         attribution.txt
+compositional_skills
+└── grounded
+    └── technology
+        └── machine_learning
+            └── natural_language_processing
+        |   |     └── information_extraction
+        |            └── inference
+        |   |            └── qualitative
+        |   |               ├── sentiment
+        |   |               |     └── qna.yaml
+        |   |               |         attribution.txt
+        │                   ├── quantitative
+        │   │                   ├── table_analysis <=== here it is :)
+        │   |   |               |     └── qna.yaml
+        │   │   │               |         attribution.txt
 
 [...]
 ```

@@ -43,12 +43,16 @@ Field | Type | Required? | Content
  `question` | string | yes | Part of the `seed_examples` collection.<br/><br/>A question for the model.
 `answer` | string | yes | Part of the `seed_examples` collection.<br/><br/>The desired response from the model.
 
-Other keys at any level are currently ignored.
+Other keys at any level are currently ignored. Learn more in the [file structure overview for skills](../skills/file_structure.md).
 
 !!! important
     Each `qna.yaml` file requires a minimum of five question and answer pairs.
 
 ### Submissions
+
+For the upstream taxonomy, there are two required files: the `qna.yaml` file and the `attribution.txt` file.
+
+#### The `qna.yaml` file
 
 To make the `qna.yaml` files easier and faster for humans to read, it is recommended to specify `version` first, followed by `task_description`, then `created_by`, and finally `seed_examples`. In `seed_examples`, it is recommended to specify `context` first (if applicable), followed by `question` and `answer`.
 
@@ -67,8 +71,10 @@ seed_examples:
     question: <string>
     answer: |
       <multi-line string>
-  ...
+  # ...
 ```
+
+#### The `attribution.txt` file
 
 Then, you create an `attribution.txt` file that includes the sources of your information, if any. These sources can also be self-authored sources for skills.
 
@@ -92,7 +98,7 @@ Creator names: Jean-Luc Picard
 
 You may copy this example and replace the title of the work (your skill) and the creator name to submit a skill. The license is [Creative Commons Attribution-ShareAlike 4.0 International](https://creativecommons.org/licenses/by-sa/4.0/), which is shortened to `CC BY-SA-4.0`.
 
-For more information on what to include in your `attribution.txt` file, see [For your attribution.txt file](https://github.com/instructlab/taxonomy/blob/main/CONTRIBUTING.md#for-your-attributiontxt-file) in CONTRIBUTING.md.
+For more information on what to include in your `attribution.txt` file, reference [the general contribution guidelines](contribution_guidelines.md#attributiontxt).
 
 ### Writing YAML
 
