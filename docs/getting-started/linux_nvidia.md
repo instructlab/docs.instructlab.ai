@@ -143,3 +143,9 @@ you can save the completion script and source it from `~/.bashrc`:
 ```sh
 _ILAB_COMPLETE=fish_source ilab > ~/.config/fish/completions/ilab.fish
 ```
+
+## Next Steps
+
+Now that you have InstructLab installed, the next step is to initialize your environment.
+
+[Initialize InstructLab](../getting-started/initilize_ilab.md){: .md-button .md-button--primary }
