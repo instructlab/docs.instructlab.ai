@@ -76,7 +76,7 @@ Key | Type | Required | Constraints | Value | Notes
 `created_by` | Y | string | - | Your GitHub username | -
 `domain` | Y | string | - | Knowledge sub-category | The knowledge domain which is used in prompts to the teacher model during synthetic data generation. The domain should be brief such as the title to a textbook chapter or section.
 `seed_examples` | Y | array | at least 5 sets | null | This is a collection of questions and answers with context from the knowledge document that InstructLab uses to generate data synthetically.
-`context` | Y | string | < 500 tokens | A chunk of the document showing off the different **unique** content to help guide the teacher model. If you have only text, that's one thing, but if you have tables or other content be sure to add that too. | This should be a copy-paste from the Markdown version of your document
+`context` | Y | string | < 500 tokens | A chunk of the document showing off the different **unique** content to help guide the teacher model. If you have only text, that's one thing, but if you have tables or other content, be sure to add that, too. | This should be a copy-paste from the Markdown version of your document
 `questions_and_answers` | Y | array | at least 3 pairs per context | null | This is a collection of questions and answers.
 `question` | Y | string | > 250 tokens | A question related to the grounded in the relivant context | Questions are things you'd expect someone to ask the model based on the context given. This will be used for synthetic data generation.
 `answer` | Y | string | > 250 tokens | An answer for the question, longer then a one word answer. | Answers are what you'd like the model to give as an answer. It will not be an exact answer the model always gives.
