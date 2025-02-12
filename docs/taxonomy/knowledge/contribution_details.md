@@ -67,28 +67,32 @@ For knowledge submissions, we need a `qna.yaml` file and an `attribution.txt` fi
 
 For the current version of the taxonomy, version 3, here are the available fields:
 
+!!! note
+    Tokens in the case of context, questions, and answers can fit to "words," but it's specifically tokens, and not words, that are the limitations.
+
 Key | Type | Required | Constraints | Value | Notes
 --|--|--|--|--|--
 `version` | Y | integer | - | `3` | The taxonomy schema version used in the `qna.yaml` file. Defined in [instructlab/schema](https://github.com/instructlab/schema)
 `created_by` | Y | string | - | Your GitHub username | -
 `domain` | Y | string | - | Knowledge sub-category | The knowledge domain which is used in prompts to the teacher model during synthetic data generation. The domain should be brief such as the title to a textbook chapter or section.
 `seed_examples` | Y | array | at least 5 sets | null | This is a collection of questions and answers with context from the knowledge document that InstructLab uses to generate data synthetically.
-`context` | Y | string | < 500 words | A chunk of information from the original knowledge document | This should be a copy-paste from the Markdown version of your document
+`context` | Y | string | < 500 tokens | A chunk of the document showing off the different **unique** content to help guide the teacher model. If you have only text, that's one thing, but if you have tables or other content, be sure to add that, too. | This should be a copy-paste from the Markdown version of your document
 `questions_and_answers` | Y | array | at least 3 pairs per context | null | This is a collection of questions and answers.
-`question` | Y | string | > 250 words | A question related to the context | Questions are things you'd expect someone to ask the model based on the context given. This will be used for synthetic data generation.
-`answer` | Y | string | > 250 words | An answer for the question | Answers are what you'd like the model to give as an answer. It will not be an exact answer the model always gives.
-`document_outline` | Y | string | - | A brief summary of the document | -
+`question` | Y | string | > 250 tokens | A question related to the grounded in the relevant context | Questions are things you'd expect someone to ask the model based on the context given. This will be used for synthetic data generation.
+`answer` | Y | string | > 250 tokens | An answer for the question, longer then a one-word answer. | Answers are what you'd like the model to give as an answer. It will not be an exact answer the model always gives.
+`document_outline` | Y | string | - | This provides the context specific for each document chunk; this should be as **specific** as you possibly can get.
 `document` | Y | object | - | null | The collection of data for the knowledge document.
 `repo` | Y | string | a git URL | The URL (with a `.git` suffix) that identifies your git repo where you've stored your knowledge documents | -
 `commit` | Y | string | full commit hash | A SHA1 full commit hash that corresponds to the document in the repo | This hash must be exactly where the system can find the document.
 `patterns` | Y | array | `*.md`, `*.pdf` | A list of glob patterns specifying the files in the repo. | Any glob pattern that starts with `*` must be quoted due to YAML rules. Currently, the system accepts `.md` and `.pdf` files.
 
 !!! important
-    There must be at least 5 sets of questions and answers with context in every `qna.yaml` file.
+    There must be at least 5 sets of 3 questions and 3 answers with context in every `qna.yaml` file. Also the "context blocks" should be as diverse and unique as possible. The goal is to get as much different
+    information in so as the teacher LLM reads through the document it gets "inspired" by the different content.
 
 #### An example file
 
-To build a strong taxonomy, 
+To build a strong taxonomy,
 
 ## Create a pull request in the taxonomy repository
 
