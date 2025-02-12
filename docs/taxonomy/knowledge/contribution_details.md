@@ -68,7 +68,7 @@ For knowledge submissions, we need a `qna.yaml` file and an `attribution.txt` fi
 For the current version of the taxonomy, version 3, here are the available fields:
 
 !!! note
-    Tokens in the case of context, questions, and answers can fit to "words" but it's specificly tokens are the limitations.
+    Tokens in the case of context, questions, and answers can fit to "words," but it's specifically tokens, and not words, that are the limitations.
 
 Key | Type | Required | Constraints | Value | Notes
 --|--|--|--|--|--
