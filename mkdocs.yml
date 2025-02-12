@@ -36,6 +36,7 @@ nav:
       - Knowledge Overview: taxonomy/knowledge/index.md
       - Knowledge Guide: taxonomy/knowledge/guide.md
       - Knowledge Contribution Details: taxonomy/knowledge/contribution_details.md
+      - Synthetic Data Generation Guidelines: taxonomy/sdg_guidelines.md
   - User Interface:
       - UI Overview: user-interface/ui_overview.md
       - Chat with the model: user-interface/playground_chat.md
