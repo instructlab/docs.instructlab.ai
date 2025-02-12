@@ -12,6 +12,9 @@ Taxonomy trees in InstructLab have leaf-node directories. These leaf nodes conta
 
 ## The `qna.yaml` file
 
+!!! note
+    Tokens in the case of context, questions, and answers can fit to "words," but it's specifically tokens, and not words, that are the limitations. [Learn more](https://github.com/instructlab/sdg/blob/main/docs/FAQ.md#how-long-can-a-given-seed_example-be-for-a-knowledge-leaf-node).
+
 In general, here are the fields in the YAML file:
 
 Key | Type | Required | Constraints | Value | Notes
@@ -20,11 +23,11 @@ Key | Type | Required | Constraints | Value | Notes
 `created_by` | string | Y | no spaces | Your GitHub username (for the upstream taxonomy) or your name with no spaces (for general intructlab use) | -
 `domain` | string | Y | - | Knowledge sub-category | The knowledge domain which is used in prompts to the teacher model during synthetic data generation. The domain should be brief such as the title to a textbook chapter or section.
 `seed_examples` | Y | array | at least 5 sets | null | This is a collection of questions and answers with context from the knowledge document that InstructLab uses to generate data synthetically.
-`context` | string | Y | < 500 words | A chunk of information from the original knowledge document | This should be a copy-paste from the Markdown version of your document
+`context` | string | Y | < 500 tokens | A chunk of the knowledge document showing off the different **unique** content to help guide the teacher model. If the knowledge documents have only text, all context would be text. If the knowledge documnets have tables or other content formats, ensure samples of those formats are all used. | This should be a copy-paste from the Markdown version of your document
 `questions_and_answers` | Y | array | at least 3 pairs per context | null | This is a collection of questions and answers.
-`question` | Y | string | < 250 words | A question related to the context | Questions are things you'd expect someone to ask the model based on the context given. This will be used for synthetic data generation.
-`answer` | Y | string | < 250 words | An answer for the question | Answers are what you'd like the model to give as an answer. It will not be an exact answer the model always gives.
-`document_outline` | Y | string | - | A brief summary of the document | -
+`question` | Y | string | \> 250 tokens | A question related to and grounded in the relevant context | Questions are things you'd expect someone to ask the model based on the context given. This will be used for synthetic data generation.
+`answer` | Y | string | \> 250 tokens | An answer for the question, longer than a one-word or one-number answer | Answers are what you'd like the model to give as an answer. It will not be an exact answer the model always gives.
+`document_outline` | Y | string | - | A brief title-like summary of the document. This provides the context specific for each document chunk. It should be as **specific** as you possibly can get. For example, "Acme Company 2023 Financial Report" rather than "Financial report." | -
 `document` | Y | object | - | null | The collection of data for the knowledge document.
 `repo` | Y | string | a git URL | The URL (with a `.git` suffix) that identifies your git repo where you've stored your knowledge documents | -
 `commit` | Y | string | full commit hash | A SHA1 full commit hash that corresponds to the document in the repo | This hash must be exactly where the system can find the document.

@@ -19,15 +19,15 @@ Compositional skills can either be grounded (includes a context) or ungrounded (
 
 Taxonomy skill files must be a valid [YAML](https://yaml.org/) file named `qna.yaml`. Each `qna.yaml` file contains a set of key/value entries with the following keys:
 
-Field | Type | Required? | Content
---|--|--|--
-`version` | integer | yes | The value must be the number 3.
-`task_description` | string | yes | A description of the task which is used in prompts to the teacher model during synthetic data generation. The description should be detailed and prescriptive to improve the teacher model's responses.
-`created_by` | string | yes | The GitHub username of the contributor.
-`seed_examples` | array | yes | A collection of key/value entries. New submissions should have at least five entries, although older files may have fewer.<br/><br/>Note collections are nested lists, like sub-entries in a bulleted list.
-`context` | string | only for grounded skills | Part of the `seed_examples` collection.<br/><br/>Grounded skills require the user to provide context containing information that the model is expected to take into account during processing. This is different from knowledge, where the model is expected to gain facts and background knowledge from the tuning process.<br/><br/>**Note:** The context key should not be used for ungrounded skills.
-`question` | string | yes | Part of the `seed_examples` collection.<br/><br/>A question for the model.
-`answer` | string | yes | Part of the `seed_examples` collection.<br/><br/>The desired response from the model.
+Field | Type | Required? | Constraints | Content
+--|--|--|--|--
+`version` | integer | yes | -- | The taxonomy schema version used in the `qna.yaml` file. Defined in [instructlab/schema](https://github.com/instructlab/schema)
+`task_description` | string | yes | | A description of the task which is used in prompts to the teacher model during synthetic data generation. The description should be detailed and prescriptive to improve the teacher model's responses.
+`created_by` | string | yes | | The GitHub username of the contributor.
+`seed_examples` | array | yes | at least 5 sets | A collection of key/value entries. New submissions should have at least five entries, although older files may have fewer.<br/><br/>Note collections are nested lists, like sub-entries in a bulleted list.
+`context` | string | only for grounded skills | < 500 tokens | Part of the `seed_examples` collection.<br/><br/>Grounded skills require the user to provide context containing information that the model is expected to take into account during processing. This is different from knowledge, where the model is expected to gain facts and background knowledge from the tuning process.<br/><br/>A chunk of the knowledge document showing off the different **unique** content to help guide the teacher model. It should be related to the skill. This should be a copy-paste from the Markdown version of your document. <br/><br/>**Note:** The context key should not be used for ungrounded skills.
+`question` | string | yes | \> 250 tokens | Part of the `seed_examples` collection.<br/><br/>A question for the model. Questions are things you'd expect someone to ask the model based on the context given. This will be used for synthetic data generation. Note that if this is a grounded skill, questions should be grounded in the context provided.
+`answer` | string | yes | \> 250 tokens | Part of the `seed_examples` collection.<br/><br/>The desired response from the model. Longer than a one-word or one-number answer.
 
 Other keys at any level are currently ignored.
 
