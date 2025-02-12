@@ -79,8 +79,8 @@ theme:
 
 # Plugins
 plugins:
-  - git-authors:
-        show_email_address: false
+#  - git-authors:
+#        show_email_address: false
   - git-committers:
       repository: instructlab/docs.instructlab.ai
       branch: main
