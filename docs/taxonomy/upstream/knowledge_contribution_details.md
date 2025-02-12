@@ -22,12 +22,42 @@ If you are using the [UI](https://ui.instructlab.ai) to submit:
 - You have a GitHub account
 - You have verified that the model does not already know the knowledge you want to submit
 
+!!! note
+    Due to the higher volume, **it will naturally take longer to receive acceptance for a knowledge contribution pull request than for a skill pull request**. Smaller pull requests are simpler and require less time and effort to review.
+
 ## Preparing your knowledge documents
 
-You need to set up your source documents as Markdown files in a git repository.
+You need to set up your source documents as Markdown or PDF files in a git repository. You can organize the knowledge files in your repository however you want. You just need to ensure the YAML is pointing to the correct file.
+
+## Accepted Sources of Knowledge
 
 !!! warning
-    **We are currently only accepting sources from [this list](https://github.com/instructlab/community/blob/main/docs/DataSources.md) at this time due to legal requirements to keep InstructLab open source.** Our taxonomy triage team will reject any contributions that do not match this pattern. Thanks for helping us keep InstructLab 100% open source!
+    **We are currently only accepting sources from [this list](https://github.com/instructlab/community/blob/main/docs/DataSources.md) at this time due to legal requirements to keep InstructLab open source.** We prefer that you keep your submission to articles from Wikipedia at this time. Our taxonomy triage team will reject any contributions that do not match this pattern. Thanks for helping us keep InstructLab 100% open source!
+
+These are the main knowledge domains that we are currently accepting knowledge contributions for:  arts, engineering, geography, history, linguistics, mathematics, philosophy, religion, science, and technology.
+
+Due to the open source nature of InstructLab, all content has to meet specific licensing requirements. This list has currently approved sources for knowledge. If you wish to use a different source, we need to approve it, and that means your submission will be on hold until we get legal review and approval. Please be patient!
+
+Domain Name | Status | Notes
+--|--|--
+[Wikipedia](https://en.wikipedia.org/wiki/Main_Page) | approved | -
+[Project Gutenberg](https://www.gutenberg.org) | approved | Pre-1927 works; public domain under US copyright law
+[Wikisource](https://en.wikisource.org) (library) | approved | "free library that anyone can improve"
+[OpenStax textbooks family of publications](https://openstax.org/subjects) | approved | -
+[The Open Organization publications](https://theopenorganization.org) | approved | -
+[The Scrum Guide](https://scrumguides.org/index.html) | approved | -
+[US Congress site](https://www.congress.gov) | reviewed - manually verify | US government sources may have different licensing; a legal review will need to verify each source
+[US White House site](https://www.whitehouse.gov) | reviewed - manually verify | US government sources may have different licensing; a legal review will need to verify each source
+[US Senate site](https://www.senate.gov) | reviewed - manually verify | US government sources may have different licensing; a legal review will need to verify each source
+[US IRS site](https://www.irs.gov) | reviewed - manually verify | US government sources may have different licensing; a legal review will need to verify each source
+[NASA](https://www.nasa.gov) | reviewed - manually verify | [See guidelines](https://www.nasa.gov/nasa-brand-center/images-and-media/)
+[Smithsonian Libraries](https://library.si.edu/) | reviewed - manually verify | For any material marked \"No Copyright - United States" or "CC0" as [described here](https://library.si.edu/copyright)
+[European Union (EU) site](https://european-union.europa.eu/) | reviewed - manually verify | Specifically documents submitted under "public registrars" as [described here](https://european-union.europa.eu/principles-countries-history/principles-and-values/access-information_en)
+[Internet Archive](https://archive.org/) | reviewed - manually verify | Pre-1927 works; public domain under US copyright law
+[PLOS family of open access journals](https://plos.org/publish) | reviewed - manually verify | -
+[Open Practice Library](https://openpracticelibrary.com/) | reviewed - manually verify | -
+[Cynefin.io wiki](https://cynefin.io/wiki/Main_Page) | reviewed - manually verify | -
+[The Open Education Project](https://research.redhat.com/blog/research_project/foundations-in-open-source-education/) | reviewed - manually verify | -
 
 ### Creating your own knowledge repository
 
@@ -39,11 +69,11 @@ The specific steps are listed as follows:
 2. This takes you to a page titled “Create a new repository”. Create a custom name for your repository and add a `README.md` file. For example, “knowledge_contributions” could be a good name for your repository.
 3. Click “Create” when you are all set.
 
-### Convert your knowledge documentation to Markdown
+### Convert your knowledge documentation to Markdown or PDF
 
 There are many online tools that can help you convert your documents to Markdown. If you are using a wiki page for your contributions, you can use [pandocs](https://pandoc.org/try/) to convert the documents. For Wikipedia sources on pandoc, use `from: mediawiki` and convert `to: markdown_strict` to access the proper Markdown format.
 
-### Add the Markdown file to your repository
+### Add the Markdown or PDF file to your repository
 
 To add a file to your GitHub repository, follow the GitHub documentation in [Adding a file to a repository](https://docs.github.com/en/repositories/working-with-files/managing-files/adding-a-file-to-a-repository).
 
@@ -103,6 +133,27 @@ There are a few ways you can create a pull request:
 - For details on the local process, check out [The GitHub Workflow Guide](https://github.com/kubernetes/community/blob/master/contributors/guide/github-workflow.md) in the Kubernetes documentation and the [GitHub flow](https://docs.github.com/en/get-started/using-github/github-flow) in the GitHub documentation.
 - For details on contributing using the GitHub webpage UI, see [Contributing using the GH UI](https://github.com/instructlab/taxonomy/docs/contributing_via_GH_UI.md) or [Creating a pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request?tool=webui) in the GitHub documentation.
 
+
+### Example of a directory tree
+
+In the taxonomy repository, here's what the previously referenced knowledge might look like in the tree:
+
+```ascii
+[...]
+
+└── knowledge
+    └── science
+        ├── astronomy
+        │ └── constellations
+        │     └── Phoenix <=== here it is :)
+        │     |    └── qna.yaml
+        |     |        attribution.txt
+        │     └── Orion
+        │          └── qna.yaml
+        |              attribution.txt
+[...]
+```
+
 ## Verification
 
 Here are a few things to check before seeking reviews for your contribution:
@@ -115,12 +166,60 @@ Here are a few things to check before seeking reviews for your contribution:
 
 The following table outlines the expected timing for the PRs you have submitted. The PRs go through a few steps, and checks, but you should be able to map your `label` to the place that it is in.
 
-| Label | Actor | Action | Duration |
-| --- | --- | --- | --- |
-| | Contributor | Submit PR | - |
-| | Contributor | Fix failed PR checks | - |
-| [triage-needed](https://github.com/instructlab/taxonomy/labels/triage-needed) | Triager | Review PR, ask for changes | Days |
-| [triage-requested-changes](https://github.com/instructlab/taxonomy/labels/triage-requested-changes) | Contributor | Make requested changes | Days |
-| [precheck-generate-ready](https://github.com/instructlab/taxonomy/labels/precheck-generate-ready) | Triager | Run prechecks and generate  | Days |
-| [community-build-ready](https://github.com/instructlab/taxonomy/labels/community-build-ready) | Backend | Model gets retrained | Weeks |
-| | Triager | Check the numbers and PR merged or closed | - |
+Label | Actor | Action | Duration
+--|--|--|--
+- | Contributor | Submit PR | -
+- | Contributor | Fix failed PR checks | -
+[triage-needed](https://github.com/instructlab/taxonomy/labels/triage-needed) | Triager | Review PR, ask for changes | Days
+[triage-dco-requested](https://github.com/instructlab/taxonomy/labels/triage-dco-requested) | Contributor | Fix DCO | -
+[triage-requested-changes](https://github.com/instructlab/taxonomy/labels/triage-requested-changes) | Contributor | Make requested changes | Days
+ [precheck-generate-ready](https://github.com/instructlab/taxonomy/labels/precheck-generate-ready) | Triager | Run prechecks and generate  | Days
+ [community-build-ready](https://github.com/instructlab/taxonomy/labels/community-build-ready) | Backend | Model gets retrained | Weeks
+ | Triager | Check the numbers and PR merged or closed | -
+
+
+### Submissions
+
+To make the `qna.yaml` files easier and faster for humans to read, it is recommended to specify `version` first, followed by `task_description`, then `created_by`, and finally `seed_examples`. In `seed_examples`, it is recommended to specify `context` first (if applicable), followed by `question` and `answer`.
+
+*Example `qna.yaml`*
+
+```yaml
+version: 2
+task_description: <string>
+created_by: <string>
+seed_examples:
+  - question: <string>
+    answer: |
+      <multi-line string>
+  - context: |
+      <multi-line string>
+    question: <string>
+    answer: |
+      <multi-line string>
+  # ...
+```
+
+Then, you create an `attribution.txt` file that includes the sources of your information, if any. These sources can also be self-authored sources for skills.
+
+*Fields in `attribution.txt`*
+
+```text
+[Link to source]
+[Link to work]
+[License of the work]
+[Creator name]
+```
+
+*Example of a self-authored source `attribution.txt`*
+
+```text
+Title of work: Customizing an order for tea
+Link to work: -
+License of the work: CC BY-SA-4.0
+Creator names: Jean-Luc Picard
+```
+
+You may copy this example and replace the title of the work (your skill) and the creator name to submit a skill. The license is [Creative Commons Attribution-ShareAlike 4.0 International](https://creativecommons.org/licenses/by-sa/4.0/), which is shortened to `CC BY-SA-4.0`.
+
+For more information on what to include in your `attribution.txt` file, reference [the general contribution guidelines](contribution_guidelines.md#attributiontxt).

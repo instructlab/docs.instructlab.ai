@@ -25,7 +25,7 @@ If you have found a missing skill in granite chat, you can create a skill contri
 
 Navigate to the Contribute section of the sidebar and click Skill. Here you will see the form to contribute a Skill to the open-source taxonomy tree.
 
-On this page you will find all the necessary pieces to fill in to create you Skill contribution, let's go through each one [here](../taxonomy/skills/skills_guide.md).
+On this page you will find all the necessary pieces to fill in to create you Skill contribution, let's go through each one [here](../taxonomy/skills/index.md).
 
 ### Author Information
 

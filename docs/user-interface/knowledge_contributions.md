@@ -15,13 +15,13 @@ When the form is filled out, you also are given the option to download the YAML 
 You can view all your submissions on the dashboard page.
 
 !!! warning
-    Even when running the UI locally, you must be logged in via github to successfully submit your Knowledge and Skills contributions. You can still fill out the form, and download the YAML and attribution files.
+    Even when running the UI locally, you must be logged in via GitHub to successfully submit your Knowledge and Skills contributions. You can still fill out the form, and download the YAML and attribution files.
 
 For tips on writing Skills & Knowledge contributions, please visit the documentation under the [Taxonomy](../taxonomy/index.md) heading.
 
 ## Knowledge Contributions
 
-Firstly you will need to find a source document for your knowledge. Accepted sources can be found [here](../taxonomy/knowledge/guide.md).
+Firstly you will need to find a source document for your knowledge. Accepted sources can be found [here](../taxonomy/upstream/knowledge_contribution_details.md).
 
 Navigate to the Contribute section of the sidebar and click Knowledge. Here you will see the form to contribute Knowledge to the open-source taxonomy tree.
 
