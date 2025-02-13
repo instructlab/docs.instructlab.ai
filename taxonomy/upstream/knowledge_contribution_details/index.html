@@ -1,0 +1,2368 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="The overview of 🐶 InstructLab's Knowledge contribution guidelines">
+      
+      
+      
+        <link rel="canonical" href="https://docs.instructlab.ai/taxonomy/upstream/knowledge_contribution_details/">
+      
+      
+        <link rel="prev" href="../contribution_guidelines/">
+      
+      
+        <link rel="next" href="../skills_contribution_details/">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.33">
+    
+    
+      
+        <title>Knowledge Contribution Guidelines - docs.instructlab.ai</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.3cba04c6.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+  
+  
+  
+  
+  <style>:root{--md-annotation-icon:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10.74 10.75 12 8l1.25 2.75L16 12l-2.75 1.26L12 16l-1.26-2.74L8 12l2.74-1.25Z"/></svg>');}</style>
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="{'primary':-'custom'}" data-md-color-accent="purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#prerequisites" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="docs.instructlab.ai" class="md-header__button md-logo" aria-label="docs.instructlab.ai" data-md-component="logo">
+      
+  <img src="../../../images/ilab_dog.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            docs.instructlab.ai
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Knowledge Contribution Guidelines
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/instructlab/docs.instructlab.ai" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    docs.instructlab.ai
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="docs.instructlab.ai" class="md-nav__button md-logo" aria-label="docs.instructlab.ai" data-md-component="logo">
+      
+  <img src="../../../images/ilab_dog.png" alt="logo">
+
+    </a>
+    docs.instructlab.ai
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/instructlab/docs.instructlab.ai" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    docs.instructlab.ai
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Welcome
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Welcome
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About InstructLab
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Getting Started
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Getting Started
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../getting-started/mac_metal/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Install on Mac Metal
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../getting-started/linux_nvidia/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Install on Linux NVIDIA
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../getting-started/linux_amd/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Install on Linux AMD
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../getting-started/initilize_ilab/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Initialize InstructLab
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../getting-started/download_models/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Download models
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../getting-started/serve_and_chat/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Intro to serve and chat
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Adding data to a model
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Adding data to a model
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../adding-data-to-model/creating_new_wikipedia_based_qna/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Creating a new Wikipedia based qna.yaml
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../adding-data-to-model/creating_new_knowledge_or_skills/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Creating New Knowledge or Skills
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Community
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Community
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../community/CODE_OF_CONDUCT/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Code of Conduct
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../community/CODE_OF_CONDUCT_COMMITTEE/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Code of Conduct Committee
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../community/FAQ/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FAQ
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../community/GOVERNANCE/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Governance Policy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../community/InstructLab_DISCORD_GUIDE/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Discord Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../community/InstructLab_DISCORD_MODERATION_GUIDE/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Discord Moderation Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../community/InstructLab_SLACK_GUIDE/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Slack Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../community/InstructLab_SLACK_MODERATION_GUIDE/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Slack Moderation Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Taxonomy
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Taxonomy
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About Taxonomy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Upstream Taxonomy Contributions
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            Upstream Taxonomy Contributions
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contribution_guidelines/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    General Guidelines
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Knowledge Guidelines
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Knowledge Guidelines
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#preparing-your-knowledge-documents" class="md-nav__link">
+    <span class="md-ellipsis">
+      Preparing your knowledge documents
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#accepted-sources-of-knowledge" class="md-nav__link">
+    <span class="md-ellipsis">
+      Accepted Sources of Knowledge
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Accepted Sources of Knowledge">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creating-your-own-knowledge-repository" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating your own knowledge repository
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#convert-your-knowledge-documentation-to-markdown-or-pdf" class="md-nav__link">
+    <span class="md-ellipsis">
+      Convert your knowledge documentation to Markdown or PDF
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add-the-markdown-or-pdf-file-to-your-repository" class="md-nav__link">
+    <span class="md-ellipsis">
+      Add the Markdown or PDF file to your repository
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-your-knowledge-submission-in-github" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating your knowledge submission in GitHub
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Creating your knowledge submission in GitHub">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-qnayaml-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      The qna.yaml file
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The qna.yaml file">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#an-example-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      An example file
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-a-pull-request-in-the-taxonomy-repository" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create a pull request in the taxonomy repository
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Create a pull request in the taxonomy repository">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-of-a-directory-tree" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example of a directory tree
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verification" class="md-nav__link">
+    <span class="md-ellipsis">
+      Verification
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pr-upstream-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      PR Upstream Workflow
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="PR Upstream Workflow">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#submissions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Submissions
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../skills_contribution_details/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Skill Guidelines
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Skills
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_3">
+            <span class="md-nav__icon md-icon"></span>
+            Skills
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../skills/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../skills/file_structure/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File Structure
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_4" id="__nav_5_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Knowledge
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_4">
+            <span class="md-nav__icon md-icon"></span>
+            Knowledge
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../knowledge/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../knowledge/file_structure/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File Structure
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    User Interface
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            User Interface
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../user-interface/ui_overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UI Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../user-interface/playground_chat/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chat with the model
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../user-interface/knowledge_contributions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contribute knowledge to community model
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../user-interface/skills_contributions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contribute skills to community model
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../user-interface/env_oauth_config/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UI Configurations
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Community Model Build
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Community Model Build
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../cmb/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About Community Model Build
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../cmb/build_process/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Community Model Build Process
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    References
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            References
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/RESOURCES/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Additional Resources
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/CONTRIBUTORS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contributors
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/MKDOCS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MkDocs Cheatsheet
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#preparing-your-knowledge-documents" class="md-nav__link">
+    <span class="md-ellipsis">
+      Preparing your knowledge documents
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#accepted-sources-of-knowledge" class="md-nav__link">
+    <span class="md-ellipsis">
+      Accepted Sources of Knowledge
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Accepted Sources of Knowledge">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creating-your-own-knowledge-repository" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating your own knowledge repository
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#convert-your-knowledge-documentation-to-markdown-or-pdf" class="md-nav__link">
+    <span class="md-ellipsis">
+      Convert your knowledge documentation to Markdown or PDF
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add-the-markdown-or-pdf-file-to-your-repository" class="md-nav__link">
+    <span class="md-ellipsis">
+      Add the Markdown or PDF file to your repository
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-your-knowledge-submission-in-github" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating your knowledge submission in GitHub
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Creating your knowledge submission in GitHub">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-qnayaml-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      The qna.yaml file
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The qna.yaml file">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#an-example-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      An example file
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-a-pull-request-in-the-taxonomy-repository" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create a pull request in the taxonomy repository
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Create a pull request in the taxonomy repository">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-of-a-directory-tree" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example of a directory tree
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verification" class="md-nav__link">
+    <span class="md-ellipsis">
+      Verification
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pr-upstream-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      PR Upstream Workflow
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="PR Upstream Workflow">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#submissions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Submissions
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+  <h1>Knowledge Guidelines</h1>
+
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>The following information is if you are comfortable contributing using GitHub, a version control system primarily used for code. If you are <strong>not</strong> comfortable with this platform, you can use the InstructLab UI to submit knowledge. To learn more, <a href="../../../user-interface/ui_overview/">head to the UI overview page</a>.</p>
+</div>
+<p>You can create a Git repository to host your knowledge contributions anywhere (GitLab, Gerrit, etc.), but it might be favorable to create one on GitHub. At the current time, we require a GitHub username to contribute, and all work is done in GitHub.</p>
+<p>The following instructions show you how to create a knowledge repository in GitHub and contribute to the taxonomy.</p>
+<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
+<p>If you are submitting to the repository directly:
+- You have a GitHub account
+- You have a forked copy of the <a href="https://github.com/instructlab/taxonomy/tree/main">taxonomy</a> repository
+- You have verified that the model does not already know the knowledge you want to submit</p>
+<p>If you are using the <a href="https://ui.instructlab.ai">UI</a> to submit:
+- You have a GitHub account
+- You have verified that the model does not already know the knowledge you want to submit</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Due to the higher volume, <strong>it will naturally take longer to receive acceptance for a knowledge contribution pull request than for a skill pull request</strong>. Smaller pull requests are simpler and require less time and effort to review.</p>
+</div>
+<h2 id="preparing-your-knowledge-documents">Preparing your knowledge documents<a class="headerlink" href="#preparing-your-knowledge-documents" title="Permanent link">&para;</a></h2>
+<p>You need to set up your source documents as Markdown or PDF files in a git repository. You can organize the knowledge files in your repository however you want. You just need to ensure the <abbr title="Yet Another Markdown Language">YAML</abbr> is pointing to the correct file.</p>
+<h2 id="accepted-sources-of-knowledge">Accepted Sources of Knowledge<a class="headerlink" href="#accepted-sources-of-knowledge" title="Permanent link">&para;</a></h2>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><strong>We are currently only accepting sources from <a href="https://github.com/instructlab/community/blob/main/docs/DataSources.md">this list</a> at this time due to legal requirements to keep InstructLab open source.</strong> We prefer that you keep your submission to articles from Wikipedia at this time. Our taxonomy triage team will reject any contributions that do not match this pattern. Thanks for helping us keep InstructLab 100% open source!</p>
+</div>
+<p>These are the main knowledge domains that we are currently accepting knowledge contributions for:  arts, engineering, geography, history, linguistics, mathematics, philosophy, religion, science, and technology.</p>
+<p>Due to the open source nature of InstructLab, all content has to meet specific licensing requirements. This list has currently approved sources for knowledge. If you wish to use a different source, we need to approve it, and that means your submission will be on hold until we get legal review and approval. Please be patient!</p>
+<table>
+<thead>
+<tr>
+<th>Domain Name</th>
+<th>Status</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://en.wikipedia.org/wiki/Main_Page">Wikipedia</a></td>
+<td>approved</td>
+<td>-</td>
+</tr>
+<tr>
+<td><a href="https://www.gutenberg.org">Project Gutenberg</a></td>
+<td>approved</td>
+<td>Pre-1927 works; public domain under US copyright law</td>
+</tr>
+<tr>
+<td><a href="https://en.wikisource.org">Wikisource</a> (library)</td>
+<td>approved</td>
+<td>"free library that anyone can improve"</td>
+</tr>
+<tr>
+<td><a href="https://openstax.org/subjects">OpenStax textbooks family of publications</a></td>
+<td>approved</td>
+<td>-</td>
+</tr>
+<tr>
+<td><a href="https://theopenorganization.org">The Open Organization publications</a></td>
+<td>approved</td>
+<td>-</td>
+</tr>
+<tr>
+<td><a href="https://scrumguides.org/index.html">The Scrum Guide</a></td>
+<td>approved</td>
+<td>-</td>
+</tr>
+<tr>
+<td><a href="https://www.congress.gov">US Congress site</a></td>
+<td>reviewed - manually verify</td>
+<td>US government sources may have different licensing; a legal review will need to verify each source</td>
+</tr>
+<tr>
+<td><a href="https://www.whitehouse.gov">US White House site</a></td>
+<td>reviewed - manually verify</td>
+<td>US government sources may have different licensing; a legal review will need to verify each source</td>
+</tr>
+<tr>
+<td><a href="https://www.senate.gov">US Senate site</a></td>
+<td>reviewed - manually verify</td>
+<td>US government sources may have different licensing; a legal review will need to verify each source</td>
+</tr>
+<tr>
+<td><a href="https://www.irs.gov">US IRS site</a></td>
+<td>reviewed - manually verify</td>
+<td>US government sources may have different licensing; a legal review will need to verify each source</td>
+</tr>
+<tr>
+<td><a href="https://www.nasa.gov">NASA</a></td>
+<td>reviewed - manually verify</td>
+<td><a href="https://www.nasa.gov/nasa-brand-center/images-and-media/">See guidelines</a></td>
+</tr>
+<tr>
+<td><a href="https://library.si.edu/">Smithsonian Libraries</a></td>
+<td>reviewed - manually verify</td>
+<td>For any material marked \"No Copyright - United States" or "CC0" as <a href="https://library.si.edu/copyright">described here</a></td>
+</tr>
+<tr>
+<td><a href="https://european-union.europa.eu/">European Union (EU) site</a></td>
+<td>reviewed - manually verify</td>
+<td>Specifically documents submitted under "public registrars" as <a href="https://european-union.europa.eu/principles-countries-history/principles-and-values/access-information_en">described here</a></td>
+</tr>
+<tr>
+<td><a href="https://archive.org/">Internet Archive</a></td>
+<td>reviewed - manually verify</td>
+<td>Pre-1927 works; public domain under US copyright law</td>
+</tr>
+<tr>
+<td><a href="https://plos.org/publish">PLOS family of open access journals</a></td>
+<td>reviewed - manually verify</td>
+<td>-</td>
+</tr>
+<tr>
+<td><a href="https://openpracticelibrary.com/">Open Practice Library</a></td>
+<td>reviewed - manually verify</td>
+<td>-</td>
+</tr>
+<tr>
+<td><a href="https://cynefin.io/wiki/Main_Page">Cynefin.io wiki</a></td>
+<td>reviewed - manually verify</td>
+<td>-</td>
+</tr>
+<tr>
+<td><a href="https://research.redhat.com/blog/research_project/foundations-in-open-source-education/">The Open Education Project</a></td>
+<td>reviewed - manually verify</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<h3 id="creating-your-own-knowledge-repository">Creating your own knowledge repository<a class="headerlink" href="#creating-your-own-knowledge-repository" title="Permanent link">&para;</a></h3>
+<p>To create a new GitHub repository, follow the GitHub documentation in <a href="https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-new-repository">Creating a new repository</a>.</p>
+<p>The specific steps are listed as follows:</p>
+<ol>
+<li>In your GitHub profile page, navigate to the repositories tab. You will see a search bar where you can search your repositories or create a new one.</li>
+<li>This takes you to a page titled “Create a new repository”. Create a custom name for your repository and add a <code>README.md</code> file. For example, “knowledge_contributions” could be a good name for your repository.</li>
+<li>Click “Create” when you are all set.</li>
+</ol>
+<h3 id="convert-your-knowledge-documentation-to-markdown-or-pdf">Convert your knowledge documentation to Markdown or PDF<a class="headerlink" href="#convert-your-knowledge-documentation-to-markdown-or-pdf" title="Permanent link">&para;</a></h3>
+<p>There are many online tools that can help you convert your documents to Markdown. If you are using a wiki page for your contributions, you can use <a href="https://pandoc.org/try/">pandocs</a> to convert the documents. For Wikipedia sources on pandoc, use <code>from: mediawiki</code> and convert <code>to: markdown_strict</code> to access the proper Markdown format.</p>
+<h3 id="add-the-markdown-or-pdf-file-to-your-repository">Add the Markdown or PDF file to your repository<a class="headerlink" href="#add-the-markdown-or-pdf-file-to-your-repository" title="Permanent link">&para;</a></h3>
+<p>To add a file to your GitHub repository, follow the GitHub documentation in <a href="https://docs.github.com/en/repositories/working-with-files/managing-files/adding-a-file-to-a-repository">Adding a file to a repository</a>.</p>
+<p>The specific steps are listed as follows:</p>
+<ol>
+<li>Navigate to “Add files”. Click “Create new file” if you want to manually add your Markdown content. Click “Upload files” if you have a file locally to add.</li>
+<li>
+<p>Add a description and commit your changes.</p>
+<p>Since this is your own repository, you can commit directly to the <code>main</code> branch.</p>
+</li>
+<li>
+<p>You can then see your new content in your repository.</p>
+</li>
+</ol>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Make a note of your commit SHA; you'll need it for your <code>qna.yaml</code>.</p>
+</div>
+<h2 id="creating-your-knowledge-submission-in-github">Creating your knowledge submission in GitHub<a class="headerlink" href="#creating-your-knowledge-submission-in-github" title="Permanent link">&para;</a></h2>
+<p>For knowledge submissions, we need a <code>qna.yaml</code> file and an <code>attribution.txt</code> file.</p>
+<h3 id="the-qnayaml-file">The <code>qna.yaml</code> file<a class="headerlink" href="#the-qnayaml-file" title="Permanent link">&para;</a></h3>
+<p>For the current version of the taxonomy, version 3, here are the available fields:</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Tokens in the case of context, questions, and answers can fit to "words," but it's specifically tokens, and not words, that are the limitations.</p>
+</div>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Type</th>
+<th>Required</th>
+<th>Constraints</th>
+<th>Value</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>version</code></td>
+<td>Y</td>
+<td>integer</td>
+<td>-</td>
+<td><code>3</code></td>
+<td>The taxonomy schema version used in the <code>qna.yaml</code> file. Defined in <a href="https://github.com/instructlab/schema">instructlab/schema</a></td>
+</tr>
+<tr>
+<td><code>created_by</code></td>
+<td>Y</td>
+<td>string</td>
+<td>-</td>
+<td>Your GitHub username</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>domain</code></td>
+<td>Y</td>
+<td>string</td>
+<td>-</td>
+<td>Knowledge sub-category</td>
+<td>The knowledge domain which is used in prompts to the teacher model during synthetic data generation. The domain should be brief such as the title to a textbook chapter or section.</td>
+</tr>
+<tr>
+<td><code>seed_examples</code></td>
+<td>Y</td>
+<td>array</td>
+<td>at least 5 sets</td>
+<td>null</td>
+<td>This is a collection of questions and answers with context from the knowledge document that InstructLab uses to generate data synthetically.</td>
+</tr>
+<tr>
+<td><code>context</code></td>
+<td>Y</td>
+<td>string</td>
+<td>&lt; 500 tokens</td>
+<td>A chunk of the document showing off the different <strong>unique</strong> content to help guide the teacher model. If you have only text, that's one thing, but if you have tables or other content, be sure to add that, too.</td>
+<td>This should be a copy-paste from the Markdown version of your document</td>
+</tr>
+<tr>
+<td><code>questions_and_answers</code></td>
+<td>Y</td>
+<td>array</td>
+<td>at least 3 pairs per context</td>
+<td>null</td>
+<td>This is a collection of questions and answers.</td>
+</tr>
+<tr>
+<td><code>question</code></td>
+<td>Y</td>
+<td>string</td>
+<td>&gt; 250 tokens</td>
+<td>A question related to the grounded in the relevant context</td>
+<td>Questions are things you'd expect someone to ask the model based on the context given. This will be used for synthetic data generation.</td>
+</tr>
+<tr>
+<td><code>answer</code></td>
+<td>Y</td>
+<td>string</td>
+<td>&gt; 250 tokens</td>
+<td>An answer for the question, longer then a one-word answer.</td>
+<td>Answers are what you'd like the model to give as an answer. It will not be an exact answer the model always gives.</td>
+</tr>
+<tr>
+<td><code>document_outline</code></td>
+<td>Y</td>
+<td>string</td>
+<td>-</td>
+<td>This provides the context specific for each document chunk; this should be as <strong>specific</strong> as you possibly can get.</td>
+<td></td>
+</tr>
+<tr>
+<td><code>document</code></td>
+<td>Y</td>
+<td>object</td>
+<td>-</td>
+<td>null</td>
+<td>The collection of data for the knowledge document.</td>
+</tr>
+<tr>
+<td><code>repo</code></td>
+<td>Y</td>
+<td>string</td>
+<td>a git URL</td>
+<td>The URL (with a <code>.git</code> suffix) that identifies your git repo where you've stored your knowledge documents</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>commit</code></td>
+<td>Y</td>
+<td>string</td>
+<td>full commit hash</td>
+<td>A SHA1 full commit hash that corresponds to the document in the repo</td>
+<td>This hash must be exactly where the system can find the document.</td>
+</tr>
+<tr>
+<td><code>patterns</code></td>
+<td>Y</td>
+<td>array</td>
+<td><code>*.md</code>, <code>*.pdf</code></td>
+<td>A list of glob patterns specifying the files in the repo.</td>
+<td>Any glob pattern that starts with <code>*</code> must be quoted due to <abbr title="Yet Another Markdown Language">YAML</abbr> rules. Currently, the system accepts <code>.md</code> and <code>.pdf</code> files.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>There must be at least 5 sets of 3 questions and 3 answers with context in every <code>qna.yaml</code> file. Also the "context blocks" should be as diverse and unique as possible. The goal is to get as much different
+information in so as the teacher LLM reads through the document it gets "inspired" by the different content.</p>
+</div>
+<h4 id="an-example-file">An example file<a class="headerlink" href="#an-example-file" title="Permanent link">&para;</a></h4>
+<p>To build a strong taxonomy,</p>
+<h2 id="create-a-pull-request-in-the-taxonomy-repository">Create a pull request in the taxonomy repository<a class="headerlink" href="#create-a-pull-request-in-the-taxonomy-repository" title="Permanent link">&para;</a></h2>
+<p>Navigate to your forked taxonomy repository and ensure it is up-to-date.</p>
+<p>There are a few ways you can create a pull request:</p>
+<ul>
+<li>For details on the local process, check out <a href="https://github.com/kubernetes/community/blob/master/contributors/guide/github-workflow.md">The GitHub Workflow Guide</a> in the Kubernetes documentation and the <a href="https://docs.github.com/en/get-started/using-github/github-flow">GitHub flow</a> in the GitHub documentation.</li>
+<li>For details on contributing using the GitHub webpage UI, see <a href="https://github.com/instructlab/taxonomy/docs/contributing_via_GH_UI.md">Contributing using the GH UI</a> or <a href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request?tool=webui">Creating a pull request</a> in the GitHub documentation.</li>
+</ul>
+<h3 id="example-of-a-directory-tree">Example of a directory tree<a class="headerlink" href="#example-of-a-directory-tree" title="Permanent link">&para;</a></h3>
+<p>In the taxonomy repository, here's what the previously referenced knowledge might look like in the tree:</p>
+<div class="highlight"><pre><span></span><code>[...]
+
+└── knowledge
+    └── science
+        ├── astronomy
+        │ └── constellations
+        │     └── Phoenix &lt;=== here it is :)
+        │     |    └── qna.yaml
+        |     |        attribution.txt
+        │     └── Orion
+        │          └── qna.yaml
+        |              attribution.txt
+[...]
+</code></pre></div>
+<h2 id="verification">Verification<a class="headerlink" href="#verification" title="Permanent link">&para;</a></h2>
+<p>Here are a few things to check before seeking reviews for your contribution:</p>
+<ul>
+<li>Your <code>qna.yaml</code> follows the proper formatting. See examples in <a href="https://github.com/instructlab/taxonomy/blob/main/README.md#knowledge-yaml-examples">Knowledge: <abbr title="Yet Another Markdown Language">YAML</abbr> examples</a></li>
+<li>Ensure all parameters are set. Especially the <code>document</code>, <code>repo</code>, <code>commit</code> and <code>pattern</code> keys; these parameters are specific to knowledge contributions and require more analysis.</li>
+<li>Include an <code>attribution.txt</code> file for citing your sources. see <a href="https://github.com/instructlab/taxonomy/blob/main/CONTRIBUTING.md#for-your-attributiontxt-file">For your attribution.txt file</a> for more information.</li>
+</ul>
+<h2 id="pr-upstream-workflow">PR Upstream Workflow<a class="headerlink" href="#pr-upstream-workflow" title="Permanent link">&para;</a></h2>
+<p>The following table outlines the expected timing for the PRs you have submitted. The PRs go through a few steps, and checks, but you should be able to map your <code>label</code> to the place that it is in.</p>
+<table>
+<thead>
+<tr>
+<th>Label</th>
+<th>Actor</th>
+<th>Action</th>
+<th>Duration</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-</td>
+<td>Contributor</td>
+<td>Submit PR</td>
+<td>-</td>
+</tr>
+<tr>
+<td>-</td>
+<td>Contributor</td>
+<td>Fix failed PR checks</td>
+<td>-</td>
+</tr>
+<tr>
+<td><a href="https://github.com/instructlab/taxonomy/labels/triage-needed">triage-needed</a></td>
+<td>Triager</td>
+<td>Review PR, ask for changes</td>
+<td>Days</td>
+</tr>
+<tr>
+<td><a href="https://github.com/instructlab/taxonomy/labels/triage-dco-requested">triage-dco-requested</a></td>
+<td>Contributor</td>
+<td>Fix DCO</td>
+<td>-</td>
+</tr>
+<tr>
+<td><a href="https://github.com/instructlab/taxonomy/labels/triage-requested-changes">triage-requested-changes</a></td>
+<td>Contributor</td>
+<td>Make requested changes</td>
+<td>Days</td>
+</tr>
+<tr>
+<td><a href="https://github.com/instructlab/taxonomy/labels/precheck-generate-ready">precheck-generate-ready</a></td>
+<td>Triager</td>
+<td>Run prechecks and generate</td>
+<td>Days</td>
+</tr>
+<tr>
+<td><a href="https://github.com/instructlab/taxonomy/labels/community-build-ready">community-build-ready</a></td>
+<td>Backend</td>
+<td>Model gets retrained</td>
+<td>Weeks</td>
+</tr>
+<tr>
+<td></td>
+<td>Triager</td>
+<td>Check the numbers and PR merged or closed</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<h3 id="submissions">Submissions<a class="headerlink" href="#submissions" title="Permanent link">&para;</a></h3>
+<p>To make the <code>qna.yaml</code> files easier and faster for humans to read, it is recommended to specify <code>version</code> first, followed by <code>task_description</code>, then <code>created_by</code>, and finally <code>seed_examples</code>. In <code>seed_examples</code>, it is recommended to specify <code>context</code> first (if applicable), followed by <code>question</code> and <code>answer</code>.</p>
+<p><em>Example <code>qna.yaml</code></em></p>
+<div class="highlight"><pre><span></span><code><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2</span>
+<span class="nt">task_description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;string&gt;</span>
+<span class="nt">created_by</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;string&gt;</span>
+<span class="nt">seed_examples</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">question</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;string&gt;</span>
+<span class="w">    </span><span class="nt">answer</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<span class="w">      </span><span class="no">&lt;multi-line string&gt;</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">context</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<span class="w">      </span><span class="no">&lt;multi-line string&gt;</span>
+<span class="w">    </span><span class="nt">question</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;string&gt;</span>
+<span class="w">    </span><span class="nt">answer</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<span class="w">      </span><span class="no">&lt;multi-line string&gt;</span>
+<span class="w">  </span><span class="c1"># ...</span>
+</code></pre></div>
+<p>Then, you create an <code>attribution.txt</code> file that includes the sources of your information, if any. These sources can also be self-authored sources for skills.</p>
+<p><em>Fields in <code>attribution.txt</code></em></p>
+<div class="highlight"><pre><span></span><code>[Link to source]
+[Link to work]
+[License of the work]
+[Creator name]
+</code></pre></div>
+<p><em>Example of a self-authored source <code>attribution.txt</code></em></p>
+<div class="highlight"><pre><span></span><code>Title of work: Customizing an order for tea
+Link to work: -
+License of the work: CC BY-SA-4.0
+Creator names: Jean-Luc Picard
+</code></pre></div>
+<p>You may copy this example and replace the title of the work (your skill) and the creator name to submit a skill. The license is <a href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International</a>, which is shortened to <code>CC BY-SA-4.0</code>.</p>
+<p>For more information on what to include in your <code>attribution.txt</code> file, reference <a href="../contribution_guidelines/#attributiontxt">the general contribution guidelines</a>.</p>
+
+
+
+
+
+
+
+  
+    
+  
+  
+    
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Last update">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 13, 2025</span>
+  </span>
+
+    
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Created">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3h-2Z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 13, 2025</span>
+  </span>
+
+    
+    
+      
+  
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Contributors">
+      
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 4a4 4 0 0 1 4 4 4 4 0 0 1-4 4 4 4 0 0 1-4-4 4 4 0 0 1 4-4m0 10c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4Z"/></svg>
+      
+    </span>
+    <nav>
+      Laura Santamaria
+    </nav>
+  </span>
+
+    
+    
+      
+  <span class="md-source-file__fact">
+    
+      
+  <span class="md-icon" title="Contributors">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2Z"/></svg>
+  </span>
+  <span>GitHub</span>
+
+    
+    <nav>
+      
+        <a href="https://github.com/nimbinatus" class="md-author" title="@nimbinatus">
+          
+          <img src="https://avatars.githubusercontent.com/u/1538692?v=4&size=72" alt="nimbinatus">
+        </a>
+      
+        <a href="https://github.com/web-flow" class="md-author" title="@web-flow">
+          
+          <img src="https://avatars.githubusercontent.com/u/19864447?v=4&size=72" alt="web-flow">
+        </a>
+      
+      
+      
+    </nav>
+  </span>
+
+    
+  </aside>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2024- Red Hat Inc.
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.annotate", "content.code.copy", "content.code.select", "content.tabs.link"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.af256bd8.min.js"></script>
+      
+    
+  </body>
+</html>

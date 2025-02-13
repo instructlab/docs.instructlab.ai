@@ -1,0 +1,2034 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="The overview of 🐶 InstructLab's contribution guidelines for taxonomy">
+      
+      
+      
+        <link rel="canonical" href="https://docs.instructlab.ai/taxonomy/upstream/contribution_guidelines/">
+      
+      
+        <link rel="prev" href="../../">
+      
+      
+        <link rel="next" href="../knowledge_contribution_details/">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.33">
+    
+    
+      
+        <title>Taxonomy Contribution Guidelines - docs.instructlab.ai</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.3cba04c6.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+  
+  
+  
+  
+  <style>:root{--md-annotation-icon:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10.74 10.75 12 8l1.25 2.75L16 12l-2.75 1.26L12 16l-1.26-2.74L8 12l2.74-1.25Z"/></svg>');}</style>
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="{'primary':-'custom'}" data-md-color-accent="purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#taxonomy-contribution-guidelines" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="docs.instructlab.ai" class="md-header__button md-logo" aria-label="docs.instructlab.ai" data-md-component="logo">
+      
+  <img src="../../../images/ilab_dog.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            docs.instructlab.ai
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Taxonomy Contribution Guidelines
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/instructlab/docs.instructlab.ai" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    docs.instructlab.ai
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="docs.instructlab.ai" class="md-nav__button md-logo" aria-label="docs.instructlab.ai" data-md-component="logo">
+      
+  <img src="../../../images/ilab_dog.png" alt="logo">
+
+    </a>
+    docs.instructlab.ai
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/instructlab/docs.instructlab.ai" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    docs.instructlab.ai
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Welcome
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Welcome
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About InstructLab
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Getting Started
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Getting Started
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../getting-started/mac_metal/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Install on Mac Metal
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../getting-started/linux_nvidia/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Install on Linux NVIDIA
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../getting-started/linux_amd/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Install on Linux AMD
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../getting-started/initilize_ilab/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Initialize InstructLab
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../getting-started/download_models/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Download models
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../getting-started/serve_and_chat/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Intro to serve and chat
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Adding data to a model
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Adding data to a model
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../adding-data-to-model/creating_new_wikipedia_based_qna/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Creating a new Wikipedia based qna.yaml
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../adding-data-to-model/creating_new_knowledge_or_skills/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Creating New Knowledge or Skills
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Community
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Community
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../community/CODE_OF_CONDUCT/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Code of Conduct
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../community/CODE_OF_CONDUCT_COMMITTEE/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Code of Conduct Committee
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../community/FAQ/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FAQ
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../community/GOVERNANCE/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Governance Policy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../community/InstructLab_DISCORD_GUIDE/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Discord Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../community/InstructLab_DISCORD_MODERATION_GUIDE/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Discord Moderation Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../community/InstructLab_SLACK_GUIDE/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Slack Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../community/InstructLab_SLACK_MODERATION_GUIDE/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Slack Moderation Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Taxonomy
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Taxonomy
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About Taxonomy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Upstream Taxonomy Contributions
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            Upstream Taxonomy Contributions
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    General Guidelines
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    General Guidelines
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#attributiontxt" class="md-nav__link">
+    <span class="md-ellipsis">
+      attribution.txt
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#upstream-taxonomy-tree-layout" class="md-nav__link">
+    <span class="md-ellipsis">
+      Upstream taxonomy tree layout
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Upstream taxonomy tree layout">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#upstream-taxonomy-diagram" class="md-nav__link">
+    <span class="md-ellipsis">
+      Upstream taxonomy diagram
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Considerations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Considerations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#avoid-these-topics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Avoid These Topics
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#building-your-llm-intuition" class="md-nav__link">
+    <span class="md-ellipsis">
+      Building Your LLM Intuition
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Building Your LLM Intuition">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#llms-are-great-at" class="md-nav__link">
+    <span class="md-ellipsis">
+      LLMs are great at
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#llms-need-help-with" class="md-nav__link">
+    <span class="md-ellipsis">
+      LLMs need help with
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#llms-are-not-so-great-at" class="md-nav__link">
+    <span class="md-ellipsis">
+      LLMs are not so great at
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../knowledge_contribution_details/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Knowledge Guidelines
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../skills_contribution_details/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Skill Guidelines
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Skills
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_3">
+            <span class="md-nav__icon md-icon"></span>
+            Skills
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../skills/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../skills/file_structure/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File Structure
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_4" id="__nav_5_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Knowledge
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_4">
+            <span class="md-nav__icon md-icon"></span>
+            Knowledge
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../knowledge/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../knowledge/file_structure/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File Structure
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    User Interface
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            User Interface
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../user-interface/ui_overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UI Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../user-interface/playground_chat/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chat with the model
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../user-interface/knowledge_contributions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contribute knowledge to community model
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../user-interface/skills_contributions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contribute skills to community model
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../user-interface/env_oauth_config/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UI Configurations
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Community Model Build
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Community Model Build
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../cmb/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About Community Model Build
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../cmb/build_process/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Community Model Build Process
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    References
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            References
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/RESOURCES/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Additional Resources
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/CONTRIBUTORS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contributors
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/MKDOCS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MkDocs Cheatsheet
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#attributiontxt" class="md-nav__link">
+    <span class="md-ellipsis">
+      attribution.txt
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#upstream-taxonomy-tree-layout" class="md-nav__link">
+    <span class="md-ellipsis">
+      Upstream taxonomy tree layout
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Upstream taxonomy tree layout">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#upstream-taxonomy-diagram" class="md-nav__link">
+    <span class="md-ellipsis">
+      Upstream taxonomy diagram
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Considerations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Considerations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#avoid-these-topics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Avoid These Topics
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#building-your-llm-intuition" class="md-nav__link">
+    <span class="md-ellipsis">
+      Building Your LLM Intuition
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Building Your LLM Intuition">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#llms-are-great-at" class="md-nav__link">
+    <span class="md-ellipsis">
+      LLMs are great at
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#llms-need-help-with" class="md-nav__link">
+    <span class="md-ellipsis">
+      LLMs need help with
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#llms-are-not-so-great-at" class="md-nav__link">
+    <span class="md-ellipsis">
+      LLMs are not so great at
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="taxonomy-contribution-guidelines">Taxonomy Contribution Guidelines<a class="headerlink" href="#taxonomy-contribution-guidelines" title="Permanent link">&para;</a></h1>
+<p class="annotate">We welcome contributions to <a href="https://github.com/instructlab/taxonomy">the upstream InstructLab taxonomy.</a>(1)</p>
+<ol>
+<li><code>upstream</code> here refers to the idea in open source of an "upstream" project that is before your product in a workstream.</li>
+</ol>
+<p>A contribution to the upstream taxonomy involves</p>
+<ul>
+<li>identifying whether your submission is <a href="../../knowledge/">a knowledge submission</a> or <a href="../../skills/">a skills submission</a>,</li>
+<li>defining the domain for the submission, or the branches and leaf node that will contain your knowledge,</li>
+<li>converting any source data to Markdown or PDF and storing them in a git-based repository (required for knowledge submissions),</li>
+<li>writing a <abbr title="Yet Another Markdown Language">YAML</abbr> file called <code>qna.yaml</code> that contains the seed content that will inform synthetic data generation and the repo URL where your converted source data is stored,</li>
+<li>creating an attribution file called <code>attribution.txt</code> that provides licensing information for source data, and</li>
+<li>submitting those two files in the proper spot in the taxonomy tree to the InstructLab taxonomy.</li>
+</ul>
+<p>You can submit knowledge or compositional skills. More information on the two types of contribution can be found in <a href="../knowledge_contribution_details/">our knowledge contribution details guide</a> or <a href="../skills_contribution_details/">our compositional skills contribution guide</a>.</p>
+<h2 id="attributiontxt"><code>attribution.txt</code><a class="headerlink" href="#attributiontxt" title="Permanent link">&para;</a></h2>
+<p>An important part of contributing to the InstructLab project is citing your sources of information. This comes in the form of your <code>attribution.txt</code> that you add to the pull requests. Almost all instances of attribution can be covered by the parameters required for Creative Commons Attribution licenses. Some parameters are as follows:</p>
+<ul>
+<li>Title of work</li>
+<li>Link to work<ul>
+<li>Include link to a specific revision where possible</li>
+</ul>
+</li>
+<li>License of the work<ul>
+<li>Include an SPDX identifier where possible</li>
+</ul>
+</li>
+<li>Creator names</li>
+<li>Copyright information</li>
+<li>Modification information<ul>
+<li>Indicate if work was itself derived from another openly licensed work</li>
+</ul>
+</li>
+</ul>
+<p>You can also see this citation style in the <a href="https://github.com/instructlab/community/blob/main/docs/DataSources.md">Data sources documentation</a>.</p>
+<h2 id="upstream-taxonomy-tree-layout">Upstream taxonomy tree layout<a class="headerlink" href="#upstream-taxonomy-tree-layout" title="Permanent link">&para;</a></h2>
+<p>The upstream taxonomy tree is organized in a cascading directory structure. At the end of each branch, there is a <abbr title="Yet Another Markdown Language">YAML</abbr> file (<code>qna.yaml</code>) that contains the examples for that domain. Maintainers can decide to change the names of the existing branches or to add new branches.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Folder names do not have spaces. Use underscores between words.</p>
+</div>
+<p>Below is an illustrative directory structure to show this layout:</p>
+<div class="highlight"><pre><span></span><code>.
+└── linguistics
+    ├── writing
+    │   ├── brainstorming
+    │   │   ├── idea_generation
+    |   │       └── qna.yaml
+    │   │           attribution.txt
+    │   │   ├── refute_claim
+    |   │       └── qna.yaml
+    │   │           attribution.txt
+    │   ├── prose
+    │   │   ├── articles
+    │   │       └── qna.yaml
+    │   │           attribution.txt
+    └── grammar
+        └── qna.yaml
+        │   attribution.txt
+        └── spelling
+            └── qna.yaml
+                attribution.txt
+</code></pre></div>
+<h3 id="upstream-taxonomy-diagram">Upstream taxonomy diagram<a class="headerlink" href="#upstream-taxonomy-diagram" title="Permanent link">&para;</a></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This diagram shows a subset of the upstream taxonomy. It is not a complete representation.</p>
+</div>
+<pre class="mermaid"><code> flowchart TD;
+   na[not accepting contributions\n at this time]:::na
+   taxonomy --&gt; foundational_skill &amp; compositional_skills &amp; knowledge
+
+   foundational_skill:::na --&gt; reasoning:::na
+   reasoning:::na --&gt; common_sense_reasoning:::na
+   reasoning:::na --&gt; mathematical_reasoning:::na
+   reasoning:::na --&gt; theory_of_mind:::na
+
+   compositional_skills --&gt; engineering
+   compositional_skills --&gt; grounded
+   compositional_skills --&gt; lingustics
+
+   grounded --&gt; grounded/arts
+   grounded --&gt; grounded/geography
+   grounded --&gt; grounded/history
+   grounded --&gt; grounded/science
+
+   knowledge --&gt; knowledge/arts
+
+   knowledge --&gt; knowledge/miscellaneous_unknown
+   knowledge --&gt; knowledge/science
+   knowledge --&gt; knowledge/technology
+   knowledge/science --&gt; animals --&gt; birds --&gt; black_capped_chickadee --&gt; black_capped_chickadee-a &amp; black_capped_chickadee-q
+   knowledge/science --&gt; astronomy --&gt; constellations --&gt; phoenix --&gt; phoenix-a &amp; phoenix-q
+
+   black_capped_chickadee-a{attribution.txt}
+   black_capped_chickadee-q{qna.yaml}
+   phoenix-a{attribution.txt}
+   phoenix-q{qna.yaml}
+   classDef na fill:#EEE</code></pre>
+<h2 id="considerations">Considerations<a class="headerlink" href="#considerations" title="Permanent link">&para;</a></h2>
+<p>When working with the upstream taxonomy, there are some things to keep in mind, like <a href="#avoid-these-topics">topics to avoid</a>, <a href="#llms-are-great-at">what <abbr title="Large Language Models">LLMs</abbr> are great at doing</a>, and <a href="#llms-are-not-so-great-at">what <abbr title="Large Language Models">LLMs</abbr> will fail at</a>. Explore this information before deciding what to contribute, especially the note about hallucinations at the end of this page.</p>
+<h3 id="avoid-these-topics">Avoid These Topics<a class="headerlink" href="#avoid-these-topics" title="Permanent link">&para;</a></h3>
+<p>While the tuning process may eventually benefit from being used to help the models work with complex social topics, at this time this is an area of active research we do not want to take lightly. Therefore, please keep your submissions clear of the following topics:</p>
+<ul>
+<li>PII (personally identifiable information) or any content invasive of individual privacy rights</li>
+<li>Violence including self-harm</li>
+<li>Cyber Bullying</li>
+<li>Internal documentation or other that is confidential to your employer or organization, e.g. trade secrets</li>
+<li>Discrimination</li>
+<li>Religion<ul>
+<li>Facts such as, "<a href="https://en.wikipedia.org/wiki/Christianity_in_Nepal">Christianity is, according to the 2011 census, the fifth most practiced religion in Nepal, with 375,699 adherents, or 1.4% of the population</a>", are fine as a knowledge contribution. However, advocating in favor of or against any religious faith is not acceptable.</li>
+</ul>
+</li>
+<li>Medical or health information<ul>
+<li>Facts such as,  "<a href="https://opentextbc.ca/biology/chapter/11-3-circulatory-and-respiratory-systems/">In mammals, pulmonary ventilation occurs via inhalation (breathing)</a>," are fine as a knowledge contribution. However, tailored medical/health advice is not acceptable.</li>
+</ul>
+</li>
+<li>Financial information<ul>
+<li>Facts such as "<a href="https://openstax.org/books/world-history-volume-2/pages/6-3-capitalism-and-the-first-industrial-revolution">laissez-faire economics ... argues that market forces alone should drive the economy and that governments should refrain from direct intervention in or moderation of the economic system</a>," are fine as a knowledge contribution. However, tailored financial advice is not acceptable.</li>
+</ul>
+</li>
+<li>Legal settlements/mitigations</li>
+<li>Gender Bias</li>
+<li>Hostile language, threats, slurs, derogatory or insensitive jokes or comments </li>
+<li>Profanity </li>
+<li>Pornography and sexually explicit or suggestive content </li>
+<li>Any contributions that would allow for automated decision-making that affect an individual's rights or well-being, such as social scoring </li>
+<li>Any contributions that engage in political campaigning or lobbying</li>
+</ul>
+<p>We are also not accepting submissions of the following content:</p>
+<ul>
+<li>Jokes<ul>
+<li>We received many joke submissions at the beginning of the project, and with jokes being "in the eye of the beholder" and puns requiring nuance for native English speakers, we realized we were possibly unconsciously biasing our model. We have discovered that working with jokes has its own challenges, and if we want something generalized, finding consensus was unsuccessful. For now, we're not accepting additional submissions of jokes.</li>
+</ul>
+</li>
+<li>Poems<ul>
+<li>We received many poem submissions at the beginning of the project, and with poems being "in the eye of the beholder" and puns requiring nuance for native English speakers, we realized we were possibly unconsciously biasing our model. We have discovered that working with both topics has its own challenges, and if we want something generalized, finding consensus was unsuccessful. For now, we're not accepting additional submissions of poems.</li>
+</ul>
+</li>
+<li>Code<ul>
+<li>Anything code-related that can be traced back to code for a computer. Not limited to <code>sed</code> or <code>bash</code> but <code>yaml</code>s for OpenShift or Kubernetes, to <code>python</code> snippets to <code>Java</code> suggestions. There are specific models focused on this space and this isn't for this model for the time being.</li>
+</ul>
+</li>
+<li>"Guardrails" for AI<ul>
+<li>We expect our upstream engineering team to create these types of skills and safeguards. We appreciate our community wanting to help with this, but there are underlying engineering decisions and taking this from the community may conflict with these.</li>
+</ul>
+</li>
+</ul>
+<h3 id="building-your-llm-intuition">Building Your LLM Intuition<a class="headerlink" href="#building-your-llm-intuition" title="Permanent link">&para;</a></h3>
+<p><abbr title="Large Language Models">LLMs</abbr> have inherent limitations that make certain tasks extremely difficult, like doing math problems. They're great at other tasks, like creative writing. And they could be better at things like logical reasoning.</p>
+<p>In regard to skills, consider these limitations and advantages when you're generating skills. Skills in the first and second categories are welcomed. Skills in the third category are usually borderline and may be rejected.</p>
+<p>In regard to knowledge, providing an LLM training pipeline with knowledge helps create a basis of information that the model can learn from. With InstructLab, you can teach it to use this knowledge via the <code>qna.yaml</code> files. For example, you can give an LLM the entire periodic table, then in a <code>qna.yaml</code> add something like:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">question</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">What is the symbol and atomic number for Chlorine?</span>
+<span class="nt">answer</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<span class="w">  </span><span class="no">The symbol for chlorine is &quot;Cl&quot;, and the atomic number is 17.</span>
+</code></pre></div>
+<p>With a few of these question-and-answer pairs, the model will learn the periodic table because it has the knowledge data.</p>
+<h4 id="llms-are-great-at"><abbr title="Large Language Models">LLMs</abbr> are great at<a class="headerlink" href="#llms-are-great-at" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Brainstorming</li>
+<li>Creativity</li>
+<li>Connecting information</li>
+<li>Cross-lingual behavior</li>
+</ul>
+<p>For these, however, it's common for <abbr title="Large Language Models">LLMs</abbr> to already have excellent performance. Try 3-5 examples in <code>ilab model chat</code> to confirm a deficit in the model before you build your submission, and share the examples in your Pull Request (PR).</p>
+<p>Skills in this category are welcomed, as refining these abilities helps us get better at the kinds of tasks where <abbr title="Large Language Models">LLMs</abbr> can excel.</p>
+<h4 id="llms-need-help-with"><abbr title="Large Language Models">LLMs</abbr> need help with<a class="headerlink" href="#llms-need-help-with" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Chains of reasoning</li>
+<li>Analysis</li>
+<li>Story plots</li>
+<li>Reassembling information</li>
+<li>Effective and succinct summaries</li>
+</ul>
+<p>LLM behavior in these sorts of topics are very difficult for the model to get right. Skills in this category are particularly welcome. Try several examples to understand the nuances of the model's ability to do these sorts of tasks, and then consider using corrections to the results you get in your tuning process.</p>
+<h4 id="llms-are-not-so-great-at"><abbr title="Large Language Models">LLMs</abbr> are not so great at<a class="headerlink" href="#llms-are-not-so-great-at" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Math</li>
+<li>Computation</li>
+<li>"Turing-complete" type tasks</li>
+<li>Generating only true real-world information (they're prone to hallucinations)</li>
+</ul>
+<p><abbr title="Large Language Models">LLMs</abbr> may struggle with solving math and computation problems, and <abbr title="Large Language Models">LLMs</abbr> may always struggle here. Solving math and computation problems via probability on natural language queries is probably not the best way to solve them. That said, improving some of these foundational skills may be something this work tackles in the future, but not at this time.</p>
+<p>Most skill submissions in these categories are likely to be rejected.</p>
+<div class="admonition note">
+<p class="admonition-title">On Hallucinations</p>
+<p>For hallucinations in particular, trying to solve this with a skill is unlikely to work. Consider contributing to the knowledge taxonomy instead to improve the model's understanding of facts.</p>
+</div>
+
+
+
+
+
+
+
+  
+    
+  
+  
+    
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Last update">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 13, 2025</span>
+  </span>
+
+    
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Created">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3h-2Z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 13, 2025</span>
+  </span>
+
+    
+    
+      
+  
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Contributors">
+      
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 4a4 4 0 0 1 4 4 4 4 0 0 1-4 4 4 4 0 0 1-4-4 4 4 0 0 1 4-4m0 10c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4Z"/></svg>
+      
+    </span>
+    <nav>
+      Laura Santamaria
+    </nav>
+  </span>
+
+    
+    
+      
+  <span class="md-source-file__fact">
+    
+      
+  <span class="md-icon" title="Contributors">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2Z"/></svg>
+  </span>
+  <span>GitHub</span>
+
+    
+    <nav>
+      
+        <a href="https://github.com/nimbinatus" class="md-author" title="@nimbinatus">
+          
+          <img src="https://avatars.githubusercontent.com/u/1538692?v=4&size=72" alt="nimbinatus">
+        </a>
+      
+        <a href="https://github.com/web-flow" class="md-author" title="@web-flow">
+          
+          <img src="https://avatars.githubusercontent.com/u/19864447?v=4&size=72" alt="web-flow">
+        </a>
+      
+      
+      
+    </nav>
+  </span>
+
+    
+  </aside>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2024- Red Hat Inc.
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.annotate", "content.code.copy", "content.code.select", "content.tabs.link"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.af256bd8.min.js"></script>
+      
+    
+  </body>
+</html>

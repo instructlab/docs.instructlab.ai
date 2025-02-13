@@ -1,0 +1,2670 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="The file structure for knowledge">
+      
+      
+      
+        <link rel="canonical" href="https://docs.instructlab.ai/taxonomy/knowledge/file_structure/">
+      
+      
+        <link rel="prev" href="../">
+      
+      
+        <link rel="next" href="../../../user-interface/ui_overview/">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.33">
+    
+    
+      
+        <title>Knowledge File Structure - docs.instructlab.ai</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.3cba04c6.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+  
+  
+  
+  
+  <style>:root{--md-annotation-icon:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10.74 10.75 12 8l1.25 2.75L16 12l-2.75 1.26L12 16l-1.26-2.74L8 12l2.74-1.25Z"/></svg>');}</style>
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="{'primary':-'custom'}" data-md-color-accent="purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#the-knowledge-files" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="docs.instructlab.ai" class="md-header__button md-logo" aria-label="docs.instructlab.ai" data-md-component="logo">
+      
+  <img src="../../../images/ilab_dog.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            docs.instructlab.ai
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Knowledge File Structure
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/instructlab/docs.instructlab.ai" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    docs.instructlab.ai
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="docs.instructlab.ai" class="md-nav__button md-logo" aria-label="docs.instructlab.ai" data-md-component="logo">
+      
+  <img src="../../../images/ilab_dog.png" alt="logo">
+
+    </a>
+    docs.instructlab.ai
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/instructlab/docs.instructlab.ai" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    docs.instructlab.ai
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Welcome
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Welcome
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About InstructLab
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Getting Started
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Getting Started
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../getting-started/mac_metal/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Install on Mac Metal
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../getting-started/linux_nvidia/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Install on Linux NVIDIA
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../getting-started/linux_amd/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Install on Linux AMD
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../getting-started/initilize_ilab/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Initialize InstructLab
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../getting-started/download_models/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Download models
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../getting-started/serve_and_chat/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Intro to serve and chat
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Adding data to a model
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Adding data to a model
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../adding-data-to-model/creating_new_wikipedia_based_qna/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Creating a new Wikipedia based qna.yaml
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../adding-data-to-model/creating_new_knowledge_or_skills/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Creating New Knowledge or Skills
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Community
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Community
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../community/CODE_OF_CONDUCT/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Code of Conduct
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../community/CODE_OF_CONDUCT_COMMITTEE/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Code of Conduct Committee
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../community/FAQ/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FAQ
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../community/GOVERNANCE/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Governance Policy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../community/InstructLab_DISCORD_GUIDE/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Discord Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../community/InstructLab_DISCORD_MODERATION_GUIDE/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Discord Moderation Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../community/InstructLab_SLACK_GUIDE/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Slack Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../community/InstructLab_SLACK_MODERATION_GUIDE/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Slack Moderation Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Taxonomy
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Taxonomy
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About Taxonomy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Upstream Taxonomy Contributions
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            Upstream Taxonomy Contributions
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../upstream/contribution_guidelines/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    General Guidelines
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../upstream/knowledge_contribution_details/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Knowledge Guidelines
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../upstream/skills_contribution_details/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Skill Guidelines
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Skills
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_3">
+            <span class="md-nav__icon md-icon"></span>
+            Skills
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../skills/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../skills/file_structure/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File Structure
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5_4" id="__nav_5_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Knowledge
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5_4">
+            <span class="md-nav__icon md-icon"></span>
+            Knowledge
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    File Structure
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    File Structure
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-qnayaml-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      The qna.yaml file
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The qna.yaml file">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#version" class="md-nav__link">
+    <span class="md-ellipsis">
+      version
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#domain" class="md-nav__link">
+    <span class="md-ellipsis">
+      domain
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#created_by" class="md-nav__link">
+    <span class="md-ellipsis">
+      created_by
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#seed_examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      seed_examples
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#context" class="md-nav__link">
+    <span class="md-ellipsis">
+      context
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#questions_and_answers" class="md-nav__link">
+    <span class="md-ellipsis">
+      questions_and_answers
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#question" class="md-nav__link">
+    <span class="md-ellipsis">
+      question
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#answer" class="md-nav__link">
+    <span class="md-ellipsis">
+      answer
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#document_outline" class="md-nav__link">
+    <span class="md-ellipsis">
+      document_outline
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#document" class="md-nav__link">
+    <span class="md-ellipsis">
+      document
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#repo" class="md-nav__link">
+    <span class="md-ellipsis">
+      repo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#commit" class="md-nav__link">
+    <span class="md-ellipsis">
+      commit
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      patterns
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-of-a-knowledge-submission" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example of a knowledge submission
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Example of a knowledge submission">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-of-a-knowledge-document-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example of a knowledge document file
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    User Interface
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            User Interface
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../user-interface/ui_overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UI Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../user-interface/playground_chat/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chat with the model
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../user-interface/knowledge_contributions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contribute knowledge to community model
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../user-interface/skills_contributions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contribute skills to community model
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../user-interface/env_oauth_config/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UI Configurations
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Community Model Build
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Community Model Build
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../cmb/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About Community Model Build
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../cmb/build_process/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Community Model Build Process
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    References
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            References
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/RESOURCES/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Additional Resources
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/CONTRIBUTORS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contributors
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/MKDOCS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MkDocs Cheatsheet
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-qnayaml-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      The qna.yaml file
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The qna.yaml file">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#version" class="md-nav__link">
+    <span class="md-ellipsis">
+      version
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#domain" class="md-nav__link">
+    <span class="md-ellipsis">
+      domain
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#created_by" class="md-nav__link">
+    <span class="md-ellipsis">
+      created_by
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#seed_examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      seed_examples
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#context" class="md-nav__link">
+    <span class="md-ellipsis">
+      context
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#questions_and_answers" class="md-nav__link">
+    <span class="md-ellipsis">
+      questions_and_answers
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#question" class="md-nav__link">
+    <span class="md-ellipsis">
+      question
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#answer" class="md-nav__link">
+    <span class="md-ellipsis">
+      answer
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#document_outline" class="md-nav__link">
+    <span class="md-ellipsis">
+      document_outline
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#document" class="md-nav__link">
+    <span class="md-ellipsis">
+      document
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#repo" class="md-nav__link">
+    <span class="md-ellipsis">
+      repo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#commit" class="md-nav__link">
+    <span class="md-ellipsis">
+      commit
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      patterns
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-of-a-knowledge-submission" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example of a knowledge submission
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Example of a knowledge submission">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-of-a-knowledge-document-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example of a knowledge document file
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="the-knowledge-files">The knowledge files<a class="headerlink" href="#the-knowledge-files" title="Permanent link">&para;</a></h1>
+<p>Taxonomy trees in InstructLab have leaf-node directories. These leaf nodes contain at least one file, and usually two:</p>
+<ul>
+<li>A <code>qna.yaml</code> file that asks and answers questions about the information in the git repository where you have stored a knowledge document.</li>
+<li>An <code>attribution.txt</code> file that includes the sources for the information used in the <code>qna.yaml</code>. This file is only required when submitting knowledge <a href="https://github.com/instructlab/taxonomy">to the InstructLab taxonomy repository</a>.</li>
+</ul>
+<h2 id="the-qnayaml-file">The <code>qna.yaml</code> file<a class="headerlink" href="#the-qnayaml-file" title="Permanent link">&para;</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Tokens in the case of context, questions, and answers can fit to "words," but it's specifically tokens, and not words, that are the limitations. <a href="https://github.com/instructlab/sdg/blob/main/docs/FAQ.md#how-long-can-a-given-seed_example-be-for-a-knowledge-leaf-node">Learn more</a>.</p>
+</div>
+<p>In general, here are the fields in the <abbr title="Yet Another Markdown Language">YAML</abbr> file:</p>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Type</th>
+<th>Required</th>
+<th>Constraints</th>
+<th>Value</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>version</code></td>
+<td>integer</td>
+<td>Y</td>
+<td>-</td>
+<td><code>3</code></td>
+<td>The taxonomy schema version used in the <code>qna.yaml</code> file. Defined in <a href="https://github.com/instructlab/schema">instructlab/schema</a></td>
+</tr>
+<tr>
+<td><code>created_by</code></td>
+<td>string</td>
+<td>Y</td>
+<td>no spaces</td>
+<td>Your GitHub username (for the upstream taxonomy) or your name with no spaces (for general intructlab use)</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>domain</code></td>
+<td>string</td>
+<td>Y</td>
+<td>-</td>
+<td>Knowledge sub-category</td>
+<td>The knowledge domain which is used in prompts to the teacher model during synthetic data generation. The domain should be brief such as the title to a textbook chapter or section.</td>
+</tr>
+<tr>
+<td><code>seed_examples</code></td>
+<td>Y</td>
+<td>array</td>
+<td>at least 5 sets</td>
+<td>null</td>
+<td>This is a collection of questions and answers with context from the knowledge document that InstructLab uses to generate data synthetically.</td>
+</tr>
+<tr>
+<td><code>context</code></td>
+<td>string</td>
+<td>Y</td>
+<td>&lt; 500 tokens</td>
+<td>A chunk of the knowledge document showing off the different <strong>unique</strong> content to help guide the teacher model. If the knowledge documents have only text, all context would be text. If the knowledge documnets have tables or other content formats, ensure samples of those formats are all used.</td>
+<td>This should be a copy-paste from the Markdown version of your document</td>
+</tr>
+<tr>
+<td><code>questions_and_answers</code></td>
+<td>Y</td>
+<td>array</td>
+<td>at least 3 pairs per context</td>
+<td>null</td>
+<td>This is a collection of questions and answers.</td>
+</tr>
+<tr>
+<td><code>question</code></td>
+<td>Y</td>
+<td>string</td>
+<td>&gt; 250 tokens</td>
+<td>A question related to and grounded in the relevant context</td>
+<td>Questions are things you'd expect someone to ask the model based on the context given. This will be used for synthetic data generation.</td>
+</tr>
+<tr>
+<td><code>answer</code></td>
+<td>Y</td>
+<td>string</td>
+<td>&gt; 250 tokens</td>
+<td>An answer for the question, longer than a one-word or one-number answer</td>
+<td>Answers are what you'd like the model to give as an answer. It will not be an exact answer the model always gives.</td>
+</tr>
+<tr>
+<td><code>document_outline</code></td>
+<td>Y</td>
+<td>string</td>
+<td>-</td>
+<td>A brief title-like summary of the document. This provides the context specific for each document chunk. It should be as <strong>specific</strong> as you possibly can get. For example, "Acme Company 2023 Financial Report" rather than "Financial report."</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>document</code></td>
+<td>Y</td>
+<td>object</td>
+<td>-</td>
+<td>null</td>
+<td>The collection of data for the knowledge document.</td>
+</tr>
+<tr>
+<td><code>repo</code></td>
+<td>Y</td>
+<td>string</td>
+<td>a git URL</td>
+<td>The URL (with a <code>.git</code> suffix) that identifies your git repo where you've stored your knowledge documents</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>commit</code></td>
+<td>Y</td>
+<td>string</td>
+<td>full commit hash</td>
+<td>A SHA1 full commit hash that corresponds to the document in the repo</td>
+<td>This hash must be exactly where the system can find the document.</td>
+</tr>
+<tr>
+<td><code>patterns</code></td>
+<td>Y</td>
+<td>array</td>
+<td><code>*.md</code>, <code>*.pdf</code></td>
+<td>A list of glob patterns specifying the files in the repo.</td>
+<td>Any glob pattern that starts with <code>*</code> must be quoted due to <abbr title="Yet Another Markdown Language">YAML</abbr> rules. Currently, the system accepts <code>.md</code> and <code>.pdf</code> files.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="version"><code>version</code><a class="headerlink" href="#version" title="Permanent link">&para;</a></h4>
+<p>The <code>version</code> field is the version of the <a href="https://github.com/instructlab/schema">schema</a> that is in use. Currently, the value here should be <code>3</code>.</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">qna.yaml</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="hll"><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span>
+</span><span class="nt">domain</span><span class="p">:</span><span class="w"> </span><span class="c1"># ...</span>
+<span class="nt">created_by</span><span class="p">:</span><span class="w"> </span><span class="c1"># ...</span>
+<span class="nt">seed_examples</span><span class="p">:</span>
+<span class="w">  </span><span class="c1"># ...</span>
+<span class="nt">document_outline</span><span class="p">:</span><span class="w"> </span><span class="c1"># ...</span>
+<span class="nt">document</span><span class="p">:</span>
+<span class="w">  </span><span class="c1"># ...</span>
+</code></pre></div></td></tr></table></div>
+<h4 id="domain"><code>domain</code><a class="headerlink" href="#domain" title="Permanent link">&para;</a></h4>
+<p>The <code>domain</code> field helps the synthetic data generation (<abbr title="Synthetic Data Generation - the process where a model artificially generates data based on provided examples">SDG</abbr>) process by identifying what specialized area the knowledge provided covers.</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">qna.yaml</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="c1"># ...</span>
+<span class="hll"><span class="nt">domain</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">astronomy</span>
+</span><span class="nt">created_by</span><span class="p">:</span><span class="w"> </span><span class="c1"># ...</span>
+<span class="nt">seed_examples</span><span class="p">:</span>
+<span class="w">  </span><span class="c1"># ...</span>
+<span class="nt">document_outline</span><span class="p">:</span><span class="w"> </span><span class="c1"># ...</span>
+<span class="nt">document</span><span class="p">:</span>
+<span class="w">  </span><span class="c1"># ...</span>
+</code></pre></div></td></tr></table></div>
+<h4 id="created_by"><code>created_by</code><a class="headerlink" href="#created_by" title="Permanent link">&para;</a></h4>
+<p>The <code>created_by</code> field defines the user who submitted the knowledge. If you're working upstream, it would be your GitHub username. If you're working on your own taxonomy, it would be some kind of identifier with no spaces.</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">qna.yaml</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="c1"># ...</span>
+<span class="nt">domain</span><span class="p">:</span><span class="w"> </span><span class="c1"># ...</span>
+<span class="hll"><span class="nt">created_by</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">juliadenham</span>
+</span><span class="nt">seed_examples</span><span class="p">:</span>
+<span class="w">  </span><span class="c1"># ...</span>
+<span class="nt">document_outline</span><span class="p">:</span><span class="w"> </span><span class="c1"># ...</span>
+<span class="nt">document</span><span class="p">:</span>
+<span class="w">  </span><span class="c1"># ...</span>
+</code></pre></div></td></tr></table></div>
+<h4 id="seed_examples"><code>seed_examples</code><a class="headerlink" href="#seed_examples" title="Permanent link">&para;</a></h4>
+<p>The <code>seed_examples</code> field does not have anything next to it because it is an array. An array in <abbr title="Yet Another Markdown Language">YAML</abbr> is a collection of other values, and those values are indicated through indentation on subsequent lines.</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">qna.yaml</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="c1"># ...</span>
+<span class="nt">domain</span><span class="p">:</span><span class="w"> </span><span class="c1"># ...</span>
+<span class="nt">created_by</span><span class="p">:</span><span class="w"> </span><span class="c1"># ...</span>
+<span class="hll"><span class="nt">seed_examples</span><span class="p">:</span>
+</span><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">context</span><span class="p">:</span><span class="w"> </span><span class="c1"># ...</span>
+<span class="w">    </span><span class="nt">questions_and_answers</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">question</span><span class="p">:</span><span class="w"> </span><span class="c1"># ...</span>
+<span class="w">        </span><span class="nt">answer</span><span class="p">:</span><span class="w"> </span><span class="c1"># ...</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">question</span><span class="p">:</span><span class="w"> </span><span class="c1"># ...</span>
+<span class="w">        </span><span class="nt">answer</span><span class="p">:</span><span class="w"> </span><span class="c1"># ...</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">question</span><span class="p">:</span><span class="w"> </span><span class="c1"># ...</span>
+<span class="w">        </span><span class="nt">answer</span><span class="p">:</span><span class="w"> </span><span class="c1"># ...</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">question</span><span class="p">:</span><span class="w"> </span><span class="c1"># ...</span>
+<span class="w">        </span><span class="nt">answer</span><span class="p">:</span><span class="w"> </span><span class="c1"># ...</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">question</span><span class="p">:</span><span class="w"> </span><span class="c1"># ...</span>
+<span class="w">        </span><span class="nt">answer</span><span class="p">:</span><span class="w"> </span><span class="c1"># ...</span>
+<span class="nt">document_outline</span><span class="p">:</span><span class="w"> </span><span class="c1"># ...</span>
+<span class="nt">document</span><span class="p">:</span>
+<span class="w">  </span><span class="c1"># ...</span>
+</code></pre></div></td></tr></table></div>
+<h4 id="context"><code>context</code><a class="headerlink" href="#context" title="Permanent link">&para;</a></h4>
+<p>The <code>context</code> field is a snippet from the knowledge document that is used to answer the questions and answers that follow. It should be directly copied and pasted from the knowledge document as found in your knowledge repository. </p>
+<p>There will be more than one <code>context</code> field in the document.</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">qna.yaml</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="c1"># ...</span>
+<span class="nt">domain</span><span class="p">:</span><span class="w"> </span><span class="c1"># ...</span>
+<span class="nt">created_by</span><span class="p">:</span><span class="w"> </span><span class="c1"># ...</span>
+<span class="nt">seed_examples</span><span class="p">:</span>
+<span class="hll"><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">context</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+</span><span class="hll"><span class="w">      </span><span class="no">**Phoenix** is a minor constellation in the southern sky. Named after the mythical</span>
+</span><span class="hll"><span class="w">      </span><span class="no">phoenix, it was first depicted on a celestial atlas by Johann Bayer in his 1603</span>
+</span><span class="hll"><span class="w">      </span><span class="no">*Uranometria*. The French explorer and astronomer Nicolas Louis de</span>
+</span><span class="hll"><span class="w">      </span><span class="no">Lacaille charted the brighter stars and gave their Bayer designations</span>
+</span><span class="hll"><span class="w">      </span><span class="no">in 1756. The constellation stretches from roughly −39 degrees to −57 degrees</span>
+</span><span class="hll"><span class="w">      </span><span class="no">declination, and from 23.5h to 2.5h of right ascension. The constellations Phoenix,</span>
+</span><span class="hll"><span class="w">      </span><span class="no">Grus, Pavo, are known as the Southern Birds.</span>
+</span><span class="w">    </span><span class="nt">questions_and_answers</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">question</span><span class="p">:</span><span class="w"> </span><span class="c1"># ...</span>
+<span class="w">        </span><span class="nt">answer</span><span class="p">:</span><span class="w"> </span><span class="c1"># ...</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">question</span><span class="p">:</span><span class="w"> </span><span class="c1"># ...</span>
+<span class="w">        </span><span class="nt">answer</span><span class="p">:</span><span class="w"> </span><span class="c1"># ...</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">question</span><span class="p">:</span><span class="w"> </span><span class="c1"># ...</span>
+<span class="w">        </span><span class="nt">answer</span><span class="p">:</span><span class="w"> </span><span class="c1"># ...</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">question</span><span class="p">:</span><span class="w"> </span><span class="c1"># ...</span>
+<span class="w">        </span><span class="nt">answer</span><span class="p">:</span><span class="w"> </span><span class="c1"># ...</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">question</span><span class="p">:</span><span class="w"> </span><span class="c1"># ...</span>
+<span class="w">        </span><span class="nt">answer</span><span class="p">:</span><span class="w"> </span><span class="c1"># ...</span>
+<span class="nt">document_outline</span><span class="p">:</span><span class="w"> </span><span class="c1"># ...</span>
+<span class="nt">document</span><span class="p">:</span>
+<span class="w">  </span><span class="c1"># ...</span>
+</code></pre></div></td></tr></table></div>
+<h4 id="questions_and_answers"><code>questions_and_answers</code><a class="headerlink" href="#questions_and_answers" title="Permanent link">&para;</a></h4>
+<p>The <code>questions_and_answers</code> field starts another array.</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">qna.yaml</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="c1"># ...</span>
+<span class="nt">domain</span><span class="p">:</span><span class="w"> </span><span class="c1"># ...</span>
+<span class="nt">created_by</span><span class="p">:</span><span class="w"> </span><span class="c1"># ...</span>
+<span class="nt">seed_examples</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">context</span><span class="p">:</span><span class="w"> </span><span class="c1"># ...</span>
+<span class="hll"><span class="w">    </span><span class="nt">questions_and_answers</span><span class="p">:</span>
+</span><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">question</span><span class="p">:</span><span class="w"> </span><span class="c1"># ...</span>
+<span class="w">        </span><span class="nt">answer</span><span class="p">:</span><span class="w"> </span><span class="c1"># ...</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">question</span><span class="p">:</span><span class="w"> </span><span class="c1"># ...</span>
+<span class="w">        </span><span class="nt">answer</span><span class="p">:</span><span class="w"> </span><span class="c1"># ...</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">question</span><span class="p">:</span><span class="w"> </span><span class="c1"># ...</span>
+<span class="w">        </span><span class="nt">answer</span><span class="p">:</span><span class="w"> </span><span class="c1"># ...</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">question</span><span class="p">:</span><span class="w"> </span><span class="c1"># ...</span>
+<span class="w">        </span><span class="nt">answer</span><span class="p">:</span><span class="w"> </span><span class="c1"># ...</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">question</span><span class="p">:</span><span class="w"> </span><span class="c1"># ...</span>
+<span class="w">        </span><span class="nt">answer</span><span class="p">:</span><span class="w"> </span><span class="c1"># ...</span>
+<span class="nt">document_outline</span><span class="p">:</span><span class="w"> </span><span class="c1"># ...</span>
+<span class="nt">document</span><span class="p">:</span>
+<span class="w">  </span><span class="c1"># ...</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="question"><code>question</code><a class="headerlink" href="#question" title="Permanent link">&para;</a></h3>
+<p>The <code>question</code> field is a sample question that the teacher model can use to train the student model during the synthetic data generation process.</p>
+<p>There will be more than one <code>question</code> field in the document.</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">qna.yaml</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="c1"># ...</span>
+<span class="nt">domain</span><span class="p">:</span><span class="w"> </span><span class="c1"># ...</span>
+<span class="nt">created_by</span><span class="p">:</span><span class="w"> </span><span class="c1"># ...</span>
+<span class="nt">seed_examples</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">context</span><span class="p">:</span><span class="w"> </span><span class="c1"># ...</span>
+<span class="w">    </span><span class="nt">questions_and_answers</span><span class="p">:</span>
+<span class="hll"><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">question</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+</span><span class="hll"><span class="w">          </span><span class="no">What is the Phoenix constellation?</span>
+</span><span class="w">        </span><span class="nt">answer</span><span class="p">:</span><span class="w"> </span><span class="c1"># ...</span>
+<span class="hll"><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">question</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+</span><span class="hll"><span class="w">          </span><span class="no">Who charted the Phoenix constellation?</span>
+</span><span class="w">        </span><span class="nt">answer</span><span class="p">:</span><span class="w"> </span><span class="c1"># ...</span>
+<span class="hll"><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">question</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+</span><span class="hll"><span class="w">          </span><span class="no">How far does the Phoenix constellation stretch?</span>
+</span><span class="w">        </span><span class="nt">answer</span><span class="p">:</span><span class="w"> </span><span class="c1"># ...</span>
+<span class="nt">document_outline</span><span class="p">:</span><span class="w"> </span><span class="c1"># ...</span>
+<span class="nt">document</span><span class="p">:</span>
+<span class="w">  </span><span class="c1"># ...</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="answer"><code>answer</code><a class="headerlink" href="#answer" title="Permanent link">&para;</a></h3>
+<p>The <code>answer</code> field is a sample expected answer for a question that the teacher model can use to train the student model during the synthetic data generation process.</p>
+<p>There will be more than one <code>answer</code> field in the document.</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">qna.yaml</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="c1"># ...</span>
+<span class="nt">domain</span><span class="p">:</span><span class="w"> </span><span class="c1"># ...</span>
+<span class="nt">created_by</span><span class="p">:</span><span class="w"> </span><span class="c1"># ...</span>
+<span class="nt">seed_examples</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">context</span><span class="p">:</span><span class="w"> </span><span class="c1"># ...</span>
+<span class="w">    </span><span class="nt">questions_and_answers</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">question</span><span class="p">:</span><span class="w"> </span><span class="c1"># ...</span>
+<span class="hll"><span class="w">        </span><span class="nt">answer</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+</span><span class="hll"><span class="w">          </span><span class="no">Phoenix is a minor constellation in the southern sky.</span>
+</span><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">question</span><span class="p">:</span><span class="w"> </span><span class="c1"># ...</span>
+<span class="hll"><span class="w">        </span><span class="nt">answer</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+</span><span class="hll"><span class="w">          </span><span class="no">The Phoenix constellation was charted by french explorer and</span>
+</span><span class="hll"><span class="w">          </span><span class="no">astronomer Nicolas Louis de Lacaille.</span>
+</span><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">question</span><span class="p">:</span><span class="w"> </span><span class="c1"># ...</span>
+<span class="hll"><span class="w">        </span><span class="nt">answer</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+</span><span class="hll"><span class="w">          </span><span class="no">The phoenix constellation stretches from roughly −39° to −57°</span>
+</span><span class="hll"><span class="w">          </span><span class="no">declination, and from 23.5h to 2.5h of right ascension.</span>
+</span><span class="nt">document_outline</span><span class="p">:</span><span class="w"> </span><span class="c1"># ...</span>
+<span class="nt">document</span><span class="p">:</span>
+<span class="w">  </span><span class="c1"># ...</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="document_outline"><code>document_outline</code><a class="headerlink" href="#document_outline" title="Permanent link">&para;</a></h3>
+<p>The <code>document_outline</code> field is a short description of the knowledge document's topic.</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">qna.yaml</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="c1"># ...</span>
+<span class="nt">domain</span><span class="p">:</span><span class="w"> </span><span class="c1"># ...</span>
+<span class="nt">created_by</span><span class="p">:</span><span class="w"> </span><span class="c1"># ...</span>
+<span class="nt">seed_examples</span><span class="p">:</span><span class="w"> </span><span class="c1"># ...</span>
+<span class="hll"><span class="nt">document_outline</span><span class="p">:</span><span class="w">  </span><span class="p p-Indicator">|</span>
+</span><span class="hll"><span class="w">  </span><span class="no">Information about the Phoenix Constellation including the</span>
+</span><span class="hll"><span class="w">  </span><span class="no">history, characteristics, and features of the stars in the constellation.</span>
+</span><span class="nt">document</span><span class="p">:</span>
+<span class="w">  </span><span class="c1"># ...</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="document"><code>document</code><a class="headerlink" href="#document" title="Permanent link">&para;</a></h3>
+<p>The <code>document</code> field starts another array.</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">qna.yaml</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="c1"># ...</span>
+<span class="nt">domain</span><span class="p">:</span><span class="w"> </span><span class="c1"># ...</span>
+<span class="nt">created_by</span><span class="p">:</span><span class="w"> </span><span class="c1"># ...</span>
+<span class="nt">seed_examples</span><span class="p">:</span><span class="w"> </span><span class="c1"># ...</span>
+<span class="nt">document_outline</span><span class="p">:</span><span class="w"> </span><span class="c1"># ...</span>
+<span class="hll"><span class="nt">document</span><span class="p">:</span>
+</span><span class="w">    </span><span class="nt">repo</span><span class="p">:</span><span class="w"> </span><span class="c1"># ...</span>
+<span class="w">    </span><span class="nt">commit</span><span class="p">:</span><span class="w"> </span><span class="c1"># ...</span>
+<span class="w">    </span><span class="nt">patterns</span><span class="p">:</span><span class="w"> </span><span class="c1"># ...</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="repo"><code>repo</code><a class="headerlink" href="#repo" title="Permanent link">&para;</a></h3>
+<p>As InstructLab currently requires a git repository, you would provide an address to a git repository here in the <code>repo</code> field. That repository may be a local one or one hosted on version control providers like GitHub or GitLab.</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">qna.yaml</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="c1"># ...</span>
+<span class="nt">domain</span><span class="p">:</span><span class="w"> </span><span class="c1"># ...</span>
+<span class="nt">created_by</span><span class="p">:</span><span class="w"> </span><span class="c1"># ...</span>
+<span class="nt">seed_examples</span><span class="p">:</span><span class="w"> </span><span class="c1"># ...</span>
+<span class="nt">document_outline</span><span class="p">:</span><span class="w"> </span><span class="c1"># ...</span>
+<span class="nt">document</span><span class="p">:</span>
+<span class="hll"><span class="w">    </span><span class="nt">repo</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://github.com/juliadenham/Summit_knowledge</span>
+</span><span class="w">    </span><span class="nt">commit</span><span class="p">:</span><span class="w"> </span><span class="c1"># ...</span>
+<span class="w">    </span><span class="nt">patterns</span><span class="p">:</span><span class="w"> </span><span class="c1"># ...</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="commit"><code>commit</code><a class="headerlink" href="#commit" title="Permanent link">&para;</a></h3>
+<p>The <code>commit</code> field holds the git-based commit hash where the exact version of your knowledge document can be found. This field allows you to pin a document version.</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">qna.yaml</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="c1"># ...</span>
+<span class="nt">domain</span><span class="p">:</span><span class="w"> </span><span class="c1"># ...</span>
+<span class="nt">created_by</span><span class="p">:</span><span class="w"> </span><span class="c1"># ...</span>
+<span class="nt">seed_examples</span><span class="p">:</span><span class="w"> </span><span class="c1"># ...</span>
+<span class="nt">document_outline</span><span class="p">:</span><span class="w"> </span><span class="c1"># ...</span>
+<span class="nt">document</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">repo</span><span class="p">:</span><span class="w"> </span><span class="c1"># ...</span>
+<span class="hll"><span class="w">    </span><span class="nt">commit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0a1f2672b9b90582e6115333e3ed62fd628f1c0f</span>
+</span><span class="w">    </span><span class="nt">patterns</span><span class="p">:</span><span class="w"> </span><span class="c1"># ...</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="patterns"><code>patterns</code><a class="headerlink" href="#patterns" title="Permanent link">&para;</a></h3>
+<p>The <code>patterns</code> field indicates what kind of files the <abbr title="Synthetic Data Generation - the process where a model artificially generates data based on provided examples">SDG</abbr> process should use. You can give an exact name, like <code>phoenix_constellation.md</code>, or a glob pattern, like <code>*.md</code>. This is a list of patterns, so there may be more than one.</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">qna.yaml</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="c1"># ...</span>
+<span class="nt">domain</span><span class="p">:</span><span class="w"> </span><span class="c1"># ...</span>
+<span class="nt">created_by</span><span class="p">:</span><span class="w"> </span><span class="c1"># ...</span>
+<span class="nt">seed_examples</span><span class="p">:</span><span class="w"> </span><span class="c1"># ...</span>
+<span class="nt">document_outline</span><span class="p">:</span><span class="w"> </span><span class="c1"># ...</span>
+<span class="nt">document</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">repo</span><span class="p">:</span><span class="w"> </span><span class="c1"># ...</span>
+<span class="w">    </span><span class="nt">commit</span><span class="p">:</span><span class="w"> </span><span class="c1"># ...</span>
+<span class="hll"><span class="w">    </span><span class="nt">patterns</span><span class="p">:</span>
+</span><span class="hll"><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">phoenix_constellation.md</span>
+</span></code></pre></div></td></tr></table></div>
+<h2 id="example-of-a-knowledge-submission">Example of a knowledge submission<a class="headerlink" href="#example-of-a-knowledge-submission" title="Permanent link">&para;</a></h2>
+<p>You can review a full example of a knowledge submission for the upstream taxonomy in <a href="https://github.com/instructlab/taxonomy/commit/1fdbbe0cf3136c14bfd6b45dfadb532b027eeb11">this commit in the taxonomy repository</a>.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">The submission</label><label for="__tabbed_1_2">The <code>qna.yaml</code> file</label><label for="__tabbed_1_3">The <code>attribution.txt</code> file</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<ul>
+<li><a href="#__tabbed_1_2">the <code>qna.yaml</code> file</a></li>
+<li><a href="#__tabbed_1_3">the <code>attribution.txt</code> file</a></li>
+</ul>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span>
+<span class="nt">domain</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">astronomy</span>
+<span class="nt">created_by</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">juliadenham</span>
+<span class="nt">seed_examples</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">context</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<span class="w">      </span><span class="no">**Phoenix** is a minor constellation in the southern sky. Named after the mythical</span>
+<span class="w">      </span><span class="no">phoenix, it was first depicted on a celestial atlas by Johann Bayer in his 1603</span>
+<span class="w">      </span><span class="no">*Uranometria*. The French explorer and astronomer Nicolas Louis de</span>
+<span class="w">      </span><span class="no">Lacaille charted the brighter stars and gave their Bayer designations</span>
+<span class="w">      </span><span class="no">in 1756. The constellation stretches from roughly −39 degrees to −57 degrees</span>
+<span class="w">      </span><span class="no">declination, and from 23.5h to 2.5h of right ascension. The constellations Phoenix,</span>
+<span class="w">      </span><span class="no">Grus, Pavo, are known as the Southern Birds.</span>
+<span class="w">    </span><span class="nt">questions_and_answers</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">question</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<span class="w">          </span><span class="no">What is the Phoenix constellation?</span>
+<span class="w">        </span><span class="nt">answer</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<span class="w">          </span><span class="no">Phoenix is a minor constellation in the southern sky.</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">question</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<span class="w">          </span><span class="no">Who charted the Phoenix constellation?</span>
+<span class="w">        </span><span class="nt">answer</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<span class="w">          </span><span class="no">The Phoenix constellation was charted by french explorer and</span>
+<span class="w">          </span><span class="no">astronomer Nicolas Louis de Lacaille.</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">question</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<span class="w">          </span><span class="no">How far does the Phoenix constellation stretch?</span>
+<span class="w">        </span><span class="nt">answer</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<span class="w">          </span><span class="no">The phoenix constellation stretches from roughly −39° to −57°</span>
+<span class="w">          </span><span class="no">declination, and from 23.5h to 2.5h of right ascension.</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">context</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<span class="w">      </span><span class="no">Phoenix was the largest of the 12 constellations established by Petrus</span>
+<span class="w">      </span><span class="no">Plancius from the observations of Pieter Dirkszoon Keyser and Frederick de</span>
+<span class="w">      </span><span class="no">Houtman. It first appeared on a 35cm diameter celestial globe published</span>
+<span class="w">      </span><span class="no">in 1597 (or 1598) in Amsterdam by Plancius with Jodocus Hondius. The first</span>
+<span class="w">      </span><span class="no">depiction of this constellation in a celestial atlas was in Johann Bayer&#39;s</span>
+<span class="w">      </span><span class="no">*Uranometria* of 1603. De Houtman included it in his southern star catalog</span>
+<span class="w">      </span><span class="no">the same year under the Dutch name *Den voghel Fenicx*, &quot;The Bird Phoenix&quot;,</span>
+<span class="w">      </span><span class="no">symbolising the phoenix of classical mythology. One name of the brightest star Alpha</span>
+<span class="w">      </span><span class="no">Phoenicis—Ankaa—is derived from the Arabic: العنقاء, romanized: al-‘anqā’,</span>
+<span class="w">      </span><span class="no">lit.</span><span class="err"> </span><span class="no">&#39;the phoenix&#39;, and was coined sometime after 1800 in relation to the constellation.</span>
+<span class="w">    </span><span class="nt">questions_and_answers</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">question</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<span class="w">          </span><span class="no">What is the brightest star in the Phoenix constellation</span>
+<span class="w">          </span><span class="no">called?</span>
+<span class="w">        </span><span class="nt">answer</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<span class="w">          </span><span class="no">Alpha Phoenicis or Ankaa is the brightest star in the Phoenix</span>
+<span class="w">          </span><span class="no">Constellation.</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">question</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Where did the Phoenix constellation first appear?</span>
+<span class="w">        </span><span class="nt">answer</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<span class="w">          </span><span class="no">The Phoenix constellation first appeared on a 35-cm diameter</span>
+<span class="w">          </span><span class="no">celestial globe published in 1597 (or 1598) in Amsterdam by</span>
+<span class="w">          </span><span class="no">Plancius with Jodocus Hondius.</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">question</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<span class="w">          </span><span class="no">What does &quot;The Bird Phoenix&quot; symbolize?</span>
+<span class="w">        </span><span class="nt">answer</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<span class="w">          </span><span class="no">&quot;The Bird Phoenix&quot; symbolizes the phoenix of classical mythology.</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">context</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<span class="w">      </span><span class="no">Phoenix is a small constellation bordered by Fornax and Sculptor to the north,</span>
+<span class="w">      </span><span class="no">Grus to the west, Tucana to the south, touching on the corner of Hydrus to the</span>
+<span class="w">      </span><span class="no">south, and Eridanus to the east and southeast. The bright star Achernar is</span>
+<span class="w">      </span><span class="no">nearby. The three-letter abbreviation for the constellation, as adopted by the</span>
+<span class="w">      </span><span class="no">International Astronomical Union in 1922, is &quot;Phe&quot;. The official constellation</span>
+<span class="w">      </span><span class="no">boundaries, as set by Belgian astronomer Eugène Delporte in 1930,</span>
+<span class="w">      </span><span class="no">are defined by a polygon of 10 segments. In the equatorial coordinate system, the right</span>
+<span class="w">      </span><span class="no">ascension coordinates of these borders lie between 23h 26.5m and 02h 25.0m,</span>
+<span class="w">      </span><span class="no">while the declination coordinates are between −39.31° and −57.84°. This means it remains</span>
+<span class="w">      </span><span class="no">below the horizon to anyone living north of the 40th parallel in the Northern</span>
+<span class="w">      </span><span class="no">Hemisphere, and remains low in the sky for anyone living north of the equator.</span>
+<span class="w">      </span><span class="no">It is most visible from locations such as Australia and South Africa during</span>
+<span class="w">      </span><span class="no">late Southern Hemisphere spring. Most of the constellation lies within, and</span>
+<span class="w">      </span><span class="no">can be located by, forming a triangle of the bright stars Achernar, Fomalhaut</span>
+<span class="w">      </span><span class="no">and Beta Ceti—Ankaa lies roughly in the centre of this.</span>
+<span class="w">    </span><span class="nt">questions_and_answers</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">question</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">What are the characteristics of the Phoenix constellation?</span>
+<span class="w">        </span><span class="nt">answer</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<span class="w">          </span><span class="no">Phoenix is a small constellation bordered by Fornax and Sculptor to</span>
+<span class="w">          </span><span class="no">the north, Grus to the west, Tucana to the south, touching on the</span>
+<span class="w">          </span><span class="no">corner of Hydrus to the south, and Eridanus to the east and southeast.</span>
+<span class="w">          </span><span class="no">The bright star Achernar is nearby.</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">question</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<span class="w">          </span><span class="no">When is the phoenix constellation most visible?</span>
+<span class="w">        </span><span class="nt">answer</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<span class="w">          </span><span class="no">Phoenix is most visible from locations such as Australia and</span>
+<span class="w">          </span><span class="no">South Africa during late Southern Hemisphere spring.</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">question</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<span class="w">          </span><span class="no">What are the Phoenix Constellation boundaries?</span>
+<span class="w">        </span><span class="nt">answer</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<span class="w">          </span><span class="no">The official constellation boundaries for Phoenix, as set by Belgian</span>
+<span class="w">          </span><span class="no">astronomer Eugène Delporte in 1930, are defined by a polygon of 10</span>
+<span class="w">          </span><span class="no">segments.</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">context</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<span class="w">      </span><span class="no">Ten stars have been found to have planets to date, and four planetary</span>
+<span class="w">      </span><span class="no">systems have been discovered with the SuperWASP project. HD 142 is a yellow</span>
+<span class="w">      </span><span class="no">giant that has an apparent magnitude of 5.7, and has a planet HD 142b 1.36</span>
+<span class="w">      </span><span class="no">times the mass of Jupiter which orbits every 328 days.  HD 2039 is a yellow</span>
+<span class="w">      </span><span class="no">subgiant with an apparent magnitude of 9.0 around 330 light years away which</span>
+<span class="w">      </span><span class="no">has a planet HD 2039 b six times the mass of Jupiter. WASP-18 is a star of</span>
+<span class="w">      </span><span class="no">magnitude 9.29 which was discovered to have a hot Jupiter-like planet taking</span>
+<span class="w">      </span><span class="no">less than a day to orbit the star. The planet is suspected to be causing WASP-18 to</span>
+<span class="w">      </span><span class="no">appear older than it really is. WASP-4 and WASP-5 are solar-type yellow stars around 1000</span>
+<span class="w">      </span><span class="no">light years distant and of 13th magnitude, each with a single planet larger</span>
+<span class="w">      </span><span class="no">than Jupiter. WASP-29 is an orange dwarf of spectral type K4V and visual magnitude</span>
+<span class="w">      </span><span class="no">11.3, which has a planetary companion of similar size and mass to Saturn. The planet</span>
+<span class="w">      </span><span class="no">completes an orbit every 3.9 days.</span>
+<span class="w">    </span><span class="nt">questions_and_answers</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">question</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">In the Phoenix constellation, how many stars have planets?</span>
+<span class="w">        </span><span class="nt">answer</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<span class="w">          </span><span class="no">In the Phoenix constellation, ten stars have been found to have</span>
+<span class="w">          </span><span class="no">planets to date, and four planetary systems have been discovered</span>
+<span class="w">          </span><span class="no">with the SuperWASP project.</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">question</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<span class="w">          </span><span class="no">What is HD 142?</span>
+<span class="w">        </span><span class="nt">answer</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<span class="w">          </span><span class="no">HD 142 is a yellow giant that has an apparent magnitude of 5.7, and</span>
+<span class="w">          </span><span class="no">has a planet (HD 142 b) 1.36 times the mass of Jupiter which</span>
+<span class="w">          </span><span class="no">orbits every 328 days.</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">question</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<span class="w">          </span><span class="no">Are WASP-4 and WASP-5 solar-type yellow stars?</span>
+<span class="w">        </span><span class="nt">answer</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<span class="w">          </span><span class="no">Yes, WASP-4 and WASP-5 are solar-type yellow stars around 1000 light</span>
+<span class="w">          </span><span class="no">years distant and of 13th magnitude, each with a single planet</span>
+<span class="w">          </span><span class="no">larger than Jupiter.</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">context</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<span class="w">      </span><span class="no">The constellation does not lie on the galactic plane of the Milky Way, and there</span>
+<span class="w">      </span><span class="no">are no prominent star clusters. NGC 625 is a dwarf irregular galaxy of apparent magnitude 11.0</span>
+<span class="w">      </span><span class="no">and lying some 12.7 million light years distant. Only 24000 light years in</span>
+<span class="w">      </span><span class="no">diameter, it is an outlying member of the Sculptor Group. NGC 625 is</span>
+<span class="w">      </span><span class="no">thought to have been involved in a collision and is experiencing a burst</span>
+<span class="w">      </span><span class="no">of active star formation. NGC 37 is a lenticular galaxy of apparent magnitude</span>
+<span class="w">      </span><span class="no">14.66. It is approximately 42 kiloparsecs in diameter and about 12.9 billion years old.</span>
+<span class="w">      </span><span class="no">Robert&#39;s Quartet , and three spiral galaxies NGC 88 and NGC 92) is a group of</span>
+<span class="w">      </span><span class="no">four galaxies located around 160 million light-years away which are in the process of colliding</span>
+<span class="w">      </span><span class="no">and merging. They are within a circle of radius of 1.6 arcmin, corresponding to about</span>
+<span class="w">      </span><span class="no">75,000 light-years. Located in the galaxy ESO 243-49 is HLX-1, an intermediate-mass</span>
+<span class="w">      </span><span class="no">black hole intermediate-mass_black_hole —the first one of its kind identified.</span>
+<span class="w">      </span><span class="no">It is thought to be a remnant of a dwarf galaxy that was absorbed in a collision</span>
+<span class="w">      </span><span class="no">with ESO 243-49. Before its discovery, this class of black hole was only hypothesized.</span>
+<span class="w">    </span><span class="nt">questions_and_answers</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">question</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<span class="w">          </span><span class="no">Is the Phoenix Constellation part of the Milky Way?</span>
+<span class="w">        </span><span class="nt">answer</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<span class="w">          </span><span class="no">The Phoenix constellation does not lie on the galactic plane of</span>
+<span class="w">          </span><span class="no">the Milky Way, and there are no prominent star clusters.</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">question</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<span class="w">          </span><span class="no">How many light years away is NGC 625?</span>
+<span class="w">        </span><span class="nt">answer</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<span class="w">          </span><span class="no">NGC 625 is 24000 light years in diameter and is an outlying</span>
+<span class="w">          </span><span class="no">member of the Sculptor Group.</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">question</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<span class="w">          </span><span class="no">What is Robert&#39;s Quartet composed of?</span>
+<span class="w">        </span><span class="nt">answer</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<span class="w">          </span><span class="no">Robert&#39;s Quartet is composed of the irregular galaxy NGC 87,</span>
+<span class="w">          </span><span class="no">and three spiral galaxies NGC 88, NGC 89 and NGC 92.</span>
+<span class="nt">document_outline</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<span class="w">  </span><span class="no">Information about the Phoenix Constellation including the</span>
+<span class="w">  </span><span class="no">history, characteristics, and features of the stars in the constellation.</span>
+<span class="nt">document</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">repo</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://github.com/juliadenham/Summit_knowledge</span>
+<span class="w">    </span><span class="nt">commit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0a1f2672b9b90582e6115333e3ed62fd628f1c0f</span>
+<span class="w">    </span><span class="nt">patterns</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">phoenix_constellation.md</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>Title of work: Phoenix (constellation)
+Link to work: https://en.wikipedia.org/wiki/Phoenix_(constellation)
+Revision: https://en.wikipedia.org/w/index.php?title=Phoenix_(constellation)&amp;oldid=1237187773
+License of the work: CC-BY-SA-4.0
+Creator names: Wikipedia Authors
+</code></pre></div>
+</div>
+</div>
+</div>
+<p>For more information on what to include in your <code>attribution.txt</code> file for an upstream submission, reference <a href="../../upstream/knowledge_contribution_details/#the-attributiontxt-file">the upstream contribution document on knowledge</a>.</p>
+<h3 id="example-of-a-knowledge-document-file">Example of a knowledge document file<a class="headerlink" href="#example-of-a-knowledge-document-file" title="Permanent link">&para;</a></h3>
+<p>The previous knowledge example references one Markdown file: <code>phoenix_constellation.md</code>. You can also add multiple Markdown files or PDFs for knowledge contributions.</p>
+<p>Here's what a snippet of <code>phoenix_constellation.md</code> might look like in your Git repository.</p>
+<p><em>Example of a <code>.md</code> file</em></p>
+<div class="highlight"><pre><span></span><code><span class="gh"># Phoenix (constellation)</span>
+
+<span class="gs">**Phoenix**</span> is a minor constellation in the southern sky. Named after the mythical
+phoenix, it was first depicted on a celestial atlas by Johann Bayer in his 1603
+<span class="ge">*Uranometria*</span>. The French explorer and astronomer Nicolas Louis de
+Lacaille charted the brighter stars and gave their Bayer designations
+in 1756. The constellation stretches from roughly −39 degrees to −57 degrees
+declination, and from 23.5h to 2.5h of right ascension. The constellations Phoenix,
+Grus, Pavo, are known as the Southern Birds.
+
+The brightest star, Alpha Phoenicis, is named Ankaa, an Arabic word meaning &#39;the Phoenix&#39;.
+It is an orange giant of apparent magnitude 2.4. Next is Beta Phoenicis, actually a
+binary system composed of two yellow giants with a combined apparent magnitude of 3.3. Nu
+Phoenicis has a dust disk, while the constellation has ten star systems with known planets and the recently
+discovered galaxy clusters El Gordo and the Phoenix
+Cluster—located 7.2 and 5.7 billion light years away respectively, two of the largest objects in the visible
+universe. Phoenix is the radiant of two annual meteor showers: the Phoenicids in December, and the July
+Phoenicids.
+</code></pre></div>
+<p>You can organize the knowledge files in your repository however you want. You need to ensure the <code>document</code> section of the <abbr title="Yet Another Markdown Language">YAML</abbr> file is pointing to the correct file.</p>
+
+
+
+
+
+
+
+  
+    
+  
+  
+    
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Last update">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 13, 2025</span>
+  </span>
+
+    
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Created">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3h-2Z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 13, 2025</span>
+  </span>
+
+    
+    
+      
+  
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Contributors">
+      
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 4a4 4 0 0 1 4 4 4 4 0 0 1-4 4 4 4 0 0 1-4-4 4 4 0 0 1 4-4m0 10c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4Z"/></svg>
+      
+    </span>
+    <nav>
+      Laura Santamaria
+    </nav>
+  </span>
+
+    
+    
+      
+  <span class="md-source-file__fact">
+    
+      
+  <span class="md-icon" title="Contributors">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2Z"/></svg>
+  </span>
+  <span>GitHub</span>
+
+    
+    <nav>
+      
+        <a href="https://github.com/nimbinatus" class="md-author" title="@nimbinatus">
+          
+          <img src="https://avatars.githubusercontent.com/u/1538692?v=4&size=72" alt="nimbinatus">
+        </a>
+      
+        <a href="https://github.com/web-flow" class="md-author" title="@web-flow">
+          
+          <img src="https://avatars.githubusercontent.com/u/19864447?v=4&size=72" alt="web-flow">
+        </a>
+      
+      
+      
+    </nav>
+  </span>
+
+    
+  </aside>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2024- Red Hat Inc.
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.annotate", "content.code.copy", "content.code.select", "content.tabs.link"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.af256bd8.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,2472 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://docs.instructlab.ai/adding-data-to-model/creating_new_knowledge_or_skills/">
+      
+      
+        <link rel="prev" href="../creating_new_wikipedia_based_qna/">
+      
+      
+        <link rel="next" href="../../community/CODE_OF_CONDUCT/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.33">
+    
+    
+      
+        <title>Creating New Knowledge or Skills - docs.instructlab.ai</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.3cba04c6.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+  
+  
+  
+  
+  <style>:root{--md-annotation-icon:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10.74 10.75 12 8l1.25 2.75L16 12l-2.75 1.26L12 16l-1.26-2.74L8 12l2.74-1.25Z"/></svg>');}</style>
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="{'primary':-'custom'}" data-md-color-accent="purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#generate-a-model-with-new-skills-and-knowledge" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="docs.instructlab.ai" class="md-header__button md-logo" aria-label="docs.instructlab.ai" data-md-component="logo">
+      
+  <img src="../../images/ilab_dog.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            docs.instructlab.ai
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Creating New Knowledge or Skills
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/instructlab/docs.instructlab.ai" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    docs.instructlab.ai
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="docs.instructlab.ai" class="md-nav__button md-logo" aria-label="docs.instructlab.ai" data-md-component="logo">
+      
+  <img src="../../images/ilab_dog.png" alt="logo">
+
+    </a>
+    docs.instructlab.ai
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/instructlab/docs.instructlab.ai" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    docs.instructlab.ai
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Welcome
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Welcome
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About InstructLab
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Getting Started
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Getting Started
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/mac_metal/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Install on Mac Metal
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/linux_nvidia/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Install on Linux NVIDIA
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/linux_amd/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Install on Linux AMD
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/initilize_ilab/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Initialize InstructLab
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/download_models/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Download models
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/serve_and_chat/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Intro to serve and chat
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Adding data to a model
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Adding data to a model
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../creating_new_wikipedia_based_qna/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Creating a new Wikipedia based qna.yaml
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Creating New Knowledge or Skills
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Creating New Knowledge or Skills
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#generate-a-model-with-new-skills-and-knowledge" class="md-nav__link">
+    <span class="md-ellipsis">
+      💻 Generate a model with new skills and knowledge
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="💻 Generate a model with new skills and knowledge">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#list-and-validate-your-new-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      📜 List and validate your new data
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#generate-a-synthetic-dataset" class="md-nav__link">
+    <span class="md-ellipsis">
+      🚀 Generate a synthetic dataset
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#training-the-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      👩‍🏫 Training the model
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#before-you-begin-training" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✋ Before you begin training
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="✋ Before you begin training">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#instructlab-model-training-pipelines" class="md-nav__link">
+    <span class="md-ellipsis">
+      InstructLab model training pipelines
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#train-the-model-locally" class="md-nav__link">
+    <span class="md-ellipsis">
+      Train the model locally
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#train-the-model-locally-on-an-m-series-mac-or-on-linux-using-the-full-pipeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      Train the model locally on an M-series Mac or on Linux using the full pipeline
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#train-the-model-locally-on-an-m-series-mac-or-on-linux-using-the-simple-pipeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      Train the model locally on an M-series Mac or on Linux using the simple pipeline
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#train-the-model-locally-with-gpu-acceleration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Train the model locally with GPU acceleration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#train-the-model-locally-with-multiphase-training-and-gpu-acceleration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Train the model locally with multiphase training and GPU acceleration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#train-the-model-in-the-cloud" class="md-nav__link">
+    <span class="md-ellipsis">
+      Train the model in the cloud
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test-the-newly-trained-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      📜 Test the newly trained model
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evaluate-the-newly-trained-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧪 Evaluate the newly trained model
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🧪 Evaluate the newly trained model">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#running-mmlu" class="md-nav__link">
+    <span class="md-ellipsis">
+      Running MMLU
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#running-mmlubranch" class="md-nav__link">
+    <span class="md-ellipsis">
+      Running MMLUBranch
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#running-mtbench" class="md-nav__link">
+    <span class="md-ellipsis">
+      Running MTBench
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#running-mtbenchbranch" class="md-nav__link">
+    <span class="md-ellipsis">
+      Running MTBenchBranch
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#serve-the-newly-trained-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      🍴 Serve the newly trained model
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chat-with-the-new-model-not-optional-this-time" class="md-nav__link">
+    <span class="md-ellipsis">
+      📣 Chat with the new model (not optional this time)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#submit-your-new-knowledge-or-skills" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎁 Submit your new knowledge or skills
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contributing" class="md-nav__link">
+    <span class="md-ellipsis">
+      📬 Contributing
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Community
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Community
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/CODE_OF_CONDUCT/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Code of Conduct
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/CODE_OF_CONDUCT_COMMITTEE/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Code of Conduct Committee
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/FAQ/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FAQ
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/GOVERNANCE/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Governance Policy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/InstructLab_DISCORD_GUIDE/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Discord Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/InstructLab_DISCORD_MODERATION_GUIDE/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Discord Moderation Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/InstructLab_SLACK_GUIDE/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Slack Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/InstructLab_SLACK_MODERATION_GUIDE/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Slack Moderation Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Taxonomy
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Taxonomy
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../taxonomy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About Taxonomy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Upstream Taxonomy Contributions
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            Upstream Taxonomy Contributions
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../taxonomy/upstream/contribution_guidelines/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    General Guidelines
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../taxonomy/upstream/knowledge_contribution_details/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Knowledge Guidelines
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../taxonomy/upstream/skills_contribution_details/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Skill Guidelines
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Skills
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_3">
+            <span class="md-nav__icon md-icon"></span>
+            Skills
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../taxonomy/skills/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../taxonomy/skills/file_structure/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File Structure
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_4" id="__nav_5_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Knowledge
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_4">
+            <span class="md-nav__icon md-icon"></span>
+            Knowledge
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../taxonomy/knowledge/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../taxonomy/knowledge/file_structure/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File Structure
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    User Interface
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            User Interface
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-interface/ui_overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UI Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-interface/playground_chat/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chat with the model
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-interface/knowledge_contributions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contribute knowledge to community model
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-interface/skills_contributions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contribute skills to community model
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-interface/env_oauth_config/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UI Configurations
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Community Model Build
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Community Model Build
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cmb/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About Community Model Build
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cmb/build_process/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Community Model Build Process
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    References
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            References
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../resources/RESOURCES/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Additional Resources
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../resources/CONTRIBUTORS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contributors
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../resources/MKDOCS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MkDocs Cheatsheet
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#generate-a-model-with-new-skills-and-knowledge" class="md-nav__link">
+    <span class="md-ellipsis">
+      💻 Generate a model with new skills and knowledge
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="💻 Generate a model with new skills and knowledge">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#list-and-validate-your-new-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      📜 List and validate your new data
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#generate-a-synthetic-dataset" class="md-nav__link">
+    <span class="md-ellipsis">
+      🚀 Generate a synthetic dataset
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#training-the-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      👩‍🏫 Training the model
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#before-you-begin-training" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✋ Before you begin training
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="✋ Before you begin training">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#instructlab-model-training-pipelines" class="md-nav__link">
+    <span class="md-ellipsis">
+      InstructLab model training pipelines
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#train-the-model-locally" class="md-nav__link">
+    <span class="md-ellipsis">
+      Train the model locally
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#train-the-model-locally-on-an-m-series-mac-or-on-linux-using-the-full-pipeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      Train the model locally on an M-series Mac or on Linux using the full pipeline
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#train-the-model-locally-on-an-m-series-mac-or-on-linux-using-the-simple-pipeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      Train the model locally on an M-series Mac or on Linux using the simple pipeline
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#train-the-model-locally-with-gpu-acceleration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Train the model locally with GPU acceleration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#train-the-model-locally-with-multiphase-training-and-gpu-acceleration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Train the model locally with multiphase training and GPU acceleration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#train-the-model-in-the-cloud" class="md-nav__link">
+    <span class="md-ellipsis">
+      Train the model in the cloud
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test-the-newly-trained-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      📜 Test the newly trained model
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evaluate-the-newly-trained-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧪 Evaluate the newly trained model
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🧪 Evaluate the newly trained model">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#running-mmlu" class="md-nav__link">
+    <span class="md-ellipsis">
+      Running MMLU
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#running-mmlubranch" class="md-nav__link">
+    <span class="md-ellipsis">
+      Running MMLUBranch
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#running-mtbench" class="md-nav__link">
+    <span class="md-ellipsis">
+      Running MTBench
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#running-mtbenchbranch" class="md-nav__link">
+    <span class="md-ellipsis">
+      Running MTBenchBranch
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#serve-the-newly-trained-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      🍴 Serve the newly trained model
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chat-with-the-new-model-not-optional-this-time" class="md-nav__link">
+    <span class="md-ellipsis">
+      📣 Chat with the new model (not optional this time)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#submit-your-new-knowledge-or-skills" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎁 Submit your new knowledge or skills
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contributing" class="md-nav__link">
+    <span class="md-ellipsis">
+      📬 Contributing
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+  <h1>Creating New Knowledge or Skills</h1>
+
+<h2 id="generate-a-model-with-new-skills-and-knowledge">💻 Generate a model with new skills and knowledge<a class="headerlink" href="#generate-a-model-with-new-skills-and-knowledge" title="Permanent link">&para;</a></h2>
+<h3 id="list-and-validate-your-new-data">📜 List and validate your new data<a class="headerlink" href="#list-and-validate-your-new-data" title="Permanent link">&para;</a></h3>
+<p>You can use the <code>ilab taxonomy diff</code> command to ensure <code>ilab</code> is registering your new knowledge or skills and your contributions are properly formatted. </p>
+<div class="highlight"><pre><span></span><code><span class="o">(</span>venv<span class="o">)</span><span class="w"> </span>$<span class="w"> </span>ilab<span class="w"> </span>taxonomy<span class="w"> </span>diff
+compositional_skills/writing/freeform/foo-lang/qna.yaml
+Taxonomy<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="nv">$HOME</span>/.local/share/instructlab/taxonomy<span class="w"> </span>is<span class="w"> </span>valid<span class="w"> </span>:<span class="o">)</span>
+</code></pre></div>
+<p>This command displays any new or modified <abbr title="Yet Another Markdown Language">YAML</abbr> files within your taxonomy tree. For example, the following is the expected result of a valid compositional skill contribution after adding a new skill called <code>foo-lang</code> to the freeform writing subdirectory.</p>
+<p>You can also validate your entire taxonomy by performing a diff against an empty base by using the <code>--taxonomy-base=empty</code> argument:</p>
+<div class="highlight"><pre><span></span><code><span class="o">(</span>venv<span class="o">)</span><span class="w"> </span>$<span class="w"> </span>ilab<span class="w"> </span>taxonomy<span class="w"> </span>diff<span class="w"> </span>--taxonomy-base<span class="o">=</span>empty
+compositional_skills/general/tables/empty/qna.yaml
+compositional_skills/general/tables/editing/add_remove/qna.yaml
+...
+Taxonomy<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="nv">$HOME</span>/.local/share/instructlab/taxonomy<span class="w"> </span>is<span class="w"> </span>valid<span class="w"> </span>:<span class="o">)</span>
+</code></pre></div>
+<h3 id="generate-a-synthetic-dataset">🚀 Generate a synthetic dataset<a class="headerlink" href="#generate-a-synthetic-dataset" title="Permanent link">&para;</a></h3>
+<p>Before following these instructions, ensure the existing model you are adding skills or knowledge to is still running. Alternatively, <code>ilab data generate</code> can start a server for you if you provide a fully qualified model path via <code>--model</code>.</p>
+<p>1) To generate a synthetic dataset based on your newly added knowledge or skill set in <a href="https://github.com/instructlab/taxonomy.git">taxonomy</a> repository, run the following command:</p>
+<p><em>Default <abbr title="Synthetic Data Generation - the process where a model artificially generates data based on provided examples">SDG</abbr></em></p>
+<div class="highlight"><pre><span></span><code>ilab<span class="w"> </span>data<span class="w"> </span>generate
+</code></pre></div>
+<p><em>With GPU acceleration</em></p>
+<div class="highlight"><pre><span></span><code>ilab<span class="w"> </span>data<span class="w"> </span>generate<span class="w"> </span>--pipeline<span class="w"> </span>full<span class="w"> </span>--gpus<span class="w"> </span>&lt;NUM_OF_GPUS&gt;
+</code></pre></div>
+<p><em>Without GPU acceleration:</em></p>
+<div class="highlight"><pre><span></span><code>ilab<span class="w"> </span>data<span class="w"> </span>generate<span class="w"> </span>--pipeline<span class="w"> </span>simple
+</code></pre></div>
+<p><em>Using a non-default model (e.g. <abbr title="LLM using Mixture of Experts by Mistral AI">Mixtral</abbr>-8x7B-Instruct-v0.1) to generate data:</em></p>
+<div class="highlight"><pre><span></span><code>ilab<span class="w"> </span>data<span class="w"> </span>generate<span class="w"> </span>--model<span class="w"> </span>~/.cache/instructlab/models/mistralai/mixtral-8x7b-instruct-v0.1<span class="w"> </span>--pipeline<span class="w"> </span>full<span class="w"> </span>--gpus<span class="w"> </span><span class="m">4</span>
+</code></pre></div>
+<p>⏳ This can take from 15 minutes to 1+ hours to complete, depending on your computing resources.</p>
+<p><em>Example output of <code>ilab data generate</code></em></p>
+<div class="highlight"><pre><span></span><code><span class="o">(</span>venv<span class="o">)</span><span class="w"> </span>$<span class="w"> </span>ilab<span class="w"> </span>data<span class="w"> </span>generate
+INFO<span class="w"> </span><span class="m">2024</span>-07-30<span class="w"> </span><span class="m">19</span>:57:44,093<span class="w"> </span>numexpr.utils:161:<span class="w"> </span>NumExpr<span class="w"> </span>defaulting<span class="w"> </span>to<span class="w"> </span><span class="m">8</span><span class="w"> </span>threads.
+INFO<span class="w"> </span><span class="m">2024</span>-07-30<span class="w"> </span><span class="m">19</span>:57:44,452<span class="w"> </span>datasets:58:<span class="w"> </span>PyTorch<span class="w"> </span>version<span class="w"> </span><span class="m">2</span>.3.1<span class="w"> </span>available.
+Generating<span class="w"> </span>synthetic<span class="w"> </span>data<span class="w"> </span>using<span class="w"> </span><span class="s1">&#39;full&#39;</span><span class="w"> </span>pipeline,<span class="w"> </span><span class="s1">&#39;mistral-7b-instruct-v0.2.Q4_K_M.gguf&#39;</span><span class="w"> </span>model,<span class="w"> </span><span class="s1">&#39;./taxonomy&#39;</span><span class="w"> </span>taxonomy,<span class="w"> </span>against<span class="w"> </span>http://localhost:8000/v1<span class="w"> </span>server
+INFO<span class="w"> </span><span class="m">2024</span>-07-30<span class="w"> </span><span class="m">19</span>:57:45,084<span class="w"> </span>instructlab.sdg:375:<span class="w"> </span>Synthesizing<span class="w"> </span>new<span class="w"> </span>instructions.<span class="w"> </span>If<span class="w"> </span>you<span class="w"> </span>aren<span class="s1">&#39;t satisfied with the generated instructions, interrupt training (Ctrl-C) and try adjusting your YAML files. Adding more examples may help.</span>
+<span class="s1">INFO 2024-07-30 19:57:45,090 instructlab.sdg.pipeline:153: Running pipeline single-threaded</span>
+<span class="s1">INFO 2024-07-30 19:57:47,820 instructlab.sdg.llmblock:51: LLM server supports batched inputs: False</span>
+<span class="s1">INFO 2024-07-30 19:57:47,820 instructlab.sdg.pipeline:197: Running block: gen_skill_freeform</span>
+<span class="s1">INFO 2024-07-30 19:57:47,820 instructlab.sdg.pipeline:198: Dataset({</span>
+<span class="s1">features: [&#39;</span>task_description<span class="s1">&#39;, &#39;</span>seed_question<span class="s1">&#39;, &#39;</span>seed_response<span class="err">&#39;</span><span class="o">]</span>,
+num_rows:<span class="w"> </span><span class="m">5</span>
+<span class="o">})</span>
+INFO<span class="w"> </span><span class="m">2024</span>-07-30<span class="w"> </span><span class="m">20</span>:02:16,455<span class="w"> </span>instructlab.sdg:411:<span class="w"> </span>Generated<span class="w"> </span><span class="m">1</span><span class="w"> </span>samples
+...
+</code></pre></div>
+<p>The synthetic data set will be two files in the newly created in the datasets directory: <code>~/.local/share/instructlab/datasets</code>. These files will be named <code>skills_train_msgs_*.jsonl</code> and <code>knowledge_train_msgs_*.jsonl</code>.</p>
+<p>2) Verify the files have been created by running the <code>ls datasets</code> command in the <code>.local/share/instructlab</code> directory.</p>
+<div class="highlight"><pre><span></span><code><span class="o">(</span>venv<span class="o">)</span><span class="w"> </span>$<span class="w"> </span>ls<span class="w"> </span>datasets/
+├──<span class="w"> </span>node_datasets_2024-08-12T20_31_15
+├──<span class="w"> </span>node_datasets_2024-08-13T19_51_48
+├──<span class="w"> </span>knowledge_recipe_2024-08-12T20_31_15.yaml
+├──<span class="w"> </span>knowledge_recipe_2024-08-13T19_51_48.yaml
+├──<span class="w"> </span>knowledge_train_msgs_2024-08-12T20_31_15.jsonl
+├──<span class="w"> </span>knowledge_train_msgs_2024-08-13T19_51_48.jsonl
+├──<span class="w"> </span>skills_recipe_2024-08-12T20_31_15.yaml
+├──<span class="w"> </span>skills_recipe_2024-08-13T19_51_48.yaml
+├──<span class="w"> </span>skills_train_msgs_2024-08-12T20_31_15.jsonl
+├──<span class="w"> </span>skills_train_msgs_2024-08-13T19_51_48.jsonl
+├──<span class="w"> </span>messages_mixtral-8x7b-instruct-v0-1_2024-08-12T20_31_15.jsonl
+├──<span class="w"> </span>messages_mixtral-8x7b-instruct-v0-1_2024-08-13T19_51_48.jsonl
+├──<span class="w"> </span>test_mixtral-8x7b-instruct-v0-1_2024-08-12T20_13_21.jsonl
+├──<span class="w"> </span>test_mixtral-8x7b-instruct-v0-1_2024-08-12T20_23_06.jsonl
+├──<span class="w"> </span>test_mixtral-8x7b-instruct-v0-1_2024-08-12T20_31_15.jsonl
+├──<span class="w"> </span>test_mixtral-8x7b-instruct-v0-1_2024-08-13T19_47_59.jsonl
+├──<span class="w"> </span>test_mixtral-8x7b-instruct-v0-1_2024-08-13T19_51_48.jsonl
+├──<span class="w"> </span>train_mixtral-8x7b-instruct-v0-1_2024-08-12T20_31_15.jsonl
+└──<span class="w"> </span>train_mixtral-8x7b-instruct-v0-1_2024-08-13T19_51_48.jsonl
+</code></pre></div>
+<p><em>Generating synthetic data on a different model:</em> It is also possible to run the generate step against a different model via an
+OpenAI-compatible API. For example, the one spawned by <code>ilab model serve</code> or any remote or locally hosted LLM (e.g. via <a href="https://ollama.com/"><code>ollama</code></a>, <a href="https://lmstudio.ai"><code>LM Studio</code></a>, etc.). Run the following command:</p>
+<div class="highlight"><pre><span></span><code>ilab<span class="w"> </span>data<span class="w"> </span>generate<span class="w"> </span>--endpoint-url<span class="w"> </span>http://localhost:8000/v1
+</code></pre></div>
+<p><em>Generating synthetic data on the entire taxonomy repo:</em> You can generate a synthetic dataset based on the entire contents of the taxonomy repo using the <code>--taxonomy-base=empty</code> option:</p>
+<div class="highlight"><pre><span></span><code>ilab<span class="w"> </span>data<span class="w"> </span>generate<span class="w"> </span>--taxonomy-base<span class="o">=</span>empty
+</code></pre></div>
+<h3 id="training-the-model">👩‍🏫 Training the model<a class="headerlink" href="#training-the-model" title="Permanent link">&para;</a></h3>
+<p>There are many options for training the model with your synthetic data-enhanced dataset.</p>
+<h3 id="before-you-begin-training">✋ Before you begin training<a class="headerlink" href="#before-you-begin-training" title="Permanent link">&para;</a></h3>
+<p>There are a few models you need to download before running the InstructLab end-to-end workflow locally.</p>
+<p>Download the <code>granite-7b-lab</code> model for training:
+<div class="highlight"><pre><span></span><code>ilab<span class="w"> </span>model<span class="w"> </span>download<span class="w"> </span>--repository<span class="w"> </span>instructlab/granite-7b-lab<span class="w"> </span>
+</code></pre></div></p>
+<p>Download the <code>prometheus-8x7b-v2.0</code> for <em>multi-phase training</em> and <em>benchmark evaluation</em>.
+This model is not required for <code>simple</code> or <code>full</code> training.<br />
+<div class="highlight"><pre><span></span><code>ilab<span class="w"> </span>model<span class="w"> </span>download<span class="w"> </span>--repository<span class="w"> </span>prometheus-eval/prometheus-8x7b-v2.0<span class="w"> </span>--hf-token<span class="w"> </span>&lt;your-huggingface-token&gt;<span class="w"> </span>
+</code></pre></div></p>
+<h4 id="instructlab-model-training-pipelines">InstructLab model training pipelines<a class="headerlink" href="#instructlab-model-training-pipelines" title="Permanent link">&para;</a></h4>
+<p><code>ilab model train</code> has three pipelines: <code>simple</code>, <code>full</code>, and <code>accelerated</code>. The default is <code>full</code>.</p>
+<ol>
+<li><code>simple</code> uses an SFT Trainer on Linux and <abbr title="An array framework for machine learning research on Apple Silicon chips">MLX</abbr> on MacOS. This type of training takes roughly an hour and produces the lowest fidelity model but should indicate if your data is being picked up by the training process.</li>
+<li><code>full</code> uses a custom training loop and data processing functions for the granite family of models. This loop is optimized for CPU and <abbr title="Metal Performance Shaders - a MacOS hardware accelerator, similar to CUDA kernels">MPS</abbr> functionality. Please use <code>--pipeline=full</code> in combination with <code>--device=cpu</code> (Linux) or <code>--device=mps</code> (MacOS). You can also use <code>--device=cpu</code> on a MacOS machine. However, <abbr title="Metal Performance Shaders - a MacOS hardware accelerator, similar to CUDA kernels">MPS</abbr> is optimized for better performance on these systems.</li>
+<li><code>accelerated</code> uses the instructlab-training library which supports GPU accelerated and distributed training. The <code>full</code> loop and data processing functions are either pulled directly from or based off of the work in this library.</li>
+</ol>
+<p>After running <code>ilab model train</code>, the output locations depend on the chosen pipeline or strategy:</p>
+<table>
+<thead>
+<tr>
+<th><strong>Pipeline/Strategy</strong></th>
+<th><strong>Operating System</strong></th>
+<th><strong>Output Location/Details</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>simple</code></td>
+<td>Linux</td>
+<td>Model saved in <code>models</code> directory as <code>ggml-model-f16.gguf</code>.</td>
+</tr>
+<tr>
+<td><code>simple</code></td>
+<td>MacOS</td>
+<td>Model saved in <code>&lt;model_name&gt;-mlx-q</code> directory.</td>
+</tr>
+<tr>
+<td><code>full</code></td>
+<td>Linux &amp; MacOS</td>
+<td><code>.bin</code> and <code>.gguf</code> models saved in <code>~/.local/share/instructlab/checkpoints/hf_format</code> directory. Two models in each <code>sample_*</code> directory: one quantized (<code>Q4-M-K</code> suffix) and one full precision.</td>
+</tr>
+<tr>
+<td><code>accelerated</code></td>
+<td>Linux</td>
+<td>Models saved in <code>~/.local/share/instructlab/checkpoints</code>. Can be evaluated with <code>ilab model evaluate</code> to choose the best one.</td>
+</tr>
+<tr>
+<td><code>lab-multiphase</code></td>
+<td>Linux</td>
+<td>Phase 1 models saved in <code>~/.local/share/instructlab/phased/phase1/checkpoints</code> (Knowledge training). Phase 2 models saved in <code>~/.local/share/instructlab/phased/phase2/checkpoints</code> (Skills training). Evaluation is run for both phases to identify the best <abbr title="Snapshots during training. They are scored individually and the best is selected.">checkpoint</abbr>.</td>
+</tr>
+</tbody>
+</table>
+<p>To limit training time, you can adjust the <code>num_epoch</code> paramater in the <code>config.yaml</code> file. The maximum number of epochs for running the InstructLab end-to-end workkflow is 10.</p>
+<h4 id="train-the-model-locally">Train the model locally<a class="headerlink" href="#train-the-model-locally" title="Permanent link">&para;</a></h4>
+<p>Train the model with your synthetic data with the <code>ilab model train</code> command:</p>
+<div class="highlight"><pre><span></span><code>ilab<span class="w"> </span>model<span class="w"> </span>train
+</code></pre></div>
+<p>⏳ This step can potentially take <strong>several hours</strong> to complete depending on your computing resources. Please stop <code>ilab model chat</code> and <code>ilab model serve</code> first to free resources.</p>
+<p>When running multiphase training evaluation is run on each phase, we will tell you which <abbr title="Snapshots during training. They are scored individually and the best is selected.">checkpoint</abbr> in this folder performs the best.</p>
+<h4 id="train-the-model-locally-on-an-m-series-mac-or-on-linux-using-the-full-pipeline">Train the model locally on an M-series Mac or on Linux using the full pipeline<a class="headerlink" href="#train-the-model-locally-on-an-m-series-mac-or-on-linux-using-the-full-pipeline" title="Permanent link">&para;</a></h4>
+<p>To train the model locally on your M-Series Mac using our full pipeline and <abbr title="Metal Performance Shaders - a MacOS hardware accelerator, similar to CUDA kernels">MPS</abbr> or on your Linux laptop/desktop using CPU:</p>
+<div class="highlight"><pre><span></span><code>ilab<span class="w"> </span>model<span class="w"> </span>train<span class="w"> </span>--pipeline<span class="w"> </span>full<span class="w"> </span>--device<span class="w"> </span>mps<span class="w"> </span>--data-path<span class="w"> </span>&lt;path-to-sdg-dataset&gt;
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>ilab<span class="w"> </span>model<span class="w"> </span>train<span class="w"> </span>--pipeline<span class="w"> </span>full<span class="w"> </span>--device<span class="w"> </span>cpu<span class="w"> </span>--data-path<span class="w"> </span>&lt;path-to-sdg-dataset&gt;
+</code></pre></div>
+<p><em>Example command</em></p>
+<div class="highlight"><pre><span></span><code>ilab<span class="w"> </span>model<span class="w"> </span>train<span class="w"> </span>--pipeline<span class="w"> </span>full<span class="w"> </span>--device<span class="w"> </span>cpu<span class="w"> </span>--data-path<span class="w"> </span>~/.local/share/instructlab/datasets/knowledge_train_msgs_2024-10-23T09_14_44.jsonl
+</code></pre></div>
+<p>⏳ This process will take a while to complete. If you run for ~8 epochs it will take several hours.</p>
+<p><code>ilab model train</code> outputs a directory for each epoch that resembles the following structure:</p>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>ls<span class="w"> </span>~/.local/share/instructlab/checkpoints/hf_format/samples_0/
+├──<span class="w"> </span>added_tokens.json
+├──<span class="w"> </span>config.json
+├──<span class="w"> </span>pytorch_model.bin
+├──<span class="w"> </span>pytorch_model.gguf
+├──<span class="w"> </span>pytorch_model-Q4_K_M.gguf
+├──<span class="w"> </span>special_tokens_map.json
+├──<span class="w"> </span>tokenizer.json
+├──<span class="w"> </span>tokenizer_config.json
+└──<span class="w"> </span>tokenizer.model
+</code></pre></div>
+<p>This entire folder can be served on a system that supports <abbr title="A library for LLM inference and serving, similar to Llama CCP. Provides an OpenAI-compatible API.">vLLM</abbr> using the <code>.bin</code> model. However, on most laptops you can serve either the full precision gguf: <code>pytorch_model.gguf</code> or the 4-bit-quantized one: <code>pytorch_model-Q4_K_M.gguf</code>.</p>
+<h4 id="train-the-model-locally-on-an-m-series-mac-or-on-linux-using-the-simple-pipeline">Train the model locally on an M-series Mac or on Linux using the simple pipeline<a class="headerlink" href="#train-the-model-locally-on-an-m-series-mac-or-on-linux-using-the-simple-pipeline" title="Permanent link">&para;</a></h4>
+<p>To train the model locally on your M-Series Mac using our simple pipeline and <abbr title="An array framework for machine learning research on Apple Silicon chips">MLX</abbr> or on your Linux laptop/desktop using an SFT Trainer:</p>
+<div class="highlight"><pre><span></span><code>ilab<span class="w"> </span>model<span class="w"> </span>train<span class="w"> </span>--pipeline<span class="w"> </span>simple
+</code></pre></div>
+<p>⏳ This process will take a little while to complete (time can vary based on hardware and output of <code>ilab data generate</code> but on the order of 5 to 15 minutes)</p>
+<p>On a Mac <code>ilab model train</code> outputs a brand-new model that is saved in the <code>&lt;model_name&gt;-mlx-q</code> directory called <code>adapters.npz</code> (in <code>Numpy</code> compressed array format). For example:</p>
+<div class="highlight"><pre><span></span><code><span class="o">(</span>venv<span class="o">)</span><span class="w"> </span>$<span class="w"> </span>ls<span class="w"> </span>instructlab-granite-7b-lab-mlx-q/
+├──<span class="w"> </span>adapters-010.npz
+├──<span class="w"> </span>adapters-020.npz
+├──<span class="w"> </span>adapters-030.npz
+├──<span class="w"> </span>adapters-040.npz
+├──<span class="w"> </span>adapters-050.npz
+├──<span class="w"> </span>adapters-060.npz
+├──<span class="w"> </span>adapters-070.npz
+├──<span class="w"> </span>adapters-080.npz
+├──<span class="w"> </span>adapters-090.npz
+├──<span class="w"> </span>adapters-100.npz
+├──<span class="w"> </span>adapters.npz
+├──<span class="w"> </span>added_tokens.json
+├──<span class="w"> </span>config.json
+├──<span class="w"> </span>model.safetensors
+├──<span class="w"> </span>special_tokens_map.json
+├──<span class="w"> </span>tokenizer.json
+├──<span class="w"> </span>tokenizer.model
+└──<span class="w"> </span>tokenizer_config.json
+</code></pre></div>
+<h4 id="train-the-model-locally-with-gpu-acceleration">Train the model locally with GPU acceleration<a class="headerlink" href="#train-the-model-locally-with-gpu-acceleration" title="Permanent link">&para;</a></h4>
+<p>Training has support for GPU acceleration with Nvidia <abbr title="Compute Unified Device Architecture - a parallel computing platform and API for general computing on GPUs by NVIDIA">CUDA</abbr> or AMD ROCm. Please see <a href="https://github.com/instructlab/instructlab/blob/main/docs/gpu-acceleration.md">the GPU acceleration documentation</a> for more details. At present, hardware acceleration requires a data center GPU or high-end consumer GPU with at least 18 GB free memory.</p>
+<div class="highlight"><pre><span></span><code>ilab<span class="w"> </span>model<span class="w"> </span>train<span class="w"> </span>--pipeline<span class="w"> </span>accelerated<span class="w"> </span>--device<span class="w"> </span>cuda<span class="w"> </span>--data-path<span class="w"> </span>&lt;path-to-sdg-data&gt;
+</code></pre></div>
+<p><em>Example command</em></p>
+<div class="highlight"><pre><span></span><code>ilab<span class="w"> </span>model<span class="w"> </span>train<span class="w"> </span>--pipeline<span class="w"> </span>full<span class="w"> </span>--device<span class="w"> </span>cpu<span class="w"> </span>--data-path<span class="w"> </span>~/.local/share/instructlab/datasets/knowledge_train_msgs_2024-10-23T09_14_44.jsonl
+</code></pre></div>
+<p>This version of <code>ilab model train</code> outputs brand-new models that can be served in the <code>~/.local/share/instructlab/checkpoints</code> directory.  These models can be run through <code>ilab model evaluate</code> to choose the best one.</p>
+<h4 id="train-the-model-locally-with-multiphase-training-and-gpu-acceleration">Train the model locally with multiphase training and GPU acceleration<a class="headerlink" href="#train-the-model-locally-with-multiphase-training-and-gpu-acceleration" title="Permanent link">&para;</a></h4>
+<p><code>ilab model train</code> supports multiphase training. This results in the following workflow:</p>
+<ol>
+<li>We train the model on knowledge</li>
+<li>Evaluate the trained model to find the best <abbr title="Snapshots during training. They are scored individually and the best is selected.">checkpoint</abbr></li>
+<li>We train the model on skills</li>
+<li>We evaluate the model to find the best overall <abbr title="Snapshots during training. They are scored individually and the best is selected.">checkpoint</abbr></li>
+</ol>
+<div class="highlight"><pre><span></span><code>ilab<span class="w"> </span>model<span class="w"> </span>train<span class="w"> </span>--strategy<span class="w"> </span>lab-multiphase<span class="w"> </span>--phased-phase1-data<span class="w"> </span>&lt;knowledge<span class="w"> </span>train<span class="w"> </span>messages<span class="w"> </span>jsonl&gt;<span class="w"> </span>--phased-phase2-data<span class="w"> </span>&lt;skills<span class="w"> </span>train<span class="w"> </span>messages<span class="w"> </span>jsonl&gt;<span class="w"> </span>-y
+</code></pre></div>
+<p>This command takes in two <code>.jsonl</code> files from your <code>datasets</code> directory, one is the knowledge jsonl and the other is a skills jsonl. The <code>-y</code> flag skips an interactive prompt asking the user if they are sure they want to run multiphase training.</p>
+<p>⏳ This command may take 3 or more hours depending on the size of the data and number of training epochs you run.</p>
+<h4 id="train-the-model-in-the-cloud">Train the model in the cloud<a class="headerlink" href="#train-the-model-in-the-cloud" title="Permanent link">&para;</a></h4>
+<p>Follow the instructions in <a href="https://github.com/instructlab/instructlab/blob/main/notebooks/README.md">Training</a>.</p>
+<p>⏳ Approximate amount of time taken on each platform:</p>
+<ul>
+<li><em>Google Colab</em>: <strong>5-10 minutes</strong> with a T4 GPU</li>
+<li><em>Kaggle</em>: <strong>~30 minutes</strong> with a P100 GPU.</li>
+</ul>
+<p>After that's done, you can play with your model directly in the Google Colab or Kaggle notebook. Model trained on the cloud will be saved on the cloud.
+The model can also be downloaded and served locally.</p>
+<h3 id="test-the-newly-trained-model">📜 Test the newly trained model<a class="headerlink" href="#test-the-newly-trained-model" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Run the following command to test the model:</li>
+</ul>
+<div class="highlight"><pre><span></span><code>ilab<span class="w"> </span>model<span class="w"> </span><span class="nb">test</span>
+</code></pre></div>
+<p>The output from the command will consist of a series of outputs from the model before and after training.</p>
+<h3 id="evaluate-the-newly-trained-model">🧪 Evaluate the newly trained model<a class="headerlink" href="#evaluate-the-newly-trained-model" title="Permanent link">&para;</a></h3>
+<p>You can use the <code>ilab model evaluate</code> command to evaluate the models you are training with several benchmarks. Currently, four benchmarks are supported.</p>
+<table>
+<thead>
+<tr>
+<th>Benchmark</th>
+<th>Measures</th>
+<th>Full Name</th>
+<th>Description</th>
+<th>Reference</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><abbr title="Massive Multitask Language Understanding - an evaluation scheme used for knowledge benchmarking">MMLU</abbr></td>
+<td>Knowledge</td>
+<td>Massive Multitask Language Understanding</td>
+<td>Tests a model against a standardized set of knowledge data and produces a score based on the model's performance</td>
+<td><a href="https://arxiv.org/abs/2009.03300">Measuring Massive Multitask Language Understanding</a></td>
+</tr>
+<tr>
+<td>MMLUBranch</td>
+<td>Knowledge</td>
+<td>N/A</td>
+<td>Tests your knowledge contributions against a base model and produces a score based on the difference in performance</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>MTBench</td>
+<td>Skills</td>
+<td>Multi-turn Benchmark</td>
+<td>Tests a model's skill at applying its knowledge against a judge model and produces a score based on the model's performance</td>
+<td><a href="https://klu.ai/glossary/mt-bench-eval"><abbr title="Multi-turn benchmark - an evaluation scheme used for skills benchmarking">MT-Bench</abbr> (Multi-turn Benchmark)</a></td>
+</tr>
+<tr>
+<td>MTBenchBranch</td>
+<td>Skills</td>
+<td>N/A</td>
+<td>Tests your skill contributions against a judge model and produces a score based on the difference in performance</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>[!NOTE]
+Evaluation must be used with local models (safetensors or GGUF format). Using models directly from Hugging Face without downloading them is unsupported.
+GGUF models are not yet supported for mmlu and mmlu_branch evaluations
+MTBench and MTBenchBranch use <a href="https://huggingface.co/prometheus-eval/prometheus-8x7b-v2.0">prometheus-8x7b-v2.0</a> as the judge model by
+default. While you do not need to use this model as your judge, it is strongly recommended to do so if you have the necessary hardware
+resources. You can download it via <code>ilab model download</code>.</p>
+</blockquote>
+<h4 id="running-mmlu">Running <abbr title="Massive Multitask Language Understanding - an evaluation scheme used for knowledge benchmarking">MMLU</abbr><a class="headerlink" href="#running-mmlu" title="Permanent link">&para;</a></h4>
+<p>Example of running <abbr title="Massive Multitask Language Understanding - an evaluation scheme used for knowledge benchmarking">MMLU</abbr> with a local safetensors model directory:</p>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span><span class="nb">export</span><span class="w"> </span><span class="nv">ILAB_MODELS_DIR</span><span class="o">=</span><span class="nv">$HOME</span>/.local/share/instructlab/models
+$<span class="w"> </span>ilab<span class="w"> </span>model<span class="w"> </span>evaluate<span class="w"> </span>--benchmark<span class="w"> </span>mmlu<span class="w"> </span>--model<span class="w"> </span><span class="nv">$ILAB_MODELS_DIR</span>/instructlab/granite-7b-test
+...
+<span class="c1"># KNOWLEDGE EVALUATION REPORT</span>
+
+<span class="c1">## MODEL (SCORE)</span>
+/home/user/.cache/instructlab/models/instructlab/granite-7b-test<span class="w"> </span><span class="o">(</span><span class="m">0</span>.52/1.0<span class="o">)</span>
+
+<span class="c1">### SCORES (0.0 to 1.0):</span>
+mmlu_abstract_algebra<span class="w"> </span>-<span class="w"> </span><span class="m">0</span>.31
+mmlu_anatomy<span class="w"> </span>-<span class="w"> </span><span class="m">0</span>.46
+mmlu_astronomy<span class="w"> </span>-<span class="w"> </span><span class="m">0</span>.52
+mmlu_business_ethics<span class="w"> </span>-<span class="w"> </span><span class="m">0</span>.55
+mmlu_clinical_knowledge<span class="w"> </span>-<span class="w"> </span><span class="m">0</span>.57
+mmlu_college_biology<span class="w"> </span>-<span class="w"> </span><span class="m">0</span>.56
+mmlu_college_chemistry<span class="w"> </span>-<span class="w"> </span><span class="m">0</span>.38
+mmlu_college_computer_science<span class="w"> </span>-<span class="w"> </span><span class="m">0</span>.46
+mmlu_college_mathematics<span class="w"> </span>-<span class="w"> </span><span class="m">0</span>.34
+mmlu_college_medicine<span class="w"> </span>-<span class="w"> </span><span class="m">0</span>.49
+mmlu_college_physics<span class="w"> </span>-<span class="w"> </span><span class="m">0</span>.27
+mmlu_computer_security<span class="w"> </span>-<span class="w"> </span><span class="m">0</span>.66
+mmlu_conceptual_physics<span class="w"> </span>-<span class="w"> </span><span class="m">0</span>.38
+mmlu_econometrics<span class="w"> </span>-<span class="w"> </span><span class="m">0</span>.39
+mmlu_electrical_engineering<span class="w"> </span>-<span class="w"> </span><span class="m">0</span>.48
+mmlu_elementary_mathematics<span class="w"> </span>-<span class="w"> </span><span class="m">0</span>.3
+...
+</code></pre></div>
+<p>The output of <abbr title="Massive Multitask Language Understanding - an evaluation scheme used for knowledge benchmarking">MMLU</abbr> displays a much longer list of subjects.</p>
+<h4 id="running-mmlubranch">Running MMLUBranch<a class="headerlink" href="#running-mmlubranch" title="Permanent link">&para;</a></h4>
+<p>Example of running MMLUBranch with a local safetensors model directory:</p>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span><span class="nb">export</span><span class="w"> </span><span class="nv">ILAB_MODELS_DIR</span><span class="o">=</span><span class="nv">$HOME</span>/.local/share/instructlab/models
+$<span class="w"> </span>ilab<span class="w"> </span>model<span class="w"> </span>evaluate<span class="w"> </span>--benchmark<span class="w"> </span>mmlu_branch<span class="w"> </span>--model<span class="w"> </span><span class="nv">$ILAB_MODELS_DIR</span>/instructlab/granite-7b-test<span class="w"> </span>--base-model<span class="w"> </span><span class="nv">$ILAB_MODELS_DIR</span>/instructlab/granite-7b-lab
+...
+<span class="c1"># KNOWLEDGE EVALUATION REPORT</span>
+
+<span class="c1">## BASE MODEL (SCORE)</span>
+/home/user/.cache/instructlab/models/instructlab/granite-7b-lab<span class="w"> </span><span class="o">(</span><span class="m">0</span>.74/1.0<span class="o">)</span>
+
+<span class="c1">## MODEL (SCORE)</span>
+/home/user/.cache/instructlab/models/instructlab/granite-7b-test<span class="w"> </span><span class="o">(</span><span class="m">0</span>.78/1.0<span class="o">)</span>
+
+<span class="c1">### IMPROVEMENTS (0.0 to 1.0):</span>
+<span class="m">1</span>.<span class="w"> </span>tonsils:<span class="w"> </span><span class="m">0</span>.74<span class="w"> </span>-&gt;<span class="w"> </span><span class="m">0</span>.78<span class="w"> </span><span class="o">(</span>+0.04<span class="o">)</span>
+</code></pre></div>
+<h4 id="running-mtbench">Running MTBench<a class="headerlink" href="#running-mtbench" title="Permanent link">&para;</a></h4>
+<p>Example of running MTBench with a local safetensors model directory:</p>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span><span class="nb">export</span><span class="w"> </span><span class="nv">ILAB_MODELS_DIR</span><span class="o">=</span><span class="nv">$HOME</span>/.local/share/instructlab/models
+$<span class="w"> </span>ilab<span class="w"> </span>model<span class="w"> </span>evaluate<span class="w"> </span>--benchmark<span class="w"> </span>mt_bench<span class="w"> </span>--model<span class="w"> </span><span class="nv">$ILAB_MODELS_DIR</span>/instructlab/granite-7b-test
+...
+<span class="c1"># SKILL EVALUATION REPORT</span>
+
+<span class="c1">## MODEL (SCORE)</span>
+/home/user/.cache/instructlab/models/instructlab/granite-7b-test<span class="w"> </span><span class="o">(</span><span class="m">7</span>.27/10.0<span class="o">)</span>
+
+<span class="c1">### TURN ONE (0.0 to 10.0):</span>
+<span class="m">7</span>.48
+
+<span class="c1">### TURN TWO (0.0 to 10.0):</span>
+<span class="m">7</span>.05
+</code></pre></div>
+<h4 id="running-mtbenchbranch">Running MTBenchBranch<a class="headerlink" href="#running-mtbenchbranch" title="Permanent link">&para;</a></h4>
+<p>Below is an example of running MTBenchBranch with a local safetensors model directory:</p>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span><span class="nb">export</span><span class="w"> </span><span class="nv">ILAB_MODELS_DIR</span><span class="o">=</span><span class="nv">$HOME</span>/.local/share/instructlab/models
+$<span class="w"> </span><span class="nb">export</span><span class="w"> </span><span class="nv">ILAB_TAXONOMY_DIR</span><span class="o">=</span><span class="nv">$HOME</span>/.local/share/instructlab/taxonomy
+$<span class="w"> </span>ilab<span class="w"> </span>model<span class="w"> </span>evaluate<span class="w"> </span>--benchmark<span class="w"> </span>mt_bench_branch<span class="w"> </span><span class="se">\</span>
+<span class="w">   </span>--model<span class="w"> </span><span class="nv">$ILAB_MODELS_DIR</span>/instructlab/granite-7b-test<span class="w"> </span><span class="se">\</span>
+<span class="w">   </span>--base-model<span class="w"> </span><span class="nv">$ILAB_MODELS_DIR</span>/instructlab/granite-7b-lab<span class="w"> </span><span class="se">\</span>
+<span class="w">   </span>--taxonomy-path<span class="w"> </span><span class="nv">$ILAB_TAXONOMY_DIR</span><span class="w"> </span><span class="se">\</span>
+<span class="w">   </span>--branch<span class="w"> </span>rc<span class="w"> </span><span class="se">\</span>
+<span class="w">   </span>--base-branch<span class="w"> </span>main
+...
+<span class="c1"># SKILL EVALUATION REPORT</span>
+
+<span class="c1">## BASE MODEL (SCORE)</span>
+/home/user/.cache/instructlab/models/instructlab/granite-7b-lab<span class="w"> </span><span class="o">(</span><span class="m">5</span>.78/10.0<span class="o">)</span>
+
+<span class="c1">## MODEL (SCORE)</span>
+/home/user/.cache/instructlab/models/instructlab/granite-7b-test<span class="w"> </span><span class="o">(</span><span class="m">6</span>.00/10.0<span class="o">)</span>
+
+<span class="c1">### IMPROVEMENTS (0.0 to 10.0):</span>
+<span class="m">1</span>.<span class="w"> </span>foundational_skills/reasoning/linguistics_reasoning/object_identification/qna.yaml:<span class="w"> </span><span class="m">4</span>.0<span class="w"> </span>-&gt;<span class="w"> </span><span class="m">6</span>.67<span class="w"> </span><span class="o">(</span>+2.67<span class="o">)</span>
+<span class="m">2</span>.<span class="w"> </span>foundational_skills/reasoning/theory_of_mind/qna.yaml:<span class="w"> </span><span class="m">3</span>.12<span class="w"> </span>-&gt;<span class="w"> </span><span class="m">4</span>.0<span class="w"> </span><span class="o">(</span>+0.88<span class="o">)</span>
+<span class="m">3</span>.<span class="w"> </span>foundational_skills/reasoning/linguistics_reasoning/logical_sequence_of_words/qna.yaml:<span class="w"> </span><span class="m">9</span>.33<span class="w"> </span>-&gt;<span class="w"> </span><span class="m">10</span>.0<span class="w"> </span><span class="o">(</span>+0.67<span class="o">)</span>
+
+<span class="c1">### REGRESSIONS (0.0 to 10.0):</span>
+<span class="m">1</span>.<span class="w"> </span>foundational_skills/reasoning/unconventional_reasoning/lower_score_wins/qna.yaml:<span class="w"> </span><span class="m">5</span>.67<span class="w"> </span>-&gt;<span class="w"> </span><span class="m">4</span>.0<span class="w"> </span><span class="o">(</span>-1.67<span class="o">)</span>
+<span class="m">2</span>.<span class="w"> </span>foundational_skills/reasoning/mathematical_reasoning/qna.yaml:<span class="w"> </span><span class="m">7</span>.33<span class="w"> </span>-&gt;<span class="w"> </span><span class="m">6</span>.0<span class="w"> </span><span class="o">(</span>-1.33<span class="o">)</span>
+<span class="m">3</span>.<span class="w"> </span>foundational_skills/reasoning/temporal_reasoning/qna.yaml:<span class="w"> </span><span class="m">5</span>.67<span class="w"> </span>-&gt;<span class="w"> </span><span class="m">4</span>.67<span class="w"> </span><span class="o">(</span>-1.0<span class="o">)</span>
+
+<span class="c1">### NO CHANGE (0.0 to 10.0):</span>
+<span class="m">1</span>.<span class="w"> </span>foundational_skills/reasoning/linguistics_reasoning/odd_one_out/qna.yaml<span class="w"> </span><span class="o">(</span><span class="m">9</span>.33<span class="o">)</span>
+<span class="m">2</span>.<span class="w"> </span>compositional_skills/grounded/linguistics/inclusion/qna.yaml<span class="w"> </span><span class="o">(</span><span class="m">6</span>.5<span class="o">)</span>
+</code></pre></div>
+<h3 id="serve-the-newly-trained-model">🍴 Serve the newly trained model<a class="headerlink" href="#serve-the-newly-trained-model" title="Permanent link">&para;</a></h3>
+<p>If you have a server running, stop the server you have running by entering <code>ctrl+c</code> keys in the terminal running the server.</p>
+<p><em>🍎 Mac only:</em> Before serving the newly trained model you must convert it to work with
+the <code>ilab</code> cli. The <code>ilab model convert</code> command converts the new model into quantized <a href="https://medium.com/@sandyeep70/ggml-to-gguf-a-leap-in-language-model-file-formats-cd5d3a6058f9">GGUF</a> format which is required by the server to host the model in the <code>ilab model serve</code> command.</p>
+<p>1) Convert the newly trained model by running the following command:</p>
+<div class="highlight"><pre><span></span><code>```shell
+</code></pre></div>
+<p>ilab model convert
+   ```</p>
+<p>2) Serve the newly trained model locally via <code>ilab model serve</code> command with the <code>--model-path</code>
+argument to specify your new model:</p>
+<div class="highlight"><pre><span></span><code>ilab<span class="w"> </span>model<span class="w"> </span>serve<span class="w"> </span>--model-path<span class="w"> </span>&lt;new<span class="w"> </span>model<span class="w"> </span>path&gt;
+</code></pre></div>
+<p>Which model should you select to serve? After running the <code>ilab model convert</code> command, some files and a directory are generated. The model you will want to serve ends with an extension of <code>.gguf</code>
+   and exists in a directory with the suffix <code>trained</code>. For example:
+   <code>instructlab-granite-7b-lab-trained/instructlab-granite-7b-lab-Q4_K_M.gguf</code>.</p>
+<h2 id="chat-with-the-new-model-not-optional-this-time">📣 Chat with the new model (not optional this time)<a class="headerlink" href="#chat-with-the-new-model-not-optional-this-time" title="Permanent link">&para;</a></h2>
+<p>1) Try the fine-tuned model out live using the chat interface, and see if the results are better than the untrained version of the model with chat by running the following command:</p>
+<div class="highlight"><pre><span></span><code>ilab<span class="w"> </span>model<span class="w"> </span>chat<span class="w"> </span>-m<span class="w"> </span>&lt;New<span class="w"> </span>model<span class="w"> </span>path&gt;
+</code></pre></div>
+<p>If you are interested in optimizing the quality of the model's responses, please see <a href="https://github.com/instructlab/instructlab/blob/main/TROUBLESHOOTING.md#model-fine-tuning-and-response-optimization"><code>TROUBLESHOOTING.md</code></a></p>
+<h2 id="submit-your-new-knowledge-or-skills">🎁 Submit your new knowledge or skills<a class="headerlink" href="#submit-your-new-knowledge-or-skills" title="Permanent link">&para;</a></h2>
+<p>Of course, the final step is, if you've improved the model, to open a pull-request in the <a href="https://github.com/instructlab/taxonomy">taxonomy repository</a> that includes the files (e.g. <code>qna.yaml</code>) with your improved data.</p>
+<h2 id="contributing">📬 Contributing<a class="headerlink" href="#contributing" title="Permanent link">&para;</a></h2>
+<p>Check out our <a href="../../community/CONTRIBUTING/">contributing</a> guide to learn how to contribute.</p>
+
+
+
+
+
+
+
+  
+    
+  
+  
+    
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Last update">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 13, 2025</span>
+  </span>
+
+    
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Created">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3h-2Z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 13, 2025</span>
+  </span>
+
+    
+    
+      
+  
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Contributors">
+      
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 4a4 4 0 0 1 4 4 4 4 0 0 1-4 4 4 4 0 0 1-4-4 4 4 0 0 1 4-4m0 10c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4Z"/></svg>
+      
+    </span>
+    <nav>
+      Laura Santamaria
+    </nav>
+  </span>
+
+    
+    
+      
+  <span class="md-source-file__fact">
+    
+      
+  <span class="md-icon" title="Contributors">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2Z"/></svg>
+  </span>
+  <span>GitHub</span>
+
+    
+    <nav>
+      
+        <a href="https://github.com/nimbinatus" class="md-author" title="@nimbinatus">
+          
+          <img src="https://avatars.githubusercontent.com/u/1538692?v=4&size=72" alt="nimbinatus">
+        </a>
+      
+        <a href="https://github.com/web-flow" class="md-author" title="@web-flow">
+          
+          <img src="https://avatars.githubusercontent.com/u/19864447?v=4&size=72" alt="web-flow">
+        </a>
+      
+        <a href="https://github.com/kelbrown20" class="md-author" title="@kelbrown20">
+          
+          <img src="https://avatars.githubusercontent.com/u/86735520?v=4&size=72" alt="kelbrown20">
+        </a>
+      
+      
+      
+    </nav>
+  </span>
+
+    
+  </aside>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2024- Red Hat Inc.
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.annotate", "content.code.copy", "content.code.select", "content.tabs.link"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.af256bd8.min.js"></script>
+      
+    
+  </body>
+</html>
