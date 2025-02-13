@@ -79,13 +79,13 @@ theme:
 
 # Plugins
 plugins:
-#  - git-authors:
-#        show_email_address: false
-#  - git-committers:
-#      repository: instructlab/docs.instructlab.ai
-#      branch: main
-#  - git-revision-date-localized:
-#      enable_creation_date: true
+  - git-authors:
+        show_email_address: false
+  - git-committers:
+      repository: instructlab/docs.instructlab.ai
+      branch: main
+  - git-revision-date-localized:
+      enable_creation_date: true
   - search
 
 # Extensions
