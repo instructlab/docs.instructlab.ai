@@ -429,7 +429,7 @@ the `ilab` cli. The `ilab model convert` command converts the new model into qua
 
 1) Convert the newly trained model by running the following command:
 
-    ```shell
+   ```shell
    ilab model convert
    ```
 
