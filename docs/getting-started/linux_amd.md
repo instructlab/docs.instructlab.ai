@@ -29,6 +29,7 @@ cd ~/.local/share/instructlab
 mkdir -p taxonomy/knowledge/astronomy/constellations/Phoenix/
 wget https://raw.githubusercontent.com/instructlab/taxonomy/26b3fe21ccbb95adc06fe8ce76c7c18559e8dd05/knowledge/science/astronomy/constellations/phoenix/qna.yaml
 mv qna.yaml taxonomy/knowledge/astronomy/constellations/Phoenix/
+ilab model download --hf-token <Huggingface generated token>
 ilab taxonomy diff
 ilab data generate
 ilab model train
