@@ -17,12 +17,12 @@ There are 2 ways to access the UI:
 
 
 !!! note
-    To log into the UI and submit Knowledge and Skills contributions, you must be a member of the [instructlab-public](https://github.com/instructlab-public) GitHub repository.
+    To log into the UI and submit Knowledge and Skills contributions, you must be a member of the [instructlab-public](https://github.com/instructlab-public) GitHub repository. You will receive an invitation when signing in with github.
 
 !!! note
-    If you aren't a member of the repository, but still wish to experiment with the UI, we recommend you to reach out to the UI Maintainers in our `#ui` [Discord server](https://instructlab.ai/discord) or [Slack channel](https://join.slack.com/t/instruct-lab/shared_invite/zt-2kieyqiz9-zhXSxGnXk6uL_f3hVbD53g) for an invitation.
-    
-    If you wish to not join but still wish to experiment, download it locally.
+    If you wish to view the newest features and updates in the user interface, we have a QA environment at [qa.ui.instructlab.ai](https://qa.ui.instructlab.ai).
+
+    Please note that this environment may contain experimental updates and is subject to frequent changes.
 
 ## Prerequisites 
 
