@@ -28,4 +28,8 @@ Go back to the playground chat, select newly added model and chat.
 
 ![UI Model Response](../images/user-interface/ui_model_response.png)
 
+If you have multiple endpoints, you can directly compare answers between different LLMs
+
+![UI Model Response Comparisons](../images/user-interface/ui_model_response_comparison.png)
+
 [Next Steps](knowledge_contributions.md){: .md-button .md-button--primary }
