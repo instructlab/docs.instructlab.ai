@@ -22,16 +22,16 @@ Make sure you have:
 #### Procedure
 
 1. Click **AI Lab** in the left navigation pane.
-1. In the Tuning section, click **Try InstructLab**.
+1. In the TUNING section, click **Try InstructLab**.
 1. Click the **Start InstructLab Container** button on the opened page. This step might take some time to start the container.
 1. Click the **Open InstructLab container** button to access the container's terminal.
 
-1. Run the `ilab config init` command to initialize/configure the InstructLab CLI.
-    ![configure the InstructLab CLI](img/initializing-ilab.png)
+1. Run the `ilab config init` command to configure the InstructLab CLI.
+    ![configure the InstructLab CLI](../images/initializing-ilab.png)
 
 #### Verification
 
-- View the InstructLab container running on the Containers page. 
-    ![updated context details](img/instructlab-container-running.png)
-- Click the name of the container to view its logs. 
-- Click the **Terminal** tab to run `ilab` commands, such as `ilab model download`, `ilab model serve`, and `ilab model chat`.
+1. View the InstructLab container running on the Containers page. 
+    ![updated context details](../images/instructlab-container-running.png)
+1. Click the name of the container to view its logs. 
+1. Click the **Terminal** tab to run `ilab` commands, such as `ilab model download`, `ilab model serve`, and `ilab model chat`.
