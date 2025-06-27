@@ -14,6 +14,7 @@ nav:
       - Install on Mac Metal: getting-started/mac_metal.md
       - Install on Linux NVIDIA: getting-started/linux_nvidia.md
       - Install on Linux AMD: getting-started/linux_amd.md
+      - Start InstructLab as a container: getting-started/using-instructlab-with-podman-desktop.md
       - Initialize InstructLab: getting-started/initilize_ilab.md
       - Download models: getting-started/download_models.md
       - Intro to serve and chat: getting-started/serve_and_chat.md
