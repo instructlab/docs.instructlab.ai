@@ -6,32 +6,30 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="The overview of 🐶 InstructLab's contribution guidelines for taxonomy">
       
       
-      
-        <link rel="canonical" href="https://docs.instructlab.ai/taxonomy/upstream/contribution_guidelines/">
-      
-      
-        <link rel="prev" href="../../">
+        <link rel="canonical" href="https://docs.instructlab.ai/getting-started/using-instructlab-with-podman-desktop/">
       
       
-        <link rel="next" href="../knowledge_contribution_details/">
+        <link rel="prev" href="../linux_amd/">
       
       
-      <link rel="icon" href="../../../assets/images/favicon.png">
+        <link rel="next" href="../initilize_ilab/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.33">
     
     
       
-        <title>Taxonomy Contribution Guidelines - docs.instructlab.ai</title>
+        <title>Start InstructLab as a container - docs.instructlab.ai</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.3cba04c6.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.3cba04c6.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -56,7 +54,7 @@
       
     
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -80,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#taxonomy-contribution-guidelines" class="md-skip">
+        <a href="#using-instructlab-with-podman-desktop" class="md-skip">
           Skip to content
         </a>
       
@@ -96,9 +94,9 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../.." title="docs.instructlab.ai" class="md-header__button md-logo" aria-label="docs.instructlab.ai" data-md-component="logo">
+    <a href="../.." title="docs.instructlab.ai" class="md-header__button md-logo" aria-label="docs.instructlab.ai" data-md-component="logo">
       
-  <img src="../../../images/ilab_dog.png" alt="logo">
+  <img src="../../images/ilab_dog.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -115,7 +113,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Taxonomy Contribution Guidelines
+              Start InstructLab as a container
             
           </span>
         </div>
@@ -202,9 +200,9 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="docs.instructlab.ai" class="md-nav__button md-logo" aria-label="docs.instructlab.ai" data-md-component="logo">
+    <a href="../.." title="docs.instructlab.ai" class="md-nav__button md-logo" aria-label="docs.instructlab.ai" data-md-component="logo">
       
-  <img src="../../../images/ilab_dog.png" alt="logo">
+  <img src="../../images/ilab_dog.png" alt="logo">
 
     </a>
     docs.instructlab.ai
@@ -266,7 +264,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../.." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -291,17 +289,19 @@
       
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -315,7 +315,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Getting Started
@@ -329,7 +329,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../getting-started/mac_metal/" class="md-nav__link">
+      <a href="../mac_metal/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -350,7 +350,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../getting-started/linux_nvidia/" class="md-nav__link">
+      <a href="../linux_nvidia/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -371,7 +371,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../getting-started/linux_amd/" class="md-nav__link">
+      <a href="../linux_amd/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -389,10 +389,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../../getting-started/using-instructlab-with-podman-desktop/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Start InstructLab as a container
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -401,6 +421,53 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#procedure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Procedure
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verification" class="md-nav__link">
+    <span class="md-ellipsis">
+      Verification
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -413,7 +480,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../getting-started/initilize_ilab/" class="md-nav__link">
+      <a href="../initilize_ilab/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -434,7 +501,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../getting-started/download_models/" class="md-nav__link">
+      <a href="../download_models/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -455,7 +522,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../getting-started/serve_and_chat/" class="md-nav__link">
+      <a href="../serve_and_chat/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -518,7 +585,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../adding-data-to-model/creating_new_wikipedia_based_qna/" class="md-nav__link">
+      <a href="../../adding-data-to-model/creating_new_wikipedia_based_qna/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -539,7 +606,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../adding-data-to-model/creating_new_knowledge_or_skills/" class="md-nav__link">
+      <a href="../../adding-data-to-model/creating_new_knowledge_or_skills/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -602,7 +669,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../community/CODE_OF_CONDUCT/" class="md-nav__link">
+      <a href="../../community/CODE_OF_CONDUCT/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -623,7 +690,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../community/CODE_OF_CONDUCT_COMMITTEE/" class="md-nav__link">
+      <a href="../../community/CODE_OF_CONDUCT_COMMITTEE/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -644,7 +711,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../community/FAQ/" class="md-nav__link">
+      <a href="../../community/FAQ/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -665,7 +732,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../community/GOVERNANCE/" class="md-nav__link">
+      <a href="../../community/GOVERNANCE/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -686,7 +753,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../community/InstructLab_DISCORD_GUIDE/" class="md-nav__link">
+      <a href="../../community/InstructLab_DISCORD_GUIDE/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -707,7 +774,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../community/InstructLab_DISCORD_MODERATION_GUIDE/" class="md-nav__link">
+      <a href="../../community/InstructLab_DISCORD_MODERATION_GUIDE/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -728,7 +795,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../community/InstructLab_SLACK_GUIDE/" class="md-nav__link">
+      <a href="../../community/InstructLab_SLACK_GUIDE/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -749,7 +816,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../community/InstructLab_SLACK_MODERATION_GUIDE/" class="md-nav__link">
+      <a href="../../community/InstructLab_SLACK_MODERATION_GUIDE/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -774,19 +841,17 @@
       
   
   
-    
   
   
-  
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
         
           
           <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
@@ -800,7 +865,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             Taxonomy
@@ -814,7 +879,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../" class="md-nav__link">
+      <a href="../../taxonomy/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -832,19 +897,17 @@
                 
   
   
-    
   
   
-  
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" >
         
           
           <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
@@ -858,7 +921,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5_2">
             <span class="md-nav__icon md-icon"></span>
             Upstream Taxonomy Contributions
@@ -869,30 +932,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    General Guidelines
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../taxonomy/upstream/contribution_guidelines/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -901,125 +944,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#attributiontxt" class="md-nav__link">
-    <span class="md-ellipsis">
-      attribution.txt
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#upstream-taxonomy-tree-layout" class="md-nav__link">
-    <span class="md-ellipsis">
-      Upstream taxonomy tree layout
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Upstream taxonomy tree layout">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#upstream-taxonomy-diagram" class="md-nav__link">
-    <span class="md-ellipsis">
-      Upstream taxonomy diagram
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#considerations" class="md-nav__link">
-    <span class="md-ellipsis">
-      Considerations
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Considerations">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#avoid-these-topics" class="md-nav__link">
-    <span class="md-ellipsis">
-      Avoid These Topics
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#building-your-llm-intuition" class="md-nav__link">
-    <span class="md-ellipsis">
-      Building Your LLM Intuition
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Building Your LLM Intuition">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#llms-are-great-at" class="md-nav__link">
-    <span class="md-ellipsis">
-      LLMs are great at
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#llms-need-help-with" class="md-nav__link">
-    <span class="md-ellipsis">
-      LLMs need help with
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#llms-are-not-so-great-at" class="md-nav__link">
-    <span class="md-ellipsis">
-      LLMs are not so great at
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1032,7 +956,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../knowledge_contribution_details/" class="md-nav__link">
+      <a href="../../taxonomy/upstream/knowledge_contribution_details/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1053,7 +977,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../skills_contribution_details/" class="md-nav__link">
+      <a href="../../taxonomy/upstream/skills_contribution_details/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1117,7 +1041,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../skills/" class="md-nav__link">
+      <a href="../../taxonomy/skills/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1138,7 +1062,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../skills/file_structure/" class="md-nav__link">
+      <a href="../../taxonomy/skills/file_structure/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1202,7 +1126,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../knowledge/" class="md-nav__link">
+      <a href="../../taxonomy/knowledge/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1223,7 +1147,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../knowledge/file_structure/" class="md-nav__link">
+      <a href="../../taxonomy/knowledge/file_structure/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1294,7 +1218,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../user-interface/ui_overview/" class="md-nav__link">
+      <a href="../../user-interface/ui_overview/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1315,7 +1239,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../user-interface/playground_chat/" class="md-nav__link">
+      <a href="../../user-interface/playground_chat/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1336,7 +1260,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../user-interface/knowledge_contributions/" class="md-nav__link">
+      <a href="../../user-interface/knowledge_contributions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1357,7 +1281,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../user-interface/skills_contributions/" class="md-nav__link">
+      <a href="../../user-interface/skills_contributions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1378,7 +1302,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../user-interface/env_oauth_config/" class="md-nav__link">
+      <a href="../../user-interface/env_oauth_config/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1441,7 +1365,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../cmb/" class="md-nav__link">
+      <a href="../../cmb/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1462,7 +1386,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../cmb/build_process/" class="md-nav__link">
+      <a href="../../cmb/build_process/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1525,7 +1449,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../resources/RESOURCES/" class="md-nav__link">
+      <a href="../../resources/RESOURCES/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1546,7 +1470,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../resources/CONTRIBUTORS/" class="md-nav__link">
+      <a href="../../resources/CONTRIBUTORS/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1567,7 +1491,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../resources/MKDOCS/" class="md-nav__link">
+      <a href="../../resources/MKDOCS/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1615,101 +1539,29 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#attributiontxt" class="md-nav__link">
+  <a href="#prerequisites" class="md-nav__link">
     <span class="md-ellipsis">
-      attribution.txt
+      Prerequisites
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#upstream-taxonomy-tree-layout" class="md-nav__link">
+  <a href="#procedure" class="md-nav__link">
     <span class="md-ellipsis">
-      Upstream taxonomy tree layout
+      Procedure
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Upstream taxonomy tree layout">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#upstream-taxonomy-diagram" class="md-nav__link">
-    <span class="md-ellipsis">
-      Upstream taxonomy diagram
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#considerations" class="md-nav__link">
+  <a href="#verification" class="md-nav__link">
     <span class="md-ellipsis">
-      Considerations
+      Verification
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Considerations">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#avoid-these-topics" class="md-nav__link">
-    <span class="md-ellipsis">
-      Avoid These Topics
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#building-your-llm-intuition" class="md-nav__link">
-    <span class="md-ellipsis">
-      Building Your LLM Intuition
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Building Your LLM Intuition">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#llms-are-great-at" class="md-nav__link">
-    <span class="md-ellipsis">
-      LLMs are great at
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#llms-need-help-with" class="md-nav__link">
-    <span class="md-ellipsis">
-      LLMs need help with
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#llms-are-not-so-great-at" class="md-nav__link">
-    <span class="md-ellipsis">
-      LLMs are not so great at
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1731,194 +1583,36 @@
   
 
 
-<h1 id="taxonomy-contribution-guidelines">Taxonomy Contribution Guidelines<a class="headerlink" href="#taxonomy-contribution-guidelines" title="Permanent link">&para;</a></h1>
-<p class="annotate">We welcome contributions to <a href="https://github.com/instructlab/taxonomy">the upstream InstructLab taxonomy.</a>(1)</p>
+<h1 id="using-instructlab-with-podman-desktop">Using InstructLab with Podman Desktop<a class="headerlink" href="#using-instructlab-with-podman-desktop" title="Permanent link">&para;</a></h1>
+<p>With InstructLab-Podman Desktop integration, you can easily use the Podman Desktop UI to create an InstructLab container to work with. Podman Desktop provides the Podman AI Lab extension to work with Large Language Models (<abbr title="Large Language Models">LLMs</abbr>) in a local development environment. The extension also provides an option to start InstructLab as a container.</p>
+<p>With a running InstructLab container, you can initialize an InstructLab session and train models with specialized knowledge and skill tuning. In the container's terminal, configure the InstructLab CLI to run relevant commands to download, serve, and chat with the model. </p>
+<h4 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h4>
+<p>Make sure you have:</p>
+<ul>
+<li><a href="https://podman-desktop.io/docs/installation">Installed Podman Desktop</a></li>
+<li><a href="https://podman-desktop.io/docs/podman/creating-a-podman-machine">A running Podman machine</a>. </li>
+<li>Installed the <a href="https://podman-desktop.io/tutorial/running-an-ai-application#installing-the-extension">AI Lab extension</a>.</li>
+</ul>
+<h4 id="procedure">Procedure<a class="headerlink" href="#procedure" title="Permanent link">&para;</a></h4>
 <ol>
-<li><code>upstream</code> here refers to the idea in open source of an "upstream" project that is before your product in a workstream.</li>
+<li>Click <strong>AI Lab</strong> in the left navigation pane.</li>
+<li>In the TUNING section, click <strong>Try InstructLab</strong>.</li>
+<li>Click the <strong>Start InstructLab Container</strong> button on the opened page. This step might take some time to start the container.</li>
+<li>
+<p>Click the <strong>Open InstructLab container</strong> button to access the container's terminal.</p>
+</li>
+<li>
+<p>Run the <code>ilab config init</code> command to configure the InstructLab CLI.
+    <img alt="configure the InstructLab CLI" src="../../images/initializing-ilab.png" /></p>
+</li>
 </ol>
-<p>A contribution to the upstream taxonomy involves</p>
-<ul>
-<li>identifying whether your submission is <a href="../../knowledge/">a knowledge submission</a> or <a href="../../skills/">a skills submission</a>,</li>
-<li>defining the domain for the submission, or the branches and leaf node that will contain your knowledge,</li>
-<li>converting any source data to Markdown or PDF and storing them in a git-based repository (required for knowledge submissions),</li>
-<li>writing a <abbr title="Yet Another Markdown Language">YAML</abbr> file called <code>qna.yaml</code> that contains the seed content that will inform synthetic data generation and the repo URL where your converted source data is stored,</li>
-<li>creating an attribution file called <code>attribution.txt</code> that provides licensing information for source data, and</li>
-<li>submitting those two files in the proper spot in the taxonomy tree to the InstructLab taxonomy.</li>
-</ul>
-<p>You can submit knowledge or compositional skills. More information on the two types of contribution can be found in <a href="../knowledge_contribution_details/">our knowledge contribution details guide</a> or <a href="../skills_contribution_details/">our compositional skills contribution guide</a>.</p>
-<h2 id="attributiontxt"><code>attribution.txt</code><a class="headerlink" href="#attributiontxt" title="Permanent link">&para;</a></h2>
-<p>An important part of contributing to the InstructLab project is citing your sources of information. This comes in the form of your <code>attribution.txt</code> that you add to the pull requests. Almost all instances of attribution can be covered by the parameters required for Creative Commons Attribution licenses. Some parameters are as follows:</p>
-<ul>
-<li>Title of work</li>
-<li>Link to work<ul>
-<li>Include link to a specific revision where possible</li>
-</ul>
-</li>
-<li>License of the work<ul>
-<li>Include an SPDX identifier where possible</li>
-</ul>
-</li>
-<li>Creator names</li>
-<li>Copyright information</li>
-<li>Modification information<ul>
-<li>Indicate if work was itself derived from another openly licensed work</li>
-</ul>
-</li>
-</ul>
-<p>You can also see this citation style in the <a href="https://github.com/instructlab/community/blob/main/docs/DataSources.md">Data sources documentation</a>.</p>
-<h2 id="upstream-taxonomy-tree-layout">Upstream taxonomy tree layout<a class="headerlink" href="#upstream-taxonomy-tree-layout" title="Permanent link">&para;</a></h2>
-<p>The upstream taxonomy tree is organized in a cascading directory structure. At the end of each branch, there is a <abbr title="Yet Another Markdown Language">YAML</abbr> file (<code>qna.yaml</code>) that contains the examples for that domain. Maintainers can decide to change the names of the existing branches or to add new branches.</p>
-<div class="admonition important">
-<p class="admonition-title">Important</p>
-<p>Folder names do not have spaces. Use underscores between words.</p>
-</div>
-<p>Below is an illustrative directory structure to show this layout:</p>
-<div class="highlight"><pre><span></span><code>.
-└── linguistics
-    ├── writing
-    │   ├── brainstorming
-    │   │   ├── idea_generation
-    |   │       └── qna.yaml
-    │   │           attribution.txt
-    │   │   ├── refute_claim
-    |   │       └── qna.yaml
-    │   │           attribution.txt
-    │   ├── prose
-    │   │   ├── articles
-    │   │       └── qna.yaml
-    │   │           attribution.txt
-    └── grammar
-        └── qna.yaml
-        │   attribution.txt
-        └── spelling
-            └── qna.yaml
-                attribution.txt
-</code></pre></div>
-<h3 id="upstream-taxonomy-diagram">Upstream taxonomy diagram<a class="headerlink" href="#upstream-taxonomy-diagram" title="Permanent link">&para;</a></h3>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>This diagram shows a subset of the upstream taxonomy. It is not a complete representation.</p>
-</div>
-<pre class="mermaid"><code> flowchart TD;
-   na[not accepting contributions\n at this time]:::na
-   taxonomy --&gt; foundational_skill &amp; compositional_skills &amp; knowledge
-
-   foundational_skill:::na --&gt; reasoning:::na
-   reasoning:::na --&gt; common_sense_reasoning:::na
-   reasoning:::na --&gt; mathematical_reasoning:::na
-   reasoning:::na --&gt; theory_of_mind:::na
-
-   compositional_skills --&gt; engineering
-   compositional_skills --&gt; grounded
-   compositional_skills --&gt; lingustics
-
-   grounded --&gt; grounded/arts
-   grounded --&gt; grounded/geography
-   grounded --&gt; grounded/history
-   grounded --&gt; grounded/science
-
-   knowledge --&gt; knowledge/arts
-
-   knowledge --&gt; knowledge/miscellaneous_unknown
-   knowledge --&gt; knowledge/science
-   knowledge --&gt; knowledge/technology
-   knowledge/science --&gt; animals --&gt; birds --&gt; black_capped_chickadee --&gt; black_capped_chickadee-a &amp; black_capped_chickadee-q
-   knowledge/science --&gt; astronomy --&gt; constellations --&gt; phoenix --&gt; phoenix-a &amp; phoenix-q
-
-   black_capped_chickadee-a{attribution.txt}
-   black_capped_chickadee-q{qna.yaml}
-   phoenix-a{attribution.txt}
-   phoenix-q{qna.yaml}
-   classDef na fill:#EEE</code></pre>
-<h2 id="considerations">Considerations<a class="headerlink" href="#considerations" title="Permanent link">&para;</a></h2>
-<p>When working with the upstream taxonomy, there are some things to keep in mind, like <a href="#avoid-these-topics">topics to avoid</a>, <a href="#llms-are-great-at">what <abbr title="Large Language Models">LLMs</abbr> are great at doing</a>, and <a href="#llms-are-not-so-great-at">what <abbr title="Large Language Models">LLMs</abbr> will fail at</a>. Explore this information before deciding what to contribute, especially the note about hallucinations at the end of this page.</p>
-<h3 id="avoid-these-topics">Avoid These Topics<a class="headerlink" href="#avoid-these-topics" title="Permanent link">&para;</a></h3>
-<p>While the tuning process may eventually benefit from being used to help the models work with complex social topics, at this time this is an area of active research we do not want to take lightly. Therefore, please keep your submissions clear of the following topics:</p>
-<ul>
-<li>PII (personally identifiable information) or any content invasive of individual privacy rights</li>
-<li>Violence including self-harm</li>
-<li>Cyber Bullying</li>
-<li>Internal documentation or other that is confidential to your employer or organization, e.g. trade secrets</li>
-<li>Discrimination</li>
-<li>Religion<ul>
-<li>Facts such as, "<a href="https://en.wikipedia.org/wiki/Christianity_in_Nepal">Christianity is, according to the 2011 census, the fifth most practiced religion in Nepal, with 375,699 adherents, or 1.4% of the population</a>", are fine as a knowledge contribution. However, advocating in favor of or against any religious faith is not acceptable.</li>
-</ul>
-</li>
-<li>Medical or health information<ul>
-<li>Facts such as,  "<a href="https://opentextbc.ca/biology/chapter/11-3-circulatory-and-respiratory-systems/">In mammals, pulmonary ventilation occurs via inhalation (breathing)</a>," are fine as a knowledge contribution. However, tailored medical/health advice is not acceptable.</li>
-</ul>
-</li>
-<li>Financial information<ul>
-<li>Facts such as "<a href="https://openstax.org/books/world-history-volume-2/pages/6-3-capitalism-and-the-first-industrial-revolution">laissez-faire economics ... argues that market forces alone should drive the economy and that governments should refrain from direct intervention in or moderation of the economic system</a>," are fine as a knowledge contribution. However, tailored financial advice is not acceptable.</li>
-</ul>
-</li>
-<li>Legal settlements/mitigations</li>
-<li>Gender Bias</li>
-<li>Hostile language, threats, slurs, derogatory or insensitive jokes or comments </li>
-<li>Profanity </li>
-<li>Pornography and sexually explicit or suggestive content </li>
-<li>Any contributions that would allow for automated decision-making that affect an individual's rights or well-being, such as social scoring </li>
-<li>Any contributions that engage in political campaigning or lobbying</li>
-</ul>
-<p>We are also not accepting submissions of the following content:</p>
-<ul>
-<li>Jokes<ul>
-<li>We received many joke submissions at the beginning of the project, and with jokes being "in the eye of the beholder" and puns requiring nuance for native English speakers, we realized we were possibly unconsciously biasing our model. We have discovered that working with jokes has its own challenges, and if we want something generalized, finding consensus was unsuccessful. For now, we're not accepting additional submissions of jokes.</li>
-</ul>
-</li>
-<li>Poems<ul>
-<li>We received many poem submissions at the beginning of the project, and with poems being "in the eye of the beholder" and puns requiring nuance for native English speakers, we realized we were possibly unconsciously biasing our model. We have discovered that working with both topics has its own challenges, and if we want something generalized, finding consensus was unsuccessful. For now, we're not accepting additional submissions of poems.</li>
-</ul>
-</li>
-<li>Code<ul>
-<li>Anything code-related that can be traced back to code for a computer. Not limited to <code>sed</code> or <code>bash</code> but <code>yaml</code>s for OpenShift or Kubernetes, to <code>python</code> snippets to <code>Java</code> suggestions. There are specific models focused on this space and this isn't for this model for the time being.</li>
-</ul>
-</li>
-<li>"Guardrails" for AI<ul>
-<li>We expect our upstream engineering team to create these types of skills and safeguards. We appreciate our community wanting to help with this, but there are underlying engineering decisions and taking this from the community may conflict with these.</li>
-</ul>
-</li>
-</ul>
-<h3 id="building-your-llm-intuition">Building Your LLM Intuition<a class="headerlink" href="#building-your-llm-intuition" title="Permanent link">&para;</a></h3>
-<p><abbr title="Large Language Models">LLMs</abbr> have inherent limitations that make certain tasks extremely difficult, like doing math problems. They're great at other tasks, like creative writing. And they could be better at things like logical reasoning.</p>
-<p>In regard to skills, consider these limitations and advantages when you're generating skills. Skills in the first and second categories are welcomed. Skills in the third category are usually borderline and may be rejected.</p>
-<p>In regard to knowledge, providing an LLM training pipeline with knowledge helps create a basis of information that the model can learn from. With InstructLab, you can teach it to use this knowledge via the <code>qna.yaml</code> files. For example, you can give an LLM the entire periodic table, then in a <code>qna.yaml</code> add something like:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">question</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">What is the symbol and atomic number for Chlorine?</span>
-<span class="nt">answer</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
-<span class="w">  </span><span class="no">The symbol for chlorine is &quot;Cl&quot;, and the atomic number is 17.</span>
-</code></pre></div>
-<p>With a few of these question-and-answer pairs, the model will learn the periodic table because it has the knowledge data.</p>
-<h4 id="llms-are-great-at"><abbr title="Large Language Models">LLMs</abbr> are great at<a class="headerlink" href="#llms-are-great-at" title="Permanent link">&para;</a></h4>
-<ul>
-<li>Brainstorming</li>
-<li>Creativity</li>
-<li>Connecting information</li>
-<li>Cross-lingual behavior</li>
-</ul>
-<p>For these, however, it's common for <abbr title="Large Language Models">LLMs</abbr> to already have excellent performance. Try 3-5 examples in <code>ilab model chat</code> to confirm a deficit in the model before you build your submission, and share the examples in your Pull Request (PR).</p>
-<p>Skills in this category are welcomed, as refining these abilities helps us get better at the kinds of tasks where <abbr title="Large Language Models">LLMs</abbr> can excel.</p>
-<h4 id="llms-need-help-with"><abbr title="Large Language Models">LLMs</abbr> need help with<a class="headerlink" href="#llms-need-help-with" title="Permanent link">&para;</a></h4>
-<ul>
-<li>Chains of reasoning</li>
-<li>Analysis</li>
-<li>Story plots</li>
-<li>Reassembling information</li>
-<li>Effective and succinct summaries</li>
-</ul>
-<p>LLM behavior in these sorts of topics are very difficult for the model to get right. Skills in this category are particularly welcome. Try several examples to understand the nuances of the model's ability to do these sorts of tasks, and then consider using corrections to the results you get in your tuning process.</p>
-<h4 id="llms-are-not-so-great-at"><abbr title="Large Language Models">LLMs</abbr> are not so great at<a class="headerlink" href="#llms-are-not-so-great-at" title="Permanent link">&para;</a></h4>
-<ul>
-<li>Math</li>
-<li>Computation</li>
-<li>"Turing-complete" type tasks</li>
-<li>Generating only true real-world information (they're prone to hallucinations)</li>
-</ul>
-<p><abbr title="Large Language Models">LLMs</abbr> may struggle with solving math and computation problems, and <abbr title="Large Language Models">LLMs</abbr> may always struggle here. Solving math and computation problems via probability on natural language queries is probably not the best way to solve them. That said, improving some of these foundational skills may be something this work tackles in the future, but not at this time.</p>
-<p>Most skill submissions in these categories are likely to be rejected.</p>
-<div class="admonition note">
-<p class="admonition-title">On Hallucinations</p>
-<p>For hallucinations in particular, trying to solve this with a skill is unlikely to work. Consider contributing to the knowledge taxonomy instead to improve the model's understanding of facts.</p>
-</div>
+<h4 id="verification">Verification<a class="headerlink" href="#verification" title="Permanent link">&para;</a></h4>
+<ol>
+<li>View the InstructLab container running on the Containers page. 
+    <img alt="updated context details" src="../../images/instructlab-container-running.png" /></li>
+<li>Click the name of the container to view its logs. </li>
+<li>Click the <strong>Terminal</strong> tab to run <code>ilab</code> commands, such as <code>ilab model download</code>, <code>ilab model serve</code>, and <code>ilab model chat</code>.</li>
+</ol>
 
 
 
@@ -1941,7 +1635,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 12, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 11, 2025</span>
   </span>
 
     
@@ -1951,7 +1645,7 @@
     <span class="md-icon" title="Created">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3h-2Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 12, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 11, 2025</span>
   </span>
 
     
@@ -1965,7 +1659,7 @@
       
     </span>
     <nav>
-      Laura Santamaria
+      Shipra Singh
     </nav>
   </span>
 
@@ -1983,14 +1677,9 @@
     
     <nav>
       
-        <a href="https://github.com/nimbinatus" class="md-author" title="@nimbinatus">
+        <a href="https://github.com/shipsing" class="md-author" title="@shipsing">
           
-          <img src="https://avatars.githubusercontent.com/u/1538692?v=4&size=72" alt="nimbinatus">
-        </a>
-      
-        <a href="https://github.com/web-flow" class="md-author" title="@web-flow">
-          
-          <img src="https://avatars.githubusercontent.com/u/19864447?v=4&size=72" alt="web-flow">
+          <img src="https://avatars.githubusercontent.com/u/94683525?v=4&size=72" alt="shipsing">
         </a>
       
       
@@ -2045,10 +1734,10 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.annotate", "content.code.copy", "content.code.select", "content.tabs.link"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.annotate", "content.code.copy", "content.code.select", "content.tabs.link"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.af256bd8.min.js"></script>
+      <script src="../../assets/javascripts/bundle.af256bd8.min.js"></script>
       
     
   </body>

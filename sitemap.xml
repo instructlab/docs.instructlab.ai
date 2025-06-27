@@ -2,182 +2,187 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://docs.instructlab.ai/</loc>
-         <lastmod>2025-03-13</lastmod>
+         <lastmod>2025-06-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.instructlab.ai/adding-data-to-model/creating_new_knowledge_or_skills/</loc>
-         <lastmod>2025-03-13</lastmod>
+         <lastmod>2025-06-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.instructlab.ai/adding-data-to-model/creating_new_wikipedia_based_qna/</loc>
-         <lastmod>2025-03-13</lastmod>
+         <lastmod>2025-06-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.instructlab.ai/cmb/</loc>
-         <lastmod>2025-03-13</lastmod>
+         <lastmod>2025-06-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.instructlab.ai/cmb/build_process/</loc>
-         <lastmod>2025-03-13</lastmod>
+         <lastmod>2025-06-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.instructlab.ai/community/CODE_OF_CONDUCT/</loc>
-         <lastmod>2025-03-13</lastmod>
+         <lastmod>2025-06-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.instructlab.ai/community/CODE_OF_CONDUCT_COMMITTEE/</loc>
-         <lastmod>2025-03-13</lastmod>
+         <lastmod>2025-06-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.instructlab.ai/community/CONTRIBUTING/</loc>
-         <lastmod>2025-03-13</lastmod>
+         <lastmod>2025-06-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.instructlab.ai/community/FAQ/</loc>
-         <lastmod>2025-03-13</lastmod>
+         <lastmod>2025-06-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.instructlab.ai/community/GOVERNANCE/</loc>
-         <lastmod>2025-03-13</lastmod>
+         <lastmod>2025-06-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.instructlab.ai/community/InstructLab_DISCORD_GUIDE/</loc>
-         <lastmod>2025-03-13</lastmod>
+         <lastmod>2025-06-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.instructlab.ai/community/InstructLab_DISCORD_MODERATION_GUIDE/</loc>
-         <lastmod>2025-03-13</lastmod>
+         <lastmod>2025-06-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.instructlab.ai/community/InstructLab_SLACK_GUIDE/</loc>
-         <lastmod>2025-03-13</lastmod>
+         <lastmod>2025-06-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.instructlab.ai/community/InstructLab_SLACK_MODERATION_GUIDE/</loc>
-         <lastmod>2025-03-13</lastmod>
+         <lastmod>2025-06-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.instructlab.ai/getting-started/download_models/</loc>
-         <lastmod>2025-03-13</lastmod>
+         <lastmod>2025-06-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.instructlab.ai/getting-started/initilize_ilab/</loc>
-         <lastmod>2025-03-13</lastmod>
+         <lastmod>2025-06-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.instructlab.ai/getting-started/linux_amd/</loc>
-         <lastmod>2025-03-13</lastmod>
+         <lastmod>2025-06-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.instructlab.ai/getting-started/linux_nvidia/</loc>
-         <lastmod>2025-03-13</lastmod>
+         <lastmod>2025-06-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.instructlab.ai/getting-started/mac_metal/</loc>
-         <lastmod>2025-03-13</lastmod>
+         <lastmod>2025-06-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.instructlab.ai/getting-started/serve_and_chat/</loc>
-         <lastmod>2025-03-13</lastmod>
+         <lastmod>2025-06-27</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.instructlab.ai/getting-started/using-instructlab-with-podman-desktop/</loc>
+         <lastmod>2025-06-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.instructlab.ai/resources/CONTRIBUTORS/</loc>
-         <lastmod>2025-03-13</lastmod>
+         <lastmod>2025-06-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.instructlab.ai/resources/MKDOCS/</loc>
-         <lastmod>2025-03-13</lastmod>
+         <lastmod>2025-06-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.instructlab.ai/resources/RESOURCES/</loc>
-         <lastmod>2025-03-13</lastmod>
+         <lastmod>2025-06-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.instructlab.ai/taxonomy/</loc>
-         <lastmod>2025-03-13</lastmod>
+         <lastmod>2025-06-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.instructlab.ai/taxonomy/knowledge/</loc>
-         <lastmod>2025-03-13</lastmod>
+         <lastmod>2025-06-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.instructlab.ai/taxonomy/knowledge/file_structure/</loc>
-         <lastmod>2025-03-13</lastmod>
+         <lastmod>2025-06-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.instructlab.ai/taxonomy/skills/</loc>
-         <lastmod>2025-03-13</lastmod>
+         <lastmod>2025-06-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.instructlab.ai/taxonomy/skills/file_structure/</loc>
-         <lastmod>2025-03-13</lastmod>
+         <lastmod>2025-06-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.instructlab.ai/taxonomy/upstream/contribution_guidelines/</loc>
-         <lastmod>2025-03-13</lastmod>
+         <lastmod>2025-06-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.instructlab.ai/taxonomy/upstream/knowledge_contribution_details/</loc>
-         <lastmod>2025-03-13</lastmod>
+         <lastmod>2025-06-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.instructlab.ai/taxonomy/upstream/skills_contribution_details/</loc>
-         <lastmod>2025-03-13</lastmod>
+         <lastmod>2025-06-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.instructlab.ai/user-interface/env_oauth_config/</loc>
-         <lastmod>2025-03-13</lastmod>
+         <lastmod>2025-06-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.instructlab.ai/user-interface/knowledge_contributions/</loc>
-         <lastmod>2025-03-13</lastmod>
+         <lastmod>2025-06-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.instructlab.ai/user-interface/playground_chat/</loc>
-         <lastmod>2025-03-13</lastmod>
+         <lastmod>2025-06-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.instructlab.ai/user-interface/skills_contributions/</loc>
-         <lastmod>2025-03-13</lastmod>
+         <lastmod>2025-06-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.instructlab.ai/user-interface/ui_overview/</loc>
-         <lastmod>2025-03-13</lastmod>
+         <lastmod>2025-06-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
